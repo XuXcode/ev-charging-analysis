@@ -1,0 +1,547 @@
+{
+  "generatedAt": "2026-10-04T03:25:05.211529+00:00",
+  "readOnly": true,
+  "indexes": {
+    "charging_stations": {
+      "indexes": [
+        {
+          "name": "ix_charging_stations_adcode",
+          "column_names": ["adcode"],
+          "unique": false
+        },
+        {
+          "name": "ix_charging_stations_city",
+          "column_names": ["city"],
+          "unique": false
+        },
+        {
+          "name": "ix_charging_stations_data_source_id",
+          "column_names": ["data_source_id"],
+          "unique": false
+        },
+        {
+          "name": "ix_charging_stations_location",
+          "column_names": ["longitude", "latitude"],
+          "unique": false
+        },
+        {
+          "name": "ix_charging_stations_source_adcode_location",
+          "column_names": ["source", "adcode", "longitude", "latitude"],
+          "unique": false
+        },
+        {
+          "name": "uq_charging_stations_identity_hash",
+          "column_names": ["identity_hash"],
+          "unique": true,
+          "type": "UNIQUE"
+        },
+        {
+          "name": "uq_charging_stations_poi_id",
+          "column_names": ["poi_id"],
+          "unique": true,
+          "type": "UNIQUE"
+        }
+      ],
+      "unique": [
+        {
+          "name": "uq_charging_stations_identity_hash",
+          "column_names": ["identity_hash"],
+          "duplicates_index": "uq_charging_stations_identity_hash"
+        },
+        {
+          "name": "uq_charging_stations_poi_id",
+          "column_names": ["poi_id"],
+          "duplicates_index": "uq_charging_stations_poi_id"
+        }
+      ],
+      "primary": {
+        "constrained_columns": ["id"],
+        "name": null
+      }
+    },
+    "poi_quality": {
+      "indexes": [
+        {
+          "name": "ix_poi_quality_filter",
+          "column_names": ["classification", "review_status", "needs_review"],
+          "unique": false
+        },
+        {
+          "name": "ix_poi_quality_run_id",
+          "column_names": ["run_id"],
+          "unique": false
+        }
+      ],
+      "unique": [],
+      "primary": {
+        "constrained_columns": ["station_id"],
+        "name": null
+      }
+    },
+    "statistic_snapshots": {
+      "indexes": [
+        {
+          "name": "ix_statistic_snapshots_data_source_id",
+          "column_names": ["data_source_id"],
+          "unique": false
+        },
+        {
+          "name": "ix_statistic_snapshots_region_adcode",
+          "column_names": ["region_adcode"],
+          "unique": false
+        },
+        {
+          "name": "uq_statistic_snapshots_region_adcode",
+          "column_names": ["region_adcode", "statistic_date"],
+          "unique": true,
+          "type": "UNIQUE"
+        }
+      ],
+      "unique": [
+        {
+          "name": "uq_statistic_snapshots_region_adcode",
+          "column_names": ["region_adcode", "statistic_date"],
+          "duplicates_index": "uq_statistic_snapshots_region_adcode"
+        }
+      ],
+      "primary": {
+        "constrained_columns": ["id"],
+        "name": null
+      }
+    },
+    "analysis_snapshots": {
+      "indexes": [
+        {
+          "name": "ix_analysis_snapshot_latest",
+          "column_names": ["status", "computed_at"],
+          "unique": false
+        },
+        {
+          "name": "ix_analysis_snapshots_input_hash",
+          "column_names": ["input_hash"],
+          "unique": false
+        },
+        {
+          "name": "ix_analysis_snapshots_run_id",
+          "column_names": ["run_id"],
+          "unique": false
+        }
+      ],
+      "unique": [],
+      "primary": {
+        "constrained_columns": ["id"],
+        "name": null
+      }
+    }
+  },
+  "queries": {
+    "city_page": {
+      "sql": "SELECT id, poi_id, name, longitude, latitude FROM charging_stations WHERE source='amap' AND adcode LIKE '4301%' ORDER BY id LIMIT 200",
+      "plan": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "charging_stations",
+          "partitions": null,
+          "type": "index",
+          "possible_keys": "ix_charging_stations_adcode,ix_charging_stations_source_adcode_location",
+          "key": "PRIMARY",
+          "key_len": "4",
+          "ref": null,
+          "rows": 732,
+          "filtered": 2.73,
+          "Extra": "Using where"
+        }
+      ],
+      "resultRows": 200,
+      "medianMs": 1.29,
+      "maxMs": 1.3
+    },
+    "county_page": {
+      "sql": "SELECT id FROM charging_stations WHERE source='amap' AND adcode='430102' ORDER BY id LIMIT 200",
+      "plan": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "charging_stations",
+          "partitions": null,
+          "type": "ref",
+          "possible_keys": "ix_charging_stations_adcode,ix_charging_stations_source_adcode_location",
+          "key": "ix_charging_stations_source_adcode_location",
+          "key_len": "828",
+          "ref": "const,const",
+          "rows": 249,
+          "filtered": 100.0,
+          "Extra": "Using index; Using filesort"
+        }
+      ],
+      "resultRows": 200,
+      "medianMs": 0.69,
+      "maxMs": 0.71
+    },
+    "bbox_page": {
+      "sql": "SELECT id FROM charging_stations WHERE source='amap' AND adcode LIKE '4301%' AND longitude BETWEEN 112.9 AND 113.1 AND latitude BETWEEN 28.1 AND 28.3 ORDER BY id LIMIT 200",
+      "plan": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "charging_stations",
+          "partitions": null,
+          "type": "index",
+          "possible_keys": "ix_charging_stations_adcode,ix_charging_stations_location,ix_charging_stations_source_adcode_location",
+          "key": "PRIMARY",
+          "key_len": "4",
+          "ref": null,
+          "rows": 825,
+          "filtered": 0.07,
+          "Extra": "Using where"
+        }
+      ],
+      "resultRows": 200,
+      "medianMs": 0.83,
+      "maxMs": 0.96
+    },
+    "classification_page": {
+      "sql": "SELECT s.id FROM poi_quality q JOIN charging_stations s ON s.id=q.station_id WHERE q.classification='personal' AND s.source='amap' ORDER BY s.id LIMIT 200",
+      "plan": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "q",
+          "partitions": null,
+          "type": "ref",
+          "possible_keys": "PRIMARY,ix_poi_quality_filter",
+          "key": "ix_poi_quality_filter",
+          "key_len": "122",
+          "ref": "const",
+          "rows": 25,
+          "filtered": 100.0,
+          "Extra": "Using index; Using temporary; Using filesort"
+        },
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "s",
+          "partitions": null,
+          "type": "eq_ref",
+          "possible_keys": "PRIMARY,ix_charging_stations_source_adcode_location",
+          "key": "PRIMARY",
+          "key_len": "4",
+          "ref": "ev_charging_live.q.station_id",
+          "rows": 1,
+          "filtered": 50.0,
+          "Extra": "Using where"
+        }
+      ],
+      "resultRows": 25,
+      "medianMs": 0.51,
+      "maxMs": 0.57
+    },
+    "review_status_page": {
+      "sql": "SELECT s.id FROM poi_quality q JOIN charging_stations s ON s.id=q.station_id WHERE q.review_status='confirmed' AND s.source='amap' ORDER BY s.id LIMIT 200",
+      "plan": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "q",
+          "partitions": null,
+          "type": "index",
+          "possible_keys": "PRIMARY",
+          "key": "ix_poi_quality_filter",
+          "key_len": "205",
+          "ref": null,
+          "rows": 12304,
+          "filtered": 10.0,
+          "Extra": "Using where; Using index; Using temporary; Using filesort"
+        },
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "s",
+          "partitions": null,
+          "type": "eq_ref",
+          "possible_keys": "PRIMARY,ix_charging_stations_source_adcode_location",
+          "key": "PRIMARY",
+          "key_len": "4",
+          "ref": "ev_charging_live.q.station_id",
+          "rows": 1,
+          "filtered": 50.0,
+          "Extra": "Using where"
+        }
+      ],
+      "resultRows": 0,
+      "medianMs": 2.21,
+      "maxMs": 5.19
+    },
+    "collection_date": {
+      "sql": "SELECT COUNT(*), MAX(collected_at) FROM charging_stations WHERE source='amap' AND adcode LIKE '43%'",
+      "plan": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "charging_stations",
+          "partitions": null,
+          "type": "ALL",
+          "possible_keys": "ix_charging_stations_adcode,ix_charging_stations_source_adcode_location",
+          "key": null,
+          "key_len": null,
+          "ref": null,
+          "rows": 12451,
+          "filtered": 5.0,
+          "Extra": "Using where"
+        }
+      ],
+      "resultRows": 1,
+      "medianMs": 4.01,
+      "maxMs": 4.22
+    },
+    "ranking": {
+      "sql": "SELECT LEFT(adcode,4), COUNT(*) FROM charging_stations WHERE source='amap' AND adcode LIKE '43%' GROUP BY LEFT(adcode,4)",
+      "plan": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "charging_stations",
+          "partitions": null,
+          "type": "range",
+          "possible_keys": "ix_charging_stations_adcode,ix_charging_stations_source_adcode_location",
+          "key": "ix_charging_stations_source_adcode_location",
+          "key_len": "828",
+          "ref": null,
+          "rows": 6225,
+          "filtered": 100.0,
+          "Extra": "Using where; Using index; Using temporary"
+        }
+      ],
+      "resultRows": 14,
+      "medianMs": 6.67,
+      "maxMs": 9.86
+    },
+    "statistics_latest": {
+      "sql": "SELECT MAX(statistic_date) FROM statistic_snapshots",
+      "plan": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "statistic_snapshots",
+          "partitions": null,
+          "type": "index",
+          "possible_keys": null,
+          "key": "uq_statistic_snapshots_region_adcode",
+          "key_len": "29",
+          "ref": null,
+          "rows": 1,
+          "filtered": 100.0,
+          "Extra": "Using index"
+        }
+      ],
+      "resultRows": 1,
+      "medianMs": 0.36,
+      "maxMs": 0.74
+    },
+    "search_contains": {
+      "sql": "SELECT id FROM charging_stations WHERE source='amap' AND adcode LIKE '43%' AND (name LIKE '%特斯拉%' OR address LIKE '%特斯拉%' OR poi_id LIKE '%特斯拉%') ORDER BY id LIMIT 8",
+      "plan": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "charging_stations",
+          "partitions": null,
+          "type": "index",
+          "possible_keys": "ix_charging_stations_adcode,ix_charging_stations_source_adcode_location",
+          "key": "PRIMARY",
+          "key_len": "4",
+          "ref": null,
+          "rows": 16,
+          "filtered": 1.49,
+          "Extra": "Using where"
+        }
+      ],
+      "resultRows": 8,
+      "medianMs": 0.55,
+      "maxMs": 0.78
+    },
+    "search_count": {
+      "sql": "SELECT COUNT(*) FROM charging_stations WHERE source='amap' AND adcode LIKE '43%' AND (name LIKE '%特斯拉%' OR address LIKE '%特斯拉%' OR poi_id LIKE '%特斯拉%')",
+      "plan": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "charging_stations",
+          "partitions": null,
+          "type": "ALL",
+          "possible_keys": "ix_charging_stations_adcode,ix_charging_stations_source_adcode_location",
+          "key": null,
+          "key_len": null,
+          "ref": null,
+          "rows": 12451,
+          "filtered": 1.49,
+          "Extra": "Using where"
+        }
+      ],
+      "resultRows": 1,
+      "medianMs": 8.28,
+      "maxMs": 8.35
+    },
+    "review_clues": {
+      "sql": "SELECT s.id FROM charging_stations s JOIN poi_quality q ON q.station_id=s.id WHERE s.source='amap' AND q.needs_review=1 ORDER BY s.id LIMIT 200",
+      "plan": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "q",
+          "partitions": null,
+          "type": "index",
+          "possible_keys": "PRIMARY",
+          "key": "ix_poi_quality_filter",
+          "key_len": "205",
+          "ref": null,
+          "rows": 12304,
+          "filtered": 10.0,
+          "Extra": "Using where; Using index; Using temporary; Using filesort"
+        },
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "s",
+          "partitions": null,
+          "type": "eq_ref",
+          "possible_keys": "PRIMARY,ix_charging_stations_source_adcode_location",
+          "key": "PRIMARY",
+          "key_len": "4",
+          "ref": "ev_charging_live.q.station_id",
+          "rows": 1,
+          "filtered": 50.0,
+          "Extra": "Using where"
+        }
+      ],
+      "resultRows": 200,
+      "medianMs": 3.11,
+      "maxMs": 3.49
+    },
+    "county_public": {
+      "sql": "SELECT s.id FROM charging_stations s JOIN poi_quality q ON q.station_id=s.id WHERE s.source='amap' AND s.adcode='430102' AND q.classification='public_candidate' ORDER BY s.id LIMIT 200",
+      "plan": [
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "s",
+          "partitions": null,
+          "type": "ref",
+          "possible_keys": "PRIMARY,ix_charging_stations_adcode,ix_charging_stations_source_adcode_location",
+          "key": "ix_charging_stations_source_adcode_location",
+          "key_len": "828",
+          "ref": "const,const",
+          "rows": 249,
+          "filtered": 100.0,
+          "Extra": "Using index; Using filesort"
+        },
+        {
+          "id": 1,
+          "select_type": "SIMPLE",
+          "table": "q",
+          "partitions": null,
+          "type": "eq_ref",
+          "possible_keys": "PRIMARY,ix_poi_quality_filter",
+          "key": "PRIMARY",
+          "key_len": "4",
+          "ref": "ev_charging_live.s.id",
+          "rows": 1,
+          "filtered": 50.0,
+          "Extra": "Using where"
+        }
+      ],
+      "resultRows": 200,
+      "medianMs": 1.16,
+      "maxMs": 1.53
+    }
+  },
+  "rowCounts": {
+    "charging_stations": 12601,
+    "poi_quality": 12601,
+    "statistic_snapshots": 0,
+    "analysis_snapshots": 80
+  },
+  "http": {
+    "/dashboard": {
+      "status": 200,
+      "encoding": "gzip",
+      "wireBytes": 15185,
+      "jsonBytes": 118966,
+      "medianMs": 349.55,
+      "maxMs": 484.63
+    },
+    "/collection/summary": {
+      "status": 200,
+      "encoding": "gzip",
+      "wireBytes": 4607,
+      "jsonBytes": 20294,
+      "medianMs": 249.27,
+      "maxMs": 251.15
+    },
+    "/stations?city=430100&page_size=200": {
+      "status": 200,
+      "encoding": "gzip",
+      "wireBytes": 13954,
+      "jsonBytes": 127260,
+      "medianMs": 312.15,
+      "maxMs": 354.68
+    },
+    "/stations?city=430100&bbox=112.9,28.1,113.1,28.3&page_size=200": {
+      "status": 200,
+      "encoding": "gzip",
+      "wireBytes": 13914,
+      "jsonBytes": 127329,
+      "medianMs": 60.18,
+      "maxMs": 61.62
+    },
+    "/quality/pois?needs_review=true&page_size=30": {
+      "status": 200,
+      "encoding": "gzip",
+      "wireBytes": 2238,
+      "jsonBytes": 17484,
+      "medianMs": 30.98,
+      "maxMs": 52.51
+    },
+    "/analysis/latest": {
+      "status": 200,
+      "encoding": "gzip",
+      "wireBytes": 22982,
+      "jsonBytes": 96712,
+      "medianMs": 211.75,
+      "maxMs": 380.23
+    },
+    "/analysis/latest?classification=personal": {
+      "status": 200,
+      "encoding": "gzip",
+      "wireBytes": 15550,
+      "jsonBytes": 85472,
+      "medianMs": 213.83,
+      "maxMs": 272.51
+    },
+    "/analysis/layers/grid": {
+      "status": 200,
+      "encoding": "gzip",
+      "wireBytes": 412498,
+      "jsonBytes": 3162242,
+      "medianMs": 225.61,
+      "maxMs": 294.75
+    },
+    "/analysis/latest?needs_review=true": {
+      "status": 200,
+      "encoding": "gzip",
+      "wireBytes": 20431,
+      "jsonBytes": 91891,
+      "medianMs": 225.97,
+      "maxMs": 296.86
+    },
+    "/stations?keyword=%E7%89%B9%E6%96%AF%E6%8B%89&classification=public_candidate&page_size=8": {
+      "status": 200,
+      "encoding": "gzip",
+      "wireBytes": 1394,
+      "jsonBytes": 5594,
+      "medianMs": 57.68,
+      "maxMs": 62.23
+    }
+  }
+}

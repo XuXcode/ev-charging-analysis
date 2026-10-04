@@ -1,0 +1,1414 @@
+{
+  "createdAt": "2026-10-04T12:11:09.399716Z",
+  "applied": false,
+  "sampleCount": 12601,
+  "before": {
+    "mismatch": 49,
+    "outside": 1,
+    "ambiguous": 0,
+    "records": [
+      {
+        "stationId": 264,
+        "poiId": "B0J25KHU6G",
+        "sourceAdcode": "430103",
+        "geometryAdcodes": ["430111"]
+      },
+      {
+        "stationId": 1755,
+        "poiId": "B0FFL9P7OP",
+        "sourceAdcode": "430202",
+        "geometryAdcodes": ["430203"]
+      },
+      {
+        "stationId": 1819,
+        "poiId": "B0KDJ7BT7Z",
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "stationId": 1820,
+        "poiId": "B0JKXBPBT8",
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "stationId": 1831,
+        "poiId": "B0JBO6LNQN",
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "stationId": 1850,
+        "poiId": "B0M6PPKRKM",
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "stationId": 1852,
+        "poiId": "B0IBRNN6IA",
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "stationId": 1855,
+        "poiId": "B0MAVD5K2P",
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "stationId": 1858,
+        "poiId": "B0JK9KCZ9L",
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "stationId": 1860,
+        "poiId": "B0HRF531LZ",
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "stationId": 1883,
+        "poiId": "B0LDXXIBAA",
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "stationId": 2900,
+        "poiId": "B0L1YZDVXS",
+        "sourceAdcode": "430321",
+        "geometryAdcodes": ["430302"]
+      },
+      {
+        "stationId": 3284,
+        "poiId": "B0MRNA735J",
+        "sourceAdcode": "430408",
+        "geometryAdcodes": ["430406"]
+      },
+      {
+        "stationId": 3396,
+        "poiId": "B0J12S3WQD",
+        "sourceAdcode": "430408",
+        "geometryAdcodes": ["430406"]
+      },
+      {
+        "stationId": 4498,
+        "poiId": "B0J6HZDVC4",
+        "sourceAdcode": "430581",
+        "geometryAdcodes": ["430525"]
+      },
+      {
+        "stationId": 4499,
+        "poiId": "B0LDXR9WB1",
+        "sourceAdcode": "430581",
+        "geometryAdcodes": ["430525"]
+      },
+      {
+        "stationId": 4504,
+        "poiId": "B0J6HZEI6V",
+        "sourceAdcode": "430581",
+        "geometryAdcodes": ["430525"]
+      },
+      {
+        "stationId": 4508,
+        "poiId": "B0MGLZMUAL",
+        "sourceAdcode": "430581",
+        "geometryAdcodes": ["430525"]
+      },
+      {
+        "stationId": 4894,
+        "poiId": "B0LK6RLWD0",
+        "sourceAdcode": "430611",
+        "geometryAdcodes": ["430621"]
+      },
+      {
+        "stationId": 4898,
+        "poiId": "B0LK6RM2TJ",
+        "sourceAdcode": "430611",
+        "geometryAdcodes": ["430623"]
+      },
+      {
+        "stationId": 4905,
+        "poiId": "B0MB6HNM1V",
+        "sourceAdcode": "430611",
+        "geometryAdcodes": ["430621"]
+      },
+      {
+        "stationId": 5460,
+        "poiId": "B0JKOBJMT0",
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "stationId": 5468,
+        "poiId": "B0HKDZW842",
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "stationId": 5482,
+        "poiId": "B0IU2YMN7Y",
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "stationId": 5506,
+        "poiId": "B0JBLLSFOG",
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "stationId": 5538,
+        "poiId": "B0LKO7HE99",
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "stationId": 5557,
+        "poiId": "B0JBLLQXOW",
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "stationId": 5588,
+        "poiId": "B0IBRNNEGX",
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "stationId": 5620,
+        "poiId": "B0LA358YAC",
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "stationId": 5646,
+        "poiId": "B0L0T49KCD",
+        "sourceAdcode": "430703",
+        "geometryAdcodes": ["430722"]
+      },
+      {
+        "stationId": 6124,
+        "poiId": "B0MA3NYFBJ",
+        "sourceAdcode": "430726",
+        "geometryAdcodes": ["430821"]
+      },
+      {
+        "stationId": 7372,
+        "poiId": "B0L2TD3DD2",
+        "sourceAdcode": "431002",
+        "geometryAdcodes": ["431003"]
+      },
+      {
+        "stationId": 7440,
+        "poiId": "B0KG4HSYJ9",
+        "sourceAdcode": "431003",
+        "geometryAdcodes": ["431002"]
+      },
+      {
+        "stationId": 7547,
+        "poiId": "B0MU69WTJ1",
+        "sourceAdcode": "431003",
+        "geometryAdcodes": ["431002"]
+      },
+      {
+        "stationId": 9104,
+        "poiId": "B0L1PP4CST",
+        "sourceAdcode": "431202",
+        "geometryAdcodes": ["431221"]
+      },
+      {
+        "stationId": 9105,
+        "poiId": "B0L066MJQY",
+        "sourceAdcode": "431202",
+        "geometryAdcodes": ["431221"]
+      },
+      {
+        "stationId": 9897,
+        "poiId": "B0HBL5B6Y9",
+        "sourceAdcode": "431321",
+        "geometryAdcodes": []
+      },
+      {
+        "stationId": 10006,
+        "poiId": "B0KGFP2EC1",
+        "sourceAdcode": "431322",
+        "geometryAdcodes": ["430923"]
+      },
+      {
+        "stationId": 11052,
+        "poiId": "B0I0SGDVFK",
+        "sourceAdcode": "430111",
+        "geometryAdcodes": ["430103"]
+      },
+      {
+        "stationId": 11505,
+        "poiId": "B0MDA61ASO",
+        "sourceAdcode": "430103",
+        "geometryAdcodes": ["430111"]
+      },
+      {
+        "stationId": 11506,
+        "poiId": "B0FFL6BVMA",
+        "sourceAdcode": "430103",
+        "geometryAdcodes": ["430111"]
+      },
+      {
+        "stationId": 11507,
+        "poiId": "B0L2ZZ3CU4",
+        "sourceAdcode": "430103",
+        "geometryAdcodes": ["430111"]
+      },
+      {
+        "stationId": 12000,
+        "poiId": "B0LKN4OU2Y",
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "stationId": 12001,
+        "poiId": "B0LAU57748",
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "stationId": 12371,
+        "poiId": "B0MA95BDH1",
+        "sourceAdcode": "430112",
+        "geometryAdcodes": ["430104"]
+      },
+      {
+        "stationId": 12372,
+        "poiId": "B0MA95BL3U",
+        "sourceAdcode": "430112",
+        "geometryAdcodes": ["430104"]
+      },
+      {
+        "stationId": 12373,
+        "poiId": "B0MA2ZQTAP",
+        "sourceAdcode": "430112",
+        "geometryAdcodes": ["430104"]
+      },
+      {
+        "stationId": 12374,
+        "poiId": "B0LR6XHMM1",
+        "sourceAdcode": "430112",
+        "geometryAdcodes": ["430104"]
+      },
+      {
+        "stationId": 12453,
+        "poiId": "B0JR9DI39N",
+        "sourceAdcode": "430121",
+        "geometryAdcodes": ["430105"]
+      }
+    ]
+  },
+  "after": {
+    "mismatch": 0,
+    "outside": 0,
+    "ambiguous": 0,
+    "records": []
+  },
+  "boundaryChanges": [
+    {
+      "adcode": "430102",
+      "name": "芙蓉区",
+      "beforeHash": "4d1fd601f29529b34aa8779233b22307bf1ad661ece6103d57f6cda58c063544",
+      "afterHash": "87a8b18e770d62933aaf583dcc649fe82d5f62965a646ec48453b1fc0f05fa6b",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430103",
+      "name": "天心区",
+      "beforeHash": "a1b8e2ebccfa2103c4a76d06f75e8f271306c696e458419c3eabcb2aafb1b5d7",
+      "afterHash": "e2052b7caea1ecbaa235ebca9262cc973abfc63ed6b3d94228a15f03d2c87e2e",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430104",
+      "name": "岳麓区",
+      "beforeHash": "5fdd21b86325362f1ac04e163ace71436c3fa81f77ad26a1e91f61712df742c8",
+      "afterHash": "8a4ef9886b17658df101d7e9060cccb85df96ecc675baa7a6fb9e53dd62c0d91",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430105",
+      "name": "开福区",
+      "beforeHash": "c25629dabd9bd979e0374cf642c02179e93d5473efa3fa997d86c47044876fd5",
+      "afterHash": "bbfc4789f1edf2198f9c58df3d0e6262b3c736ba95b4dc84724e97da8f26b888",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430111",
+      "name": "雨花区",
+      "beforeHash": "42c0ef06e4d4cba148e6ba9108d89147adbc66694939bbdcf2f4e1adddf9a16c",
+      "afterHash": "4f97f4c657f5094158eddfd3f03f8985449d58d179a1ca9284b99a86c1cb50b8",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430112",
+      "name": "望城区",
+      "beforeHash": "cfd20294e6af418785ec9dff630270f642bda8574d15a468ef260e2d7359a699",
+      "afterHash": "ca399428a758105a05c7a61fbcef3d61e3ab4bac2999a4a33d18a539a64a7d49",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430121",
+      "name": "长沙县",
+      "beforeHash": "6827a99a25552b58db72920f568825dfa7a5e690edd4cc4d3397429bcf647567",
+      "afterHash": "38c469cc124ba741b741f348711eb51d0b7293eb269570305278f4609f6244b6",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430181",
+      "name": "浏阳市",
+      "beforeHash": "1e985f7c4e55041c04e357c1c5d04efba6d33ded8d084d73c2fbb13504254771",
+      "afterHash": "b40697ffea714d30c8e648ddd69bd28e2523d63031309e73c88cf02021d32bca",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430182",
+      "name": "宁乡市",
+      "beforeHash": "8435ad234f1c9b25892d2ace40d28176b414351bc3c011afef4f5acbb43ad3b6",
+      "afterHash": "23215bac1f35aee496d62d7f56b864422f68384c4d058e6cbfd71ff0dfcc57e6",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430202",
+      "name": "荷塘区",
+      "beforeHash": "fbef2c9075e84cc371ae9dceafcf509f1635bfd3e24bd8f9509a6fd0ab9ab83e",
+      "afterHash": "11a01d1cae0776a33d1ff3fba9bdf085d49b1818ed5f94ec19cb0ee4241461b6",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430203",
+      "name": "芦淞区",
+      "beforeHash": "980e7d8f56ae1e68162facfe68b69326461319d73d62a5ad2f18150bb23473ac",
+      "afterHash": "735832e1451004693fdfaa600e3c27a98d9e0e77829654c1f438e08f4d6ed5ab",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430204",
+      "name": "石峰区",
+      "beforeHash": "1e4f73cd7135de4a6ef187576cb0fcded8c4d984cf0e6e3edb6789c90dffbb51",
+      "afterHash": "20dbf66b95df63d17c195682cac4556ade449b76cba7dc75976b4eb1b3649654",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430211",
+      "name": "天元区",
+      "beforeHash": "2994dbd58f4b7c4fc0f0014c85199354538c46ea47504bee88bc67038694dcb3",
+      "afterHash": "a0f988db03375ac9577297ecfe1ecf89a2e4169e7008286efd2f0cd67f569749",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430212",
+      "name": "渌口区",
+      "beforeHash": "66d737b92d4bf6b90b8c9d1e5efabf88c2c13edfaab625a3bcd48431bb3668ed",
+      "afterHash": "5020f8a0164ce6f79be6b20be6165fc08abc65aab3eb57af5eef15f4ac521499",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430223",
+      "name": "攸县",
+      "beforeHash": "aa371a663d6588ef80cf5905a66730c7568a2472cd5306387dc2ed48f4dd4689",
+      "afterHash": "029f6da789660872161a78c3672b65c2667c9161ecee7e994294d0a1dc7e167d",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430224",
+      "name": "茶陵县",
+      "beforeHash": "7ecff257433f735fec96bbaaddd6dc018614a87df0dcc4acd654499719eb9ec3",
+      "afterHash": "4058e046524802931065fe2629c6aeb81e67286e74798da5d5676ded9b821000",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430225",
+      "name": "炎陵县",
+      "beforeHash": "f272dddd4041d84683d3c0eb1173246743cec53dfb0a33a5590a8cf1a494352f",
+      "afterHash": "c25c66004d65baca491dd1ef239a016342c564d3d271c3b72faf393650fd129a",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430281",
+      "name": "醴陵市",
+      "beforeHash": "4b58f11a118d0ea6efe4a6b4b3de7bece72ae59db30a66900099d4689335a4d3",
+      "afterHash": "a26b70c590fe17a9a1a3ebfeefd31d9b718661ac66fd6cf629d36a9e57e4b566",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430302",
+      "name": "雨湖区",
+      "beforeHash": "87abb4a153b0d34a243e3b79a34c326f87b8596f9c4d1fa2d7011bc22cd46ff1",
+      "afterHash": "042354151b9be7587e5fb75f10cb7ed2b3906de7ae8fbf269f75a9bed33e9d9a",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430300_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430304",
+      "name": "岳塘区",
+      "beforeHash": "0e069ba3d029588f53e7d569ba18cfe40d553809867f580fdef87a78fc8dbd97",
+      "afterHash": "76dd72dfb0cdff2bd774848333f1d1e7cdc153f93909edba0ab887e1d49b0b0a",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430300_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430321",
+      "name": "湘潭县",
+      "beforeHash": "a4f2fb6c2d269b3dd519d0772c3b6b01b8afef56aa48db9c66dfec89c5c26bfe",
+      "afterHash": "e23cbb46930b4f6563e22547fd8af90f6be16ed1903bfe453daada3411eddddc",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430300_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430381",
+      "name": "湘乡市",
+      "beforeHash": "7eea5a1efb50d96984e7eaed746ae4941c2d26a400cb786fb45c3ff4f7d3239b",
+      "afterHash": "0919f474dc8bf5e931819aa89c1c143390a9f038ac46fdae203a3d6b52aa81fb",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430300_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430382",
+      "name": "韶山市",
+      "beforeHash": "7026e51f7900cf6497ea0a767a0989917009983aedfb61334a90b8b89e4bcdbe",
+      "afterHash": "b707f8232f8e5344df4acde5e8c0c952c54959f35f3b782868c0be40c77905fb",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430300_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430405",
+      "name": "珠晖区",
+      "beforeHash": "386d21745d89d972a766066e01567cb8afa3623c98960291d4cc4c422b253c37",
+      "afterHash": "84dfca2c12981b2e736aff1d2355c3fd9faf4821ea1ee0dba1356e54da3dd9c9",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430400_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430406",
+      "name": "雁峰区",
+      "beforeHash": "9c899862110ef0191636bbdc519a1f5d50e8b1ab434bbb50241daaa4bc85402b",
+      "afterHash": "342d8b8977f2e34ee17aae7bafd4280e89c1cac476d2854889394605385822db",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430400_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430407",
+      "name": "石鼓区",
+      "beforeHash": "6d8ff7c92fdaac12863d86d54ceb587d3b72831812180275413d08c66a5bd205",
+      "afterHash": "957fbf620bb8bad416415c1e7739df88059fefa961a13a0ed44326f3d8fd8f88",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430400_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430408",
+      "name": "蒸湘区",
+      "beforeHash": "dcd9f821817243f976675cf5f775fc3c02cd467d11d47a91b716e99dbb8adc54",
+      "afterHash": "26141944c7ce48fac193f2ab32882a48977fa3702862c210d23884e483a746d3",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430400_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430412",
+      "name": "南岳区",
+      "beforeHash": "ecdc4f72820753939af26b58ebd86138b2f9501dbad4f31b64ce1a1f6bfa1585",
+      "afterHash": "a83b8a754b9e19974d892aebf199c3b79748f375eb68aacbbb73b8da32bf1470",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430400_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430421",
+      "name": "衡阳县",
+      "beforeHash": "4b2087ddfec879cb2d26b524e3378bc1fb36e0156215f43a50bcb7818c51d61e",
+      "afterHash": "c8c2a5c2db7e8cb7e6709a30facc4b2466fbb94caec1b8a489d9d6b3cdc5408c",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430400_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430422",
+      "name": "衡南县",
+      "beforeHash": "875d9a424f4f9d37df2f20c56215652f447b4210b432fe62849b381ba6760131",
+      "afterHash": "dcf9c480d3fe40c0f334ebab41f6b9667987d54048aba3c8298dbfda3c9064d8",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430400_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430423",
+      "name": "衡山县",
+      "beforeHash": "2efb7119036b206713ff3230f4d4a491a2cc29681c1653daf73bc2150ff81620",
+      "afterHash": "5bf81acde626c93501a1e2122dfeecd180e5533b9382e6668993b4d99d080708",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430400_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430424",
+      "name": "衡东县",
+      "beforeHash": "c93940f409dd8c7ed5de57d46c4367ef5538df611e5beb81a35c8bf54496c94b",
+      "afterHash": "134e1932ddde6e96aefc34a366622a082ce5fb5602d1aa6f362a751984f71c62",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430400_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430426",
+      "name": "祁东县",
+      "beforeHash": "884db1a2417f17905c538ce28cf21f7fccde82abdbac8c0ba25450f5f22da4de",
+      "afterHash": "243c03d20276457230d4393256bf0ea55d86d487e96569276c858b9606077d9d",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430400_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430481",
+      "name": "耒阳市",
+      "beforeHash": "bafbe6508fc25431c1b7704242d08a2db18addb1db6539b5791f802b1933a540",
+      "afterHash": "935ef271ef7f5d9583d0e0c0edcafa883d8ee750301522d2a8f3ef6cf9f06386",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430400_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430482",
+      "name": "常宁市",
+      "beforeHash": "f4fe9cf54735346b289a0b9377f884e0fca4be05302796ab1bd6abc7a9bc45bf",
+      "afterHash": "0f5d9a0db6507c227523eb17e723893c7af8f55bcb2569eb777b89f68e806657",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430400_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430502",
+      "name": "双清区",
+      "beforeHash": "2bfaff7851afa04110bf6f75aa73183a1efeeca358747db869e6c48b9e2f306b",
+      "afterHash": "e8177010df0d72f77b8f90f9df417c9be17fe62f886e7e10c3a0cb81bb278eab",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430500_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430503",
+      "name": "大祥区",
+      "beforeHash": "f8528459260daf150d71d53b73b032ed3ec1352be81ba4fa4a6be1c81d749adb",
+      "afterHash": "040321631d3fb69ff2dc53f222c90530cc48c132658cd59c171da21e382ce13f",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430500_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430511",
+      "name": "北塔区",
+      "beforeHash": "3a19d5ce7344bfc0a23a0389d15159b0e83fc63b0f54a70a685afcfe0dbfd132",
+      "afterHash": "6f1f4c0480c8971089ff18d91e389a34d0d5d5450659f39482e292a640e923d6",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430500_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430522",
+      "name": "新邵县",
+      "beforeHash": "0049a82b48365361d28007ed3899a460151b5dd2cc32a03ed41a552906278f33",
+      "afterHash": "a0ecc64e4a51d4a87869da7dfec176928ef4e1f0936e29095f794521b4648872",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430500_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430523",
+      "name": "邵阳县",
+      "beforeHash": "df22e4aa274c6784a011ee0cde8177bd513ab8c8537d0e7895004e53af6a0eb8",
+      "afterHash": "1f2da6a7d8190490f278d592dce9560f45f2407d89a809299d189f5a89afc6c4",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430500_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430524",
+      "name": "隆回县",
+      "beforeHash": "288658a294f5dc76ec88739a7afb275d22d6b441b794ade64649b73ff573d43d",
+      "afterHash": "d0437bf2fbe312cdbfc715693f47bdd2ab06af2abae09ef0b3c1ce60b988948f",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430500_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430525",
+      "name": "洞口县",
+      "beforeHash": "b2e4b4a4f32e40ff9f22d1051a21788ae7cbd99d553eed547a304462d967d1f3",
+      "afterHash": "35b99f21efddd3b74f05f40a9886b6bb47f4f4f607cb6f124ab7fca73468f560",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430500_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430527",
+      "name": "绥宁县",
+      "beforeHash": "8ff7845551700ddb8d0d0d7f4e2d481355055ba27a65b230058ce1f9437e9e2f",
+      "afterHash": "0039f164cc022658b02d095b5ff71857ba97d965e9c837ff305393a75bb83de0",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430500_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430528",
+      "name": "新宁县",
+      "beforeHash": "6d5a75e63bf54253b0fec78ff46dc89cce1805d2b048300a21758a7f150a018e",
+      "afterHash": "40d0b87e889fd462b74caf3b23babd6445d51aadea6c2abb1496aaff95e8c5e1",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430500_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430529",
+      "name": "城步苗族自治县",
+      "beforeHash": "83cdac5f60bd1c28286fa35514f3e603f2bfc14f1a66addd22d166c7c4279430",
+      "afterHash": "3fdfd1eb95732dfdb5fd9bc1857ec963988432bb78301ec026a17f0ef9125083",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430500_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430581",
+      "name": "武冈市",
+      "beforeHash": "9237f3bf553f2ab280805e5edcb06ddd4aa65a8a581d1cccab69158950ab55a5",
+      "afterHash": "228a08034a7a06a18928b0e05298f5c573c2d389dde822aac10d43cb6a5a8e3b",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430500_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430582",
+      "name": "邵东市",
+      "beforeHash": "5c42003ed8095f2bd82009336faa73c9be90b2d3bdab6de8eaabe58129bfa9f1",
+      "afterHash": "7122c756a25f76fd8e9a29bd478f0f53dc4cbf2b5acee99b970027147526addd",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430500_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430602",
+      "name": "岳阳楼区",
+      "beforeHash": "9db5b41d77cdc3fc2f8b7786e90e72fdd62fb6e14f8ae1f7c90ade10417531a1",
+      "afterHash": "ed262e4474e0e9bd33126c3e7c7681cbcf910693611b3e8338a0acd532c94fd7",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430600_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430603",
+      "name": "云溪区",
+      "beforeHash": "d11a4145479251663164495c172771b4b1a0dffcc3b2425674e4b10a68f236f5",
+      "afterHash": "d0bf7ca6cca8b94bcddf7eb1772c2a9da4a560294c4cdba64f0fe368140a392c",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430600_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430611",
+      "name": "君山区",
+      "beforeHash": "7173bb2e0d52cc13e93ae1c17bf13728dc763b18fd711b6195b80ccbd03c1e3b",
+      "afterHash": "d951f93865fbf296591a042edb4693d859ccd01f7fabac068c7834ba9d972918",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430600_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430621",
+      "name": "岳阳县",
+      "beforeHash": "9067ae9fa2764267145b5342aac28c1c39e3fbbf9e5a9aa28d92fe5fdd493460",
+      "afterHash": "238c48251c7721e2c31de022e6977a5ed111d160322d35bd1db504bdb8cd098b",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430600_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430623",
+      "name": "华容县",
+      "beforeHash": "32810275a10f47cb07c3b0a20c279273a29a4feef0802f009c65a24f1c7c9678",
+      "afterHash": "37edeaf391db08efc10abb67bf03060644e7a3fe96fa630e444bdb1b383b744a",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430600_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430624",
+      "name": "湘阴县",
+      "beforeHash": "d1be2d38d5d4f1a1251df47fec5e991e09ecb76714d43faf68a914bcd46aa3ba",
+      "afterHash": "932c543b3219cb48710f44bc6d7f9883450c9956f90f73b76711c7561eea4e87",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430600_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430626",
+      "name": "平江县",
+      "beforeHash": "5d6a71c844aa5e54275eae6b55ad8ecc3cee39daff8514c2118d162a992a3e25",
+      "afterHash": "914c937d2dfd7027585ed285e55760b45b016bb95a51f80eaedb8f58b050a6c2",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430600_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430681",
+      "name": "汨罗市",
+      "beforeHash": "e94920f056a849e9371291897fc6cb72ec6ce2be420883e4e136ce9a098e322a",
+      "afterHash": "677465a76e27af4fd2a503584b71d85695ab7b0a4266cc312cbafd6a802015fb",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430600_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430682",
+      "name": "临湘市",
+      "beforeHash": "16e693aafb5a86b95c169a6458babe6604cbfa792dfa28aa20fd34b1dd384d84",
+      "afterHash": "8edee859e8cd4af7064206f51fccb4048b082e4eb22f194a9e7533f54838389b",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430600_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430702",
+      "name": "武陵区",
+      "beforeHash": "4971d243bae494e02a0f721af797ac10d7bc54826ac6169877506a3fc64bd02d",
+      "afterHash": "796ba61e34af53b00d344455bb9a1dc4271fcbf69abf8f27037daff588aad559",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430700_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430703",
+      "name": "鼎城区",
+      "beforeHash": "b30c708510ef0d7ace541d6d9252ab1f237ebba33c1758c610fdede65f5efa10",
+      "afterHash": "b5c441c676518863cc641d493a3b3865f7c06b565c167df5f6b414da228b2cb8",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430700_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430721",
+      "name": "安乡县",
+      "beforeHash": "dbe1e393da9707d3fe1021449f77342442d66b05034f266e9d85bdd0136e49dc",
+      "afterHash": "493b5471a280e0eb8274dc7b4ee0c286947e627952b3126fff0d60fb1ed52113",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430700_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430722",
+      "name": "汉寿县",
+      "beforeHash": "ff25d994855983ac16d139316b3765ab9a09db17bc8cc822b51a357eb1179d51",
+      "afterHash": "5d166d41dfcca188be82092a7cb305050531098e38dfc58b39b235b3a1391bd5",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430700_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430723",
+      "name": "澧县",
+      "beforeHash": "787c5ec50a477e2a678a69b0eeecd93bc4532e525662490c87944eb1e65d283e",
+      "afterHash": "985ed3930c3a57a9864f46e96d001f14647ba3abdb3e630cd1135f1d0ddc6f4b",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430700_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430724",
+      "name": "临澧县",
+      "beforeHash": "63b19e317b234f8d58214707ecb30d291bbb7e4fa2f3321024316507d396a6d0",
+      "afterHash": "838139ba6e25d66726d0103febca7f7f841d2dfac2dc21be64f8ed183dcd6cc1",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430700_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430725",
+      "name": "桃源县",
+      "beforeHash": "75b9cf68f0e0a9b397260bdbfd04614028fbb28a5d14db485169d3abe6e0a38b",
+      "afterHash": "f7fde9248ca312c129e9fa6420f9ee115cbf6ed00d46648cf5b98ada1cdd381e",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430700_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430726",
+      "name": "石门县",
+      "beforeHash": "b4801b348003a599cf3671cc68ad84dc86ed7e85bc7a99b525a929fbce3a5a98",
+      "afterHash": "b730bf779b060c8512004dadb80845bad6ff91f97b74965f854dbaf60b2f01e7",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430700_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430781",
+      "name": "津市市",
+      "beforeHash": "06f2dd3a0ba6a454790618c3d72157b34648720cc1b7435f990003a991d5694b",
+      "afterHash": "ff93e309157efb8f7e094455e26e4fbbb1c66cc3681b306b9ae4819af543d040",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430700_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430802",
+      "name": "永定区",
+      "beforeHash": "230dbc26c42ba0fed82fbfd43c9d35f5158ae1a9c2dd990733bad6d416f7d101",
+      "afterHash": "1450f0ce0af3bc2cb26fe99adf6c456c4c765800518d98f0917d88bba156a465",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430800_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430811",
+      "name": "武陵源区",
+      "beforeHash": "69814f00423ad576c518eb2e1990cfbe5d0848e8dd7de903af22aabe95e45235",
+      "afterHash": "5454ca0bd363d76f63cdfea543001e4a0e0b00cc0447bccf8507775022d22f6b",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430800_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430821",
+      "name": "慈利县",
+      "beforeHash": "23bbccd3c30ae2db1f6a1520aeb60aa9763106b3f66ea86d6219e3e2f5372c3b",
+      "afterHash": "ac6e46b51700aa7a5c897f296a77ec232fc023d1d2cec52701019ece222b8370",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430800_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430822",
+      "name": "桑植县",
+      "beforeHash": "fef1510349b47e1a09d101c13f6c0953ea529c5b316babbba7b3f4b5ca9ae2ff",
+      "afterHash": "815d08fe2190614c0c584826b936da2e2a08a53c86af59456e5330d81c01223a",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430800_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430902",
+      "name": "资阳区",
+      "beforeHash": "afe7e7162a853b3000bfd025c85c611c65b19b36f66fabb551e0387dd419743d",
+      "afterHash": "b385b29a1e5de8a78dae684b7f98d95bf6cb36ced17d128a6e6138097b306622",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430900_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430903",
+      "name": "赫山区",
+      "beforeHash": "8a5a21f4f9e0917bc3c6cde0dc121ae683a90fa427a0137968ec0b3f97eca8b0",
+      "afterHash": "fd0c8b09b9ad2cd2b89817113a9c2fef6de1b9f48a62e8a6bb8d7f668d1ece25",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430900_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430921",
+      "name": "南县",
+      "beforeHash": "3a3c44b6b604afd1ba33ec206fba9a004e09137cc9730d4c5127e63791142031",
+      "afterHash": "b4b7d0f491a22836c20471c322d01e289a0a2833311cdd764759fef691a147e5",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430900_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430922",
+      "name": "桃江县",
+      "beforeHash": "3deda1860f623b7e844ac2963a39e2b7d2296483da024f49b9eb2c878a1e31a2",
+      "afterHash": "83ff24aa2fdf0460aee7ce09c594bc896ab9d3b357fd18d2f4d586385089779e",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430900_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430923",
+      "name": "安化县",
+      "beforeHash": "603e281d186ce32420127cc60d54b12ade99920992d999ec73fa38a2c58f1e36",
+      "afterHash": "4bc13c857d4009a380131d62f89e90417bba6a620a1e29258b945dc1f6655c7b",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430900_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "430981",
+      "name": "沅江市",
+      "beforeHash": "10da2b67df1d4f42a999829b876b68a2a72b68a584080913034149427edd9406",
+      "afterHash": "25c84919f620feee4041ef1b51523372abbfb284bd8cba21c3bf72b07dad3719",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/430900_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431002",
+      "name": "北湖区",
+      "beforeHash": "e6c18e1f539039cc08919cebbfe9c614b70b40ca4614a921e590cc7b45a776dd",
+      "afterHash": "e14cd75001305ed554e0b3d1355c81173c6d6746418fa5e2f3b6d3c14930287a",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431000_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431003",
+      "name": "苏仙区",
+      "beforeHash": "5c6be59c77dab1fcb881d568ebbfb66a8fdbeee37cb1181aa6f01127ab8b80a6",
+      "afterHash": "9872430d1a4d01595bdc44d6085d844c44a90253b991f6693dc9838effe40b06",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431000_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431021",
+      "name": "桂阳县",
+      "beforeHash": "a734ff47dbd5167d0c70383547eca05cd70e1ceaedd4e5e4a82c58f60319b4d4",
+      "afterHash": "7b86ec74bfea9e9b9ec808a0c53c4b9a1360ec7c9a8d024bb67fde56a264158d",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431000_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431022",
+      "name": "宜章县",
+      "beforeHash": "336d45f6477144a96da1382803aeba9498305cfe866e536c26c676308299be45",
+      "afterHash": "e3bb67a6846e4ecf97ab836da9e123f83561a203df84a8b9845b9f3e5bd863a8",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431000_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431023",
+      "name": "永兴县",
+      "beforeHash": "4ed74dc77f09f282afc112a4f052d53b4ae2d65a359e6395e0f2db98d8503276",
+      "afterHash": "ac34c2da8c8eb47abe929523499c9eb998dad0f8a72026c3135fa321d924021c",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431000_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431024",
+      "name": "嘉禾县",
+      "beforeHash": "919f06cf975fc9c84308596a4c746f78fe99cf0297f604d13982bd1753c4c2d3",
+      "afterHash": "aeb6b46ff60c6085007313405748628f99c9e859b76d47d0cbbe36f9368026f4",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431000_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431025",
+      "name": "临武县",
+      "beforeHash": "d1c0a632ee999ce0af1a99270e3a7349c5d339124b77d5e22a2ec34b57e7676c",
+      "afterHash": "a341f09181412625c69bc79ef96f6933bdf4322dde9e836ab3afdde2cdebf840",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431000_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431026",
+      "name": "汝城县",
+      "beforeHash": "6d151ff56cded9ba2970cdcf195beaa14b185e78c7c216c1872d7ce0f43c0f0a",
+      "afterHash": "90b52aa878b7482f8d76b36483ccbfad91c22d70057a96cc38651c9a2c1398b9",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431000_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431027",
+      "name": "桂东县",
+      "beforeHash": "cecd1f75c146b78e90247fb66ceb7bfa4c4ded773b5ff01639cc0b3103e989e9",
+      "afterHash": "0a351a915545cc47fcedc125902b4fea7cf1855b7f695e03c81f933c75d0b549",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431000_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431028",
+      "name": "安仁县",
+      "beforeHash": "cc7b93f6f1acf9325610e81d2f2cdd121fa503edbc21e9e95e3b8eb66aa01781",
+      "afterHash": "91cbc819d9946d3f04da76a48efe9504ad6e79d0c5cacebfeafbcd95a016b738",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431000_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431081",
+      "name": "资兴市",
+      "beforeHash": "e8646ed84d1153a81ed0dc860a3453cfae30acd204f4cb080345f0f04965154b",
+      "afterHash": "39b069bf2b5a8f2b5b36c835f927592c404a509d8aac36090acf01d809920dc9",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431000_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431102",
+      "name": "零陵区",
+      "beforeHash": "d00e95cc678cef58dd9603fc374e29a5510a441de076e92eafd8b37cf71889b1",
+      "afterHash": "dda8a4cb54fdabd2f7c53cca941d07cf2e51f9890b0c89bb1a0416f202f267d6",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431103",
+      "name": "冷水滩区",
+      "beforeHash": "3a2d3d7e3f886bdc9131793287a35aa314ca32bd580b4adb5625648e30b6dfac",
+      "afterHash": "b1b4f20ae9279ba58319610e4ce7831d1a36fa03e0549dfb692ae61db898745a",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431122",
+      "name": "东安县",
+      "beforeHash": "1bd3847f6ee45f817c70fa91839eac39eaa0d2f3746e81c9b7e3efd27a4373f6",
+      "afterHash": "59d78b84279eac31a1a558769fb2cc748104206e84691afe723dcd0e2de5396e",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431123",
+      "name": "双牌县",
+      "beforeHash": "94d79babda6f4ca60fc968657197ab3a753d416481211e9894f0d00e0b9c7696",
+      "afterHash": "7ca727bcc6c8184df7ba49e170889da554781c33a92f12510d1bd89681071346",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431124",
+      "name": "道县",
+      "beforeHash": "edddc527bf75aeac2c20fc61b1dfb62bd0ab43be6c87bd4ded65451e67a1d452",
+      "afterHash": "8f92e1c1e1bc73bd48359948ab99141ae3f4cc4bb3087ce82bd3486a1985a941",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431125",
+      "name": "江永县",
+      "beforeHash": "5455dc28c2f513e29216f58918db0e4e52cb8949438a96b970e145adec2b268f",
+      "afterHash": "bcf21c7397c20118b4268adc0e4da380cfe1113757cdbedef0dd3245ef6e0f9d",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431126",
+      "name": "宁远县",
+      "beforeHash": "07accbe1fa2815ffc2b18462dcf3cf1ea56542134776a56918abf0ba0597d2f0",
+      "afterHash": "a6ec6286330ad7142003a7e00421f267b8428d187d32580a9295a2970048eb1a",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431127",
+      "name": "蓝山县",
+      "beforeHash": "3ad1f177ba00e36ba4f5b682632aedc7925a9c97dc6bd30ff81b1705af410636",
+      "afterHash": "91030ad6fc7b1e547cd9d749f49aa6fdab0441c54815a614fedcae0402c108d3",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431128",
+      "name": "新田县",
+      "beforeHash": "7555afca2a6e18cca5c6227393cba5edcb12689bafe26fed90e4ddeb6ab09d46",
+      "afterHash": "c5f3cc375620fcc107c1d8d803aef98b771ee986355e96080c9c072c38868166",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431129",
+      "name": "江华瑶族自治县",
+      "beforeHash": "c99bc17fab77df11bab569abbf2619d6b8d5b82fc2dddc04556e5aa891fc2a10",
+      "afterHash": "2dabfff7305a26635cba5e4b044bef2506f485a0978d3b9d4cc4db86e670c4b5",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431181",
+      "name": "祁阳市",
+      "beforeHash": "df7d502dbb286568fb42f0632f46fe95125c6fe57fea3be68febe99068e113af",
+      "afterHash": "c90ee03528ab7e05657016ab867308cb9c997a1c4aeede1f33f2c52e6ffd0cb3",
+      "beforeSource": "https://restapi.amap.com/v3/config/district",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431202",
+      "name": "鹤城区",
+      "beforeHash": "dd5c4eff81da8902a1e787f1e12f48842d0daa297a90f2141367e4bdb89c24ab",
+      "afterHash": "5648e4131cf5c989025db6bad25295e009bc9d6f41bd119f60c7a2ef115d8c43",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431221",
+      "name": "中方县",
+      "beforeHash": "f0233f9e9753743dc6022c8df282562e14212ebf0ab8b45636677c4291e18ffd",
+      "afterHash": "ef0ff86ec8e24e043a86b0f52b5da2f12c029c34947fae45351f077e504bbb27",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431222",
+      "name": "沅陵县",
+      "beforeHash": "c024c7deabef87d85457d32907c2f12fb1ef5a0e28cfa4449c210e4d4e49fe99",
+      "afterHash": "f85d38cca24a16e7337d24ceddeb8df3f87ca12454cef503a49697668b259873",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431223",
+      "name": "辰溪县",
+      "beforeHash": "eb097c6110c3ba63c51f73c5863647ab4fd44fe358af646130880b1d104e599c",
+      "afterHash": "edbe04933f82dae83c14379394dfc3aa3387103a4782f77a8b006d3b462c418e",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431224",
+      "name": "溆浦县",
+      "beforeHash": "9aa2a1f9c5a319196fc4dabb481cc2a41a8dc50a16f858c18003f4ecdd3ef1bb",
+      "afterHash": "0c2f71af5bda08592c1d7c6f901252345d6deaf5dde87947fd3e0719cd9a5602",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431225",
+      "name": "会同县",
+      "beforeHash": "f66ef66a7e85ded5dfb79c7567fe775e979cce7c05c747fbc7f50694dc7853fe",
+      "afterHash": "17eb42fde612ed3e37df74c53f59c112fd51f4d5be218c52561e6f1df9f8c323",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431226",
+      "name": "麻阳苗族自治县",
+      "beforeHash": "db92c6d091714475e117bf3ae9e58db2eba093a4c3462cbcd8eb0fb87e8976a3",
+      "afterHash": "5efa1cd957fc82690c64f8cca83e4a5c4b2824a7662355a992e8a7b0328d3ffb",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431227",
+      "name": "新晃侗族自治县",
+      "beforeHash": "12029f9bd8f688b6cded490a9130a2025375bf2d87e4c5e85e2043a0b9e17546",
+      "afterHash": "67477d493e931230981f6521436ba1e0aacddb671d0ed2e5dc4ff606e959ab69",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431228",
+      "name": "芷江侗族自治县",
+      "beforeHash": "c5e609ea499db285a200ea04397da87a95d9c9600b95ba0efb58f8f07220fdb5",
+      "afterHash": "7ce4ae73d70ac82017791c7ed213acf71a056be2a382ebf77ae81978654ba10d",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431229",
+      "name": "靖州苗族侗族自治县",
+      "beforeHash": "a34bd4d926c77ede356bbf0be9fcb40f39d9618c3d9eb11ccb0afffa9aeff202",
+      "afterHash": "6d01d80a456eedf0a8397efe232b9e24d62392a7c02e0fe56da82595ab2594e8",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431230",
+      "name": "通道侗族自治县",
+      "beforeHash": "649ecaa9779d7aadf110440bf41c46d6949ae127c06ff309728fb5413f4a6f2d",
+      "afterHash": "3a498efd4ae3f06fc5fe8283e334a89dad64da07882732447e2a77a6f39fc05b",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431281",
+      "name": "洪江市",
+      "beforeHash": "b2f893303b4e873dca2af3812c6bbc1b87d5b3e919e759f56609d9c3ae7c22b3",
+      "afterHash": "c6f522ee3310bad7493e39750d900d07a7d39a073a809f9b44703d890355a4a9",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431200_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431302",
+      "name": "娄星区",
+      "beforeHash": "2499c423b8b48606216d0c0c6c8aeb5d9302cf15fb32f3b891a4b3a25e510783",
+      "afterHash": "2cd6effb1b10248fa85a91b8c1595368adf09335d923c3100e4a7a204bd16bad",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431300_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431321",
+      "name": "双峰县",
+      "beforeHash": "4e14ff48f643abf6f864ae2f2fe50039f052bf814361ed9bd9519972899a9c5f",
+      "afterHash": "c6214f6b00151a11c87b953d23d5365cc61f085b8c6fc409677c0a5fa95208d5",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431300_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431322",
+      "name": "新化县",
+      "beforeHash": "cd5974ac93d630d21dcecd4d69a61c3fabf91505bd8a0249beafb2dc73aeb8b7",
+      "afterHash": "3e4bc4aca4b8157f35bf6eca8963ac99506e9f746a5aa1237c20d84391fa72a8",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431300_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431381",
+      "name": "冷水江市",
+      "beforeHash": "b5e200f1b5a3a38cb5b04389d863cb0f610b17eab0989589efa4715ffa4d1710",
+      "afterHash": "afe446db738f1f53d43adfcdc376dca47e6739b192d2adca82d8df871a86e169",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431300_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "431382",
+      "name": "涟源市",
+      "beforeHash": "f333c0d9909fc252280ce2fc13e90b1be2d3badfa3fad74983f32009ef18c337",
+      "afterHash": "2f433bae003418dafc31c71cd1372b986af06b095d5be502fad003b0da6fb8a0",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/431300_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "433101",
+      "name": "吉首市",
+      "beforeHash": "8cdbf229543e48f4c1477a374bc88de508797d72ef92022c5f4a36b2e557a84f",
+      "afterHash": "494136703c3ba4ccaf2cd92ae81290b10f585149a900f0834a7cdbdde1479fef",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/433100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "433122",
+      "name": "泸溪县",
+      "beforeHash": "8d099fed380259ea1b70e51632ddea83672a2a230c71cbfeaf1eee0f705d8a99",
+      "afterHash": "621c82de0bf91cfb98a48fe5ebb4e13a07f0cba07cd5e848d0720e42571d2211",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/433100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "433123",
+      "name": "凤凰县",
+      "beforeHash": "98d099db08ffb6184a545f42cd61ac5a7b3bfd7610a2a1d9626116a9c77afd00",
+      "afterHash": "170c98c047f047c2ac92d5710478f149d58d9121cdfa9bef8c8173b386eca242",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/433100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "433124",
+      "name": "花垣县",
+      "beforeHash": "816eb9207f26205e1e78390d23b0fa83d653ddf8c01b1e498c368a1f9de4abf5",
+      "afterHash": "87b056461fee1fbe898e02d1201f02f163765d1ecf8b7caccd36a81205812fd2",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/433100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "433125",
+      "name": "保靖县",
+      "beforeHash": "c78eab856872225106db62b2c036105cb715561e057b927da48bb40bf4a12d1f",
+      "afterHash": "7a02b6db87dc4c45df2e9d4b518d0d1af07c57d8c6d02b0b4c32b06f8d4cf292",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/433100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "433126",
+      "name": "古丈县",
+      "beforeHash": "7ebf970441afbf9cef6b1c3874f6840d830770d014ab0afc18af9fe795b65f9f",
+      "afterHash": "7ece7d7701a328047bdc4af4362ce288aec5948a33e4523ccf67c19bf26f0f76",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/433100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "433127",
+      "name": "永顺县",
+      "beforeHash": "227e09a0066cff12665dfbf4e6b7c1773b5291c4d8a3390004183f9b562ef647",
+      "afterHash": "403d25ec172dfeed69a316032f93c52807317001d47effbb0001ebd6214565cb",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/433100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    },
+    {
+      "adcode": "433130",
+      "name": "龙山县",
+      "beforeHash": "7a0a090d8add2c25e36b10ea5606ce4c7757284714632181c98db94ce02b090a",
+      "afterHash": "56ae4430f4e6eb9cb6caafc298d5fa69b5a3904036f00717e386aa8175f95d97",
+      "beforeSource": "https://geo.datav.aliyun.com/areas_v3/bound/433100_full.json",
+      "afterSource": "https://restapi.amap.com/v3/config/district",
+      "reason": "以统一高德行政区多边形替换DataV展示图形；逆地理编码与原始POI一致，不修改站点编码或坐标。"
+    }
+  ],
+  "existingRoadOriginsOutsideNewBoundary": [],
+  "notice": "商业地图行政区数据交叉核验，非法律确界或实地测量；历史边界、原始POI及冻结快照保留。"
+}

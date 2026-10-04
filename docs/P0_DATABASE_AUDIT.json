@@ -1,0 +1,1307 @@
+{
+  "boundary_revisions": 244,
+  "poi_review_events": 446,
+  "official_statistics": 0,
+  "charging_stations": 12601,
+  "latest48Snapshots": [
+    {
+      "id": "02767901be264a8ba2621082494dd7d2",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "confirmed",
+          "classification": "dedicated"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "620864527e456f1dab3834418fcd80f9856d6bb0eb12b6a5e90702c962c65912",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:15:01"
+    },
+    {
+      "id": "0417cc132d154091a0e089b6d0aeb577",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "classification": "public_candidate"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "3e8bf8afb34b2b659df7fb3fd6505a052bd63ddb0aa545c2331cf4a8b29df423",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:13:45"
+    },
+    {
+      "id": "14acd3d2150b459389f4f05cd62d11c2",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "unreviewed",
+          "classification": "personal"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "f5b5c1fb372a906f106c4b7ecd830b9634b864a5c762756cbbb9cc69a092ee4c",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:15:31"
+    },
+    {
+      "id": "14ed8f2b691448e4be54442b593d3e34",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "needs_review",
+          "classification": "unknown"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "e616971d78e7fa1c144d92a84c2d5cadadd4025d53950f9213878fa1e151fca5",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:17:14"
+    },
+    {
+      "id": "16e6515b2ab740898f38deeba613ca1d",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "confirmed",
+          "classification": "personal"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "ab676e4f52b6bd6c611267eee3d4fed2e4c08920b86a2dbb347dec394974cb72",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:15:36"
+    },
+    {
+      "id": "1787df872e414ec6b1217b9f204fd7ae",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "confirmed",
+          "classification": "unknown"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "030cd2bfcaa17e2cbd3184e6a43ce05785aa1eb169f59a89d78c9fd194335d82",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:17:09"
+    },
+    {
+      "id": "1ddf2e77d6694aaca19f9ba16fbeac7b",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "needs_review",
+          "classification": "personal"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "d11387c3b4e4f595e6fa860327cbfe2481c265ab420201b5810ec186f6e36f4f",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:15:51"
+    },
+    {
+      "id": "2ce0510f5f254824a61053206ead4e99",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "unreviewed",
+          "classification": "public_candidate"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "25ee138382c3a896f23d63d7b5d6ef583d0191e047380a3e48f71d28f484277e",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:14:10"
+    },
+    {
+      "id": "35136bc561c54a94ab07295e2eb08a93",
+      "parameters": {
+        "filters": {},
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "0b0a9d134d4d1f90292bc7b5e8f60705a9675dbdb105524ffbb83dadb4663c58",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:12:21"
+    },
+    {
+      "id": "360052790e314d5bbf294f6f107550b4",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "needs_review",
+          "classification": "suspected_closed"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "1658bc442adf27dd74097acf143a8580c0e27c6b4e0185cb9ceeb193be52dfef",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:16:32"
+    },
+    {
+      "id": "39aad8d49ebe4bf7ae4e1dcf2d9bdacc",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "needs_review",
+          "classification": "personal"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "cab654dabb94cafec9ba8212fe8ec14d893c689d355508d16a220ead856ac588",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:15:46"
+    },
+    {
+      "id": "43b23908938d49c188047bbc66727cce",
+      "parameters": {
+        "filters": {
+          "classification": "unknown"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "8ffb1746dc287229da897ff59368fd03a1f3580991a98735ed73e94fb1f64a8a",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:16:39"
+    },
+    {
+      "id": "4d18e64664b34950abe237c86069a064",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "unreviewed"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "df9b65729a251089b868d9192046a55f5a4ce8340332e59762df5ed03a05edd1",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:12:50"
+    },
+    {
+      "id": "4e412b39d51c4014a803a7b0b1808a60",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "unreviewed",
+          "classification": "unknown"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "2bfe2e6fcd32b962ef12ceb54230eb908800a3151007c02acb59653c578eada0",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:16:53"
+    },
+    {
+      "id": "57f6b84e5747413f9aa36cc60eebaba2",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "confirmed",
+          "classification": "public_candidate"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "6918984795cec944c63624dbe5c84d8af46fcf0e40aab2a0a8b69563683eb7d2",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:14:15"
+    },
+    {
+      "id": "5b2aedc0a69349959478959e09c84265",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "classification": "suspected_closed"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "d5435071ceb0555e25bb7c9b9dfd3b3afb446485fc11fad3c46518fadbfd46b4",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:16:02"
+    },
+    {
+      "id": "5ea8c4eb32c44598a06ac6ac05124dd9",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "confirmed",
+          "classification": "unknown"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "88aaf03d03737ea52659a34d9776114b634d6701381392c092ae38f1e35c439d",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:17:04"
+    },
+    {
+      "id": "6422a5692faf48ab87da01ed063ed9f4",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "confirmed"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "082b9926bde86644bfcedee49c981cd2d82c7a1d16bc7fe24e5451398cdacecb",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:13:03"
+    },
+    {
+      "id": "650073e5fb5c47bd9c3e91b875a53982",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "needs_review",
+          "classification": "suspected_closed"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "74c7800bc7710dadd904fe3ce4b89736375af2ba28a5aced677824489239bc9b",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:16:27"
+    },
+    {
+      "id": "6586566b45a944d198873c2d99a87b40",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "unreviewed",
+          "classification": "public_candidate"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "17457a561d66e3c55af00ddc0d35f4c97e727ff22f70560f8bf3f90668dd4605",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:14:05"
+    },
+    {
+      "id": "65c76453df8b47d495cc2d26e1f1eb63",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "classification": "dedicated"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "f87e850ec60615198fe743cffb19d19650cb7e26887e608ab58e14662671b29f",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:14:41"
+    },
+    {
+      "id": "68e6a3b703c64a06a51603e6f9c07a32",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "unreviewed"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "efd6e5048da9106e9ae69093b1ecf369e62795c18fe445a7b7d980e260adbfb5",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:12:58"
+    },
+    {
+      "id": "700b1b4425ab4ca0808dd98a23c631a8",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "unreviewed",
+          "classification": "dedicated"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "fd33856d19ef7511056b86dc8fc4b961b3af0fe6b8dbe30d29bc71dca0ff2140",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:14:46"
+    },
+    {
+      "id": "74f299e91757407c9c01e7e84b651762",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "needs_review",
+          "classification": "public_candidate"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "a8ac3ab73ccbd76c69f99875577e73babe3475a9b3395ce5b40031d0113ae547",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:14:25"
+    },
+    {
+      "id": "789b2b11212e4524ab15b2ec7cb67753",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "confirmed",
+          "classification": "suspected_closed"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "6e32088175dee3cf39c46fcb1d383992d16729104d95621cb869808ef8d4504a",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:16:21"
+    },
+    {
+      "id": "7ae8573a2a2b465e83b322cfb546bfa3",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "unreviewed",
+          "classification": "suspected_closed"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "476681698f50cf8d40fa1fe665365d02c1a97c84869ce1732b9d4b9c23785523",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:16:07"
+    },
+    {
+      "id": "80b9eb8a07fa4832b30e3cc3dbe0af1d",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "unreviewed",
+          "classification": "personal"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "ce91987d013ba914f22a878bc0388045ba8d56430afdb70d398813161f6df115",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:15:27"
+    },
+    {
+      "id": "8988078a5ef74101a2f4165c579a4ca6",
+      "parameters": {
+        "filters": {
+          "classification": "personal"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "eec7675ab3ffc836f6c82884f033d098935a8bd2295418971d5d852db8aa30b8",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:15:17"
+    },
+    {
+      "id": "8cf2148271f94f8087196abd7f5f594d",
+      "parameters": {
+        "filters": {
+          "classification": "dedicated"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "19fa4e7a930d0d858feac3345d8f7f590bbaa25cfe451f71eb6d33a11bbbc5c9",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:14:36"
+    },
+    {
+      "id": "901bee105ef3425ab45a3fac49999a61",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "unreviewed",
+          "classification": "unknown"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "a985c35282efc91c7aaac66183d55405573907a9e8188191f0775ede92067047",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:16:59"
+    },
+    {
+      "id": "945d44e025304a2ea7d4a417f810f668",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "classification": "unknown"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "4e376deab22deba38587ebf051102d1f5d1ac15ef7bd651c87cc4bf00e927e23",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:16:46"
+    },
+    {
+      "id": "9f3b6807f8a641c7ab61cb049ba9f892",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "confirmed",
+          "classification": "public_candidate"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "061e547864a345383ddfe3e99e2df06c4fdab8e92fca93246a4aaa570a47b184",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:14:20"
+    },
+    {
+      "id": "a02011fcde3b4d50bd46e116cad89b0a",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "needs_review"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "627e82de480652dd5f85863b5a1b8e6bb8c8947219b08bb49633ca47413512c8",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:13:14"
+    },
+    {
+      "id": "a4bcd1ad0e8748a3aedb649ca7ac623a",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "unreviewed",
+          "classification": "dedicated"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "99db7fce6230789857c3a69226a35357c021f9be57337197eaf06d73bc2c1079",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:14:51"
+    },
+    {
+      "id": "a755e6b235624f02bfdf064298bf1df4",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "needs_review",
+          "classification": "unknown"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "692c38ffa4d85f2c69a6fe1c9bb04967ced42a64f1727b8a4dfb15c081a9274e",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:17:19"
+    },
+    {
+      "id": "ad220f5930b94c2b8e6a9b954151e3f8",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "confirmed",
+          "classification": "dedicated"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "429ea7e72d7b0ccea0c56887979b95bf81844fe645f8bd9e9d1b24db5c9cff64",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:14:56"
+    },
+    {
+      "id": "ad89b62031954576a198cee52596b610",
+      "parameters": {
+        "filters": {
+          "needsReview": true
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "339debd393d51890bd136697cf7af71affea2df1ce5113539f59dfc10ff42ebc",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:12:30"
+    },
+    {
+      "id": "b00a64520e6a4d78a9adabbee18daa4d",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "needs_review",
+          "classification": "dedicated"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "3afa66f9c4f6167c08cff78db6deaa13ea3bc12e296a28b78c9e69439d52e7b6",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:15:06"
+    },
+    {
+      "id": "b387dae6cf31497b887f53f81d2acd1f",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "needs_review",
+          "classification": "public_candidate"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "183e53bc3af125d5f63a850e53aec655a066678496f9983ef3f61f683cff45b7",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:14:30"
+    },
+    {
+      "id": "b929b4f297b34c4eb41ed2c1bb4d420e",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "c78767f20ab6fa558ab840ef153f8d892e542c0a6be109e5f9873b5834ea5317",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:13:20"
+    },
+    {
+      "id": "d6256ae4638048f49f88d501599604ab",
+      "parameters": {
+        "filters": {
+          "classification": "suspected_closed"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "aa7d2d2c510e9f031f37754ff15052b9b0ede84b727b146f9dfa547524c7beb7",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:15:56"
+    },
+    {
+      "id": "de36c3b9ed064a65b1c5654a002ad377",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "confirmed"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "6308d996d51734bd0bf0389f60ee4103d14cb57b1e9fa98077e6b2f3b7d35900",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:13:07"
+    },
+    {
+      "id": "e01b353f5581494aa03c4e9636d7b412",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "needs_review",
+          "classification": "dedicated"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "d89911d78be20eda3a67850810b0c52204d155a11115e24c553ddc3b20b7374a",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:15:12"
+    },
+    {
+      "id": "e1ecfc944b5243cda52564f6301fe526",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "unreviewed",
+          "classification": "suspected_closed"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "1b46d9979382e957b9def052fc68a98343c3c175379e5eff902d945b0ace455d",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:16:12"
+    },
+    {
+      "id": "e2cc69dfbe8948799a4182282cd3909e",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "classification": "personal"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "6141ebc49dd2842d13040d3f2401bf1fc6ed2891e0d014d57fe30b4477e6c458",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:15:22"
+    },
+    {
+      "id": "efb399e4e1f9462aa6f6ace1c39c035a",
+      "parameters": {
+        "filters": {
+          "reviewStatus": "confirmed",
+          "classification": "suspected_closed"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "85b965277f8373c1875855e0f61523d94ac6215e1b58bb687d338817d1f9a2e0",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:16:16"
+    },
+    {
+      "id": "f4b14b22c8884a58bb4e96e2dd3688f7",
+      "parameters": {
+        "filters": {
+          "classification": "public_candidate"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "382a6348d7edda271ec3366717692226685e9ef83ffdc51482594eaa928e8c45",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:13:40"
+    },
+    {
+      "id": "f5fc84da54364d88b29d03cd7bce2abd",
+      "parameters": {
+        "filters": {
+          "needsReview": true,
+          "reviewStatus": "confirmed",
+          "classification": "personal"
+        },
+        "radiusM": 1000,
+        "gridStepM": 5000,
+        "sourceHash": "3e451e78f63d1f87bdfd85459b0757c36369bfe4139744e015f2a4b9d450fc43",
+        "bufferModel": "ellipsoid-scale-ring-on-GCJ-chart",
+        "geosVersion": "3.13.1",
+        "sampleScope": "all_retained_pois",
+        "pyprojVersion": "3.8.0",
+        "bufferSegments": 256,
+        "metricPipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=laea +lat_0=27.5 +lon_0=111.5 +ellps=WGS84",
+        "shapelyVersion": "2.1.2",
+        "bufferEllipsoid": "WGS84-scale-only-no-datum-conversion",
+        "coordinateModel": "GCJ02-chart-LAEA-approximate",
+        "countAssignment": "source_adcode",
+        "displayToleranceM": 25,
+        "bufferMaximumChordSagittaM": 0.07529816085549701
+      },
+      "inputHash": "3c3b4d7c4f485b536b0cf3a9bc7abbc6b89cb2cd5daa24d3ce390ac0d3c1ec99",
+      "boundaryHash": "ae47e8743bca7407c679f0233138f4846bc350c58c6fdee7e83d293a3387d3a5",
+      "computedAt": "2026-10-04T12:15:41"
+    }
+  ]
+}

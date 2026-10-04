@@ -1,0 +1,613 @@
+{
+  "generatedAt": "2026-10-04T03:56:02.354618+00:00",
+  "readOnly": true,
+  "datasetCount": 12601,
+  "publicCandidateCount": 11720,
+  "reviewClues": 875,
+  "cities": 14,
+  "districts": 122,
+  "snapshotId": "da4dd7cd5f8840a2aad8ed0fe53e8100",
+  "algorithmVersion": "sample-spatial-v1.2",
+  "stale": false,
+  "qualityRunIds": ["77751da1e930432394ebe8325068c3b6", "f8a52ae0e1ea44528ffac48b4ab073d6"],
+  "frozenInputHash": "eeec62dd243d11a8b97863a04ed1d690466a3360df6a3c66f02f8616b3d59b7d",
+  "assignment": {
+    "notice": "行政区数量按原始adcode；空间网格按几何归属。错配保留原记录，不自动改址。",
+    "evidence": [
+      {
+        "poiId": "B0J25KHU6G",
+        "stationId": 264,
+        "sourceAdcode": "430103",
+        "geometryAdcodes": ["430111"]
+      },
+      {
+        "poiId": "B0FFL9P7OP",
+        "stationId": 1755,
+        "sourceAdcode": "430202",
+        "geometryAdcodes": ["430203"]
+      },
+      {
+        "poiId": "B0KDJ7BT7Z",
+        "stationId": 1819,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0JKXBPBT8",
+        "stationId": 1820,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0JBO6LNQN",
+        "stationId": 1831,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0M6PPKRKM",
+        "stationId": 1850,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0IBRNN6IA",
+        "stationId": 1852,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0MAVD5K2P",
+        "stationId": 1855,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0JK9KCZ9L",
+        "stationId": 1858,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0HRF531LZ",
+        "stationId": 1860,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0LDXXIBAA",
+        "stationId": 1883,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0L1YZDVXS",
+        "stationId": 2900,
+        "sourceAdcode": "430321",
+        "geometryAdcodes": ["430302"]
+      },
+      {
+        "poiId": "B0MRNA735J",
+        "stationId": 3284,
+        "sourceAdcode": "430408",
+        "geometryAdcodes": ["430406"]
+      },
+      {
+        "poiId": "B0J12S3WQD",
+        "stationId": 3396,
+        "sourceAdcode": "430408",
+        "geometryAdcodes": ["430406"]
+      },
+      {
+        "poiId": "B0J6HZDVC4",
+        "stationId": 4498,
+        "sourceAdcode": "430581",
+        "geometryAdcodes": ["430525"]
+      },
+      {
+        "poiId": "B0LDXR9WB1",
+        "stationId": 4499,
+        "sourceAdcode": "430581",
+        "geometryAdcodes": ["430525"]
+      },
+      {
+        "poiId": "B0J6HZEI6V",
+        "stationId": 4504,
+        "sourceAdcode": "430581",
+        "geometryAdcodes": ["430525"]
+      },
+      {
+        "poiId": "B0MGLZMUAL",
+        "stationId": 4508,
+        "sourceAdcode": "430581",
+        "geometryAdcodes": ["430525"]
+      },
+      {
+        "poiId": "B0LK6RLWD0",
+        "stationId": 4894,
+        "sourceAdcode": "430611",
+        "geometryAdcodes": ["430621"]
+      },
+      {
+        "poiId": "B0LK6RM2TJ",
+        "stationId": 4898,
+        "sourceAdcode": "430611",
+        "geometryAdcodes": ["430623"]
+      },
+      {
+        "poiId": "B0MB6HNM1V",
+        "stationId": 4905,
+        "sourceAdcode": "430611",
+        "geometryAdcodes": ["430621"]
+      },
+      {
+        "poiId": "B0JKOBJMT0",
+        "stationId": 5460,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0HKDZW842",
+        "stationId": 5468,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0IU2YMN7Y",
+        "stationId": 5482,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0JBLLSFOG",
+        "stationId": 5506,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0LKO7HE99",
+        "stationId": 5538,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0JBLLQXOW",
+        "stationId": 5557,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0IBRNNEGX",
+        "stationId": 5588,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0L0T49KCD",
+        "stationId": 5646,
+        "sourceAdcode": "430703",
+        "geometryAdcodes": ["430722"]
+      },
+      {
+        "poiId": "B0MA3NYFBJ",
+        "stationId": 6124,
+        "sourceAdcode": "430726",
+        "geometryAdcodes": ["430821"]
+      },
+      {
+        "poiId": "B0L2TD3DD2",
+        "stationId": 7372,
+        "sourceAdcode": "431002",
+        "geometryAdcodes": ["431003"]
+      },
+      {
+        "poiId": "B0KG4HSYJ9",
+        "stationId": 7440,
+        "sourceAdcode": "431003",
+        "geometryAdcodes": ["431002"]
+      },
+      {
+        "poiId": "B0MU69WTJ1",
+        "stationId": 7547,
+        "sourceAdcode": "431003",
+        "geometryAdcodes": ["431002"]
+      },
+      {
+        "poiId": "B0L1PP4CST",
+        "stationId": 9104,
+        "sourceAdcode": "431202",
+        "geometryAdcodes": ["431221"]
+      },
+      {
+        "poiId": "B0L066MJQY",
+        "stationId": 9105,
+        "sourceAdcode": "431202",
+        "geometryAdcodes": ["431221"]
+      },
+      {
+        "poiId": "B0KGFP2EC1",
+        "stationId": 10006,
+        "sourceAdcode": "431322",
+        "geometryAdcodes": ["430923"]
+      },
+      {
+        "poiId": "B0I0SGDVFK",
+        "stationId": 11052,
+        "sourceAdcode": "430111",
+        "geometryAdcodes": ["430103"]
+      },
+      {
+        "poiId": "B0MDA61ASO",
+        "stationId": 11505,
+        "sourceAdcode": "430103",
+        "geometryAdcodes": ["430111"]
+      },
+      {
+        "poiId": "B0FFL6BVMA",
+        "stationId": 11506,
+        "sourceAdcode": "430103",
+        "geometryAdcodes": ["430111"]
+      },
+      {
+        "poiId": "B0L2ZZ3CU4",
+        "stationId": 11507,
+        "sourceAdcode": "430103",
+        "geometryAdcodes": ["430111"]
+      },
+      {
+        "poiId": "B0LKN4OU2Y",
+        "stationId": 12000,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0MA95BDH1",
+        "stationId": 12371,
+        "sourceAdcode": "430112",
+        "geometryAdcodes": ["430104"]
+      },
+      {
+        "poiId": "B0MA95BL3U",
+        "stationId": 12372,
+        "sourceAdcode": "430112",
+        "geometryAdcodes": ["430104"]
+      },
+      {
+        "poiId": "B0MA2ZQTAP",
+        "stationId": 12373,
+        "sourceAdcode": "430112",
+        "geometryAdcodes": ["430104"]
+      },
+      {
+        "poiId": "B0JR9DI39N",
+        "stationId": 12453,
+        "sourceAdcode": "430121",
+        "geometryAdcodes": ["430105"]
+      }
+    ],
+    "multipleDistrictHitCount": 0,
+    "adcodeGeometryMismatchCount": 45,
+    "outsideDistrictBoundaryCount": 0
+  },
+  "assignmentScope": "public_candidate",
+  "allClassificationCounts": {
+    "unknown": 533,
+    "personal": 25,
+    "dedicated": 184,
+    "public_candidate": 11720,
+    "suspected_closed": 139
+  },
+  "allAssignment": {
+    "notice": "行政区数量按原始adcode；空间网格按几何归属。错配保留原记录，不自动改址。",
+    "evidence": [
+      {
+        "poiId": "B0J25KHU6G",
+        "stationId": 264,
+        "sourceAdcode": "430103",
+        "geometryAdcodes": ["430111"]
+      },
+      {
+        "poiId": "B0FFL9P7OP",
+        "stationId": 1755,
+        "sourceAdcode": "430202",
+        "geometryAdcodes": ["430203"]
+      },
+      {
+        "poiId": "B0KDJ7BT7Z",
+        "stationId": 1819,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0JKXBPBT8",
+        "stationId": 1820,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0JBO6LNQN",
+        "stationId": 1831,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0M6PPKRKM",
+        "stationId": 1850,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0IBRNN6IA",
+        "stationId": 1852,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0MAVD5K2P",
+        "stationId": 1855,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0JK9KCZ9L",
+        "stationId": 1858,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0HRF531LZ",
+        "stationId": 1860,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0LDXXIBAA",
+        "stationId": 1883,
+        "sourceAdcode": "430204",
+        "geometryAdcodes": ["430202"]
+      },
+      {
+        "poiId": "B0L1YZDVXS",
+        "stationId": 2900,
+        "sourceAdcode": "430321",
+        "geometryAdcodes": ["430302"]
+      },
+      {
+        "poiId": "B0MRNA735J",
+        "stationId": 3284,
+        "sourceAdcode": "430408",
+        "geometryAdcodes": ["430406"]
+      },
+      {
+        "poiId": "B0J12S3WQD",
+        "stationId": 3396,
+        "sourceAdcode": "430408",
+        "geometryAdcodes": ["430406"]
+      },
+      {
+        "poiId": "B0J6HZDVC4",
+        "stationId": 4498,
+        "sourceAdcode": "430581",
+        "geometryAdcodes": ["430525"]
+      },
+      {
+        "poiId": "B0LDXR9WB1",
+        "stationId": 4499,
+        "sourceAdcode": "430581",
+        "geometryAdcodes": ["430525"]
+      },
+      {
+        "poiId": "B0J6HZEI6V",
+        "stationId": 4504,
+        "sourceAdcode": "430581",
+        "geometryAdcodes": ["430525"]
+      },
+      {
+        "poiId": "B0MGLZMUAL",
+        "stationId": 4508,
+        "sourceAdcode": "430581",
+        "geometryAdcodes": ["430525"]
+      },
+      {
+        "poiId": "B0LK6RLWD0",
+        "stationId": 4894,
+        "sourceAdcode": "430611",
+        "geometryAdcodes": ["430621"]
+      },
+      {
+        "poiId": "B0LK6RM2TJ",
+        "stationId": 4898,
+        "sourceAdcode": "430611",
+        "geometryAdcodes": ["430623"]
+      },
+      {
+        "poiId": "B0MB6HNM1V",
+        "stationId": 4905,
+        "sourceAdcode": "430611",
+        "geometryAdcodes": ["430621"]
+      },
+      {
+        "poiId": "B0JKOBJMT0",
+        "stationId": 5460,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0HKDZW842",
+        "stationId": 5468,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0IU2YMN7Y",
+        "stationId": 5482,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0JBLLSFOG",
+        "stationId": 5506,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0LKO7HE99",
+        "stationId": 5538,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0JBLLQXOW",
+        "stationId": 5557,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0IBRNNEGX",
+        "stationId": 5588,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0LA358YAC",
+        "stationId": 5620,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0L0T49KCD",
+        "stationId": 5646,
+        "sourceAdcode": "430703",
+        "geometryAdcodes": ["430722"]
+      },
+      {
+        "poiId": "B0MA3NYFBJ",
+        "stationId": 6124,
+        "sourceAdcode": "430726",
+        "geometryAdcodes": ["430821"]
+      },
+      {
+        "poiId": "B0L2TD3DD2",
+        "stationId": 7372,
+        "sourceAdcode": "431002",
+        "geometryAdcodes": ["431003"]
+      },
+      {
+        "poiId": "B0KG4HSYJ9",
+        "stationId": 7440,
+        "sourceAdcode": "431003",
+        "geometryAdcodes": ["431002"]
+      },
+      {
+        "poiId": "B0MU69WTJ1",
+        "stationId": 7547,
+        "sourceAdcode": "431003",
+        "geometryAdcodes": ["431002"]
+      },
+      {
+        "poiId": "B0L1PP4CST",
+        "stationId": 9104,
+        "sourceAdcode": "431202",
+        "geometryAdcodes": ["431221"]
+      },
+      {
+        "poiId": "B0L066MJQY",
+        "stationId": 9105,
+        "sourceAdcode": "431202",
+        "geometryAdcodes": ["431221"]
+      },
+      {
+        "poiId": "B0HBL5B6Y9",
+        "stationId": 9897,
+        "sourceAdcode": "431321",
+        "geometryAdcodes": []
+      },
+      {
+        "poiId": "B0KGFP2EC1",
+        "stationId": 10006,
+        "sourceAdcode": "431322",
+        "geometryAdcodes": ["430923"]
+      },
+      {
+        "poiId": "B0I0SGDVFK",
+        "stationId": 11052,
+        "sourceAdcode": "430111",
+        "geometryAdcodes": ["430103"]
+      },
+      {
+        "poiId": "B0MDA61ASO",
+        "stationId": 11505,
+        "sourceAdcode": "430103",
+        "geometryAdcodes": ["430111"]
+      },
+      {
+        "poiId": "B0FFL6BVMA",
+        "stationId": 11506,
+        "sourceAdcode": "430103",
+        "geometryAdcodes": ["430111"]
+      },
+      {
+        "poiId": "B0L2ZZ3CU4",
+        "stationId": 11507,
+        "sourceAdcode": "430103",
+        "geometryAdcodes": ["430111"]
+      },
+      {
+        "poiId": "B0LKN4OU2Y",
+        "stationId": 12000,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0LAU57748",
+        "stationId": 12001,
+        "sourceAdcode": "430702",
+        "geometryAdcodes": ["430703"]
+      },
+      {
+        "poiId": "B0MA95BDH1",
+        "stationId": 12371,
+        "sourceAdcode": "430112",
+        "geometryAdcodes": ["430104"]
+      },
+      {
+        "poiId": "B0MA95BL3U",
+        "stationId": 12372,
+        "sourceAdcode": "430112",
+        "geometryAdcodes": ["430104"]
+      },
+      {
+        "poiId": "B0MA2ZQTAP",
+        "stationId": 12373,
+        "sourceAdcode": "430112",
+        "geometryAdcodes": ["430104"]
+      },
+      {
+        "poiId": "B0LR6XHMM1",
+        "stationId": 12374,
+        "sourceAdcode": "430112",
+        "geometryAdcodes": ["430104"]
+      },
+      {
+        "poiId": "B0JR9DI39N",
+        "stationId": 12453,
+        "sourceAdcode": "430121",
+        "geometryAdcodes": ["430105"]
+      }
+    ],
+    "multipleDistrictHitCount": 0,
+    "adcodeGeometryMismatchCount": 49,
+    "outsideDistrictBoundaryCount": 1
+  },
+  "checks": [
+    "count and scope agreement",
+    "14/122 real boundaries",
+    "137 area complements",
+    "zero scope preserved",
+    "real POI ID search",
+    "no frozen inputs or unused layers in latest API",
+    "invalid scope and bbox rejected",
+    "missing boundaries explicit 404",
+    "live OpenAPI descriptions"
+  ]
+}

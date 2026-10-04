@@ -1,0 +1,115 @@
+{
+  "recordedAt": "2026-10-04T02:33:02.809576Z",
+  "stationWrites": 0,
+  "districts": [
+    {
+      "adcode": "430102",
+      "name": "芙蓉区",
+      "beforeCount": 179,
+      "status": "补采尚未执行"
+    },
+    {
+      "adcode": "430103",
+      "name": "天心区",
+      "beforeCount": 188,
+      "status": "补采尚未执行"
+    },
+    {
+      "adcode": "430104",
+      "name": "岳麓区",
+      "beforeCount": 192,
+      "status": "补采尚未执行"
+    },
+    {
+      "adcode": "430105",
+      "name": "开福区",
+      "beforeCount": 187,
+      "status": "补采尚未执行"
+    },
+    {
+      "adcode": "430111",
+      "name": "雨花区",
+      "beforeCount": 193,
+      "status": "补采尚未执行"
+    },
+    {
+      "adcode": "430112",
+      "name": "望城区",
+      "beforeCount": 187,
+      "status": "补采尚未执行"
+    },
+    {
+      "adcode": "430121",
+      "name": "长沙县",
+      "beforeCount": 195,
+      "status": "补采尚未执行"
+    },
+    {
+      "adcode": "430181",
+      "name": "浏阳市",
+      "beforeCount": 193,
+      "status": "补采尚未执行"
+    },
+    {
+      "adcode": "430182",
+      "name": "宁乡市",
+      "beforeCount": 186,
+      "status": "补采尚未执行"
+    },
+    {
+      "adcode": "430281",
+      "name": "醴陵市",
+      "beforeCount": 183,
+      "status": "补采尚未执行"
+    },
+    {
+      "adcode": "430602",
+      "name": "岳阳楼区",
+      "beforeCount": 190,
+      "status": "补采尚未执行"
+    },
+    {
+      "adcode": "430702",
+      "name": "武陵区",
+      "beforeCount": 176,
+      "status": "补采尚未执行"
+    },
+    {
+      "adcode": "430802",
+      "name": "永定区",
+      "beforeCount": 180,
+      "status": "补采尚未执行"
+    },
+    {
+      "adcode": "430903",
+      "name": "赫山区",
+      "beforeCount": 188,
+      "status": "补采尚未执行"
+    },
+    {
+      "adcode": "431002",
+      "name": "北湖区",
+      "beforeCount": 181,
+      "status": "补采尚未执行"
+    },
+    {
+      "adcode": "431302",
+      "name": "娄星区",
+      "beforeCount": 182,
+      "status": "补采尚未执行"
+    },
+    {
+      "adcode": "431322",
+      "name": "新化县",
+      "beforeCount": 183,
+      "status": "补采尚未执行"
+    }
+  ],
+  "probe": {
+    "adcode": "430102",
+    "bounds": [112.976012, 28.17299, 113.043498, 28.198040499999998],
+    "returnedCount": 25,
+    "attempts": 1,
+    "permissionVerified": true
+  }
+}

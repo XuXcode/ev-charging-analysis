@@ -1,0 +1,692 @@
+{
+  "version": "admin-review-v1",
+  "count": 49,
+  "coordinateSystem": "GCJ-02",
+  "metricModel": "LAEA-on-GCJ-chart",
+  "records": [
+    {
+      "stationId": 264,
+      "poiId": "B0J25KHU6G",
+      "name": "小桔充电汽车充电站(长沙市天心区长沙总部基地)",
+      "sourceAdcode": "430103",
+      "position": [113.021377, 28.068496],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430111"],
+      "sourceBoundaryDistanceM": 76.6,
+      "boundaryHashes": {
+        "430111": "42c0ef06e4d4cba148e6ba9108d89147adbc66694939bbdcf2f4e1adddf9a16c"
+      }
+    },
+    {
+      "stationId": 1755,
+      "poiId": "B0FFL9P7OP",
+      "name": "株洲市委党校充电站",
+      "sourceAdcode": "430202",
+      "position": [113.190352, 27.83171],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430203"],
+      "sourceBoundaryDistanceM": 254.26,
+      "boundaryHashes": {
+        "430203": "980e7d8f56ae1e68162facfe68b69326461319d73d62a5ad2f18150bb23473ac"
+      }
+    },
+    {
+      "stationId": 1819,
+      "poiId": "B0KDJ7BT7Z",
+      "name": "汽车充电站(中国石化云龙01充电站)",
+      "sourceAdcode": "430204",
+      "position": [113.16318, 27.883394],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430202"],
+      "sourceBoundaryDistanceM": 935.44,
+      "boundaryHashes": {
+        "430202": "fbef2c9075e84cc371ae9dceafcf509f1635bfd3e24bd8f9509a6fd0ab9ab83e"
+      }
+    },
+    {
+      "stationId": 1820,
+      "poiId": "B0JKXBPBT8",
+      "name": "汽车充电站(中国石化云龙07充电站)",
+      "sourceAdcode": "430204",
+      "position": [113.18663, 27.919027],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430202"],
+      "sourceBoundaryDistanceM": 512.0,
+      "boundaryHashes": {
+        "430202": "fbef2c9075e84cc371ae9dceafcf509f1635bfd3e24bd8f9509a6fd0ab9ab83e"
+      }
+    },
+    {
+      "stationId": 1831,
+      "poiId": "B0JBO6LNQN",
+      "name": "特来电汽车充电站(特来电株洲特来电城铁大丰站充电站)",
+      "sourceAdcode": "430204",
+      "position": [113.156641, 27.879306],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430202"],
+      "sourceBoundaryDistanceM": 191.11,
+      "boundaryHashes": {
+        "430202": "fbef2c9075e84cc371ae9dceafcf509f1635bfd3e24bd8f9509a6fd0ab9ab83e"
+      }
+    },
+    {
+      "stationId": 1850,
+      "poiId": "B0M6PPKRKM",
+      "name": "昆仑网电汽车充电站(中石油株洲云龙03充电站)",
+      "sourceAdcode": "430204",
+      "position": [113.168686, 27.891354],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430202"],
+      "sourceBoundaryDistanceM": 1165.14,
+      "boundaryHashes": {
+        "430202": "fbef2c9075e84cc371ae9dceafcf509f1635bfd3e24bd8f9509a6fd0ab9ab83e"
+      }
+    },
+    {
+      "stationId": 1852,
+      "poiId": "B0IBRNN6IA",
+      "name": "国家电网汽车充电站(株洲市云龙凤凰谷小区公共充电站)",
+      "sourceAdcode": "430204",
+      "position": [113.192526, 27.924989],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430202"],
+      "sourceBoundaryDistanceM": 280.44,
+      "boundaryHashes": {
+        "430202": "fbef2c9075e84cc371ae9dceafcf509f1635bfd3e24bd8f9509a6fd0ab9ab83e"
+      }
+    },
+    {
+      "stationId": 1855,
+      "poiId": "B0MAVD5K2P",
+      "name": "国家电网汽车充电站(株洲市创客大厦公共充电站)",
+      "sourceAdcode": "430204",
+      "position": [113.16974, 27.89082],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430202"],
+      "sourceBoundaryDistanceM": 1275.1,
+      "boundaryHashes": {
+        "430202": "fbef2c9075e84cc371ae9dceafcf509f1635bfd3e24bd8f9509a6fd0ab9ab83e"
+      }
+    },
+    {
+      "stationId": 1858,
+      "poiId": "B0JK9KCZ9L",
+      "name": "国家电网汽车充电站(云龙发展中心公共充电站)",
+      "sourceAdcode": "430204",
+      "position": [113.18276, 27.90798],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430202"],
+      "sourceBoundaryDistanceM": 1207.69,
+      "boundaryHashes": {
+        "430202": "fbef2c9075e84cc371ae9dceafcf509f1635bfd3e24bd8f9509a6fd0ab9ab83e"
+      }
+    },
+    {
+      "stationId": 1860,
+      "poiId": "B0HRF531LZ",
+      "name": "国家电网汽车充电站(株洲市创客大厦公共充电站)",
+      "sourceAdcode": "430204",
+      "position": [113.17021, 27.890546],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430202"],
+      "sourceBoundaryDistanceM": 1327.75,
+      "boundaryHashes": {
+        "430202": "fbef2c9075e84cc371ae9dceafcf509f1635bfd3e24bd8f9509a6fd0ab9ab83e"
+      }
+    },
+    {
+      "stationId": 1883,
+      "poiId": "B0LDXXIBAA",
+      "name": "电动汽车充电站(磐龙世纪城)",
+      "sourceAdcode": "430204",
+      "position": [113.180386, 27.915054],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430202"],
+      "sourceBoundaryDistanceM": 431.34,
+      "boundaryHashes": {
+        "430202": "fbef2c9075e84cc371ae9dceafcf509f1635bfd3e24bd8f9509a6fd0ab9ab83e"
+      }
+    },
+    {
+      "stationId": 2900,
+      "poiId": "B0L1YZDVXS",
+      "name": "蔚景云汽车充电站(楠竹山江南医院电摩桩)",
+      "sourceAdcode": "430321",
+      "position": [112.654655, 27.840166],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430302"],
+      "sourceBoundaryDistanceM": 8.11,
+      "boundaryHashes": {
+        "430302": "87abb4a153b0d34a243e3b79a34c326f87b8596f9c4d1fa2d7011bc22cd46ff1"
+      }
+    },
+    {
+      "stationId": 3284,
+      "poiId": "B0MRNA735J",
+      "name": "中国铁塔汽车充电站(湖南衡阳铁塔蒸湘南路加气站充电站)",
+      "sourceAdcode": "430408",
+      "position": [112.605268, 26.883196],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430406"],
+      "sourceBoundaryDistanceM": 91.6,
+      "boundaryHashes": {
+        "430406": "9c899862110ef0191636bbdc519a1f5d50e8b1ab434bbb50241daaa4bc85402b"
+      }
+    },
+    {
+      "stationId": 3396,
+      "poiId": "B0J12S3WQD",
+      "name": "大圣汽车充电站(海通金融中心)",
+      "sourceAdcode": "430408",
+      "position": [112.604822, 26.883939],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430406"],
+      "sourceBoundaryDistanceM": 59.98,
+      "boundaryHashes": {
+        "430406": "9c899862110ef0191636bbdc519a1f5d50e8b1ab434bbb50241daaa4bc85402b"
+      }
+    },
+    {
+      "stationId": 4498,
+      "poiId": "B0J6HZDVC4",
+      "name": "湖南高速汽车充电站(洞城-武冈B-洞口方向新)",
+      "sourceAdcode": "430581",
+      "position": [110.685751, 26.880823],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430525"],
+      "sourceBoundaryDistanceM": 177.62,
+      "boundaryHashes": {
+        "430525": "b2e4b4a4f32e40ff9f22d1051a21788ae7cbd99d553eed547a304462d967d1f3"
+      }
+    },
+    {
+      "stationId": 4499,
+      "poiId": "B0LDXR9WB1",
+      "name": "湖南高速汽车充电站(武冈服务区城步方向)",
+      "sourceAdcode": "430581",
+      "position": [110.6834, 26.880283],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430525"],
+      "sourceBoundaryDistanceM": 97.78,
+      "boundaryHashes": {
+        "430525": "b2e4b4a4f32e40ff9f22d1051a21788ae7cbd99d553eed547a304462d967d1f3"
+      }
+    },
+    {
+      "stationId": 4504,
+      "poiId": "B0J6HZEI6V",
+      "name": "湖南高速汽车充电站(洞城-武冈A-城步方向新)",
+      "sourceAdcode": "430581",
+      "position": [110.683845, 26.880927],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430525"],
+      "sourceBoundaryDistanceM": 181.5,
+      "boundaryHashes": {
+        "430525": "b2e4b4a4f32e40ff9f22d1051a21788ae7cbd99d553eed547a304462d967d1f3"
+      }
+    },
+    {
+      "stationId": 4508,
+      "poiId": "B0MGLZMUAL",
+      "name": "湖南高速汽车充电站(武冈服务区洞口方向)",
+      "sourceAdcode": "430581",
+      "position": [110.68521, 26.87993],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430525"],
+      "sourceBoundaryDistanceM": 78.67,
+      "boundaryHashes": {
+        "430525": "b2e4b4a4f32e40ff9f22d1051a21788ae7cbd99d553eed547a304462d967d1f3"
+      }
+    },
+    {
+      "stationId": 4894,
+      "poiId": "B0LK6RLWD0",
+      "name": "国家电网汽车充电站(钱粮湖镇六门闸停车场)",
+      "sourceAdcode": "430611",
+      "position": [112.77738, 29.462149],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430621"],
+      "sourceBoundaryDistanceM": 62.24,
+      "boundaryHashes": {
+        "430621": "9067ae9fa2764267145b5342aac28c1c39e3fbbf9e5a9aa28d92fe5fdd493460"
+      }
+    },
+    {
+      "stationId": 4898,
+      "poiId": "B0LK6RM2TJ",
+      "name": "国家电网汽车充电站(钱粮湖镇分路口社区广场)",
+      "sourceAdcode": "430611",
+      "position": [112.746376, 29.527203],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430623"],
+      "sourceBoundaryDistanceM": 818.67,
+      "boundaryHashes": {
+        "430623": "32810275a10f47cb07c3b0a20c279273a29a4feef0802f009c65a24f1c7c9678"
+      }
+    },
+    {
+      "stationId": 4905,
+      "poiId": "B0MB6HNM1V",
+      "name": "汽车充电站(六门闸国网停车场休息区站)",
+      "sourceAdcode": "430611",
+      "position": [112.779422, 29.463304],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430621"],
+      "sourceBoundaryDistanceM": 265.29,
+      "boundaryHashes": {
+        "430621": "9067ae9fa2764267145b5342aac28c1c39e3fbbf9e5a9aa28d92fe5fdd493460"
+      }
+    },
+    {
+      "stationId": 5460,
+      "poiId": "B0JKOBJMT0",
+      "name": "汽车充电站(中国石化鼎城白鹤山充电站)",
+      "sourceAdcode": "430702",
+      "position": [111.755806, 29.096094],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430703"],
+      "sourceBoundaryDistanceM": 452.97,
+      "boundaryHashes": {
+        "430703": "b30c708510ef0d7ace541d6d9252ab1f237ebba33c1758c610fdede65f5efa10"
+      }
+    },
+    {
+      "stationId": 5468,
+      "poiId": "B0HKDZW842",
+      "name": "特斯拉超级充电站",
+      "sourceAdcode": "430702",
+      "position": [111.69496, 29.115047],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430703"],
+      "sourceBoundaryDistanceM": 602.22,
+      "boundaryHashes": {
+        "430703": "b30c708510ef0d7ace541d6d9252ab1f237ebba33c1758c610fdede65f5efa10"
+      }
+    },
+    {
+      "stationId": 5482,
+      "poiId": "B0IU2YMN7Y",
+      "name": "国家电网汽车充电站(常德德山石门桥充电站)",
+      "sourceAdcode": "430702",
+      "position": [111.737598, 28.906984],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430703"],
+      "sourceBoundaryDistanceM": 344.57,
+      "boundaryHashes": {
+        "430703": "b30c708510ef0d7ace541d6d9252ab1f237ebba33c1758c610fdede65f5efa10"
+      }
+    },
+    {
+      "stationId": 5506,
+      "poiId": "B0JBLLSFOG",
+      "name": "湖南高速汽车充电站(二广-石门桥B-广州方向新)",
+      "sourceAdcode": "430702",
+      "position": [111.769623, 28.940726],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430703"],
+      "sourceBoundaryDistanceM": 1529.99,
+      "boundaryHashes": {
+        "430703": "b30c708510ef0d7ace541d6d9252ab1f237ebba33c1758c610fdede65f5efa10"
+      }
+    },
+    {
+      "stationId": 5538,
+      "poiId": "B0LKO7HE99",
+      "name": "常德沙滩公园公共充电站",
+      "sourceAdcode": "430702",
+      "position": [111.73656, 29.11681],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430703"],
+      "sourceBoundaryDistanceM": 612.88,
+      "boundaryHashes": {
+        "430703": "b30c708510ef0d7ace541d6d9252ab1f237ebba33c1758c610fdede65f5efa10"
+      }
+    },
+    {
+      "stationId": 5557,
+      "poiId": "B0JBLLQXOW",
+      "name": "湖南高速汽车充电站(二广-石门桥A-二连浩特方向新)",
+      "sourceAdcode": "430702",
+      "position": [111.771023, 28.939722],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430703"],
+      "sourceBoundaryDistanceM": 1690.58,
+      "boundaryHashes": {
+        "430703": "b30c708510ef0d7ace541d6d9252ab1f237ebba33c1758c610fdede65f5efa10"
+      }
+    },
+    {
+      "stationId": 5588,
+      "poiId": "B0IBRNNEGX",
+      "name": "国家电网汽车充电站(常德市东山站充电站)",
+      "sourceAdcode": "430702",
+      "position": [111.759948, 29.110221],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430703"],
+      "sourceBoundaryDistanceM": 959.64,
+      "boundaryHashes": {
+        "430703": "b30c708510ef0d7ace541d6d9252ab1f237ebba33c1758c610fdede65f5efa10"
+      }
+    },
+    {
+      "stationId": 5620,
+      "poiId": "B0LA358YAC",
+      "name": "能效邻里共享汽车充电站(月亮社区)",
+      "sourceAdcode": "430702",
+      "position": [111.721725, 29.124403],
+      "classification": "unknown",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430703"],
+      "sourceBoundaryDistanceM": 877.73,
+      "boundaryHashes": {
+        "430703": "b30c708510ef0d7ace541d6d9252ab1f237ebba33c1758c610fdede65f5efa10"
+      }
+    },
+    {
+      "stationId": 5646,
+      "poiId": "B0L0T49KCD",
+      "name": "汽车充电站(中国石化汉寿油铺岭充电站)",
+      "sourceAdcode": "430703",
+      "position": [111.823265, 28.842096],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430722"],
+      "sourceBoundaryDistanceM": 9.82,
+      "boundaryHashes": {
+        "430722": "ff25d994855983ac16d139316b3765ab9a09db17bc8cc822b51a357eb1179d51"
+      }
+    },
+    {
+      "stationId": 6124,
+      "poiId": "B0MA3NYFBJ",
+      "name": "新电途汽车充电站(慈利苗市镇界溪村委充电站)",
+      "sourceAdcode": "430726",
+      "position": [111.277674, 29.571292],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430821"],
+      "sourceBoundaryDistanceM": 174.32,
+      "boundaryHashes": {
+        "430821": "23bbccd3c30ae2db1f6a1520aeb60aa9763106b3f66ea86d6219e3e2f5372c3b"
+      }
+    },
+    {
+      "stationId": 7372,
+      "poiId": "B0L2TD3DD2",
+      "name": "滴滴充电充电站(郴州市农业农村局充电站)",
+      "sourceAdcode": "431002",
+      "position": [113.034255, 25.771062],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["431003"],
+      "sourceBoundaryDistanceM": 78.72,
+      "boundaryHashes": {
+        "431003": "5c6be59c77dab1fcb881d568ebbfb66a8fdbeee37cb1181aa6f01127ab8b80a6"
+      }
+    },
+    {
+      "stationId": 7440,
+      "poiId": "B0KG4HSYJ9",
+      "name": "华自充电汽车充电站(郴州恒大帝景站)",
+      "sourceAdcode": "431003",
+      "position": [113.036145, 25.768846],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["431002"],
+      "sourceBoundaryDistanceM": 4.5,
+      "boundaryHashes": {
+        "431002": "e6c18e1f539039cc08919cebbfe9c614b70b40ca4614a921e590cc7b45a776dd"
+      }
+    },
+    {
+      "stationId": 7547,
+      "poiId": "B0MU69WTJ1",
+      "name": "汽车充电站(郴州恒大帝景华自充电站)",
+      "sourceAdcode": "431003",
+      "position": [113.036145, 25.768846],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["431002"],
+      "sourceBoundaryDistanceM": 4.5,
+      "boundaryHashes": {
+        "431002": "e6c18e1f539039cc08919cebbfe9c614b70b40ca4614a921e590cc7b45a776dd"
+      }
+    },
+    {
+      "stationId": 9104,
+      "poiId": "B0L1PP4CST",
+      "name": "驴充充汽车充电站(重卡充电站怀化华基工程建设有限公司)",
+      "sourceAdcode": "431202",
+      "position": [110.09017, 27.593796],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["431221"],
+      "sourceBoundaryDistanceM": 1894.31,
+      "boundaryHashes": {
+        "431221": "f0233f9e9753743dc6022c8df282562e14212ebf0ab8b45636677c4291e18ffd"
+      }
+    },
+    {
+      "stationId": 9105,
+      "poiId": "B0L066MJQY",
+      "name": "特来电汽车充电站(台泥怀化水泥有限公司中方县泸阳镇五里村重卡充电站)",
+      "sourceAdcode": "431202",
+      "position": [110.097893, 27.593958],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["431221"],
+      "sourceBoundaryDistanceM": 2096.77,
+      "boundaryHashes": {
+        "431221": "f0233f9e9753743dc6022c8df282562e14212ebf0ab8b45636677c4291e18ffd"
+      }
+    },
+    {
+      "stationId": 9897,
+      "poiId": "B0HBL5B6Y9",
+      "name": "泥溪电动车充电站",
+      "sourceAdcode": "431321",
+      "position": [112.244241, 27.709816],
+      "classification": "unknown",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": [],
+      "sourceBoundaryDistanceM": 33.06,
+      "boundaryHashes": {}
+    },
+    {
+      "stationId": 10006,
+      "poiId": "B0KGFP2EC1",
+      "name": "驴充充汽车充电站(益阳安化平口镇汽车站充电站)",
+      "sourceAdcode": "431322",
+      "position": [111.10553, 28.03778],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430923"],
+      "sourceBoundaryDistanceM": 7.58,
+      "boundaryHashes": {
+        "430923": "603e281d186ce32420127cc60d54b12ade99920992d999ec73fa38a2c58f1e36"
+      }
+    },
+    {
+      "stationId": 11052,
+      "poiId": "B0I0SGDVFK",
+      "name": "小桔充电汽车充电站(长沙市雨花区中海油汇金路充电站)",
+      "sourceAdcode": "430111",
+      "position": [113.015566, 28.071026],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430103"],
+      "sourceBoundaryDistanceM": 108.47,
+      "boundaryHashes": {
+        "430103": "a1b8e2ebccfa2103c4a76d06f75e8f271306c696e458419c3eabcb2aafb1b5d7"
+      }
+    },
+    {
+      "stationId": 11505,
+      "poiId": "B0MDA61ASO",
+      "name": "滴滴充电充电站(清政园)",
+      "sourceAdcode": "430103",
+      "position": [113.000475, 28.122875],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430111"],
+      "sourceBoundaryDistanceM": 9.3,
+      "boundaryHashes": {
+        "430111": "42c0ef06e4d4cba148e6ba9108d89147adbc66694939bbdcf2f4e1adddf9a16c"
+      }
+    },
+    {
+      "stationId": 11506,
+      "poiId": "B0FFL6BVMA",
+      "name": "依威能源汽车充电站(清政园)",
+      "sourceAdcode": "430103",
+      "position": [113.00048, 28.122898],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430111"],
+      "sourceBoundaryDistanceM": 7.18,
+      "boundaryHashes": {
+        "430111": "42c0ef06e4d4cba148e6ba9108d89147adbc66694939bbdcf2f4e1adddf9a16c"
+      }
+    },
+    {
+      "stationId": 11507,
+      "poiId": "B0L2ZZ3CU4",
+      "name": "蔚景云汽车充电站(青园街道电摩)",
+      "sourceAdcode": "430103",
+      "position": [113.000336, 28.122011],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430111"],
+      "sourceBoundaryDistanceM": 10.71,
+      "boundaryHashes": {
+        "430111": "42c0ef06e4d4cba148e6ba9108d89147adbc66694939bbdcf2f4e1adddf9a16c"
+      }
+    },
+    {
+      "stationId": 12000,
+      "poiId": "B0LKN4OU2Y",
+      "name": "智迅充电汽车充电站(64栋1单元至65栋3单元前坪停车场)",
+      "sourceAdcode": "430702",
+      "position": [111.70419, 29.117378],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430703"],
+      "sourceBoundaryDistanceM": 523.69,
+      "boundaryHashes": {
+        "430703": "b30c708510ef0d7ace541d6d9252ab1f237ebba33c1758c610fdede65f5efa10"
+      }
+    },
+    {
+      "stationId": 12001,
+      "poiId": "B0LAU57748",
+      "name": "能效邻里共享汽车充电站(吴家口村)",
+      "sourceAdcode": "430702",
+      "position": [111.81358, 29.080696],
+      "classification": "unknown",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430703"],
+      "sourceBoundaryDistanceM": 2514.26,
+      "boundaryHashes": {
+        "430703": "b30c708510ef0d7ace541d6d9252ab1f237ebba33c1758c610fdede65f5efa10"
+      }
+    },
+    {
+      "stationId": 12371,
+      "poiId": "B0MA95BDH1",
+      "name": "小麦电站汽车充电站(米地亚家园电站169车位-A165)",
+      "sourceAdcode": "430112",
+      "position": [112.871414, 28.254095],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430104"],
+      "sourceBoundaryDistanceM": 115.21,
+      "boundaryHashes": {
+        "430104": "5fdd21b86325362f1ac04e163ace71436c3fa81f77ad26a1e91f61712df742c8"
+      }
+    },
+    {
+      "stationId": 12372,
+      "poiId": "B0MA95BL3U",
+      "name": "小麦电站汽车充电站(米地亚家园-B区11栋A169)",
+      "sourceAdcode": "430112",
+      "position": [112.871414, 28.254095],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430104"],
+      "sourceBoundaryDistanceM": 115.21,
+      "boundaryHashes": {
+        "430104": "5fdd21b86325362f1ac04e163ace71436c3fa81f77ad26a1e91f61712df742c8"
+      }
+    },
+    {
+      "stationId": 12373,
+      "poiId": "B0MA2ZQTAP",
+      "name": "小麦电站汽车充电站(米地亚家园B11栋A187车位)",
+      "sourceAdcode": "430112",
+      "position": [112.86943, 28.254063],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430104"],
+      "sourceBoundaryDistanceM": 200.0,
+      "boundaryHashes": {
+        "430104": "5fdd21b86325362f1ac04e163ace71436c3fa81f77ad26a1e91f61712df742c8"
+      }
+    },
+    {
+      "stationId": 12374,
+      "poiId": "B0LR6XHMM1",
+      "name": "云快充汽车充电站(望城日报印务中心)(内部专用)(暂停营业)",
+      "sourceAdcode": "430112",
+      "position": [112.865018, 28.253767],
+      "classification": "suspected_closed",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430104"],
+      "sourceBoundaryDistanceM": 108.89,
+      "boundaryHashes": {
+        "430104": "5fdd21b86325362f1ac04e163ace71436c3fa81f77ad26a1e91f61712df742c8"
+      }
+    },
+    {
+      "stationId": 12453,
+      "poiId": "B0JR9DI39N",
+      "name": "星星充电汽车充电站(鹏和科技长沙县旺德府充电桩项目)",
+      "sourceAdcode": "430121",
+      "position": [113.056491, 28.230207],
+      "classification": "public_candidate",
+      "reviewStatus": "unreviewed",
+      "geometryAdcodes": ["430105"],
+      "sourceBoundaryDistanceM": 24.52,
+      "boundaryHashes": {
+        "430105": "c25629dabd9bd979e0374cf642c02179e93d5473efa3fa997d86c47044876fd5"
+      }
+    }
+  ]
+}

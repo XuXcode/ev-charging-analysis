@@ -1,0 +1,36 @@
+{
+  "scope": "public_candidate",
+  "stationCount": 11720,
+  "stationInputHash": "575917142e10fa275ae779db2735de9057b6c43b7a694311eaa4b6acef34fd25",
+  "comparisonBasis": "同一补采后样本和同一行政边界，比较距离模型及96/256边离散化的综合变化",
+  "v1.1": {
+    "count": 11720,
+    "sharePercent": 100.0,
+    "areaKm2": 211959.2320145572,
+    "density": 0.055293651937723,
+    "coveredAreaKm2": 13536.773874318751,
+    "coveragePercent": 6.386498830769992,
+    "uncoveredAreaKm2": 198422.45814025367,
+    "unionSeconds": 1.2338377999985823,
+    "maximumProbeRadialErrorM": 0.5441745695804912
+  },
+  "v1.2": {
+    "count": 11720,
+    "sharePercent": 100.0,
+    "areaKm2": 211959.2320145572,
+    "density": 0.055293651937723,
+    "coveredAreaKm2": 13542.677154727788,
+    "coveragePercent": 6.389283932580812,
+    "uncoveredAreaKm2": 198416.55485982643,
+    "unionSeconds": 6.8019168000028,
+    "maximumProbeRadialErrorM": 2.52202880801633e-9
+  },
+  "coverageChangeKm2": 5.903280409036597,
+  "coverageChangePercentagePoints": 0.0027851018108204784,
+  "areaConservationErrorKm2": 2.99072265625e-9,
+  "notice": "探针只检验椭球尺度模型的径向误差，不测量GCJ-02基准误差、真实设施完整性或道路覆盖。耗时为本机单次测量。",
+  "references": [
+    "https://pyproj4.github.io/pyproj/stable/api/geod.html",
+    "https://shapely.readthedocs.io/en/stable/manual.html"
+  ]
+}

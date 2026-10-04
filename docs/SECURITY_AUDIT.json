@@ -1,0 +1,15 @@
+{
+  "scannedFiles": 240,
+  "historyBlobs": 274,
+  "buildFiles": 30,
+  "privateBuildSecretsChecked": 2,
+  "configuredSecretsChecked": 4,
+  "ignoredEnvironmentFiles": {
+    ".env": true,
+    ".env.local": true,
+    "backend/.env": true
+  },
+  "trackedSecretEnvironmentFiles": [],
+  "locations": [],
+  "passed": true
+}

@@ -1,0 +1,2368 @@
+{
+  "id": "4d1b90976c8046e3a13cf739daecef50",
+  "status": "completed",
+  "algorithmVersion": "road-county-representative-v1",
+  "inputHash": "66c22ac0fb2a437e887b29adf721b70e5db02c342499f794c727b3fe5e93d43e",
+  "parameters": {
+    "notice": "区县几何内部代表点到附近3个公共候选POI的驾车估计，非人口覆盖、面积覆盖或等时圈；候选最短时间不保证全库最近，POI营业和公共开放尚未认证。路网及路况随查询时间变化。",
+    "endpoint": "https://restapi.amap.com/v3/direction/driving",
+    "maxCalls": 419,
+    "strategy": 0,
+    "cacheTtlDays": 7,
+    "originMethod": "geometry_representative_point",
+    "candidateCount": 3,
+    "candidateRadiusM": 20000,
+    "coordinateSystem": "GCJ-02",
+    "maxAttemptsPerOD": 3,
+    "thresholdMinutes": [5, 10, 15],
+    "minimumIntervalSeconds": 1
+  },
+  "computedAt": "2026-10-04T11:43:27Z",
+  "result": {
+    "notice": "区县几何内部代表点到附近3个公共候选POI的驾车估计，非人口覆盖、面积覆盖或等时圈；候选最短时间不保证全库最近，POI营业和公共开放尚未认证。路网及路况随查询时间变化。",
+    "regions": [
+      {
+        "name": "芙蓉区",
+        "adcode": "430102",
+        "cityCode": "430100",
+        "complete": true,
+        "position": [113.05084698889412, 28.1979585],
+        "distanceM": 698.0,
+        "boundaryHash": "4d1fd601f29529b34aa8779233b22307bf1ad661ece6103d57f6cda58c063544",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 143.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0L1H9YLTJ"
+      },
+      {
+        "name": "天心区",
+        "adcode": "430103",
+        "cityCode": "430100",
+        "complete": true,
+        "position": [112.96702231469963, 28.0804715],
+        "distanceM": 1773.0,
+        "boundaryHash": "a1b8e2ebccfa2103c4a76d06f75e8f271306c696e458419c3eabcb2aafb1b5d7",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 401.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0L24PNIMH"
+      },
+      {
+        "name": "岳麓区",
+        "adcode": "430104",
+        "cityCode": "430100",
+        "complete": true,
+        "position": [112.78474362756828, 28.123224],
+        "distanceM": 1518.0,
+        "boundaryHash": "5fdd21b86325362f1ac04e163ace71436c3fa81f77ad26a1e91f61712df742c8",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 186.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0MDCR3S1G"
+      },
+      {
+        "name": "开福区",
+        "adcode": "430105",
+        "cityCode": "430100",
+        "complete": true,
+        "position": [113.00334614563602, 28.2926125],
+        "distanceM": 1011.0,
+        "boundaryHash": "c25629dabd9bd979e0374cf642c02179e93d5473efa3fa997d86c47044876fd5",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 203.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0MD6CATQ6"
+      },
+      {
+        "name": "雨花区",
+        "adcode": "430111",
+        "cityCode": "430100",
+        "complete": true,
+        "position": [113.11069916886484, 28.0513635],
+        "distanceM": 4157.0,
+        "boundaryHash": "42c0ef06e4d4cba148e6ba9108d89147adbc66694939bbdcf2f4e1adddf9a16c",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 544.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0IGRMWU7S"
+      },
+      {
+        "name": "望城区",
+        "adcode": "430112",
+        "cityCode": "430100",
+        "complete": true,
+        "position": [112.82294541960508, 28.34903],
+        "distanceM": 456.0,
+        "boundaryHash": "cfd20294e6af418785ec9dff630270f642bda8574d15a468ef260e2d7359a699",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 119.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0L054S1TV"
+      },
+      {
+        "name": "长沙县",
+        "adcode": "430121",
+        "cityCode": "430100",
+        "complete": true,
+        "position": [113.20802511346766, 28.3457585],
+        "distanceM": 2065.0,
+        "boundaryHash": "6827a99a25552b58db72920f568825dfa7a5e690edd4cc4d3397429bcf647567",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 210.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0K23PQMIL"
+      },
+      {
+        "name": "浏阳市",
+        "adcode": "430181",
+        "cityCode": "430100",
+        "complete": true,
+        "position": [113.69600163056911, 28.207921],
+        "distanceM": 7840.0,
+        "boundaryHash": "1e985f7c4e55041c04e357c1c5d04efba6d33ded8d084d73c2fbb13504254771",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 819.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0K1VUS5ET"
+      },
+      {
+        "name": "宁乡市",
+        "adcode": "430182",
+        "cityCode": "430100",
+        "complete": true,
+        "position": [112.29018189376184, 28.1831505],
+        "distanceM": 1163.0,
+        "boundaryHash": "8435ad234f1c9b25892d2ace40d28176b414351bc3c011afef4f5acbb43ad3b6",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 157.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0L2U9FXSC"
+      },
+      {
+        "name": "荷塘区",
+        "adcode": "430202",
+        "cityCode": "430200",
+        "complete": true,
+        "position": [113.23080272818848, 27.918772500000003],
+        "distanceM": 5281.0,
+        "boundaryHash": "fbef2c9075e84cc371ae9dceafcf509f1635bfd3e24bd8f9509a6fd0ab9ab83e",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 733.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LK27S53W"
+      },
+      {
+        "name": "芦淞区",
+        "adcode": "430203",
+        "cityCode": "430200",
+        "complete": true,
+        "position": [113.25440532717484, 27.8098945],
+        "distanceM": 1558.0,
+        "boundaryHash": "980e7d8f56ae1e68162facfe68b69326461319d73d62a5ad2f18150bb23473ac",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 214.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LR61HECX"
+      },
+      {
+        "name": "石峰区",
+        "adcode": "430204",
+        "cityCode": "430200",
+        "complete": true,
+        "position": [113.16443720753183, 27.934651],
+        "distanceM": 2462.0,
+        "boundaryHash": "1e4f73cd7135de4a6ef187576cb0fcded8c4d984cf0e6e3edb6789c90dffbb51",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 222.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MUYUQ8M1"
+      },
+      {
+        "name": "天元区",
+        "adcode": "430211",
+        "cityCode": "430200",
+        "complete": true,
+        "position": [113.06646160370644, 27.6870975],
+        "distanceM": 5610.0,
+        "boundaryHash": "2994dbd58f4b7c4fc0f0014c85199354538c46ea47504bee88bc67038694dcb3",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 682.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MDV6MDHF"
+      },
+      {
+        "name": "渌口区",
+        "adcode": "430212",
+        "cityCode": "430200",
+        "complete": true,
+        "position": [113.08526742421272, 27.495151],
+        "distanceM": 4503.0,
+        "boundaryHash": "66d737b92d4bf6b90b8c9d1e5efabf88c2c13edfaab625a3bcd48431bb3668ed",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 882.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0K03KPUSB"
+      },
+      {
+        "name": "攸县",
+        "adcode": "430223",
+        "cityCode": "430200",
+        "complete": true,
+        "position": [113.44017874156005, 27.1002165],
+        "distanceM": 11347.0,
+        "boundaryHash": "aa371a663d6588ef80cf5905a66730c7568a2472cd5306387dc2ed48f4dd4689",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1178.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0J6GPF2ZA"
+      },
+      {
+        "name": "茶陵县",
+        "adcode": "430224",
+        "cityCode": "430200",
+        "complete": true,
+        "position": [113.6181762498534, 26.811635],
+        "distanceM": 3630.0,
+        "boundaryHash": "7ecff257433f735fec96bbaaddd6dc018614a87df0dcc4acd654499719eb9ec3",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 705.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LKM45AQ3"
+      },
+      {
+        "name": "炎陵县",
+        "adcode": "430225",
+        "cityCode": "430200",
+        "complete": true,
+        "position": [113.81744101751846, 26.3476595],
+        "distanceM": 3222.0,
+        "boundaryHash": "f272dddd4041d84683d3c0eb1173246743cec53dfb0a33a5590a8cf1a494352f",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 281.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0HKFO15QU"
+      },
+      {
+        "name": "醴陵市",
+        "adcode": "430281",
+        "cityCode": "430200",
+        "complete": true,
+        "position": [113.43378186446604, 27.6678285],
+        "distanceM": 3096.0,
+        "boundaryHash": "4b58f11a118d0ea6efe4a6b4b3de7bece72ae59db30a66900099d4689335a4d3",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 354.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0K03KYEMU"
+      },
+      {
+        "name": "雨湖区",
+        "adcode": "430302",
+        "cityCode": "430300",
+        "complete": true,
+        "position": [112.87294304335327, 27.9372955],
+        "distanceM": 3961.0,
+        "boundaryHash": "87abb4a153b0d34a243e3b79a34c326f87b8596f9c4d1fa2d7011bc22cd46ff1",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 707.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0HK15BN4F"
+      },
+      {
+        "name": "岳塘区",
+        "adcode": "430304",
+        "cityCode": "430300",
+        "complete": true,
+        "position": [113.0107272010629, 27.9026615],
+        "distanceM": 567.0,
+        "boundaryHash": "0e069ba3d029588f53e7d569ba18cfe40d553809867f580fdef87a78fc8dbd97",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 107.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0JKXBM1G0"
+      },
+      {
+        "name": "湘潭县",
+        "adcode": "430321",
+        "cityCode": "430300",
+        "complete": true,
+        "position": [112.80795398431152, 27.638591],
+        "distanceM": 3720.0,
+        "boundaryHash": "a4f2fb6c2d269b3dd519d0772c3b6b01b8afef56aa48db9c66dfec89c5c26bfe",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 469.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LAYAYRKL"
+      },
+      {
+        "name": "湘乡市",
+        "adcode": "430381",
+        "cityCode": "430300",
+        "complete": true,
+        "position": [112.36054881013236, 27.770504000000003],
+        "distanceM": 7966.0,
+        "boundaryHash": "7eea5a1efb50d96984e7eaed746ae4941c2d26a400cb786fb45c3ff4f7d3239b",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 910.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L63RBL3N"
+      },
+      {
+        "name": "韶山市",
+        "adcode": "430382",
+        "cityCode": "430300",
+        "complete": true,
+        "position": [112.51355021624413, 27.9331635],
+        "distanceM": 2945.0,
+        "boundaryHash": "7026e51f7900cf6497ea0a767a0989917009983aedfb61334a90b8b89e4bcdbe",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 551.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LAYSYJ6I"
+      },
+      {
+        "name": "珠晖区",
+        "adcode": "430405",
+        "cityCode": "430400",
+        "complete": true,
+        "position": [112.6740592802629, 26.888022],
+        "distanceM": 851.0,
+        "boundaryHash": "386d21745d89d972a766066e01567cb8afa3623c98960291d4cc4c422b253c37",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 174.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0IDS5KTKE"
+      },
+      {
+        "name": "雁峰区",
+        "adcode": "430406",
+        "cityCode": "430400",
+        "complete": true,
+        "position": [112.6150869980703, 26.833858],
+        "distanceM": 2110.0,
+        "boundaryHash": "9c899862110ef0191636bbdc519a1f5d50e8b1ab434bbb50241daaa4bc85402b",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 363.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0JDVCY4H6"
+      },
+      {
+        "name": "石鼓区",
+        "adcode": "430407",
+        "cityCode": "430400",
+        "complete": true,
+        "position": [112.60389890499091, 26.9552675],
+        "distanceM": 2256.0,
+        "boundaryHash": "6d8ff7c92fdaac12863d86d54ceb587d3b72831812180275413d08c66a5bd205",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 374.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MUJLT7NL"
+      },
+      {
+        "name": "蒸湘区",
+        "adcode": "430408",
+        "cityCode": "430400",
+        "complete": true,
+        "position": [112.55806936331729, 26.879436],
+        "distanceM": 1395.0,
+        "boundaryHash": "dcd9f821817243f976675cf5f775fc3c02cd467d11d47a91b716e99dbb8adc54",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 226.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L37SLBR1"
+      },
+      {
+        "name": "南岳区",
+        "adcode": "430412",
+        "cityCode": "430400",
+        "complete": true,
+        "position": [112.71286399677992, 27.2605325],
+        "distanceM": 7779.0,
+        "boundaryHash": "ecdc4f72820753939af26b58ebd86138b2f9501dbad4f31b64ce1a1f6bfa1585",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1189.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0M6J5EE8O"
+      },
+      {
+        "name": "衡阳县",
+        "adcode": "430421",
+        "cityCode": "430400",
+        "complete": true,
+        "position": [112.35272218298245, 27.120580500000003],
+        "distanceM": 12336.0,
+        "boundaryHash": "4b2087ddfec879cb2d26b524e3378bc1fb36e0156215f43a50bcb7818c51d61e",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1270.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LKDUNBQA"
+      },
+      {
+        "name": "衡南县",
+        "adcode": "430422",
+        "cityCode": "430400",
+        "complete": true,
+        "position": [112.88539525995044, 26.7603795],
+        "distanceM": 7045.0,
+        "boundaryHash": "875d9a424f4f9d37df2f20c56215652f447b4210b432fe62849b381ba6760131",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 789.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MB1NV245"
+      },
+      {
+        "name": "衡山县",
+        "adcode": "430423",
+        "cityCode": "430400",
+        "complete": true,
+        "position": [112.81396790203218, 27.2214835],
+        "distanceM": 997.0,
+        "boundaryHash": "2efb7119036b206713ff3230f4d4a491a2cc29681c1653daf73bc2150ff81620",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 139.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L6UPRNK7"
+      },
+      {
+        "name": "衡东县",
+        "adcode": "430424",
+        "cityCode": "430400",
+        "complete": true,
+        "position": [112.9898378635596, 27.1102875],
+        "distanceM": 1182.0,
+        "boundaryHash": "c93940f409dd8c7ed5de57d46c4367ef5538df611e5beb81a35c8bf54496c94b",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 242.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LK3NXKAG"
+      },
+      {
+        "name": "祁东县",
+        "adcode": "430426",
+        "cityCode": "430400",
+        "complete": true,
+        "position": [112.06217774524752, 26.767245],
+        "distanceM": 1388.0,
+        "boundaryHash": "884db1a2417f17905c538ce28cf21f7fccde82abdbac8c0ba25450f5f22da4de",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 169.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LK6NK0G6"
+      },
+      {
+        "name": "耒阳市",
+        "adcode": "430481",
+        "cityCode": "430400",
+        "complete": true,
+        "position": [112.90452173931504, 26.410584],
+        "distanceM": 4464.0,
+        "boundaryHash": "bafbe6508fc25431c1b7704242d08a2db18addb1db6539b5791f802b1933a540",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 549.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L2CBHFBH"
+      },
+      {
+        "name": "常宁市",
+        "adcode": "430482",
+        "cityCode": "430400",
+        "complete": true,
+        "position": [112.40259259836074, 26.3521585],
+        "distanceM": 7405.0,
+        "boundaryHash": "f4fe9cf54735346b289a0b9377f884e0fca4be05302796ab1bd6abc7a9bc45bf",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 983.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L6ZCW8BH"
+      },
+      {
+        "name": "双清区",
+        "adcode": "430502",
+        "cityCode": "430500",
+        "complete": true,
+        "position": [111.55091769285453, 27.248215],
+        "distanceM": 2211.0,
+        "boundaryHash": "2bfaff7851afa04110bf6f75aa73183a1efeeca358747db869e6c48b9e2f306b",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 398.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MG4NWG63"
+      },
+      {
+        "name": "大祥区",
+        "adcode": "430503",
+        "cityCode": "430500",
+        "complete": true,
+        "position": [111.48900678278795, 27.1575495],
+        "distanceM": 5793.0,
+        "boundaryHash": "f8528459260daf150d71d53b73b032ed3ec1352be81ba4fa4a6be1c81d749adb",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 679.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MG1ARZ6S"
+      },
+      {
+        "name": "北塔区",
+        "adcode": "430511",
+        "cityCode": "430500",
+        "complete": true,
+        "position": [111.419087835536, 27.246539499999997],
+        "distanceM": 3410.0,
+        "boundaryHash": "3a19d5ce7344bfc0a23a0389d15159b0e83fc63b0f54a70a685afcfe0dbfd132",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 586.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MUC72D5U"
+      },
+      {
+        "name": "新邵县",
+        "adcode": "430522",
+        "cityCode": "430500",
+        "complete": true,
+        "position": [111.4888909918238, 27.436876],
+        "distanceM": 12069.0,
+        "boundaryHash": "0049a82b48365361d28007ed3899a460151b5dd2cc32a03ed41a552906278f33",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1355.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LU3S98BE"
+      },
+      {
+        "name": "邵阳县",
+        "adcode": "430523",
+        "cityCode": "430500",
+        "complete": true,
+        "position": [111.34539607989235, 26.9787965],
+        "distanceM": 13552.0,
+        "boundaryHash": "df22e4aa274c6784a011ee0cde8177bd513ab8c8537d0e7895004e53af6a0eb8",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1324.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0JA6HHG2J"
+      },
+      {
+        "name": "隆回县",
+        "adcode": "430524",
+        "cityCode": "430500",
+        "complete": true,
+        "position": [110.98384213871988, 27.329109000000003],
+        "distanceM": 9415.0,
+        "boundaryHash": "288658a294f5dc76ec88739a7afb275d22d6b441b794ade64649b73ff573d43d",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1255.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MU7N3TTQ"
+      },
+      {
+        "name": "洞口县",
+        "adcode": "430525",
+        "cityCode": "430500",
+        "complete": true,
+        "position": [110.62864828499151, 27.1121255],
+        "distanceM": 3078.0,
+        "boundaryHash": "b2e4b4a4f32e40ff9f22d1051a21788ae7cbd99d553eed547a304462d967d1f3",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 598.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0H3TRK8JT"
+      },
+      {
+        "name": "绥宁县",
+        "adcode": "430527",
+        "cityCode": "430500",
+        "complete": true,
+        "position": [110.2527813218292, 26.7032395],
+        "distanceM": 14559.0,
+        "boundaryHash": "8ff7845551700ddb8d0d0d7f4e2d481355055ba27a65b230058ce1f9437e9e2f",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1606.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0K1Y766RG"
+      },
+      {
+        "name": "新宁县",
+        "adcode": "430528",
+        "cityCode": "430500",
+        "complete": true,
+        "position": [110.94262635057224, 26.583498],
+        "distanceM": 9910.0,
+        "boundaryHash": "6d5a75e63bf54253b0fec78ff46dc89cce1805d2b048300a21758a7f150a018e",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1197.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MRNA6LDW"
+      },
+      {
+        "name": "城步苗族自治县",
+        "adcode": "430529",
+        "cityCode": "430500",
+        "complete": true,
+        "position": [110.28257296644132, 26.33563],
+        "distanceM": 5304.0,
+        "boundaryHash": "83cdac5f60bd1c28286fa35514f3e603f2bfc14f1a66addd22d166c7c4279430",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 545.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MBLOTO8H"
+      },
+      {
+        "name": "武冈市",
+        "adcode": "430581",
+        "cityCode": "430500",
+        "complete": true,
+        "position": [110.72486209632028, 26.790559],
+        "distanceM": 7060.0,
+        "boundaryHash": "9237f3bf553f2ab280805e5edcb06ddd4aa65a8a581d1cccab69158950ab55a5",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1002.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MA6UL2WU"
+      },
+      {
+        "name": "邵东市",
+        "adcode": "430582",
+        "cityCode": "430500",
+        "complete": true,
+        "position": [111.84768652745288, 27.1922295],
+        "distanceM": 6848.0,
+        "boundaryHash": "5c42003ed8095f2bd82009336faa73c9be90b2d3bdab6de8eaabe58129bfa9f1",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 888.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L2BCLI7O"
+      },
+      {
+        "name": "岳阳楼区",
+        "adcode": "430602",
+        "cityCode": "430600",
+        "complete": true,
+        "position": [113.19270081300334, 29.346125],
+        "distanceM": 3394.0,
+        "boundaryHash": "9db5b41d77cdc3fc2f8b7786e90e72fdd62fb6e14f8ae1f7c90ade10417531a1",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 418.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0MBHHIH5X"
+      },
+      {
+        "name": "云溪区",
+        "adcode": "430603",
+        "cityCode": "430600",
+        "complete": true,
+        "position": [113.28691085966597, 29.51446],
+        "distanceM": 3702.0,
+        "boundaryHash": "d11a4145479251663164495c172771b4b1a0dffcc3b2425674e4b10a68f236f5",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 504.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0J3FP6JPL"
+      },
+      {
+        "name": "君山区",
+        "adcode": "430611",
+        "cityCode": "430600",
+        "complete": true,
+        "position": [112.7298684161812, 29.4767395],
+        "distanceM": 4323.0,
+        "boundaryHash": "7173bb2e0d52cc13e93ae1c17bf13728dc763b18fd711b6195b80ccbd03c1e3b",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 499.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0J2342NWN"
+      },
+      {
+        "name": "岳阳县",
+        "adcode": "430621",
+        "cityCode": "430600",
+        "complete": true,
+        "position": [113.05502702787972, 29.2311025],
+        "distanceM": 2133.0,
+        "boundaryHash": "9067ae9fa2764267145b5342aac28c1c39e3fbbf9e5a9aa28d92fe5fdd493460",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 291.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0KDSBQX78"
+      },
+      {
+        "name": "华容县",
+        "adcode": "430623",
+        "cityCode": "430600",
+        "complete": true,
+        "position": [112.50306847385674, 29.477919999999997],
+        "distanceM": 3295.0,
+        "boundaryHash": "32810275a10f47cb07c3b0a20c279273a29a4feef0802f009c65a24f1c7c9678",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 497.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0KRMBS78U"
+      },
+      {
+        "name": "湘阴县",
+        "adcode": "430624",
+        "cityCode": "430600",
+        "complete": true,
+        "position": [112.80993678872116, 28.742384],
+        "distanceM": 9954.0,
+        "boundaryHash": "d1be2d38d5d4f1a1251df47fec5e991e09ecb76714d43faf68a914bcd46aa3ba",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 883.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L63D5LCX"
+      },
+      {
+        "name": "平江县",
+        "adcode": "430626",
+        "cityCode": "430600",
+        "complete": true,
+        "position": [113.671444648691, 28.76335],
+        "distanceM": 9979.0,
+        "boundaryHash": "5d6a71c844aa5e54275eae6b55ad8ecc3cee39daff8514c2118d162a992a3e25",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1163.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MDAN1IOF"
+      },
+      {
+        "name": "汨罗市",
+        "adcode": "430681",
+        "cityCode": "430600",
+        "complete": true,
+        "position": [113.10018959959942, 28.7627915],
+        "distanceM": 5327.0,
+        "boundaryHash": "e94920f056a849e9371291897fc6cb72ec6ce2be420883e4e136ce9a098e322a",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 649.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0IK6SGWPC"
+      },
+      {
+        "name": "临湘市",
+        "adcode": "430682",
+        "cityCode": "430600",
+        "complete": true,
+        "position": [113.51153465154394, 29.522527],
+        "distanceM": 6989.0,
+        "boundaryHash": "16e693aafb5a86b95c169a6458babe6604cbfa792dfa28aa20fd34b1dd384d84",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 701.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0JKXBMN5E"
+      },
+      {
+        "name": "武陵区",
+        "adcode": "430702",
+        "cityCode": "430700",
+        "complete": true,
+        "position": [111.7519683080832, 29.014387],
+        "distanceM": 3121.0,
+        "boundaryHash": "4971d243bae494e02a0f721af797ac10d7bc54826ac6169877506a3fc64bd02d",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 358.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0MUY7R1IJ"
+      },
+      {
+        "name": "鼎城区",
+        "adcode": "430703",
+        "cityCode": "430700",
+        "complete": true,
+        "position": [111.8544706598469, 29.173055],
+        "distanceM": 4628.0,
+        "boundaryHash": "b30c708510ef0d7ace541d6d9252ab1f237ebba33c1758c610fdede65f5efa10",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 599.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LKZXH0KV"
+      },
+      {
+        "name": "安乡县",
+        "adcode": "430721",
+        "cityCode": "430700",
+        "complete": true,
+        "position": [112.1428432874512, 29.4533785],
+        "distanceM": 9159.0,
+        "boundaryHash": "dbe1e393da9707d3fe1021449f77342442d66b05034f266e9d85bdd0136e49dc",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1123.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0IG1CGRYH"
+      },
+      {
+        "name": "汉寿县",
+        "adcode": "430722",
+        "cityCode": "430700",
+        "complete": true,
+        "position": [112.0124221360634, 28.880309],
+        "distanceM": 5635.0,
+        "boundaryHash": "ff25d994855983ac16d139316b3765ab9a09db17bc8cc822b51a357eb1179d51",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 635.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LD74ZD8B"
+      },
+      {
+        "name": "澧县",
+        "adcode": "430723",
+        "cityCode": "430700",
+        "complete": true,
+        "position": [111.76131119010212, 29.6987535],
+        "distanceM": 4390.0,
+        "boundaryHash": "787c5ec50a477e2a678a69b0eeecd93bc4532e525662490c87944eb1e65d283e",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 559.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MRND75SS"
+      },
+      {
+        "name": "临澧县",
+        "adcode": "430724",
+        "cityCode": "430700",
+        "complete": true,
+        "position": [111.60795227102588, 29.512887],
+        "distanceM": 3895.0,
+        "boundaryHash": "63b19e317b234f8d58214707ecb30d291bbb7e4fa2f3321024316507d396a6d0",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 438.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L63PDNZ2"
+      },
+      {
+        "name": "桃源县",
+        "adcode": "430725",
+        "cityCode": "430700",
+        "complete": true,
+        "position": [111.24486488525795, 28.905311],
+        "distanceM": 11978.0,
+        "boundaryHash": "75b9cf68f0e0a9b397260bdbfd04614028fbb28a5d14db485169d3abe6e0a38b",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1571.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0KKNKXXBI"
+      },
+      {
+        "name": "石门县",
+        "adcode": "430726",
+        "cityCode": "430700",
+        "complete": true,
+        "position": [111.10270058556117, 29.698797],
+        "distanceM": 8645.0,
+        "boundaryHash": "b4801b348003a599cf3671cc68ad84dc86ed7e85bc7a99b525a929fbce3a5a98",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1058.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MG5C35QG"
+      },
+      {
+        "name": "津市市",
+        "adcode": "430781",
+        "cityCode": "430700",
+        "complete": true,
+        "position": [111.87650482858936, 29.4980135],
+        "distanceM": 5827.0,
+        "boundaryHash": "06f2dd3a0ba6a454790618c3d72157b34648720cc1b7435f990003a991d5694b",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 842.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0K035Q4KJ"
+      },
+      {
+        "name": "永定区",
+        "adcode": "430802",
+        "cityCode": "430800",
+        "complete": true,
+        "position": [110.43552049093842, 29.125188],
+        "distanceM": 6062.0,
+        "boundaryHash": "230dbc26c42ba0fed82fbfd43c9d35f5158ae1a9c2dd990733bad6d416f7d101",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 865.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0J01R55M2"
+      },
+      {
+        "name": "武陵源区",
+        "adcode": "430811",
+        "cityCode": "430800",
+        "complete": true,
+        "position": [110.53440556509996, 29.3328295],
+        "distanceM": 491.0,
+        "boundaryHash": "69814f00423ad576c518eb2e1990cfbe5d0848e8dd7de903af22aabe95e45235",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 78.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0J27D3QRD"
+      },
+      {
+        "name": "慈利县",
+        "adcode": "430821",
+        "cityCode": "430800",
+        "complete": true,
+        "position": [110.9354964540995, 29.379674],
+        "distanceM": 2633.0,
+        "boundaryHash": "23bbccd3c30ae2db1f6a1520aeb60aa9763106b3f66ea86d6219e3e2f5372c3b",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 420.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MA3NYJJ9"
+      },
+      {
+        "name": "桑植县",
+        "adcode": "430822",
+        "cityCode": "430800",
+        "complete": true,
+        "position": [110.18392117790182, 29.537993],
+        "distanceM": 7000.0,
+        "boundaryHash": "fef1510349b47e1a09d101c13f6c0953ea529c5b316babbba7b3f4b5ca9ae2ff",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1040.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0KRH7OK6K"
+      },
+      {
+        "name": "资阳区",
+        "adcode": "430902",
+        "cityCode": "430900",
+        "complete": true,
+        "position": [112.374168342925, 28.6990005],
+        "distanceM": 13371.0,
+        "boundaryHash": "afe7e7162a853b3000bfd025c85c611c65b19b36f66fabb551e0387dd419743d",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1301.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L63A4B3X"
+      },
+      {
+        "name": "赫山区",
+        "adcode": "430903",
+        "cityCode": "430900",
+        "complete": true,
+        "position": [112.42293634750622, 28.4629675],
+        "distanceM": 3430.0,
+        "boundaryHash": "8a5a21f4f9e0917bc3c6cde0dc121ae683a90fa427a0137968ec0b3f97eca8b0",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 457.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0MAHYL1RC"
+      },
+      {
+        "name": "南县",
+        "adcode": "430921",
+        "cityCode": "430900",
+        "complete": true,
+        "position": [112.46000193987636, 29.283623499999997],
+        "distanceM": 9062.0,
+        "boundaryHash": "3a3c44b6b604afd1ba33ec206fba9a004e09137cc9730d4c5127e63791142031",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 890.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LKDUNBR9"
+      },
+      {
+        "name": "桃江县",
+        "adcode": "430922",
+        "cityCode": "430900",
+        "complete": true,
+        "position": [111.91740638153937, 28.4445075],
+        "distanceM": 4999.0,
+        "boundaryHash": "3deda1860f623b7e844ac2963a39e2b7d2296483da024f49b9eb2c878a1e31a2",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 519.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LR55AV3D"
+      },
+      {
+        "name": "安化县",
+        "adcode": "430923",
+        "cityCode": "430900",
+        "complete": true,
+        "position": [111.34823112489768, 28.307788],
+        "distanceM": 9920.0,
+        "boundaryHash": "603e281d186ce32420127cc60d54b12ade99920992d999ec73fa38a2c58f1e36",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 981.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MDKZBZ70"
+      },
+      {
+        "name": "沅江市",
+        "adcode": "430981",
+        "cityCode": "430900",
+        "complete": true,
+        "position": [112.55844286107904, 28.947765],
+        "distanceM": 6443.0,
+        "boundaryHash": "10da2b67df1d4f42a999829b876b68a2a72b68a584080913034149427edd9406",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 510.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MBHMHX5R"
+      },
+      {
+        "name": "北湖区",
+        "adcode": "431002",
+        "cityCode": "431000",
+        "complete": true,
+        "position": [112.934835142362, 25.654582],
+        "distanceM": 11248.0,
+        "boundaryHash": "e6c18e1f539039cc08919cebbfe9c614b70b40ca4614a921e590cc7b45a776dd",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1298.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0M6PRNFAL"
+      },
+      {
+        "name": "苏仙区",
+        "adcode": "431003",
+        "cityCode": "431000",
+        "complete": true,
+        "position": [113.16252932566417, 25.7778365],
+        "distanceM": 3696.0,
+        "boundaryHash": "5c6be59c77dab1fcb881d568ebbfb66a8fdbeee37cb1181aa6f01127ab8b80a6",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 483.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LROSW2XC"
+      },
+      {
+        "name": "桂阳县",
+        "adcode": "431021",
+        "cityCode": "431000",
+        "complete": true,
+        "position": [112.60883669112192, 25.8355015],
+        "distanceM": 17982.0,
+        "boundaryHash": "a734ff47dbd5167d0c70383547eca05cd70e1ceaedd4e5e4a82c58f60319b4d4",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1590.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L3S72RWE"
+      },
+      {
+        "name": "宜章县",
+        "adcode": "431022",
+        "cityCode": "431000",
+        "complete": true,
+        "position": [112.79505851790071, 25.2937295],
+        "distanceM": 1334.0,
+        "boundaryHash": "336d45f6477144a96da1382803aeba9498305cfe866e536c26c676308299be45",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 230.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LKUC00V6"
+      },
+      {
+        "name": "永兴县",
+        "adcode": "431023",
+        "cityCode": "431000",
+        "complete": true,
+        "position": [113.29973913412825, 26.229049],
+        "distanceM": 25901.0,
+        "boundaryHash": "4ed74dc77f09f282afc112a4f052d53b4ae2d65a359e6395e0f2db98d8503276",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 2304.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MBXZYFTG"
+      },
+      {
+        "name": "嘉禾县",
+        "adcode": "431024",
+        "cityCode": "431000",
+        "complete": true,
+        "position": [112.39132372556732, 25.611719],
+        "distanceM": 418.0,
+        "boundaryHash": "919f06cf975fc9c84308596a4c746f78fe99cf0297f604d13982bd1753c4c2d3",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 57.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L1LBCYND"
+      },
+      {
+        "name": "临武县",
+        "adcode": "431025",
+        "cityCode": "431000",
+        "complete": true,
+        "position": [112.58406350784357, 25.353572999999997],
+        "distanceM": 2032.0,
+        "boundaryHash": "d1c0a632ee999ce0af1a99270e3a7349c5d339124b77d5e22a2ec34b57e7676c",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 266.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LD0C7FC2"
+      },
+      {
+        "name": "汝城县",
+        "adcode": "431026",
+        "cityCode": "431000",
+        "complete": true,
+        "position": [113.75497080905969, 25.5942045],
+        "distanceM": 15411.0,
+        "boundaryHash": "6d151ff56cded9ba2970cdcf195beaa14b185e78c7c216c1872d7ce0f43c0f0a",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1226.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MDFG8GHZ"
+      },
+      {
+        "name": "桂东县",
+        "adcode": "431027",
+        "cityCode": "431000",
+        "complete": true,
+        "position": [113.85323344253578, 25.9711855],
+        "distanceM": 8409.0,
+        "boundaryHash": "cecd1f75c146b78e90247fb66ceb7bfa4c4ded773b5ff01639cc0b3103e989e9",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1232.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L044WFJO"
+      },
+      {
+        "name": "安仁县",
+        "adcode": "431028",
+        "cityCode": "431000",
+        "complete": true,
+        "position": [113.30248751914536, 26.5601215],
+        "distanceM": 2887.0,
+        "boundaryHash": "cc7b93f6f1acf9325610e81d2f2cdd121fa503edbc21e9e95e3b8eb66aa01781",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 466.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0KAK7U2ZV"
+      },
+      {
+        "name": "资兴市",
+        "adcode": "431081",
+        "cityCode": "431000",
+        "complete": true,
+        "position": [113.43073647225924, 25.922676000000003],
+        "distanceM": 5751.0,
+        "boundaryHash": "e8646ed84d1153a81ed0dc860a3453cfae30acd204f4cb080345f0f04965154b",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 783.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L61USXP9"
+      },
+      {
+        "name": "零陵区",
+        "adcode": "431102",
+        "cityCode": "431100",
+        "complete": true,
+        "position": [111.5050767280864, 26.104655],
+        "distanceM": 8471.0,
+        "boundaryHash": "d00e95cc678cef58dd9603fc374e29a5510a441de076e92eafd8b37cf71889b1",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 930.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LR5UAVCB"
+      },
+      {
+        "name": "冷水滩区",
+        "adcode": "431103",
+        "cityCode": "431100",
+        "complete": true,
+        "position": [111.66398308229908, 26.531732],
+        "distanceM": 2159.0,
+        "boundaryHash": "3a2d3d7e3f886bdc9131793287a35aa314ca32bd580b4adb5625648e30b6dfac",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 166.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LUTS4Z47"
+      },
+      {
+        "name": "东安县",
+        "adcode": "431122",
+        "cityCode": "431100",
+        "complete": true,
+        "position": [111.42383915529176, 26.4912725],
+        "distanceM": 5112.0,
+        "boundaryHash": "1bd3847f6ee45f817c70fa91839eac39eaa0d2f3746e81c9b7e3efd27a4373f6",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 619.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LGHXN92R"
+      },
+      {
+        "name": "双牌县",
+        "adcode": "431123",
+        "cityCode": "431100",
+        "complete": true,
+        "position": [111.66681648194528, 25.881828],
+        "distanceM": 4313.0,
+        "boundaryHash": "94d79babda6f4ca60fc968657197ab3a753d416481211e9894f0d00e0b9c7696",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 452.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L6TKI4FU"
+      },
+      {
+        "name": "道县",
+        "adcode": "431124",
+        "cityCode": "431100",
+        "complete": true,
+        "position": [111.56022815230212, 25.499986],
+        "distanceM": 2758.0,
+        "boundaryHash": "edddc527bf75aeac2c20fc61b1dfb62bd0ab43be6c87bd4ded65451e67a1d452",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 470.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0IAKMEX9E"
+      },
+      {
+        "name": "江永县",
+        "adcode": "431125",
+        "cityCode": "431100",
+        "complete": true,
+        "position": [111.26202356111216, 25.1957275],
+        "distanceM": 7833.0,
+        "boundaryHash": "5455dc28c2f513e29216f58918db0e4e52cb8949438a96b970e145adec2b268f",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 913.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L63D8KRU"
+      },
+      {
+        "name": "宁远县",
+        "adcode": "431126",
+        "cityCode": "431100",
+        "complete": true,
+        "position": [111.96206995104748, 25.666342],
+        "distanceM": 1878.0,
+        "boundaryHash": "07accbe1fa2815ffc2b18462dcf3cf1ea56542134776a56918abf0ba0597d2f0",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 199.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LR7ZINUG"
+      },
+      {
+        "name": "蓝山县",
+        "adcode": "431127",
+        "cityCode": "431100",
+        "complete": true,
+        "position": [112.23267655385878, 25.3075605],
+        "distanceM": 21358.0,
+        "boundaryHash": "3ad1f177ba00e36ba4f5b682632aedc7925a9c97dc6bd30ff81b1705af410636",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 2271.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L0MU9EVG"
+      },
+      {
+        "name": "新田县",
+        "adcode": "431128",
+        "cityCode": "431100",
+        "complete": true,
+        "position": [112.21942309839838, 25.8860085],
+        "distanceM": 1364.0,
+        "boundaryHash": "7555afca2a6e18cca5c6227393cba5edcb12689bafe26fed90e4ddeb6ab09d46",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 263.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MBBRWQWP"
+      },
+      {
+        "name": "江华瑶族自治县",
+        "adcode": "431129",
+        "cityCode": "431100",
+        "complete": true,
+        "position": [111.77863396054244, 24.9819975],
+        "distanceM": 5569.0,
+        "boundaryHash": "c99bc17fab77df11bab569abbf2619d6b8d5b82fc2dddc04556e5aa891fc2a10",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 449.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L0TG9THU"
+      },
+      {
+        "name": "祁阳市",
+        "adcode": "431181",
+        "cityCode": "431100",
+        "complete": true,
+        "position": [111.9653586605377, 26.4407585],
+        "distanceM": 28323.0,
+        "boundaryHash": "df7d502dbb286568fb42f0632f46fe95125c6fe57fea3be68febe99068e113af",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1254.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LAMXCDX4"
+      },
+      {
+        "name": "鹤城区",
+        "adcode": "431202",
+        "cityCode": "431200",
+        "complete": true,
+        "position": [109.96346535513206, 27.619048],
+        "distanceM": 5755.0,
+        "boundaryHash": "dd5c4eff81da8902a1e787f1e12f48842d0daa297a90f2141367e4bdb89c24ab",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 551.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L6UX2LQW"
+      },
+      {
+        "name": "中方县",
+        "adcode": "431221",
+        "cityCode": "431200",
+        "complete": true,
+        "position": [110.27653707244384, 27.5066505],
+        "distanceM": 5752.0,
+        "boundaryHash": "f0233f9e9753743dc6022c8df282562e14212ebf0ab8b45636677c4291e18ffd",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 917.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LBBDTQP3"
+      },
+      {
+        "name": "沅陵县",
+        "adcode": "431222",
+        "cityCode": "431200",
+        "complete": true,
+        "position": [110.61369169713196, 28.560161],
+        "distanceM": 12386.0,
+        "boundaryHash": "c024c7deabef87d85457d32907c2f12fb1ef5a0e28cfa4449c210e4d4e49fe99",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 2503.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MG9PONGX"
+      },
+      {
+        "name": "辰溪县",
+        "adcode": "431223",
+        "cityCode": "431200",
+        "complete": true,
+        "position": [110.20444444827812, 27.900333],
+        "distanceM": 4915.0,
+        "boundaryHash": "eb097c6110c3ba63c51f73c5863647ab4fd44fe358af646130880b1d104e599c",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 480.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LR0AMDHI"
+      },
+      {
+        "name": "溆浦县",
+        "adcode": "431224",
+        "cityCode": "431200",
+        "complete": true,
+        "position": [110.63547711316188, 27.7889365],
+        "distanceM": 8518.0,
+        "boundaryHash": "9aa2a1f9c5a319196fc4dabb481cc2a41a8dc50a16f858c18003f4ecdd3ef1bb",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 983.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0K03KRZPC"
+      },
+      {
+        "name": "会同县",
+        "adcode": "431225",
+        "cityCode": "431200",
+        "complete": true,
+        "position": [109.78083056022048, 26.90475],
+        "distanceM": 6438.0,
+        "boundaryHash": "f66ef66a7e85ded5dfb79c7567fe775e979cce7c05c747fbc7f50694dc7853fe",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 786.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0KDZPJ7K5"
+      },
+      {
+        "name": "麻阳苗族自治县",
+        "adcode": "431226",
+        "cityCode": "431200",
+        "complete": true,
+        "position": [109.6700646956837, 27.782425],
+        "distanceM": 7672.0,
+        "boundaryHash": "db92c6d091714475e117bf3ae9e58db2eba093a4c3462cbcd8eb0fb87e8976a3",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 742.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LDPR31BP"
+      },
+      {
+        "name": "新晃侗族自治县",
+        "adcode": "431227",
+        "cityCode": "431200",
+        "complete": true,
+        "position": [109.18479287626452, 27.2267675],
+        "distanceM": 9904.0,
+        "boundaryHash": "12029f9bd8f688b6cded490a9130a2025375bf2d87e4c5e85e2043a0b9e17546",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1001.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0K03KYU3H"
+      },
+      {
+        "name": "芷江侗族自治县",
+        "adcode": "431228",
+        "cityCode": "431200",
+        "complete": true,
+        "position": [109.57724140791828, 27.3532875],
+        "distanceM": 4704.0,
+        "boundaryHash": "c5e609ea499db285a200ea04397da87a95d9c9600b95ba0efb58f8f07220fdb5",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 565.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MAVN583Z"
+      },
+      {
+        "name": "靖州苗族侗族自治县",
+        "adcode": "431229",
+        "cityCode": "431200",
+        "complete": true,
+        "position": [109.64077700286408, 26.5241385],
+        "distanceM": 5630.0,
+        "boundaryHash": "a34bd4d926c77ede356bbf0be9fcb40f39d9618c3d9eb11ccb0afffa9aeff202",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 545.0,
+        "thresholdReached": {
+          "5": false,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MA1LEPW2"
+      },
+      {
+        "name": "通道侗族自治县",
+        "adcode": "431230",
+        "cityCode": "431200",
+        "complete": true,
+        "position": [109.70808191850594, 26.1734965],
+        "distanceM": 9119.0,
+        "boundaryHash": "649ecaa9779d7aadf110440bf41c46d6949ae127c06ff309728fb5413f4a6f2d",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1985.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L6C1SRNA"
+      },
+      {
+        "name": "洪江市",
+        "adcode": "431281",
+        "cityCode": "431200",
+        "complete": true,
+        "position": [110.08451843356929, 27.232105],
+        "distanceM": 10381.0,
+        "boundaryHash": "b2f893303b4e873dca2af3812c6bbc1b87d5b3e919e759f56609d9c3ae7c22b3",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 861.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LA9UVLCP"
+      },
+      {
+        "name": "娄星区",
+        "adcode": "431302",
+        "cityCode": "431300",
+        "complete": true,
+        "position": [112.01457326765927, 27.7543585],
+        "distanceM": 1070.0,
+        "boundaryHash": "2499c423b8b48606216d0c0c6c8aeb5d9302cf15fb32f3b891a4b3a25e510783",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 155.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0L119N787"
+      },
+      {
+        "name": "双峰县",
+        "adcode": "431321",
+        "cityCode": "431300",
+        "complete": true,
+        "position": [112.1729501732452, 27.456719999999997],
+        "distanceM": 319.0,
+        "boundaryHash": "4e14ff48f643abf6f864ae2f2fe50039f052bf814361ed9bd9519972899a9c5f",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 44.0,
+        "thresholdReached": {
+          "5": true,
+          "10": true,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L2SR6QCG"
+      },
+      {
+        "name": "新化县",
+        "adcode": "431322",
+        "cityCode": "431300",
+        "complete": true,
+        "position": [111.27888101464146, 27.880985],
+        "distanceM": 9750.0,
+        "boundaryHash": "cd5974ac93d630d21dcecd4d69a61c3fabf91505bd8a0249beafb2dc73aeb8b7",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1107.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": true,
+        "nearestCandidatePoiId": "B0L34SF7TB"
+      },
+      {
+        "name": "冷水江市",
+        "adcode": "431381",
+        "cityCode": "431300",
+        "complete": true,
+        "position": [111.50969087327744, 27.6799175],
+        "distanceM": 5209.0,
+        "boundaryHash": "b5e200f1b5a3a38cb5b04389d863cb0f610b17eab0989589efa4715ffa4d1710",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 693.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MGM59OLO"
+      },
+      {
+        "name": "涟源市",
+        "adcode": "431382",
+        "cityCode": "431300",
+        "complete": true,
+        "position": [111.73547007894736, 27.7386645],
+        "distanceM": 7464.0,
+        "boundaryHash": "f333c0d9909fc252280ce2fc13e90b1be2d3badfa3fad74983f32009ef18c337",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 857.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MUOO6R68"
+      },
+      {
+        "name": "吉首市",
+        "adcode": "433101",
+        "cityCode": "433100",
+        "complete": true,
+        "position": [109.76606423333864, 28.3034725],
+        "distanceM": 3963.0,
+        "boundaryHash": "8cdbf229543e48f4c1477a374bc88de508797d72ef92022c5f4a36b2e557a84f",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 650.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0MU36MV31"
+      },
+      {
+        "name": "泸溪县",
+        "adcode": "433122",
+        "cityCode": "433100",
+        "complete": true,
+        "position": [110.02302912021972, 28.1806085],
+        "distanceM": 40256.0,
+        "boundaryHash": "8d099fed380259ea1b70e51632ddea83672a2a230c71cbfeaf1eee0f705d8a99",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 3411.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0J6UHK0PA"
+      },
+      {
+        "name": "凤凰县",
+        "adcode": "433123",
+        "cityCode": "433100",
+        "complete": true,
+        "position": [109.5505117375157, 28.0190075],
+        "distanceM": 5792.0,
+        "boundaryHash": "98d099db08ffb6184a545f42cd61ac5a7b3bfd7610a2a1d9626116a9c77afd00",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 781.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": true
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0K0LPE576"
+      },
+      {
+        "name": "花垣县",
+        "adcode": "433124",
+        "cityCode": "433100",
+        "complete": true,
+        "position": [109.45350439813046, 28.4015715],
+        "distanceM": 16910.0,
+        "boundaryHash": "816eb9207f26205e1e78390d23b0fa83d653ddf8c01b1e498c368a1f9de4abf5",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1625.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L14D1LNU"
+      },
+      {
+        "name": "保靖县",
+        "adcode": "433125",
+        "cityCode": "433100",
+        "complete": true,
+        "position": [109.50249182071492, 28.658336499999997],
+        "distanceM": 17459.0,
+        "boundaryHash": "c78eab856872225106db62b2c036105cb715561e057b927da48bb40bf4a12d1f",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1957.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0L6UMP8G5"
+      },
+      {
+        "name": "古丈县",
+        "adcode": "433126",
+        "cityCode": "433100",
+        "complete": true,
+        "position": [109.99524124556852, 28.579668],
+        "distanceM": 15046.0,
+        "boundaryHash": "7ebf970441afbf9cef6b1c3874f6840d830770d014ab0afc18af9fe795b65f9f",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1811.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0LAYS0121"
+      },
+      {
+        "name": "永顺县",
+        "adcode": "433127",
+        "cityCode": "433100",
+        "complete": true,
+        "position": [109.94373528393504, 29.0749845],
+        "distanceM": 14708.0,
+        "boundaryHash": "227e09a0066cff12665dfbf4e6b7c1773b5291c4d8a3390004183f9b562ef647",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 1192.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0KGPPY3ZS"
+      },
+      {
+        "name": "龙山县",
+        "adcode": "433130",
+        "cityCode": "433100",
+        "complete": true,
+        "position": [109.46878382801688, 29.201356500000003],
+        "distanceM": 72376.0,
+        "boundaryHash": "7a0a090d8add2c25e36b10ea5606ce4c7757284714632181c98db94ce02b090a",
+        "successfulOD": 3,
+        "candidateCount": 3,
+        "durationSeconds": 5379.0,
+        "thresholdReached": {
+          "5": false,
+          "10": false,
+          "15": false
+        },
+        "completenessWarning": false,
+        "nearestCandidatePoiId": "B0J6A77IW1"
+      }
+    ],
+    "originCount": 122,
+    "qualityBatches": ["77751da1e930432394ebe8325068c3b6", "f8a52ae0e1ea44528ffac48b4ab073d6"],
+    "meanDenominator": 122,
+    "ratioDenominator": 122,
+    "thresholdPercent": {
+      "5": 20.49180327868853,
+      "10": 47.540983606557376,
+      "15": 68.0327868852459
+    },
+    "resolvedOriginCount": 122,
+    "meanNearestDistanceM": 7200.44262295082,
+    "meanNearestDurationSeconds": 803.5081967213115
+  },
+  "apiCalls": 364,
+  "cacheHits": 0,
+  "previousTransportReservations": 81,
+  "totalReservedCalls": 445,
+  "cacheReuse": {
+    "id": "6e3bd3eb0e954e1192e3075f94eb51ab",
+    "status": "completed",
+    "apiCalls": 0,
+    "cacheHits": 364,
+    "originCount": 122,
+    "sameResults": true
+  }
+}

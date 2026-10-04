@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-04T03:00:36.563201Z",
+  "sourceUpdatedAt": "2026-10-04T02:49:05Z",
+  "stationCount": 12601,
+  "runId": "77751da1e930432394ebe8325068c3b6",
+  "supplementRunIds": ["f8a52ae0e1ea44528ffac48b4ab073d6"],
+  "readOnly": true,
+  "statusHints": {
+    "暂停营业": 139,
+    "已拆除": 5,
+    "装修或建设中": 7
+  },
+  "pausedOrRemovedUniqueCount": 139,
+  "accessHints": {
+    "内部使用或限制开放": 112
+  },
+  "categoryHints": {
+    "两轮或换电相关名称": 2,
+    "名称未明确车辆类型": 373
+  },
+  "rawTypeNotChargingCount": 109,
+  "rawPersonalChargingCount": 25,
+  "rawDedicatedChargingCount": 189,
+  "unmatchedRawCount": 0,
+  "missingTraceCount": 0,
+  "invalidCoordinateCount": 0,
+  "reviewUniqueCount": 875,
+  "cities": {
+    "430100": 3399,
+    "430200": 808,
+    "430300": 571,
+    "430400": 815,
+    "430500": 746,
+    "430600": 850,
+    "430700": 717,
+    "430800": 489,
+    "430900": 660,
+    "431000": 971,
+    "431100": 823,
+    "431200": 628,
+    "431300": 687,
+    "433100": 437
+  },
+  "rawTypes": [
+    {
+      "typeCode": "011100",
+      "type": "汽车服务;充电站;充电站",
+      "count": 12272
+    },
+    {
+      "typeCode": "011103",
+      "type": "汽车服务;充电站;专用充电站",
+      "count": 189
+    },
+    {
+      "typeCode": "070000",
+      "type": "生活服务;生活服务场所;生活服务场所",
+      "count": 45
+    },
+    {
+      "typeCode": "010000",
+      "type": "汽车服务;汽车服务相关;汽车服务相关",
+      "count": 40
+    },
+    {
+      "typeCode": "011104",
+      "type": "汽车服务;充电站;个人充电站",
+      "count": 25
+    },
+    {
+      "typeCode": "150700",
+      "type": "交通设施服务;公交车站;公交车站相关",
+      "count": 7
+    },
+    {
+      "typeCode": "090000",
+      "type": "医疗保健服务;医疗保健服务场所;医疗保健服务场所",
+      "count": 6
+    },
+    {
+      "typeCode": "170200",
+      "type": "公司企业;公司;公司",
+      "count": 4
+    },
+    {
+      "typeCode": "060000",
+      "type": "购物服务;购物相关场所;购物相关场所",
+      "count": 2
+    },
+    {
+      "typeCode": "011100|070000",
+      "type": "汽车服务;充电站;充电站|生活服务;生活服务场所;生活服务场所",
+      "count": 2
+    },
+    {
+      "typeCode": "150000",
+      "type": "交通设施服务;交通服务相关;交通服务相关",
+      "count": 1
+    },
+    {
+      "typeCode": "011100|060000",
+      "type": "汽车服务;充电站;充电站|购物服务;购物相关场所;购物相关场所",
+      "count": 1
+    },
+    {
+      "typeCode": "150904",
+      "type": "交通设施服务;停车场;公共停车场",
+      "count": 1
+    },
+    {
+      "typeCode": "100000",
+      "type": "住宿服务;住宿服务相关;住宿服务相关",
+      "count": 1
+    },
+    {
+      "typeCode": "170000",
+      "type": "公司企业;公司企业;公司企业",
+      "count": 1
+    },
+    {
+      "typeCode": "100200|011100",
+      "type": "住宿服务;旅馆招待所;旅馆招待所|汽车服务;充电站;充电站",
+      "count": 1
+    },
+    {
+      "typeCode": "080500|011100",
+      "type": "体育休闲服务;休闲场所;休闲场所|汽车服务;充电站;充电站",
+      "count": 1
+    },
+    {
+      "typeCode": "130000",
+      "type": "政府机构及社会团体;政府及社会团体相关;政府及社会团体相关",
+      "count": 1
+    },
+    {
+      "typeCode": "011100|170000",
+      "type": "汽车服务;充电站;充电站|公司企业;公司企业;公司企业",
+      "count": 1
+    }
+  ],
+  "storedTypes": {
+    "新能源汽车充电站": 12601
+  },
+  "boundary": {
+    "sourceUrl": "https://geo.datav.aliyun.com/areas_v3/bound/430000_full.json",
+    "coordinateSystem": "GCJ-02",
+    "coordinateBasis": "供应方文档与来源链路，非逐点实地配准",
+    "sha256": "a010692a27bf9fa1a6ba53067b78040d0e6b734929175bf35abc4e54834a9f48",
+    "featureCount": 14,
+    "cityCodes": [
+      "430100",
+      "430200",
+      "430300",
+      "430400",
+      "430500",
+      "430600",
+      "430700",
+      "430800",
+      "430900",
+      "431000",
+      "431100",
+      "431200",
+      "431300",
+      "433100"
+    ],
+    "uniqueCityCodeCount": 14,
+    "vertexCount": 7528,
+    "invalidCoordinates": 0,
+    "unclosedRings": 0,
+    "bbox": [108.792209, 24.636548, 114.260116, 30.125989],
+    "providerComparison": "未请求供应方边界"
+  },
+  "notice": "离线只读核验快照；名称与原始类别仅提供复核线索，不判定真实营业状态或车辆类型。重叠线索不能相加推算无效总量，所有样本均保留。"
+}

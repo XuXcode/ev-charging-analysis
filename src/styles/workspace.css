@@ -1,0 +1,1395 @@
+/* Content-first refinements shared by the provincial and city workspaces. */
+.app-header {
+  height: 70px;
+}
+.brand-symbol {
+  width: 38px;
+  height: 42px;
+  border-radius: 5px;
+}
+.brand strong {
+  display: block;
+  font-size: 19px;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+.brand small {
+  font-size: 12px;
+  letter-spacing: 0;
+  margin-top: 4px;
+  color: var(--muted);
+}
+.header-status {
+  font-size: 12px;
+}
+.main-nav {
+  height: 48px;
+}
+.page-toolbar {
+  height: 42px;
+}
+.page-intro {
+  margin-bottom: 14px;
+  min-height: 48px;
+}
+.page-intro h1 {
+  font-size: 22px;
+  margin: 0 0 6px;
+  letter-spacing: 0;
+}
+.page-intro p {
+  font-size: 12px;
+}
+.page-date {
+  font-size: 12px;
+  color: var(--muted);
+}
+.metric-icon {
+  background: transparent;
+  border-radius: 0;
+}
+.metric-grid {
+  gap: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.metric-card {
+  border: 0;
+  border-right: 1px solid var(--border);
+  border-radius: 0;
+}
+.metric-card:last-child {
+  border-right: 0;
+}
+.metric-label {
+  min-height: 25px;
+}
+.metric-change {
+  font-size: 12px;
+}
+.panel-heading p {
+  font-size: 12px;
+}
+.overview-page .dashboard-grid {
+  grid-template-columns: minmax(230px, 0.66fr) minmax(500px, 2.8fr) minmax(275px, 0.8fr);
+  gap: 18px;
+}
+.overview-page .regional-panel {
+  display: flex;
+  flex-direction: column;
+}
+.overview-page .region-feature {
+  background: #f1f6f2;
+  border-left: 0;
+  border-radius: 3px;
+}
+.overview-page .region-feature strong {
+  font-size: 32px;
+  font-weight: 600;
+}
+.overview-page .region-bars {
+  flex: 1;
+  padding-top: 19px;
+}
+.overview-page .region-bars > div {
+  margin-bottom: 16px;
+}
+.overview-page .region-track {
+  height: 5px;
+  margin-left: 0;
+  margin-top: 8px;
+}
+.region-share {
+  display: block;
+  margin-top: 5px;
+  text-align: right;
+  font-size: 11px;
+  color: var(--muted);
+}
+.regional-footnote {
+  border-top: 1px solid var(--border);
+  margin: 0 20px;
+  padding: 12px 0;
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.overview-page .bottom-grid {
+  grid-template-columns: 1fr 1.3fr;
+  gap: 18px;
+}
+.map-view {
+  background-image: none;
+  background-color: #eef3ef;
+}
+.map-top {
+  top: 18px;
+}
+.map-top h2 {
+  margin-top: 0;
+  font-size: 16px;
+}
+.map-top p {
+  font-size: 12px;
+}
+.map-canvas {
+  inset: 56px 8px 40px;
+}
+.map-canvas.amap-canvas {
+  inset: 0;
+}
+.map-layers {
+  top: 88px;
+  padding: 12px;
+  box-shadow: none;
+}
+.map-layers .ant-checkbox-wrapper,
+.reserved-layer {
+  font-size: 12px;
+}
+.map-legend strong {
+  font-size: 11px;
+}
+.map-legend p {
+  font-size: 11px;
+}
+.map-compass {
+  top: 88px;
+}
+.ranking-header,
+.ranking-list strong,
+.rank-city {
+  font-size: 12px;
+}
+.ranking-list li a {
+  height: 32px;
+}
+.panel-note {
+  font-size: 11px;
+}
+.data-source {
+  font-size: 11px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.city-hint {
+  border-top: 1px solid var(--border);
+  background: transparent;
+  padding: 18px 0 0;
+}
+.city-hint > svg {
+  display: none;
+}
+.city-hint h3 {
+  margin-top: 0;
+  font-weight: 500;
+}
+.city-facts dd {
+  font-size: 14px;
+}
+.module-panel .empty-state {
+  min-height: 150px;
+}
+.module-panel .empty-state > svg {
+  display: none;
+}
+.module-tabs button {
+  font-size: 13px;
+}
+.topic-workspace {
+  display: grid;
+  grid-template-columns: 285px minmax(0, 1fr);
+  gap: 18px;
+}
+.topic-workspace .map-view {
+  min-height: 650px;
+}
+.topic-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+.topic-inputs {
+  padding: 0 20px 24px;
+}
+.topic-inputs > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+  padding: 15px 0;
+  font-size: 13px;
+}
+.topic-inputs small {
+  white-space: nowrap;
+  color: var(--muted);
+  font-size: 11px;
+}
+.topic-output-nav {
+  border-top: 1px solid var(--border);
+  padding: 22px 12px;
+}
+.topic-output-nav h2 {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0 8px 14px;
+}
+.topic-output-nav button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  color: var(--muted);
+  padding: 14px 10px;
+  text-align: left;
+  font-size: 13px;
+}
+.topic-output-nav button > svg:last-child {
+  margin-left: auto;
+}
+.topic-output-nav button.active {
+  color: var(--primary);
+  background: #edf4ef;
+  font-weight: 500;
+}
+.topic-status {
+  margin: auto 20px 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.topic-status p {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.topic-output {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  gap: 20px;
+}
+.topic-output h2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.topic-output p {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+@media (min-width: 1700px) and (min-height: 950px) {
+  .app-header {
+    height: 64px;
+  }
+  .main-nav {
+    height: 44px;
+  }
+  .page-toolbar {
+    height: 38px;
+  }
+  .page-intro {
+    min-height: 42px;
+    margin-bottom: 12px;
+  }
+  .page-intro h1 {
+    font-size: 21px;
+  }
+  .overview-page .metric-grid {
+    margin-bottom: 16px;
+  }
+  .metric-card {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+  .overview-page .map-view {
+    min-height: 490px;
+  }
+  .overview-page .ranking-list li a {
+    height: 24px;
+  }
+  .overview-page .region-bars > div {
+    margin-bottom: 10px;
+  }
+  .overview-page .region-feature {
+    padding: 12px 16px;
+  }
+  .overview-page .bottom-grid {
+    margin-top: 16px;
+  }
+  .overview-page .chart-panel {
+    height: 194px;
+  }
+  main {
+    padding-bottom: 8px;
+  }
+  .data-source {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .topic-workspace .map-view {
+    min-height: 700px;
+  }
+}
+@media (max-width: 1300px) {
+  .overview-page .dashboard-grid {
+    grid-template-columns: 220px minmax(340px, 1fr) 250px;
+    gap: 14px;
+  }
+  .overview-page .bottom-grid {
+    gap: 14px;
+  }
+  .brand strong {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1050px) {
+  .overview-page .dashboard-grid {
+    grid-template-columns: minmax(0, 1fr) 265px;
+  }
+  .overview-page .regional-panel {
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
+  .overview-page .region-feature {
+    display: none;
+  }
+  .overview-page .region-bars {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+  .topic-workspace {
+    grid-template-columns: 250px minmax(0, 1fr);
+  }
+  .header-status > span:last-child {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .metric-card {
+    border-bottom: 1px solid var(--border);
+  }
+  .metric-card:nth-child(2n) {
+    border-right: 0;
+  }
+  .metric-card:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+  .app-header {
+    height: 76px;
+  }
+  .brand strong {
+    font-size: 13px;
+  }
+  .brand small {
+    font-size: 11px;
+  }
+  .brand {
+    gap: 8px;
+  }
+  .brand-symbol {
+    width: 30px;
+    height: 34px;
+  }
+  .header-status {
+    font-size: 10px;
+  }
+  .overview-page .dashboard-grid {
+    display: flex;
+  }
+  .overview-page .regional-panel {
+    order: 3;
+  }
+  .overview-page .region-bars {
+    grid-template-columns: 1fr 1fr;
+  }
+  .overview-page .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+  .overview-page .chart-panel {
+    height: 270px;
+  }
+  .page-date {
+    display: none;
+  }
+  .page-intro h1 {
+    font-size: 20px;
+  }
+  .page-intro p {
+    line-height: 1.7;
+  }
+  .metric-change {
+    font-size: 11px;
+  }
+  .topic-workspace {
+    grid-template-columns: 1fr;
+  }
+  .topic-workspace .map-view {
+    min-height: 580px;
+  }
+  .topic-workspace .topic-sidebar {
+    order: 2;
+  }
+  .topic-output {
+    align-items: flex-start;
+    padding: 20px;
+  }
+}
+
+/* Shared hierarchy for every analysis workspace; layout remains page-specific. */
+body {
+  font-family: var(--font-family);
+  font-size: var(--type-body);
+}
+button,
+input,
+select {
+  font: inherit;
+}
+select,
+input {
+  min-height: var(--button-height);
+}
+button:disabled {
+  cursor: not-allowed;
+  color: var(--muted);
+  opacity: 0.65;
+}
+select:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+.page-intro h1 {
+  font-size: var(--type-title);
+  line-height: 1.3;
+  color: var(--primary-dark);
+}
+.page-intro p,
+.panel-heading p {
+  font-size: var(--type-body);
+  line-height: 1.6;
+}
+.panel {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-panel);
+}
+.panel-heading h2,
+.analysis-panel h2 {
+  font-size: var(--panel-title-size);
+  line-height: 1.4;
+  color: var(--text);
+}
+.analysis-panel > p {
+  font-size: var(--type-body);
+  line-height: 1.7;
+}
+.analysis-warning {
+  color: var(--warning);
+  background: var(--warning-soft);
+  border-color: var(--warning);
+}
+.core-findings ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.core-findings li {
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--border);
+}
+.core-findings li:first-child {
+  border: 0;
+}
+.core-findings li > span {
+  font-size: var(--type-caption);
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+.core-findings li p {
+  font-size: var(--type-body);
+  color: var(--text);
+  line-height: 1.65;
+  margin-top: 4px;
+}
+.spatial-map {
+  background: var(--map-background);
+}
+.metric-value {
+  font-variant-numeric: tabular-nums;
+}
+@media (min-width: 1700px) and (min-height: 950px) {
+  .overview-page .dashboard-grid {
+    min-height: 570px;
+  }
+  .overview-page .dashboard-grid .spatial-map {
+    min-height: 570px;
+  }
+  .overview-page .ranking-list .rank-row {
+    min-height: 32px;
+  }
+  .analysis-page .analysis-comparison-chart {
+    height: 560px;
+    min-height: 560px;
+  }
+  .analysis-page .analysis-comparison-chart .chart-canvas {
+    height: 450px;
+    min-height: 450px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Shared WebGIS interaction and visual hierarchy. */
+:root {
+  --radius: 6px;
+  --muted: #5f7568;
+}
+.intro-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.methodology-button {
+  border: 1px solid #c9dbce;
+  background: #fff;
+  padding: 7px 12px;
+  border-radius: var(--radius);
+  color: #245d44;
+  font-size: 13px;
+}
+.inline-data-badge {
+  color: #856b3d;
+}
+.metric-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.metric-value {
+  font-size: 36px;
+  font-weight: 650;
+  color: #234f39;
+}
+.metric-value span {
+  font-size: 13px;
+}
+.metric-label {
+  color: #52685a;
+  font-size: 14px;
+}
+.metric-period {
+  font-size: 12px;
+  color: var(--muted);
+}
+.metric-sparkline {
+  width: 108px;
+  height: 35px;
+  overflow: visible;
+  color: #80ab8e;
+}
+.metric-trends {
+  display: flex;
+  gap: 24px;
+  margin-top: 9px;
+  font-size: 12px;
+  color: #5d7164;
+}
+.metric-trends b {
+  font-weight: 600;
+  color: #217765;
+  margin-left: 5px;
+}
+.metric-trends b.negative {
+  color: #94663c;
+}
+.overview-page .dashboard-grid {
+  grid-template-columns: minmax(245px, 0.72fr) minmax(500px, 3.3fr) minmax(290px, 0.86fr);
+  gap: 16px;
+}
+.panel-heading h2 {
+  font-size: 16px;
+}
+.panel-heading h2 small {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--muted);
+  margin-left: 8px;
+}
+.panel-heading p,
+.map-top p {
+  color: #607366;
+}
+.group-switch {
+  margin: 0 18px 12px;
+  width: calc(100% - 36px);
+  font-size: 13px;
+}
+.overview-page .analysis-context {
+  margin: 0 18px;
+  padding: 12px 14px;
+}
+.analysis-context > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #50675a;
+}
+.analysis-context strong {
+  display: block;
+  padding-top: 6px;
+}
+.analysis-context p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 5px 0 0;
+  color: #586e60;
+}
+.context-reset {
+  border: 0;
+  background: transparent;
+  color: #217765;
+  padding: 0;
+  font-size: 12px;
+}
+.context-detail {
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 6px;
+}
+.overview-page .region-bars {
+  padding: 12px 12px 8px;
+}
+.group-row {
+  display: block;
+  width: 100%;
+  border: 1px solid transparent;
+  padding: 9px 6px;
+  text-align: left;
+  background: transparent;
+  color: var(--text);
+  border-radius: 4px;
+}
+.group-row:hover,
+.group-row.active {
+  background: #f1f6f2;
+  border-color: #dce7de;
+}
+.group-row > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+.group-row strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+.group-row strong small {
+  font-size: 12px;
+}
+.group-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #667b6e;
+}
+.overview-page .region-track {
+  height: 4px;
+  margin-top: 6px;
+}
+.regional-footnote {
+  margin: 0 18px;
+  padding: 10px 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.map-canvas {
+  inset: 46px 4px 30px;
+}
+.map-layers {
+  top: 86px;
+  left: 18px;
+  background: #ffffffee;
+  border: 1px solid #d7e2d8;
+  border-radius: var(--radius);
+}
+.map-legend strong {
+  font-size: 12px;
+}
+.map-legend strong small {
+  font-size: 11px;
+}
+.map-city-tooltip {
+  position: absolute;
+  right: 55px;
+  bottom: 70px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 13px;
+  line-height: 1.9;
+  z-index: 10;
+  box-shadow: 0 4px 20px #244a3d14;
+  pointer-events: none;
+}
+.ranking-panel > .ant-segmented {
+  margin: 0 18px 10px;
+  width: calc(100% - 36px);
+  font-size: 12px;
+}
+.ranking-header {
+  color: #617668;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+.ranking-list {
+  padding: 0 14px;
+}
+.rank-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 34px;
+  padding: 0 7px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  text-align: left;
+  color: #2c4435;
+}
+.rank-row:hover,
+.rank-row.hovered {
+  background: #f0f5f1;
+}
+.rank-row.selected {
+  background: #edf5ef;
+  border-color: #bed6c5;
+}
+.rank-number {
+  color: #6d8074;
+  font-size: 12px;
+}
+.rank-city,
+.ranking-list strong {
+  font-size: 13px;
+}
+.rank-track,
+.rank-track i {
+  height: 3px;
+  border-radius: 2px;
+}
+.rank-row.selected .rank-track i {
+  background: #217765;
+}
+.panel-note {
+  font-size: 12px;
+}
+.panel-note a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.overview-page .bottom-grid {
+  gap: 16px;
+}
+.comparison-workspace {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.analysis-chart-tabs {
+  display: flex;
+  gap: 18px;
+  padding: 0 18px;
+  min-height: 35px;
+  border-bottom: 1px solid var(--border);
+}
+.analysis-chart-tabs button {
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  padding: 8px 0;
+  color: #526b5b;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.analysis-chart-tabs button.active {
+  border-color: #217765;
+  color: #205d43;
+  font-weight: 600;
+}
+.analysis-chart-tabs small {
+  margin-left: 4px;
+  font-size: 10px;
+  color: #7b897f;
+}
+.comparison-workspace .chart-panel {
+  border: 0;
+  border-radius: 0;
+  flex: 1;
+  min-height: 0;
+}
+.overview-page .chart-panel,
+.comparison-workspace {
+  height: 262px;
+}
+.comparison-workspace .chart-panel {
+  height: auto;
+}
+.chart-scope {
+  font-size: 12px;
+  color: #217765;
+  white-space: nowrap;
+}
+.chart-panel .ant-segmented {
+  font-size: 12px;
+}
+.reserved-chart-state {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  gap: 8px;
+  padding: 20px;
+}
+.reserved-chart-state h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+.reserved-chart-state p,
+.reserved-chart-state small {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+.reserved-status {
+  font-size: 11px;
+  color: #6b7d70;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 3px 8px;
+}
+.methodology-content {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.methodology-notice {
+  background: #f7f4ee;
+  color: #806338;
+  padding: 10px 14px;
+  border-radius: 4px;
+}
+.methodology-content dt {
+  font-weight: 600;
+  margin-top: 15px;
+  color: #2a5039;
+}
+.methodology-content dt small {
+  margin-left: 8px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.methodology-content dd {
+  margin: 4px 0 0;
+  color: #556a5c;
+}
+.methodology-source {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  margin-top: 18px;
+  color: var(--muted);
+}
+.data-source {
+  font-size: 12px;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #367c5b;
+  outline-offset: 2px;
+}
+@media (min-width: 1700px) and (min-height: 950px) {
+  .overview-page .metric-card {
+    padding: 10px 22px;
+  }
+  .overview-page .metric-value {
+    font-size: 36px;
+  }
+  .overview-page .map-view {
+    min-height: 470px;
+  }
+  .overview-page .rank-row {
+    height: 24px;
+  }
+  .overview-page .ranking-panel .panel-heading {
+    padding: 13px 18px 10px;
+  }
+  .overview-page .ranking-panel > .ant-segmented {
+    margin-bottom: 8px;
+  }
+  .overview-page .ranking-header {
+    padding-bottom: 7px;
+  }
+  .overview-page .panel-note {
+    margin: 8px 18px 10px;
+    padding-top: 8px;
+  }
+  .overview-page .regional-panel .panel-heading {
+    padding: 13px 18px 10px;
+  }
+  .overview-page .group-switch {
+    margin-bottom: 10px;
+  }
+  .overview-page .region-bars {
+    padding-top: 6px;
+    padding-bottom: 4px;
+  }
+  .overview-page .group-row {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .overview-page .analysis-context strong {
+    font-size: 29px;
+    padding-top: 2px;
+  }
+  .overview-page .analysis-context {
+    padding: 10px 12px;
+  }
+  .overview-page .chart-panel,
+  .overview-page .comparison-workspace {
+    height: 220px;
+  }
+  .overview-page .comparison-workspace .chart-panel {
+    height: auto;
+  }
+  .overview-page .chart-panel .panel-heading {
+    padding-top: 12px;
+  }
+  .overview-page .analysis-chart-tabs {
+    min-height: 30px;
+  }
+  .overview-page .analysis-chart-tabs button {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+@media (max-width: 1500px) {
+  .overview-page .dashboard-grid {
+    grid-template-columns: 240px minmax(340px, 1fr) 280px;
+    gap: 14px;
+  }
+  .metric-sparkline {
+    width: 78px;
+  }
+  .analysis-chart-tabs {
+    gap: 12px;
+  }
+}
+@media (max-width: 1050px) {
+  .overview-page .dashboard-grid {
+    grid-template-columns: minmax(0, 1fr) 280px;
+  }
+  .overview-page .region-bars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .analysis-chart-tabs {
+    gap: 10px;
+    overflow-x: auto;
+  }
+  .metric-sparkline {
+    width: 60px;
+  }
+  .metric-trends {
+    gap: 10px;
+  }
+}
+@media (max-width: 760px) {
+  .intro-actions {
+    gap: 0;
+  }
+  .methodology-button {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+  .metric-period,
+  .metric-sparkline {
+    display: none;
+  }
+  .metric-value {
+    font-size: 30px;
+  }
+  .overview-page .rank-row {
+    height: 36px;
+  }
+  .overview-page .chart-panel,
+  .overview-page .comparison-workspace {
+    height: 290px;
+  }
+  .overview-page .comparison-workspace .chart-panel {
+    height: auto;
+  }
+  .overview-page .region-bars {
+    grid-template-columns: 1fr 1fr;
+  }
+  .map-layers {
+    left: 12px;
+  }
+}
+/* Wide-screen density: keep the map central and all overview charts in one viewport. */
+.context-detail {
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: 10px;
+}
+@media (min-width: 1700px) and (min-height: 950px) {
+  .overview-page .metric-card {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .overview-page .regional-panel .panel-heading,
+  .overview-page .ranking-panel .panel-heading {
+    padding-top: 10px;
+    padding-bottom: 8px;
+  }
+  .overview-page .dashboard-grid .panel-heading p {
+    display: none;
+  }
+  .overview-page .dashboard-grid .panel-heading h2 {
+    line-height: 20px;
+  }
+  .overview-page .map-view {
+    min-height: 478px;
+  }
+  .overview-page .group-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 90px;
+    padding: 6px;
+  }
+  .overview-page .group-row > div:first-child {
+    grid-column: 1 / -1;
+    line-height: 16px;
+  }
+  .overview-page .group-row .region-track {
+    margin-right: 10px;
+    align-self: center;
+  }
+  .overview-page .group-meta {
+    display: block;
+    line-height: 14px;
+    text-align: right;
+  }
+  .overview-page .group-meta > span:first-child {
+    display: none;
+  }
+}
+@media (min-width: 1700px) and (min-height: 950px) {
+  .overview-page .group-meta,
+  .overview-page .group-row .region-track {
+    margin-top: 2px;
+  }
+}
+@media (min-width: 1700px) and (min-height: 950px) {
+  .overview-page .metric-grid {
+    margin-bottom: 14px;
+  }
+}
+.ranking-panel .ant-segmented-item-label {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.map-legend {
+  width: 184px;
+}
+.legend-values {
+  font-size: 11px;
+  color: #5f7568;
+}
+.map-bottom {
+  font-size: 11px;
+}
+@media (max-width: 760px) {
+  .map-legend {
+    width: 166px;
+  }
+}
+/* Data availability states and the explicit, bounded POI query controls. */
+.chart-empty-state {
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #52685c;
+  font-size: 16px;
+}
+.chart-empty-state span {
+  font-size: 13px;
+}
+.map-query-controls {
+  position: absolute;
+  z-index: 120;
+  top: 84px;
+  left: 164px;
+  right: 65px;
+  width: fit-content;
+  max-width: calc(100% - 229px);
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #dbe5df;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px #243b3508;
+}
+.map-query-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+}
+.map-query-actions button {
+  padding: 4px 8px;
+  border: 1px solid #bad2c7;
+  border-radius: 4px;
+  background: #f2f8f4;
+  color: #185f48;
+  cursor: pointer;
+}
+.map-query-actions button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+.map-query-controls small {
+  display: block;
+  margin-top: 6px;
+  color: #52685c;
+  font-size: 12px;
+}
+
+.collection-trigger {
+  border: 0;
+  background: none;
+  padding: 0;
+  color: #245d45;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: left;
+}
+.collection-info {
+  width: min(420px, 75vw);
+  max-height: 65vh;
+  overflow-y: auto;
+  color: #29463a;
+}
+.collection-info p {
+  margin: 0 0 8px;
+  line-height: 1.55;
+}
+.collection-info p > b {
+  font-size: 20px;
+  margin-right: 8px;
+}
+.collection-run-id {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+  color: #53675d;
+}
+.collection-quality {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 10px;
+  background: #f1f6f2;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+.collection-cities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 18px;
+  border-top: 1px solid #e0e9e3;
+  padding-top: 10px;
+  margin-bottom: 12px;
+}
+.collection-cities span {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.collection-note {
+  color: #53675d;
+  font-size: 12px;
+}
+.ranking-list strong {
+  min-width: 64px;
+}
+
+/* Two map scales share the shell while keeping renderer lifecycles independent. */
+.overview-page .dashboard-grid {
+  grid-template-columns: minmax(280px, 0.7fr) minmax(500px, 3.4fr) minmax(275px, 0.82fr);
+}
+.province-map-shell {
+  min-height: 530px;
+  background: #f5f8f4;
+}
+.city-map-shell {
+  min-height: 540px;
+  height: auto;
+}
+.sample-context-panel .data-status-card {
+  margin: 0 16px;
+}
+.sample-context {
+  padding: 18px 20px;
+  border-top: 1px solid var(--border);
+  margin-top: 18px;
+}
+.sample-context-label {
+  font-size: 13px;
+  color: var(--muted);
+}
+.sample-context strong {
+  display: block;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-top: 7px;
+}
+.sample-context strong small {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 7px;
+}
+.sample-context p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-top: 6px;
+}
+.sample-method-note {
+  padding: 0 20px 16px;
+  margin-top: auto;
+}
+.sample-method-note h3 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+.sample-method-note p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 6px 0;
+}
+.sample-data-badge {
+  color: var(--primary);
+}
+.province-tooltip strong {
+  font-size: 15px;
+}
+.province-tooltip dl {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 24px;
+  margin: 13px 0;
+}
+.province-tooltip dt {
+  color: #526e5c;
+}
+.province-tooltip dd {
+  margin: 0;
+  font-weight: 600;
+  text-align: right;
+}
+.province-tooltip p,
+.province-tooltip small {
+  font-size: 12px;
+  color: #5f7568;
+  line-height: 1.8;
+}
+.city-detail-panel > .data-status-card {
+  margin: 18px 18px 0;
+}
+@media (min-width: 1700px) and (min-height: 950px) {
+  .app-header {
+    height: 54px;
+  }
+  .main-nav {
+    height: 40px;
+  }
+  .page-toolbar {
+    height: 30px;
+  }
+  .overview-page .page-intro {
+    min-height: 40px;
+    margin-bottom: 10px;
+  }
+  .overview-page .metric-label {
+    min-height: 20px;
+  }
+  .overview-page .metric-pending,
+  .overview-page .metric-change {
+    margin-top: 4px;
+  }
+  .overview-page .map-view {
+    min-height: 530px;
+  }
+  .overview-page .chart-panel,
+  .overview-page .comparison-workspace {
+    height: 210px;
+  }
+  .overview-page .ranking-list .rank-row {
+    height: 26px;
+  }
+  .overview-page .metric-card {
+    min-height: 76px;
+  }
+}
+@media (max-width: 1300px) {
+  .overview-page .dashboard-grid {
+    grid-template-columns: 220px minmax(340px, 1fr) 240px;
+  }
+}
+@media (max-width: 1050px) {
+  .overview-page .dashboard-grid {
+    grid-template-columns: minmax(0, 1fr) 265px;
+  }
+  .sample-context-panel .data-status-card {
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 760px) {
+  .overview-page .dashboard-grid {
+    display: flex;
+  }
+  .province-map-shell {
+    min-height: 620px;
+  }
+}

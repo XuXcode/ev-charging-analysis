@@ -1,0 +1,6061 @@
+{
+  "createdAt": "2026-10-04T12:04:23.705671Z",
+  "administrative": [
+    {
+      "poiId": "B0J25KHU6G",
+      "stationId": 264,
+      "before": {
+        "adcode": "430103",
+        "position": [113.021377, 28.068496],
+        "geometryAdcodes": ["430111"]
+      },
+      "after": {
+        "adcode": "430103",
+        "position": [113.021377, 28.068496],
+        "geometryAdcodes": ["430111"],
+        "providerAdcode": "430103",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0FFL9P7OP",
+      "stationId": 1755,
+      "before": {
+        "adcode": "430202",
+        "position": [113.190352, 27.83171],
+        "geometryAdcodes": ["430203"]
+      },
+      "after": {
+        "adcode": "430202",
+        "position": [113.190352, 27.83171],
+        "geometryAdcodes": ["430203"],
+        "providerAdcode": "430202",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0KDJ7BT7Z",
+      "stationId": 1819,
+      "before": {
+        "adcode": "430204",
+        "position": [113.16318, 27.883394],
+        "geometryAdcodes": ["430202"]
+      },
+      "after": {
+        "adcode": "430204",
+        "position": [113.16318, 27.883394],
+        "geometryAdcodes": ["430202"],
+        "providerAdcode": "430204",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0JKXBPBT8",
+      "stationId": 1820,
+      "before": {
+        "adcode": "430204",
+        "position": [113.18663, 27.919027],
+        "geometryAdcodes": ["430202"]
+      },
+      "after": {
+        "adcode": "430204",
+        "position": [113.18663, 27.919027],
+        "geometryAdcodes": ["430202"],
+        "providerAdcode": "430204",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0JBO6LNQN",
+      "stationId": 1831,
+      "before": {
+        "adcode": "430204",
+        "position": [113.156641, 27.879306],
+        "geometryAdcodes": ["430202"]
+      },
+      "after": {
+        "adcode": "430204",
+        "position": [113.156641, 27.879306],
+        "geometryAdcodes": ["430202"],
+        "providerAdcode": "430204",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0M6PPKRKM",
+      "stationId": 1850,
+      "before": {
+        "adcode": "430204",
+        "position": [113.168686, 27.891354],
+        "geometryAdcodes": ["430202"]
+      },
+      "after": {
+        "adcode": "430204",
+        "position": [113.168686, 27.891354],
+        "geometryAdcodes": ["430202"],
+        "providerAdcode": "430204",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0IBRNN6IA",
+      "stationId": 1852,
+      "before": {
+        "adcode": "430204",
+        "position": [113.192526, 27.924989],
+        "geometryAdcodes": ["430202"]
+      },
+      "after": {
+        "adcode": "430204",
+        "position": [113.192526, 27.924989],
+        "geometryAdcodes": ["430202"],
+        "providerAdcode": "430204",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0MAVD5K2P",
+      "stationId": 1855,
+      "before": {
+        "adcode": "430204",
+        "position": [113.16974, 27.89082],
+        "geometryAdcodes": ["430202"]
+      },
+      "after": {
+        "adcode": "430204",
+        "position": [113.16974, 27.89082],
+        "geometryAdcodes": ["430202"],
+        "providerAdcode": "430204",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0JK9KCZ9L",
+      "stationId": 1858,
+      "before": {
+        "adcode": "430204",
+        "position": [113.18276, 27.90798],
+        "geometryAdcodes": ["430202"]
+      },
+      "after": {
+        "adcode": "430204",
+        "position": [113.18276, 27.90798],
+        "geometryAdcodes": ["430202"],
+        "providerAdcode": "430204",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0HRF531LZ",
+      "stationId": 1860,
+      "before": {
+        "adcode": "430204",
+        "position": [113.17021, 27.890546],
+        "geometryAdcodes": ["430202"]
+      },
+      "after": {
+        "adcode": "430204",
+        "position": [113.17021, 27.890546],
+        "geometryAdcodes": ["430202"],
+        "providerAdcode": "430204",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0LDXXIBAA",
+      "stationId": 1883,
+      "before": {
+        "adcode": "430204",
+        "position": [113.180386, 27.915054],
+        "geometryAdcodes": ["430202"]
+      },
+      "after": {
+        "adcode": "430204",
+        "position": [113.180386, 27.915054],
+        "geometryAdcodes": ["430202"],
+        "providerAdcode": "430204",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0L1YZDVXS",
+      "stationId": 2900,
+      "before": {
+        "adcode": "430321",
+        "position": [112.654655, 27.840166],
+        "geometryAdcodes": ["430302"]
+      },
+      "after": {
+        "adcode": "430321",
+        "position": [112.654655, 27.840166],
+        "geometryAdcodes": ["430302"],
+        "providerAdcode": "430321",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0MRNA735J",
+      "stationId": 3284,
+      "before": {
+        "adcode": "430408",
+        "position": [112.605268, 26.883196],
+        "geometryAdcodes": ["430406"]
+      },
+      "after": {
+        "adcode": "430408",
+        "position": [112.605268, 26.883196],
+        "geometryAdcodes": ["430406"],
+        "providerAdcode": "430408",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0J12S3WQD",
+      "stationId": 3396,
+      "before": {
+        "adcode": "430408",
+        "position": [112.604822, 26.883939],
+        "geometryAdcodes": ["430406"]
+      },
+      "after": {
+        "adcode": "430408",
+        "position": [112.604822, 26.883939],
+        "geometryAdcodes": ["430406"],
+        "providerAdcode": "430408",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0J6HZDVC4",
+      "stationId": 4498,
+      "before": {
+        "adcode": "430581",
+        "position": [110.685751, 26.880823],
+        "geometryAdcodes": ["430525"]
+      },
+      "after": {
+        "adcode": "430581",
+        "position": [110.685751, 26.880823],
+        "geometryAdcodes": ["430525"],
+        "providerAdcode": "430581",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0LDXR9WB1",
+      "stationId": 4499,
+      "before": {
+        "adcode": "430581",
+        "position": [110.6834, 26.880283],
+        "geometryAdcodes": ["430525"]
+      },
+      "after": {
+        "adcode": "430581",
+        "position": [110.6834, 26.880283],
+        "geometryAdcodes": ["430525"],
+        "providerAdcode": "430581",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0J6HZEI6V",
+      "stationId": 4504,
+      "before": {
+        "adcode": "430581",
+        "position": [110.683845, 26.880927],
+        "geometryAdcodes": ["430525"]
+      },
+      "after": {
+        "adcode": "430581",
+        "position": [110.683845, 26.880927],
+        "geometryAdcodes": ["430525"],
+        "providerAdcode": "430581",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0MGLZMUAL",
+      "stationId": 4508,
+      "before": {
+        "adcode": "430581",
+        "position": [110.68521, 26.87993],
+        "geometryAdcodes": ["430525"]
+      },
+      "after": {
+        "adcode": "430581",
+        "position": [110.68521, 26.87993],
+        "geometryAdcodes": ["430525"],
+        "providerAdcode": "430581",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0LK6RLWD0",
+      "stationId": 4894,
+      "before": {
+        "adcode": "430611",
+        "position": [112.77738, 29.462149],
+        "geometryAdcodes": ["430621"]
+      },
+      "after": {
+        "adcode": "430611",
+        "position": [112.77738, 29.462149],
+        "geometryAdcodes": ["430621"],
+        "providerAdcode": "430611",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0LK6RM2TJ",
+      "stationId": 4898,
+      "before": {
+        "adcode": "430611",
+        "position": [112.746376, 29.527203],
+        "geometryAdcodes": ["430623"]
+      },
+      "after": {
+        "adcode": "430611",
+        "position": [112.746376, 29.527203],
+        "geometryAdcodes": ["430623"],
+        "providerAdcode": "430611",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0MB6HNM1V",
+      "stationId": 4905,
+      "before": {
+        "adcode": "430611",
+        "position": [112.779422, 29.463304],
+        "geometryAdcodes": ["430621"]
+      },
+      "after": {
+        "adcode": "430611",
+        "position": [112.779422, 29.463304],
+        "geometryAdcodes": ["430621"],
+        "providerAdcode": "430611",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0JKOBJMT0",
+      "stationId": 5460,
+      "before": {
+        "adcode": "430702",
+        "position": [111.755806, 29.096094],
+        "geometryAdcodes": ["430703"]
+      },
+      "after": {
+        "adcode": "430702",
+        "position": [111.755806, 29.096094],
+        "geometryAdcodes": ["430703"],
+        "providerAdcode": "430702",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0HKDZW842",
+      "stationId": 5468,
+      "before": {
+        "adcode": "430702",
+        "position": [111.69496, 29.115047],
+        "geometryAdcodes": ["430703"]
+      },
+      "after": {
+        "adcode": "430702",
+        "position": [111.69496, 29.115047],
+        "geometryAdcodes": ["430703"],
+        "providerAdcode": "430702",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0IU2YMN7Y",
+      "stationId": 5482,
+      "before": {
+        "adcode": "430702",
+        "position": [111.737598, 28.906984],
+        "geometryAdcodes": ["430703"]
+      },
+      "after": {
+        "adcode": "430702",
+        "position": [111.737598, 28.906984],
+        "geometryAdcodes": ["430703"],
+        "providerAdcode": "430702",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0JBLLSFOG",
+      "stationId": 5506,
+      "before": {
+        "adcode": "430702",
+        "position": [111.769623, 28.940726],
+        "geometryAdcodes": ["430703"]
+      },
+      "after": {
+        "adcode": "430702",
+        "position": [111.769623, 28.940726],
+        "geometryAdcodes": ["430703"],
+        "providerAdcode": "430702",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0LKO7HE99",
+      "stationId": 5538,
+      "before": {
+        "adcode": "430702",
+        "position": [111.73656, 29.11681],
+        "geometryAdcodes": ["430703"]
+      },
+      "after": {
+        "adcode": "430702",
+        "position": [111.73656, 29.11681],
+        "geometryAdcodes": ["430703"],
+        "providerAdcode": "430702",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0JBLLQXOW",
+      "stationId": 5557,
+      "before": {
+        "adcode": "430702",
+        "position": [111.771023, 28.939722],
+        "geometryAdcodes": ["430703"]
+      },
+      "after": {
+        "adcode": "430702",
+        "position": [111.771023, 28.939722],
+        "geometryAdcodes": ["430703"],
+        "providerAdcode": "430702",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0IBRNNEGX",
+      "stationId": 5588,
+      "before": {
+        "adcode": "430702",
+        "position": [111.759948, 29.110221],
+        "geometryAdcodes": ["430703"]
+      },
+      "after": {
+        "adcode": "430702",
+        "position": [111.759948, 29.110221],
+        "geometryAdcodes": ["430703"],
+        "providerAdcode": "430702",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0LA358YAC",
+      "stationId": 5620,
+      "before": {
+        "adcode": "430702",
+        "position": [111.721725, 29.124403],
+        "geometryAdcodes": ["430703"]
+      },
+      "after": {
+        "adcode": "430702",
+        "position": [111.721725, 29.124403],
+        "geometryAdcodes": ["430703"],
+        "providerAdcode": "430702",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0L0T49KCD",
+      "stationId": 5646,
+      "before": {
+        "adcode": "430703",
+        "position": [111.823265, 28.842096],
+        "geometryAdcodes": ["430722"]
+      },
+      "after": {
+        "adcode": "430703",
+        "position": [111.823265, 28.842096],
+        "geometryAdcodes": ["430722"],
+        "providerAdcode": "430703",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0MA3NYFBJ",
+      "stationId": 6124,
+      "before": {
+        "adcode": "430726",
+        "position": [111.277674, 29.571292],
+        "geometryAdcodes": ["430821"]
+      },
+      "after": {
+        "adcode": "430726",
+        "position": [111.277674, 29.571292],
+        "geometryAdcodes": ["430821"],
+        "providerAdcode": "430726",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0L2TD3DD2",
+      "stationId": 7372,
+      "before": {
+        "adcode": "431002",
+        "position": [113.034255, 25.771062],
+        "geometryAdcodes": ["431003"]
+      },
+      "after": {
+        "adcode": "431002",
+        "position": [113.034255, 25.771062],
+        "geometryAdcodes": ["431003"],
+        "providerAdcode": "431002",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0KG4HSYJ9",
+      "stationId": 7440,
+      "before": {
+        "adcode": "431003",
+        "position": [113.036145, 25.768846],
+        "geometryAdcodes": ["431002"]
+      },
+      "after": {
+        "adcode": "431003",
+        "position": [113.036145, 25.768846],
+        "geometryAdcodes": ["431002"],
+        "providerAdcode": "431003",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0MU69WTJ1",
+      "stationId": 7547,
+      "before": {
+        "adcode": "431003",
+        "position": [113.036145, 25.768846],
+        "geometryAdcodes": ["431002"]
+      },
+      "after": {
+        "adcode": "431003",
+        "position": [113.036145, 25.768846],
+        "geometryAdcodes": ["431002"],
+        "providerAdcode": "431003",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0L1PP4CST",
+      "stationId": 9104,
+      "before": {
+        "adcode": "431202",
+        "position": [110.09017, 27.593796],
+        "geometryAdcodes": ["431221"]
+      },
+      "after": {
+        "adcode": "431202",
+        "position": [110.09017, 27.593796],
+        "geometryAdcodes": ["431221"],
+        "providerAdcode": "431202",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0L066MJQY",
+      "stationId": 9105,
+      "before": {
+        "adcode": "431202",
+        "position": [110.097893, 27.593958],
+        "geometryAdcodes": ["431221"]
+      },
+      "after": {
+        "adcode": "431202",
+        "position": [110.097893, 27.593958],
+        "geometryAdcodes": ["431221"],
+        "providerAdcode": "431202",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0HBL5B6Y9",
+      "stationId": 9897,
+      "before": {
+        "adcode": "431321",
+        "position": [112.244241, 27.709816],
+        "geometryAdcodes": []
+      },
+      "after": {
+        "adcode": "431321",
+        "position": [112.244241, 27.709816],
+        "geometryAdcodes": [],
+        "providerAdcode": "431321",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0KGFP2EC1",
+      "stationId": 10006,
+      "before": {
+        "adcode": "431322",
+        "position": [111.10553, 28.03778],
+        "geometryAdcodes": ["430923"]
+      },
+      "after": {
+        "adcode": "431322",
+        "position": [111.10553, 28.03778],
+        "geometryAdcodes": ["430923"],
+        "providerAdcode": "431322",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0I0SGDVFK",
+      "stationId": 11052,
+      "before": {
+        "adcode": "430111",
+        "position": [113.015566, 28.071026],
+        "geometryAdcodes": ["430103"]
+      },
+      "after": {
+        "adcode": "430111",
+        "position": [113.015566, 28.071026],
+        "geometryAdcodes": ["430103"],
+        "providerAdcode": "430111",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0MDA61ASO",
+      "stationId": 11505,
+      "before": {
+        "adcode": "430103",
+        "position": [113.000475, 28.122875],
+        "geometryAdcodes": ["430111"]
+      },
+      "after": {
+        "adcode": "430103",
+        "position": [113.000475, 28.122875],
+        "geometryAdcodes": ["430111"],
+        "providerAdcode": "430103",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0FFL6BVMA",
+      "stationId": 11506,
+      "before": {
+        "adcode": "430103",
+        "position": [113.00048, 28.122898],
+        "geometryAdcodes": ["430111"]
+      },
+      "after": {
+        "adcode": "430103",
+        "position": [113.00048, 28.122898],
+        "geometryAdcodes": ["430111"],
+        "providerAdcode": "430103",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0L2ZZ3CU4",
+      "stationId": 11507,
+      "before": {
+        "adcode": "430103",
+        "position": [113.000336, 28.122011],
+        "geometryAdcodes": ["430111"]
+      },
+      "after": {
+        "adcode": "430103",
+        "position": [113.000336, 28.122011],
+        "geometryAdcodes": ["430111"],
+        "providerAdcode": "430103",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0LKN4OU2Y",
+      "stationId": 12000,
+      "before": {
+        "adcode": "430702",
+        "position": [111.70419, 29.117378],
+        "geometryAdcodes": ["430703"]
+      },
+      "after": {
+        "adcode": "430702",
+        "position": [111.70419, 29.117378],
+        "geometryAdcodes": ["430703"],
+        "providerAdcode": "430702",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0LAU57748",
+      "stationId": 12001,
+      "before": {
+        "adcode": "430702",
+        "position": [111.81358, 29.080696],
+        "geometryAdcodes": ["430703"]
+      },
+      "after": {
+        "adcode": "430702",
+        "position": [111.81358, 29.080696],
+        "geometryAdcodes": ["430703"],
+        "providerAdcode": "430702",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0MA95BDH1",
+      "stationId": 12371,
+      "before": {
+        "adcode": "430112",
+        "position": [112.871414, 28.254095],
+        "geometryAdcodes": ["430104"]
+      },
+      "after": {
+        "adcode": "430112",
+        "position": [112.871414, 28.254095],
+        "geometryAdcodes": ["430104"],
+        "providerAdcode": "430112",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0MA95BL3U",
+      "stationId": 12372,
+      "before": {
+        "adcode": "430112",
+        "position": [112.871414, 28.254095],
+        "geometryAdcodes": ["430104"]
+      },
+      "after": {
+        "adcode": "430112",
+        "position": [112.871414, 28.254095],
+        "geometryAdcodes": ["430104"],
+        "providerAdcode": "430112",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0MA2ZQTAP",
+      "stationId": 12373,
+      "before": {
+        "adcode": "430112",
+        "position": [112.86943, 28.254063],
+        "geometryAdcodes": ["430104"]
+      },
+      "after": {
+        "adcode": "430112",
+        "position": [112.86943, 28.254063],
+        "geometryAdcodes": ["430104"],
+        "providerAdcode": "430112",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0LR6XHMM1",
+      "stationId": 12374,
+      "before": {
+        "adcode": "430112",
+        "position": [112.865018, 28.253767],
+        "geometryAdcodes": ["430104"]
+      },
+      "after": {
+        "adcode": "430112",
+        "position": [112.865018, 28.253767],
+        "geometryAdcodes": ["430104"],
+        "providerAdcode": "430112",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    },
+    {
+      "poiId": "B0JR9DI39N",
+      "stationId": 12453,
+      "before": {
+        "adcode": "430121",
+        "position": [113.056491, 28.230207],
+        "geometryAdcodes": ["430105"]
+      },
+      "after": {
+        "adcode": "430121",
+        "position": [113.056491, 28.230207],
+        "geometryAdcodes": ["430105"],
+        "providerAdcode": "430121",
+        "decision": "source_code_reconfirmed"
+      },
+      "reason": "二次高德逆地理编码与原始POI编码一致，保留原编码与坐标；DataV图形不一致需在边界版本层处理。"
+    }
+  ],
+  "highRisk": [
+    {
+      "stationId": 16,
+      "poiId": "B0LD9U4BDP",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 40,
+      "poiId": "B0LR9LQ6ZH",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 63,
+      "poiId": "B0J24C5D1E",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 84,
+      "poiId": "B0MD0YQEW4",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 137,
+      "poiId": "B0JKDGW8U4",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 224,
+      "poiId": "B0KAV1E6PR",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 232,
+      "poiId": "B0I2H98E0F",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 334,
+      "poiId": "B0IG1CES4S",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 353,
+      "poiId": "B0MD0YQ1OY",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 395,
+      "poiId": "B0I1NS8UR2",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 482,
+      "poiId": "B0K6FGEUI4",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 506,
+      "poiId": "B0J0KG257H",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 530,
+      "poiId": "B0M167P2YV",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 795,
+      "poiId": "B0FFK8U2Y5",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1056,
+      "poiId": "B0K2RP8F80",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1069,
+      "poiId": "B0J247607G",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1153,
+      "poiId": "B0MGSALXYJ",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1254,
+      "poiId": "B0MDJAIK2E",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1507,
+      "poiId": "B0M6D56GZ1",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1710,
+      "poiId": "B0MR2ANKEM",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1731,
+      "poiId": "B0MAV56FC9",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1770,
+      "poiId": "B0M2J1J0RH",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1881,
+      "poiId": "B0L6YOO3UL",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1891,
+      "poiId": "B0M1GA6J89",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1926,
+      "poiId": "B0KKDGU30F",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1933,
+      "poiId": "B0MU7A5DZ0",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1941,
+      "poiId": "B0M1ANFO0Q",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 2062,
+      "poiId": "B0I2R5V5S1",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 2933,
+      "poiId": "B0M1FAA1LJ",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 2937,
+      "poiId": "B0M1FAA5IB",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 2941,
+      "poiId": "B0L07NZSHY",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 2956,
+      "poiId": "B0MUSYAAVN",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3019,
+      "poiId": "B0LR7AGPLE",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3163,
+      "poiId": "B0L1F7ZLPH",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3273,
+      "poiId": "B0LK2PPFEP",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3279,
+      "poiId": "B0KD6GHD40",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3280,
+      "poiId": "B0L1UG2VR8",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3881,
+      "poiId": "B0K0RDOHQX",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3953,
+      "poiId": "B0JRPKGDV4",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3961,
+      "poiId": "B0L6YOPATF",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3965,
+      "poiId": "B0L6YOO3V8",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3993,
+      "poiId": "B0L3CKIBZX",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4001,
+      "poiId": "B0K0YPINGU",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4003,
+      "poiId": "B0MRAPXSSP",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4046,
+      "poiId": "B0MRNA7355",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4114,
+      "poiId": "B0MRNA6XBF",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4163,
+      "poiId": "B0MRNA6LDT",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4187,
+      "poiId": "B0MRNA6QXI",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4300,
+      "poiId": "B0MRNA6LDX",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4349,
+      "poiId": "B0L1RKABYI",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4408,
+      "poiId": "B0MBNPRMD9",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4450,
+      "poiId": "B0M6TG2VHE",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4460,
+      "poiId": "B0L1JA836B",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4583,
+      "poiId": "B0LBRPGMVZ",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4657,
+      "poiId": "B0J247AAE6",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4674,
+      "poiId": "B0LR7AHJXY",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4702,
+      "poiId": "B0KAVGDPW4",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4730,
+      "poiId": "B0J2ZRJIVF",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4769,
+      "poiId": "B0MRCAP7UP",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4808,
+      "poiId": "B0MD95OUD3",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4834,
+      "poiId": "B0KDSBRP6K",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4879,
+      "poiId": "B0K6THPL88",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4914,
+      "poiId": "B0KDSBMHW3",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4926,
+      "poiId": "B0KDSBQX77",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4971,
+      "poiId": "B0M29BS347",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4988,
+      "poiId": "B0KDSBRHJZ",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4995,
+      "poiId": "B0M6DP494R",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5055,
+      "poiId": "B0MRNA6LDZ",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5070,
+      "poiId": "B0KDSBM2HH",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5125,
+      "poiId": "B0KDSBLN4S",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5138,
+      "poiId": "B0KDSBUA45",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5245,
+      "poiId": "B0HG7CLZ7R",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5387,
+      "poiId": "B0K3NZN7ZD",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5426,
+      "poiId": "B0HKFO26HI",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5429,
+      "poiId": "B0M11A12VR",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5432,
+      "poiId": "B0LKBXVLWC",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5438,
+      "poiId": "B0LGXSBG0B",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5451,
+      "poiId": "B0LBRMHKXI",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5510,
+      "poiId": "B0LD2ONES4",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5580,
+      "poiId": "B0KKMZ2CDR",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5598,
+      "poiId": "B0MGXAXC24",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5643,
+      "poiId": "B0L1UG244I",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5710,
+      "poiId": "B0IDCMND8T",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5875,
+      "poiId": "B0LDODWVP0",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6044,
+      "poiId": "B0MBXAYAB8",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6095,
+      "poiId": "B0M6MNTP6O",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6181,
+      "poiId": "B0MRNA6XBP",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6188,
+      "poiId": "B0KKXA0XI6",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6227,
+      "poiId": "B0MRNA6QX1",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6312,
+      "poiId": "B0HGO6S11J",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6348,
+      "poiId": "B0L07N0N76",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6360,
+      "poiId": "B0MRNA6LDP",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6411,
+      "poiId": "B0MR958CE6",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6461,
+      "poiId": "B0K6CNX0A0",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6470,
+      "poiId": "B0L23446LA",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6502,
+      "poiId": "B0L04SX21X",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6611,
+      "poiId": "B0GUX1A8W1",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6734,
+      "poiId": "B0LKOGEPFB",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6739,
+      "poiId": "B0I2H9CVSY",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6841,
+      "poiId": "B0K307UUVF",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6974,
+      "poiId": "B0LKJS1RYY",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7428,
+      "poiId": "B0MRNA6QWY",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7452,
+      "poiId": "B0IBRNN6IT",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7495,
+      "poiId": "B0K30PV4LY",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7651,
+      "poiId": "B0J2JP4MI4",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7889,
+      "poiId": "B0HA955ZVD",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7920,
+      "poiId": "B0K0Z1ZFUC",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7944,
+      "poiId": "B0MRKZ32J9",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7956,
+      "poiId": "B0HGO6TAOX",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7978,
+      "poiId": "B0J2478KO3",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 8184,
+      "poiId": "B0M651L3TZ",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 8215,
+      "poiId": "B0I1NS52PY",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 8306,
+      "poiId": "B0LBO440MD",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 8648,
+      "poiId": "B0L1RB9Y0R",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 8996,
+      "poiId": "B0LKUCYA8C",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9101,
+      "poiId": "B0M2NAYRFE",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9134,
+      "poiId": "B0M2NAYOKN",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9332,
+      "poiId": "B0IDU9MKP5",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9517,
+      "poiId": "B0IUDDINL6",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9598,
+      "poiId": "B0KGYPFGY8",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9660,
+      "poiId": "B0MRNA6XBH",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9664,
+      "poiId": "B0I1NS8UUM",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9679,
+      "poiId": "B0MR0AG8EK",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9694,
+      "poiId": "B0MGSALR3O",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9938,
+      "poiId": "B0MRNA735K",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10101,
+      "poiId": "B0LAODBVSJ",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10180,
+      "poiId": "B0L6DL9V62",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10191,
+      "poiId": "B0MGSAMAOI",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10197,
+      "poiId": "B0MRNA6QXK",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10218,
+      "poiId": "B0MRNA6XBQ",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10224,
+      "poiId": "B0M2NAYXU3",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10231,
+      "poiId": "B0MGX4XA8G",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10398,
+      "poiId": "B0I6VH7Z9B",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10647,
+      "poiId": "B0L61B8DMC",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10657,
+      "poiId": "B0MBKYPGC8",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10661,
+      "poiId": "B0MUT7LCIZ",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10717,
+      "poiId": "B0LGJ7RSA0",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10719,
+      "poiId": "B0LR05MGHW",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10721,
+      "poiId": "B0LAYX0DKM",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10723,
+      "poiId": "B0MUUHX10D",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10724,
+      "poiId": "B0LRUXDNCR",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10725,
+      "poiId": "B0LR0UMMCW",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10726,
+      "poiId": "B0LG1X3WE5",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10727,
+      "poiId": "B0LU77YYYP",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10728,
+      "poiId": "B0L1R4ADV9",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10729,
+      "poiId": "B0LRZG1EQI",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10731,
+      "poiId": "B0LR0UMSON",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10736,
+      "poiId": "B0LR0UM8VD",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10739,
+      "poiId": "B0LUJ7BDHT",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10766,
+      "poiId": "B0LAKXLQJT",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10783,
+      "poiId": "B0FFL9IJQM",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10850,
+      "poiId": "B0M2Y58D4Q",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10863,
+      "poiId": "B0MROMG4XR",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10870,
+      "poiId": "B0LUHZJXR6",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10929,
+      "poiId": "B0L0UCVNDZ",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10987,
+      "poiId": "B0JRA5ER8W",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11165,
+      "poiId": "B0LDJXYRKV",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11207,
+      "poiId": "B0L6U770NA",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11208,
+      "poiId": "B0L26HEC3A",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11220,
+      "poiId": "B0M29AT10N",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11256,
+      "poiId": "B0MR26N2SU",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11293,
+      "poiId": "B0M2YS6D6R",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11330,
+      "poiId": "B0M64AIQV5",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11400,
+      "poiId": "B0H6OUSZ6N",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11432,
+      "poiId": "B0FFLHQCMV",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11445,
+      "poiId": "B0I6VH75L6",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11466,
+      "poiId": "B0MD0YQM90",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11491,
+      "poiId": "B0LD557XMR",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11630,
+      "poiId": "B0KAFPH7DX",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11694,
+      "poiId": "B0JUAPMO53",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11701,
+      "poiId": "B0M2Y58663",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11711,
+      "poiId": "B0LAPXLMLN",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11829,
+      "poiId": "B0KDAPL8XQ",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11830,
+      "poiId": "B0MDLRL481",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11868,
+      "poiId": "B0IDV1T47Y",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11890,
+      "poiId": "B0KBNUIAU6",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12085,
+      "poiId": "B0FFKZWF4Z",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12235,
+      "poiId": "B0L6YOKNAX",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12254,
+      "poiId": "B0FFLJ3T8Q",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12431,
+      "poiId": "B0L0F4W7QI",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12477,
+      "poiId": "B0LKXCNY4H",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12495,
+      "poiId": "B0HK3CRNWS",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12563,
+      "poiId": "B0MGZZHMIM",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12601,
+      "poiId": "B0L1VZB18M",
+      "classification": "dedicated",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1577,
+      "poiId": "B0JKLH56AF",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 2446,
+      "poiId": "B0L6YOKO1P",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 2712,
+      "poiId": "B0MU7A57XH",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3696,
+      "poiId": "B0KRLM6ODG",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4176,
+      "poiId": "B0MUC40GNE",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4194,
+      "poiId": "B0M15G4U2C",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4306,
+      "poiId": "B0MUD4HGDV",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4378,
+      "poiId": "B0LDDZCG08",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5103,
+      "poiId": "B0MD0YQ7VI",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6015,
+      "poiId": "B0LGDGESPD",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6017,
+      "poiId": "B0L61G41EM",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7026,
+      "poiId": "B0MR6NYFR4",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7166,
+      "poiId": "B0MBG42QD9",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7885,
+      "poiId": "B0I2VZ4VL6",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 8551,
+      "poiId": "B0L0T495UU",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 8595,
+      "poiId": "B0M61PFI8U",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 8759,
+      "poiId": "B0LUVXENAH",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 8904,
+      "poiId": "B0LUVGDRFI",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9823,
+      "poiId": "B0M279LC7X",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10618,
+      "poiId": "B0K254QSTE",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10797,
+      "poiId": "B0LA7ZLL71",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10846,
+      "poiId": "B0L07B07O6",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11814,
+      "poiId": "B0KRVKBNRH",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12048,
+      "poiId": "B0L1YPDXZQ",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12350,
+      "poiId": "B0MR340A3T",
+      "classification": "personal",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 95,
+      "poiId": "B0IU3DG6FJ",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 127,
+      "poiId": "B0LDGP3FZZ",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 144,
+      "poiId": "B0K6JKO488",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 178,
+      "poiId": "B0L3UBG62A",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 275,
+      "poiId": "B0MA3LZCIS",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 324,
+      "poiId": "B0J0Z4CGJ2",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 650,
+      "poiId": "B0K6NK1PL3",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 658,
+      "poiId": "B0K6MMCWYO",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 679,
+      "poiId": "B0H6R99L1X",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 687,
+      "poiId": "B0I1NS81ZI",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 699,
+      "poiId": "B0IR5AW39B",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1288,
+      "poiId": "B0KDSBSCAX",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1293,
+      "poiId": "B0JA9AJQ84",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1512,
+      "poiId": "B0LGFURX8A",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1672,
+      "poiId": "B0KKNS4YXU",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1887,
+      "poiId": "B0JDB5BC2D",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1974,
+      "poiId": "B0JU6H06FC",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1975,
+      "poiId": "B0JB6GEMUE",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 1976,
+      "poiId": "B0LU1SFJ2W",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 2046,
+      "poiId": "B0IADDWUYM",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 2190,
+      "poiId": "B0LRR9L38Z",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 2598,
+      "poiId": "B0KAOBT0VY",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 2649,
+      "poiId": "B0MG6UHX18",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 2651,
+      "poiId": "B0L6P5DAIQ",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 2904,
+      "poiId": "B0L6N5MDXZ",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3596,
+      "poiId": "B0I05O5MKJ",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3642,
+      "poiId": "B0HKN5PMNC",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3643,
+      "poiId": "B0G3A5FRT5",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3762,
+      "poiId": "B0KKCZMZAY",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3831,
+      "poiId": "B0L0A5C9L4",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3832,
+      "poiId": "B0LRB5NN7C",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3889,
+      "poiId": "B0KBPK0166",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3890,
+      "poiId": "B0LRRDKMBH",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3891,
+      "poiId": "B0IK0HLMAW",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3973,
+      "poiId": "B0H0Y5I9YC",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 3974,
+      "poiId": "B0MACCVZQZ",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4026,
+      "poiId": "B0JBULFWOP",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4027,
+      "poiId": "B0M6BZHDA8",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4379,
+      "poiId": "B0L2RKLBN9",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4380,
+      "poiId": "B0L1M7HFRI",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4381,
+      "poiId": "B0L07U2L25",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4536,
+      "poiId": "B0J6NLNA44",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4622,
+      "poiId": "B0L6ZBWFCN",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4623,
+      "poiId": "B0KARXEOZ4",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4726,
+      "poiId": "B0L0TB8OZL",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 4979,
+      "poiId": "B0LKVN3HO7",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5406,
+      "poiId": "B0MBN7U2IN",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5452,
+      "poiId": "B0FFH6D4S2",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5453,
+      "poiId": "B0LDDHBLN1",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5454,
+      "poiId": "B0JBTU6DVM",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5455,
+      "poiId": "B0FFJA4U42",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5456,
+      "poiId": "B0K6A7VIDQ",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5457,
+      "poiId": "B0JB9Y0QHD",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5458,
+      "poiId": "B0JAUAQEIQ",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5555,
+      "poiId": "B0IAHS45W3",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5591,
+      "poiId": "B0KAVKAQ5G",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5613,
+      "poiId": "B0IBAN04FH",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5757,
+      "poiId": "B0LKSHIDED",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 5903,
+      "poiId": "B0HB7R1GIK",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6429,
+      "poiId": "B0IBANZOSA",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6439,
+      "poiId": "B0MAV46359",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6563,
+      "poiId": "B0IAL5Y4HM",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6620,
+      "poiId": "B0L374KRWR",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6773,
+      "poiId": "B0LDMAB5VB",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6859,
+      "poiId": "B0JK6CQJSI",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6928,
+      "poiId": "B0KKAZL5SQ",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 6929,
+      "poiId": "B0JG350VJV",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7331,
+      "poiId": "B0MA6BKG0D",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7367,
+      "poiId": "B0MA6BJTAP",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7376,
+      "poiId": "B0L6YGHJHD",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7378,
+      "poiId": "B0MA6BJLPL",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7384,
+      "poiId": "B0MA64KO0V",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7403,
+      "poiId": "B0MA6BKNXT",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7407,
+      "poiId": "B0HGO6SGKR",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7411,
+      "poiId": "B0HKTRKD90",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7520,
+      "poiId": "B0MA64K0XK",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7743,
+      "poiId": "B0FFGK36UE",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7744,
+      "poiId": "B0L1FZWC9S",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 7862,
+      "poiId": "B0L2ZC4CVV",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 8022,
+      "poiId": "B0JKU5JZ1V",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 8121,
+      "poiId": "B0HKN5QOQ7",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 8122,
+      "poiId": "B0KGL700OB",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 8457,
+      "poiId": "B0LRBSNTEZ",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 8782,
+      "poiId": "B0L3F44A97",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 8936,
+      "poiId": "B0L0VAIH7M",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9394,
+      "poiId": "B0HKBLXXXV",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9471,
+      "poiId": "B0K03K1V17",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9580,
+      "poiId": "B0MA6ULAIM",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9657,
+      "poiId": "B0LR7AHJXZ",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9658,
+      "poiId": "B0MB56JF2S",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9767,
+      "poiId": "B0MRNA6QXG",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9830,
+      "poiId": "B0L2AK135E",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9921,
+      "poiId": "B0LKCM1BMA",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 9927,
+      "poiId": "B0KR7GIQV2",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10280,
+      "poiId": "B0J0PD8DSW",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10281,
+      "poiId": "B0JB6AB3SJ",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10282,
+      "poiId": "B0LGDS8ZMX",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10283,
+      "poiId": "B0LUPDYW6T",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10389,
+      "poiId": "B0LA7RWDLO",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10745,
+      "poiId": "B0L33N8TT5",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10787,
+      "poiId": "B0LR5UAGTJ",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10789,
+      "poiId": "B0FFL6BVUF",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 10970,
+      "poiId": "B0JK66XV3P",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11137,
+      "poiId": "B0KGU7SDJF",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11138,
+      "poiId": "B0L3CRK6XS",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11303,
+      "poiId": "B0J6N9NQ7R",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11311,
+      "poiId": "B0IAL5YJ1I",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11331,
+      "poiId": "B0IAL5XW9S",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11332,
+      "poiId": "B0IAL5X4KX",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11343,
+      "poiId": "B0M21RYOOJ",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11394,
+      "poiId": "B0K6O4K4N4",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11409,
+      "poiId": "B0L2AK0VM5",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11423,
+      "poiId": "B0J6MHHM1U",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11452,
+      "poiId": "B0FFIIRM21",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11489,
+      "poiId": "B0JUDA4MKN",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11508,
+      "poiId": "B0LBLLQSJW",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11550,
+      "poiId": "B0K3244MQY",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11621,
+      "poiId": "B0LULU740C",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11633,
+      "poiId": "B0FFIL3X4K",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11647,
+      "poiId": "B0K6ZU0X84",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11649,
+      "poiId": "B0JB1U8YP9",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11739,
+      "poiId": "B0GKYZI2F5",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11783,
+      "poiId": "B0KGSGF7ZA",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11818,
+      "poiId": "B0L1CO7IYE",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11880,
+      "poiId": "B0FFHKJH1G",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11900,
+      "poiId": "B0JRA5K3X2",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11901,
+      "poiId": "B0M2OP0HGB",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 11944,
+      "poiId": "B0LU1SBUY9",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12017,
+      "poiId": "B0L2F51F5G",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12069,
+      "poiId": "B0LR2Z4ABI",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12167,
+      "poiId": "B0HAVS9CC8",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12179,
+      "poiId": "B0FFIHDYZ8",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12334,
+      "poiId": "B0L1H4WFC2",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12338,
+      "poiId": "B0L6YOSQ9K",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12374,
+      "poiId": "B0LR6XHMM1",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12507,
+      "poiId": "B0JANZOQJ7",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12508,
+      "poiId": "B0JAN7KRR6",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12582,
+      "poiId": "B0JUJDP04S",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    },
+    {
+      "stationId": 12588,
+      "poiId": "B0JACCQC2F",
+      "classification": "suspected_closed",
+      "before": {
+        "reviewStatus": "unreviewed",
+        "reviewNote": null,
+        "reviewedAt": null
+      },
+      "after": {
+        "reviewStatus": "needs_review",
+        "reviewNote": "P0复核分流：原始类别或名称含停业/拆除、专用、个人线索；尚未核实营业或公共开放，需运营方或现场证据。",
+        "reviewedAt": null
+      }
+    }
+  ],
+  "notice": "自动证据复核/分流，不证明法律行政归属或营业状态；原始站点、坐标、采集页面未删除。"
+}

@@ -1,0 +1,1390 @@
+{
+  "description": "SIMULATED TEST DATA ONLY. Exported from existing frontend mock; no real POI or analysis.",
+  "sourceInfo": {
+    "simulated": true,
+    "updatedAt": "2026-09-30",
+    "period": "2026年第三季度",
+    "label": "本地演示数据",
+    "boundary": "阿里云 DataV.GeoAtlas（展示边界）",
+    "note": "设施数量、统计面积、密度、趋势及站点位置均为模拟数据，不代表实际建设情况。"
+  },
+  "cities": [
+    {
+      "code": "430100",
+      "name": "长沙市",
+      "shortName": "长沙",
+      "stations": 2850,
+      "piles": 21600,
+      "fastRate": 71.2,
+      "growth": 28.4,
+      "region": "长株潭",
+      "center": [112.9388, 28.2282],
+      "areaKm2": 11800,
+      "density": 24.15
+    },
+    {
+      "code": "430200",
+      "name": "株洲市",
+      "shortName": "株洲",
+      "stations": 980,
+      "piles": 6800,
+      "fastRate": 64.5,
+      "growth": 25.6,
+      "region": "长株潭",
+      "center": [113.1517, 27.8358],
+      "areaKm2": 11300,
+      "density": 8.67
+    },
+    {
+      "code": "430300",
+      "name": "湘潭市",
+      "shortName": "湘潭",
+      "stations": 720,
+      "piles": 5100,
+      "fastRate": 62.8,
+      "growth": 24.1,
+      "region": "长株潭",
+      "center": [112.9441, 27.8298],
+      "areaKm2": 5000,
+      "density": 14.4
+    },
+    {
+      "code": "430400",
+      "name": "衡阳市",
+      "shortName": "衡阳",
+      "stations": 1120,
+      "piles": 7900,
+      "fastRate": 60.3,
+      "growth": 22.8,
+      "region": "湘南",
+      "center": [112.6077, 26.9004],
+      "areaKm2": 15400,
+      "density": 7.27
+    },
+    {
+      "code": "430500",
+      "name": "邵阳市",
+      "shortName": "邵阳",
+      "stations": 680,
+      "piles": 4200,
+      "fastRate": 49.6,
+      "growth": 19.2,
+      "region": "湘中",
+      "center": [111.4679, 27.2389],
+      "areaKm2": 20800,
+      "density": 3.27
+    },
+    {
+      "code": "430600",
+      "name": "岳阳市",
+      "shortName": "岳阳",
+      "stations": 1060,
+      "piles": 7300,
+      "fastRate": 61.4,
+      "growth": 23.5,
+      "region": "洞庭湖",
+      "center": [113.1329, 29.3703],
+      "areaKm2": 14900,
+      "density": 7.11
+    },
+    {
+      "code": "430700",
+      "name": "常德市",
+      "shortName": "常德",
+      "stations": 950,
+      "piles": 6200,
+      "fastRate": 58.7,
+      "growth": 21.8,
+      "region": "洞庭湖",
+      "center": [111.6985, 29.0317],
+      "areaKm2": 18200,
+      "density": 5.22
+    },
+    {
+      "code": "430800",
+      "name": "张家界市",
+      "shortName": "张家界",
+      "stations": 310,
+      "piles": 1800,
+      "fastRate": 43.2,
+      "growth": 18.6,
+      "region": "湘西",
+      "center": [110.4792, 29.1171],
+      "areaKm2": 9500,
+      "density": 3.26
+    },
+    {
+      "code": "430900",
+      "name": "益阳市",
+      "shortName": "益阳",
+      "stations": 540,
+      "piles": 3500,
+      "fastRate": 52.1,
+      "growth": 20.4,
+      "region": "洞庭湖",
+      "center": [112.355, 28.5701],
+      "areaKm2": 12100,
+      "density": 4.46
+    },
+    {
+      "code": "431000",
+      "name": "郴州市",
+      "shortName": "郴州",
+      "stations": 830,
+      "piles": 5600,
+      "fastRate": 56.9,
+      "growth": 26.3,
+      "region": "湘南",
+      "center": [113.0147, 25.7705],
+      "areaKm2": 19300,
+      "density": 4.3
+    },
+    {
+      "code": "431100",
+      "name": "永州市",
+      "shortName": "永州",
+      "stations": 610,
+      "piles": 3900,
+      "fastRate": 48.5,
+      "growth": 21.7,
+      "region": "湘南",
+      "center": [111.6134, 26.4204],
+      "areaKm2": 22400,
+      "density": 2.72
+    },
+    {
+      "code": "431200",
+      "name": "怀化市",
+      "shortName": "怀化",
+      "stations": 580,
+      "piles": 3600,
+      "fastRate": 45.8,
+      "growth": 20.2,
+      "region": "湘西",
+      "center": [109.9782, 27.5501],
+      "areaKm2": 27600,
+      "density": 2.1
+    },
+    {
+      "code": "431300",
+      "name": "娄底市",
+      "shortName": "娄底",
+      "stations": 490,
+      "piles": 3200,
+      "fastRate": 51.3,
+      "growth": 19.8,
+      "region": "湘中",
+      "center": [112.0085, 27.7281],
+      "areaKm2": 8100,
+      "density": 6.05
+    },
+    {
+      "code": "433100",
+      "name": "湘西土家族苗族自治州",
+      "shortName": "湘西州",
+      "stations": 280,
+      "piles": 1600,
+      "fastRate": 39.6,
+      "growth": 17.5,
+      "region": "湘西",
+      "center": [109.7389, 28.3117],
+      "areaKm2": 15500,
+      "density": 1.81
+    }
+  ],
+  "stations": [
+    {
+      "id": "430100-0",
+      "cityCode": "430100",
+      "name": "长沙示例充电站 1",
+      "type": "直流快充",
+      "position": [112.8538, 28.168200000000002],
+      "piles": 8
+    },
+    {
+      "id": "430100-1",
+      "cityCode": "430100",
+      "name": "长沙示例充电站 2",
+      "type": "交流慢充",
+      "position": [112.9388, 28.2282],
+      "piles": 12
+    },
+    {
+      "id": "430100-2",
+      "cityCode": "430100",
+      "name": "长沙示例充电站 3",
+      "type": "直流快充",
+      "position": [113.0238, 28.2882],
+      "piles": 16
+    },
+    {
+      "id": "430200-0",
+      "cityCode": "430200",
+      "name": "株洲示例充电站 1",
+      "type": "直流快充",
+      "position": [113.06670000000001, 27.7758],
+      "piles": 12
+    },
+    {
+      "id": "430200-1",
+      "cityCode": "430200",
+      "name": "株洲示例充电站 2",
+      "type": "交流慢充",
+      "position": [113.1517, 27.8358],
+      "piles": 16
+    },
+    {
+      "id": "430200-2",
+      "cityCode": "430200",
+      "name": "株洲示例充电站 3",
+      "type": "直流快充",
+      "position": [113.2367, 27.895799999999998],
+      "piles": 20
+    },
+    {
+      "id": "430300-0",
+      "cityCode": "430300",
+      "name": "湘潭示例充电站 1",
+      "type": "直流快充",
+      "position": [112.85910000000001, 27.7698],
+      "piles": 16
+    },
+    {
+      "id": "430300-1",
+      "cityCode": "430300",
+      "name": "湘潭示例充电站 2",
+      "type": "交流慢充",
+      "position": [112.9441, 27.8298],
+      "piles": 20
+    },
+    {
+      "id": "430300-2",
+      "cityCode": "430300",
+      "name": "湘潭示例充电站 3",
+      "type": "直流快充",
+      "position": [113.0291, 27.889799999999997],
+      "piles": 24
+    },
+    {
+      "id": "430400-0",
+      "cityCode": "430400",
+      "name": "衡阳示例充电站 1",
+      "type": "直流快充",
+      "position": [112.5227, 26.840400000000002],
+      "piles": 20
+    },
+    {
+      "id": "430400-1",
+      "cityCode": "430400",
+      "name": "衡阳示例充电站 2",
+      "type": "交流慢充",
+      "position": [112.6077, 26.9004],
+      "piles": 24
+    },
+    {
+      "id": "430400-2",
+      "cityCode": "430400",
+      "name": "衡阳示例充电站 3",
+      "type": "直流快充",
+      "position": [112.69269999999999, 26.9604],
+      "piles": 28
+    },
+    {
+      "id": "430500-0",
+      "cityCode": "430500",
+      "name": "邵阳示例充电站 1",
+      "type": "直流快充",
+      "position": [111.3829, 27.178900000000002],
+      "piles": 24
+    },
+    {
+      "id": "430500-1",
+      "cityCode": "430500",
+      "name": "邵阳示例充电站 2",
+      "type": "交流慢充",
+      "position": [111.4679, 27.2389],
+      "piles": 28
+    },
+    {
+      "id": "430500-2",
+      "cityCode": "430500",
+      "name": "邵阳示例充电站 3",
+      "type": "直流快充",
+      "position": [111.5529, 27.2989],
+      "piles": 8
+    },
+    {
+      "id": "430600-0",
+      "cityCode": "430600",
+      "name": "岳阳示例充电站 1",
+      "type": "直流快充",
+      "position": [113.04790000000001, 29.3103],
+      "piles": 28
+    },
+    {
+      "id": "430600-1",
+      "cityCode": "430600",
+      "name": "岳阳示例充电站 2",
+      "type": "交流慢充",
+      "position": [113.1329, 29.3703],
+      "piles": 8
+    },
+    {
+      "id": "430600-2",
+      "cityCode": "430600",
+      "name": "岳阳示例充电站 3",
+      "type": "直流快充",
+      "position": [113.2179, 29.4303],
+      "piles": 12
+    },
+    {
+      "id": "430700-0",
+      "cityCode": "430700",
+      "name": "常德示例充电站 1",
+      "type": "直流快充",
+      "position": [111.6135, 28.971700000000002],
+      "piles": 8
+    },
+    {
+      "id": "430700-1",
+      "cityCode": "430700",
+      "name": "常德示例充电站 2",
+      "type": "交流慢充",
+      "position": [111.6985, 29.0317],
+      "piles": 12
+    },
+    {
+      "id": "430700-2",
+      "cityCode": "430700",
+      "name": "常德示例充电站 3",
+      "type": "直流快充",
+      "position": [111.78349999999999, 29.0917],
+      "piles": 16
+    },
+    {
+      "id": "430800-0",
+      "cityCode": "430800",
+      "name": "张家界示例充电站 1",
+      "type": "直流快充",
+      "position": [110.39420000000001, 29.057100000000002],
+      "piles": 12
+    },
+    {
+      "id": "430800-1",
+      "cityCode": "430800",
+      "name": "张家界示例充电站 2",
+      "type": "交流慢充",
+      "position": [110.4792, 29.1171],
+      "piles": 16
+    },
+    {
+      "id": "430800-2",
+      "cityCode": "430800",
+      "name": "张家界示例充电站 3",
+      "type": "直流快充",
+      "position": [110.5642, 29.1771],
+      "piles": 20
+    },
+    {
+      "id": "430900-0",
+      "cityCode": "430900",
+      "name": "益阳示例充电站 1",
+      "type": "直流快充",
+      "position": [112.27000000000001, 28.5101],
+      "piles": 16
+    },
+    {
+      "id": "430900-1",
+      "cityCode": "430900",
+      "name": "益阳示例充电站 2",
+      "type": "交流慢充",
+      "position": [112.355, 28.5701],
+      "piles": 20
+    },
+    {
+      "id": "430900-2",
+      "cityCode": "430900",
+      "name": "益阳示例充电站 3",
+      "type": "直流快充",
+      "position": [112.44, 28.6301],
+      "piles": 24
+    },
+    {
+      "id": "431000-0",
+      "cityCode": "431000",
+      "name": "郴州示例充电站 1",
+      "type": "直流快充",
+      "position": [112.92970000000001, 25.7105],
+      "piles": 20
+    },
+    {
+      "id": "431000-1",
+      "cityCode": "431000",
+      "name": "郴州示例充电站 2",
+      "type": "交流慢充",
+      "position": [113.0147, 25.7705],
+      "piles": 24
+    },
+    {
+      "id": "431000-2",
+      "cityCode": "431000",
+      "name": "郴州示例充电站 3",
+      "type": "直流快充",
+      "position": [113.0997, 25.830499999999997],
+      "piles": 28
+    },
+    {
+      "id": "431100-0",
+      "cityCode": "431100",
+      "name": "永州示例充电站 1",
+      "type": "直流快充",
+      "position": [111.5284, 26.360400000000002],
+      "piles": 24
+    },
+    {
+      "id": "431100-1",
+      "cityCode": "431100",
+      "name": "永州示例充电站 2",
+      "type": "交流慢充",
+      "position": [111.6134, 26.4204],
+      "piles": 28
+    },
+    {
+      "id": "431100-2",
+      "cityCode": "431100",
+      "name": "永州示例充电站 3",
+      "type": "直流快充",
+      "position": [111.69839999999999, 26.4804],
+      "piles": 8
+    },
+    {
+      "id": "431200-0",
+      "cityCode": "431200",
+      "name": "怀化示例充电站 1",
+      "type": "直流快充",
+      "position": [109.89320000000001, 27.4901],
+      "piles": 28
+    },
+    {
+      "id": "431200-1",
+      "cityCode": "431200",
+      "name": "怀化示例充电站 2",
+      "type": "交流慢充",
+      "position": [109.9782, 27.5501],
+      "piles": 8
+    },
+    {
+      "id": "431200-2",
+      "cityCode": "431200",
+      "name": "怀化示例充电站 3",
+      "type": "直流快充",
+      "position": [110.0632, 27.6101],
+      "piles": 12
+    },
+    {
+      "id": "431300-0",
+      "cityCode": "431300",
+      "name": "娄底示例充电站 1",
+      "type": "直流快充",
+      "position": [111.9235, 27.668100000000003],
+      "piles": 8
+    },
+    {
+      "id": "431300-1",
+      "cityCode": "431300",
+      "name": "娄底示例充电站 2",
+      "type": "交流慢充",
+      "position": [112.0085, 27.7281],
+      "piles": 12
+    },
+    {
+      "id": "431300-2",
+      "cityCode": "431300",
+      "name": "娄底示例充电站 3",
+      "type": "直流快充",
+      "position": [112.09349999999999, 27.7881],
+      "piles": 16
+    },
+    {
+      "id": "433100-0",
+      "cityCode": "433100",
+      "name": "湘西州示例充电站 1",
+      "type": "直流快充",
+      "position": [109.65390000000001, 28.2517],
+      "piles": 12
+    },
+    {
+      "id": "433100-1",
+      "cityCode": "433100",
+      "name": "湘西州示例充电站 2",
+      "type": "交流慢充",
+      "position": [109.7389, 28.3117],
+      "piles": 16
+    },
+    {
+      "id": "433100-2",
+      "cityCode": "433100",
+      "name": "湘西州示例充电站 3",
+      "type": "直流快充",
+      "position": [109.8239, 28.371699999999997],
+      "piles": 20
+    }
+  ],
+  "trend": [
+    {
+      "period": "2024 Q1",
+      "stations": 5820,
+      "piles": 32800
+    },
+    {
+      "period": "2024 Q2",
+      "stations": 6270,
+      "piles": 36200
+    },
+    {
+      "period": "2024 Q3",
+      "stations": 6880,
+      "piles": 41500
+    },
+    {
+      "period": "2024 Q4",
+      "stations": 7620,
+      "piles": 47900
+    },
+    {
+      "period": "2025 Q1",
+      "stations": 8250,
+      "piles": 53800
+    },
+    {
+      "period": "2025 Q2",
+      "stations": 8960,
+      "piles": 60400
+    },
+    {
+      "period": "2025 Q3",
+      "stations": 9730,
+      "piles": 66400
+    },
+    {
+      "period": "2025 Q4",
+      "stations": 10360,
+      "piles": 71300
+    },
+    {
+      "period": "2026 Q1",
+      "stations": 11080,
+      "piles": 76200
+    },
+    {
+      "period": "2026 Q2",
+      "stations": 11720,
+      "piles": 81500
+    },
+    {
+      "period": "2026 Q3",
+      "stations": 12000,
+      "piles": 82300
+    }
+  ],
+  "cityTrends": {
+    "430100": [
+      {
+        "period": "2024 Q1",
+        "stations": 1382,
+        "piles": 8609
+      },
+      {
+        "period": "2024 Q2",
+        "stations": 1489,
+        "piles": 9501
+      },
+      {
+        "period": "2024 Q3",
+        "stations": 1634,
+        "piles": 10892
+      },
+      {
+        "period": "2024 Q4",
+        "stations": 1810,
+        "piles": 12572
+      },
+      {
+        "period": "2025 Q1",
+        "stations": 1959,
+        "piles": 14120
+      },
+      {
+        "period": "2025 Q2",
+        "stations": 2128,
+        "piles": 15852
+      },
+      {
+        "period": "2025 Q3",
+        "stations": 2311,
+        "piles": 17427
+      },
+      {
+        "period": "2025 Q4",
+        "stations": 2461,
+        "piles": 18713
+      },
+      {
+        "period": "2026 Q1",
+        "stations": 2632,
+        "piles": 19999
+      },
+      {
+        "period": "2026 Q2",
+        "stations": 2784,
+        "piles": 21390
+      },
+      {
+        "period": "2026 Q3",
+        "stations": 2850,
+        "piles": 21600
+      }
+    ],
+    "430200": [
+      {
+        "period": "2024 Q1",
+        "stations": 475,
+        "piles": 2710
+      },
+      {
+        "period": "2024 Q2",
+        "stations": 512,
+        "piles": 2991
+      },
+      {
+        "period": "2024 Q3",
+        "stations": 562,
+        "piles": 3429
+      },
+      {
+        "period": "2024 Q4",
+        "stations": 622,
+        "piles": 3958
+      },
+      {
+        "period": "2025 Q1",
+        "stations": 674,
+        "piles": 4445
+      },
+      {
+        "period": "2025 Q2",
+        "stations": 732,
+        "piles": 4991
+      },
+      {
+        "period": "2025 Q3",
+        "stations": 795,
+        "piles": 5486
+      },
+      {
+        "period": "2025 Q4",
+        "stations": 846,
+        "piles": 5891
+      },
+      {
+        "period": "2026 Q1",
+        "stations": 905,
+        "piles": 6296
+      },
+      {
+        "period": "2026 Q2",
+        "stations": 957,
+        "piles": 6734
+      },
+      {
+        "period": "2026 Q3",
+        "stations": 980,
+        "piles": 6800
+      }
+    ],
+    "430300": [
+      {
+        "period": "2024 Q1",
+        "stations": 349,
+        "piles": 2033
+      },
+      {
+        "period": "2024 Q2",
+        "stations": 376,
+        "piles": 2243
+      },
+      {
+        "period": "2024 Q3",
+        "stations": 413,
+        "piles": 2572
+      },
+      {
+        "period": "2024 Q4",
+        "stations": 457,
+        "piles": 2968
+      },
+      {
+        "period": "2025 Q1",
+        "stations": 495,
+        "piles": 3334
+      },
+      {
+        "period": "2025 Q2",
+        "stations": 538,
+        "piles": 3743
+      },
+      {
+        "period": "2025 Q3",
+        "stations": 584,
+        "piles": 4115
+      },
+      {
+        "period": "2025 Q4",
+        "stations": 622,
+        "piles": 4418
+      },
+      {
+        "period": "2026 Q1",
+        "stations": 665,
+        "piles": 4722
+      },
+      {
+        "period": "2026 Q2",
+        "stations": 703,
+        "piles": 5050
+      },
+      {
+        "period": "2026 Q3",
+        "stations": 720,
+        "piles": 5100
+      }
+    ],
+    "430400": [
+      {
+        "period": "2024 Q1",
+        "stations": 543,
+        "piles": 3148
+      },
+      {
+        "period": "2024 Q2",
+        "stations": 585,
+        "piles": 3475
+      },
+      {
+        "period": "2024 Q3",
+        "stations": 642,
+        "piles": 3984
+      },
+      {
+        "period": "2024 Q4",
+        "stations": 711,
+        "piles": 4598
+      },
+      {
+        "period": "2025 Q1",
+        "stations": 770,
+        "piles": 5164
+      },
+      {
+        "period": "2025 Q2",
+        "stations": 836,
+        "piles": 5798
+      },
+      {
+        "period": "2025 Q3",
+        "stations": 908,
+        "piles": 6374
+      },
+      {
+        "period": "2025 Q4",
+        "stations": 967,
+        "piles": 6844
+      },
+      {
+        "period": "2026 Q1",
+        "stations": 1034,
+        "piles": 7314
+      },
+      {
+        "period": "2026 Q2",
+        "stations": 1094,
+        "piles": 7823
+      },
+      {
+        "period": "2026 Q3",
+        "stations": 1120,
+        "piles": 7900
+      }
+    ],
+    "430500": [
+      {
+        "period": "2024 Q1",
+        "stations": 330,
+        "piles": 1674
+      },
+      {
+        "period": "2024 Q2",
+        "stations": 355,
+        "piles": 1847
+      },
+      {
+        "period": "2024 Q3",
+        "stations": 390,
+        "piles": 2118
+      },
+      {
+        "period": "2024 Q4",
+        "stations": 432,
+        "piles": 2444
+      },
+      {
+        "period": "2025 Q1",
+        "stations": 468,
+        "piles": 2746
+      },
+      {
+        "period": "2025 Q2",
+        "stations": 508,
+        "piles": 3082
+      },
+      {
+        "period": "2025 Q3",
+        "stations": 551,
+        "piles": 3389
+      },
+      {
+        "period": "2025 Q4",
+        "stations": 587,
+        "piles": 3639
+      },
+      {
+        "period": "2026 Q1",
+        "stations": 628,
+        "piles": 3889
+      },
+      {
+        "period": "2026 Q2",
+        "stations": 664,
+        "piles": 4159
+      },
+      {
+        "period": "2026 Q3",
+        "stations": 680,
+        "piles": 4200
+      }
+    ],
+    "430600": [
+      {
+        "period": "2024 Q1",
+        "stations": 514,
+        "piles": 2909
+      },
+      {
+        "period": "2024 Q2",
+        "stations": 554,
+        "piles": 3211
+      },
+      {
+        "period": "2024 Q3",
+        "stations": 608,
+        "piles": 3681
+      },
+      {
+        "period": "2024 Q4",
+        "stations": 673,
+        "piles": 4249
+      },
+      {
+        "period": "2025 Q1",
+        "stations": 729,
+        "piles": 4772
+      },
+      {
+        "period": "2025 Q2",
+        "stations": 791,
+        "piles": 5357
+      },
+      {
+        "period": "2025 Q3",
+        "stations": 859,
+        "piles": 5890
+      },
+      {
+        "period": "2025 Q4",
+        "stations": 915,
+        "piles": 6324
+      },
+      {
+        "period": "2026 Q1",
+        "stations": 979,
+        "piles": 6759
+      },
+      {
+        "period": "2026 Q2",
+        "stations": 1035,
+        "piles": 7229
+      },
+      {
+        "period": "2026 Q3",
+        "stations": 1060,
+        "piles": 7300
+      }
+    ],
+    "430700": [
+      {
+        "period": "2024 Q1",
+        "stations": 461,
+        "piles": 2471
+      },
+      {
+        "period": "2024 Q2",
+        "stations": 496,
+        "piles": 2727
+      },
+      {
+        "period": "2024 Q3",
+        "stations": 545,
+        "piles": 3126
+      },
+      {
+        "period": "2024 Q4",
+        "stations": 603,
+        "piles": 3609
+      },
+      {
+        "period": "2025 Q1",
+        "stations": 653,
+        "piles": 4053
+      },
+      {
+        "period": "2025 Q2",
+        "stations": 709,
+        "piles": 4550
+      },
+      {
+        "period": "2025 Q3",
+        "stations": 770,
+        "piles": 5002
+      },
+      {
+        "period": "2025 Q4",
+        "stations": 820,
+        "piles": 5371
+      },
+      {
+        "period": "2026 Q1",
+        "stations": 877,
+        "piles": 5740
+      },
+      {
+        "period": "2026 Q2",
+        "stations": 928,
+        "piles": 6140
+      },
+      {
+        "period": "2026 Q3",
+        "stations": 950,
+        "piles": 6200
+      }
+    ],
+    "430800": [
+      {
+        "period": "2024 Q1",
+        "stations": 150,
+        "piles": 717
+      },
+      {
+        "period": "2024 Q2",
+        "stations": 162,
+        "piles": 792
+      },
+      {
+        "period": "2024 Q3",
+        "stations": 178,
+        "piles": 908
+      },
+      {
+        "period": "2024 Q4",
+        "stations": 197,
+        "piles": 1048
+      },
+      {
+        "period": "2025 Q1",
+        "stations": 213,
+        "piles": 1177
+      },
+      {
+        "period": "2025 Q2",
+        "stations": 231,
+        "piles": 1321
+      },
+      {
+        "period": "2025 Q3",
+        "stations": 251,
+        "piles": 1452
+      },
+      {
+        "period": "2025 Q4",
+        "stations": 268,
+        "piles": 1559
+      },
+      {
+        "period": "2026 Q1",
+        "stations": 286,
+        "piles": 1667
+      },
+      {
+        "period": "2026 Q2",
+        "stations": 303,
+        "piles": 1783
+      },
+      {
+        "period": "2026 Q3",
+        "stations": 310,
+        "piles": 1800
+      }
+    ],
+    "430900": [
+      {
+        "period": "2024 Q1",
+        "stations": 262,
+        "piles": 1395
+      },
+      {
+        "period": "2024 Q2",
+        "stations": 282,
+        "piles": 1539
+      },
+      {
+        "period": "2024 Q3",
+        "stations": 310,
+        "piles": 1765
+      },
+      {
+        "period": "2024 Q4",
+        "stations": 343,
+        "piles": 2037
+      },
+      {
+        "period": "2025 Q1",
+        "stations": 371,
+        "piles": 2288
+      },
+      {
+        "period": "2025 Q2",
+        "stations": 403,
+        "piles": 2569
+      },
+      {
+        "period": "2025 Q3",
+        "stations": 438,
+        "piles": 2824
+      },
+      {
+        "period": "2025 Q4",
+        "stations": 466,
+        "piles": 3032
+      },
+      {
+        "period": "2026 Q1",
+        "stations": 499,
+        "piles": 3241
+      },
+      {
+        "period": "2026 Q2",
+        "stations": 527,
+        "piles": 3466
+      },
+      {
+        "period": "2026 Q3",
+        "stations": 540,
+        "piles": 3500
+      }
+    ],
+    "431000": [
+      {
+        "period": "2024 Q1",
+        "stations": 403,
+        "piles": 2232
+      },
+      {
+        "period": "2024 Q2",
+        "stations": 434,
+        "piles": 2463
+      },
+      {
+        "period": "2024 Q3",
+        "stations": 476,
+        "piles": 2824
+      },
+      {
+        "period": "2024 Q4",
+        "stations": 527,
+        "piles": 3259
+      },
+      {
+        "period": "2025 Q1",
+        "stations": 571,
+        "piles": 3661
+      },
+      {
+        "period": "2025 Q2",
+        "stations": 620,
+        "piles": 4110
+      },
+      {
+        "period": "2025 Q3",
+        "stations": 673,
+        "piles": 4518
+      },
+      {
+        "period": "2025 Q4",
+        "stations": 717,
+        "piles": 4852
+      },
+      {
+        "period": "2026 Q1",
+        "stations": 766,
+        "piles": 5185
+      },
+      {
+        "period": "2026 Q2",
+        "stations": 811,
+        "piles": 5546
+      },
+      {
+        "period": "2026 Q3",
+        "stations": 830,
+        "piles": 5600
+      }
+    ],
+    "431100": [
+      {
+        "period": "2024 Q1",
+        "stations": 296,
+        "piles": 1554
+      },
+      {
+        "period": "2024 Q2",
+        "stations": 319,
+        "piles": 1715
+      },
+      {
+        "period": "2024 Q3",
+        "stations": 350,
+        "piles": 1967
+      },
+      {
+        "period": "2024 Q4",
+        "stations": 387,
+        "piles": 2270
+      },
+      {
+        "period": "2025 Q1",
+        "stations": 419,
+        "piles": 2549
+      },
+      {
+        "period": "2025 Q2",
+        "stations": 455,
+        "piles": 2862
+      },
+      {
+        "period": "2025 Q3",
+        "stations": 495,
+        "piles": 3147
+      },
+      {
+        "period": "2025 Q4",
+        "stations": 527,
+        "piles": 3379
+      },
+      {
+        "period": "2026 Q1",
+        "stations": 563,
+        "piles": 3611
+      },
+      {
+        "period": "2026 Q2",
+        "stations": 596,
+        "piles": 3862
+      },
+      {
+        "period": "2026 Q3",
+        "stations": 610,
+        "piles": 3900
+      }
+    ],
+    "431200": [
+      {
+        "period": "2024 Q1",
+        "stations": 281,
+        "piles": 1435
+      },
+      {
+        "period": "2024 Q2",
+        "stations": 303,
+        "piles": 1583
+      },
+      {
+        "period": "2024 Q3",
+        "stations": 333,
+        "piles": 1815
+      },
+      {
+        "period": "2024 Q4",
+        "stations": 368,
+        "piles": 2095
+      },
+      {
+        "period": "2025 Q1",
+        "stations": 399,
+        "piles": 2353
+      },
+      {
+        "period": "2025 Q2",
+        "stations": 433,
+        "piles": 2642
+      },
+      {
+        "period": "2025 Q3",
+        "stations": 470,
+        "piles": 2904
+      },
+      {
+        "period": "2025 Q4",
+        "stations": 501,
+        "piles": 3119
+      },
+      {
+        "period": "2026 Q1",
+        "stations": 536,
+        "piles": 3333
+      },
+      {
+        "period": "2026 Q2",
+        "stations": 566,
+        "piles": 3565
+      },
+      {
+        "period": "2026 Q3",
+        "stations": 580,
+        "piles": 3600
+      }
+    ],
+    "431300": [
+      {
+        "period": "2024 Q1",
+        "stations": 238,
+        "piles": 1275
+      },
+      {
+        "period": "2024 Q2",
+        "stations": 256,
+        "piles": 1408
+      },
+      {
+        "period": "2024 Q3",
+        "stations": 281,
+        "piles": 1614
+      },
+      {
+        "period": "2024 Q4",
+        "stations": 311,
+        "piles": 1862
+      },
+      {
+        "period": "2025 Q1",
+        "stations": 337,
+        "piles": 2092
+      },
+      {
+        "period": "2025 Q2",
+        "stations": 366,
+        "piles": 2348
+      },
+      {
+        "period": "2025 Q3",
+        "stations": 397,
+        "piles": 2582
+      },
+      {
+        "period": "2025 Q4",
+        "stations": 423,
+        "piles": 2772
+      },
+      {
+        "period": "2026 Q1",
+        "stations": 452,
+        "piles": 2963
+      },
+      {
+        "period": "2026 Q2",
+        "stations": 479,
+        "piles": 3169
+      },
+      {
+        "period": "2026 Q3",
+        "stations": 490,
+        "piles": 3200
+      }
+    ],
+    "433100": [
+      {
+        "period": "2024 Q1",
+        "stations": 136,
+        "piles": 638
+      },
+      {
+        "period": "2024 Q2",
+        "stations": 147,
+        "piles": 705
+      },
+      {
+        "period": "2024 Q3",
+        "stations": 158,
+        "piles": 805
+      },
+      {
+        "period": "2024 Q4",
+        "stations": 179,
+        "piles": 931
+      },
+      {
+        "period": "2025 Q1",
+        "stations": 192,
+        "piles": 1046
+      },
+      {
+        "period": "2025 Q2",
+        "stations": 210,
+        "piles": 1175
+      },
+      {
+        "period": "2025 Q3",
+        "stations": 228,
+        "piles": 1290
+      },
+      {
+        "period": "2025 Q4",
+        "stations": 240,
+        "piles": 1387
+      },
+      {
+        "period": "2026 Q1",
+        "stations": 258,
+        "piles": 1481
+      },
+      {
+        "period": "2026 Q2",
+        "stations": 273,
+        "piles": 1584
+      },
+      {
+        "period": "2026 Q3",
+        "stations": 280,
+        "piles": 1600
+      }
+    ]
+  }
+}

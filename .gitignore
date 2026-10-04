@@ -216,3 +216,20 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Vue / Vite
+node_modules/
+.vite/
+.env.*
+!.env.example
+*.local
+.npm-cache/
+backend/.runtime/
+backend/.conda/
+backend/requirements.lock.txt.tmp
+
+# Local IDE / assistant state
+.idea/
+.workbuddy/
+.DS_Store
+Thumbs.db

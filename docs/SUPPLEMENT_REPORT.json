@@ -1,0 +1,1585 @@
+{
+  "id": "f8a52ae0e1ea44528ffac48b4ab073d6",
+  "status": "completed",
+  "parentRunId": "77751da1e930432394ebe8325068c3b6",
+  "strategy": "adaptive_polygon_v1",
+  "startedAt": "2026-10-04T02:37:39Z",
+  "updatedAt": "2026-10-04T02:49:21Z",
+  "lastError": null,
+  "districts": [
+    {
+      "name": "芙蓉区",
+      "adcode": "430102",
+      "cityCode": "430100",
+      "cityName": "长沙市",
+      "beforeCount": 179,
+      "boundaryHash": "4d1fd601f29529b34aa8779233b22307bf1ad661ece6103d57f6cda58c063544",
+      "afterCount": 249,
+      "addedCount": 70,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    },
+    {
+      "name": "天心区",
+      "adcode": "430103",
+      "cityCode": "430100",
+      "cityName": "长沙市",
+      "beforeCount": 188,
+      "boundaryHash": "a1b8e2ebccfa2103c4a76d06f75e8f271306c696e458419c3eabcb2aafb1b5d7",
+      "afterCount": 319,
+      "addedCount": 131,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    },
+    {
+      "name": "岳麓区",
+      "adcode": "430104",
+      "cityCode": "430100",
+      "cityName": "长沙市",
+      "beforeCount": 192,
+      "boundaryHash": "5fdd21b86325362f1ac04e163ace71436c3fa81f77ad26a1e91f61712df742c8",
+      "afterCount": 635,
+      "addedCount": 443,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    },
+    {
+      "name": "开福区",
+      "adcode": "430105",
+      "cityCode": "430100",
+      "cityName": "长沙市",
+      "beforeCount": 187,
+      "boundaryHash": "c25629dabd9bd979e0374cf642c02179e93d5473efa3fa997d86c47044876fd5",
+      "afterCount": 352,
+      "addedCount": 165,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    },
+    {
+      "name": "雨花区",
+      "adcode": "430111",
+      "cityCode": "430100",
+      "cityName": "长沙市",
+      "beforeCount": 193,
+      "boundaryHash": "42c0ef06e4d4cba148e6ba9108d89147adbc66694939bbdcf2f4e1adddf9a16c",
+      "afterCount": 454,
+      "addedCount": 261,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    },
+    {
+      "name": "望城区",
+      "adcode": "430112",
+      "cityCode": "430100",
+      "cityName": "长沙市",
+      "beforeCount": 187,
+      "boundaryHash": "cfd20294e6af418785ec9dff630270f642bda8574d15a468ef260e2d7359a699",
+      "afterCount": 323,
+      "addedCount": 136,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    },
+    {
+      "name": "长沙县",
+      "adcode": "430121",
+      "cityCode": "430100",
+      "cityName": "长沙市",
+      "beforeCount": 195,
+      "boundaryHash": "6827a99a25552b58db72920f568825dfa7a5e690edd4cc4d3397429bcf647567",
+      "afterCount": 542,
+      "addedCount": 347,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    },
+    {
+      "name": "浏阳市",
+      "adcode": "430181",
+      "cityCode": "430100",
+      "cityName": "长沙市",
+      "beforeCount": 193,
+      "boundaryHash": "1e985f7c4e55041c04e357c1c5d04efba6d33ded8d084d73c2fbb13504254771",
+      "afterCount": 263,
+      "addedCount": 70,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    },
+    {
+      "name": "宁乡市",
+      "adcode": "430182",
+      "cityCode": "430100",
+      "cityName": "长沙市",
+      "beforeCount": 186,
+      "boundaryHash": "8435ad234f1c9b25892d2ace40d28176b414351bc3c011afef4f5acbb43ad3b6",
+      "afterCount": 262,
+      "addedCount": 76,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    },
+    {
+      "name": "醴陵市",
+      "adcode": "430281",
+      "cityCode": "430200",
+      "cityName": "株洲市",
+      "beforeCount": 183,
+      "boundaryHash": "4b58f11a118d0ea6efe4a6b4b3de7bece72ae59db30a66900099d4689335a4d3",
+      "afterCount": 186,
+      "addedCount": 3,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    },
+    {
+      "name": "岳阳楼区",
+      "adcode": "430602",
+      "cityCode": "430600",
+      "cityName": "岳阳市",
+      "beforeCount": 190,
+      "boundaryHash": "9db5b41d77cdc3fc2f8b7786e90e72fdd62fb6e14f8ae1f7c90ade10417531a1",
+      "afterCount": 219,
+      "addedCount": 29,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    },
+    {
+      "name": "武陵区",
+      "adcode": "430702",
+      "cityCode": "430700",
+      "cityName": "常德市",
+      "beforeCount": 176,
+      "boundaryHash": "4971d243bae494e02a0f721af797ac10d7bc54826ac6169877506a3fc64bd02d",
+      "afterCount": 195,
+      "addedCount": 19,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    },
+    {
+      "name": "永定区",
+      "adcode": "430802",
+      "cityCode": "430800",
+      "cityName": "张家界市",
+      "beforeCount": 180,
+      "boundaryHash": "230dbc26c42ba0fed82fbfd43c9d35f5158ae1a9c2dd990733bad6d416f7d101",
+      "afterCount": 205,
+      "addedCount": 25,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    },
+    {
+      "name": "赫山区",
+      "adcode": "430903",
+      "cityCode": "430900",
+      "cityName": "益阳市",
+      "beforeCount": 188,
+      "boundaryHash": "8a5a21f4f9e0917bc3c6cde0dc121ae683a90fa427a0137968ec0b3f97eca8b0",
+      "afterCount": 231,
+      "addedCount": 43,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    },
+    {
+      "name": "北湖区",
+      "adcode": "431002",
+      "cityCode": "431000",
+      "cityName": "郴州市",
+      "beforeCount": 181,
+      "boundaryHash": "e6c18e1f539039cc08919cebbfe9c614b70b40ca4614a921e590cc7b45a776dd",
+      "afterCount": 182,
+      "addedCount": 1,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    },
+    {
+      "name": "娄星区",
+      "adcode": "431302",
+      "cityCode": "431300",
+      "cityName": "娄底市",
+      "beforeCount": 182,
+      "boundaryHash": "2499c423b8b48606216d0c0c6c8aeb5d9302cf15fb32f3b891a4b3a25e510783",
+      "afterCount": 183,
+      "addedCount": 1,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    },
+    {
+      "name": "新化县",
+      "adcode": "431322",
+      "cityCode": "431300",
+      "cityName": "娄底市",
+      "beforeCount": 183,
+      "boundaryHash": "cd5974ac93d630d21dcecd4d69a61c3fabf91505bd8a0249beafb2dc73aeb8b7",
+      "afterCount": 219,
+      "addedCount": 36,
+      "pendingShards": 0,
+      "cappedLeafShards": 0,
+      "completenessStatus": "计划分片已耗尽；不证明全量"
+    }
+  ],
+  "shardCount": 169,
+  "quality": {
+    "pageCount": 682,
+    "rawCount": 15578,
+    "insertedCount": 1856,
+    "retainedDuplicateCount": 8120,
+    "rejectedCount": 5602,
+    "rejectionReasons": {
+      "not_ev_charging_station": 51,
+      "outside_requested_district": 5551
+    },
+    "countBasis": "按该批次已提交页面的inserted记录还原，不随后续批次变化",
+    "queryDifference": "原批次为行政区关键词搜索；补采为矩形关键词+011100分类搜索，范围和检索条件均有变化"
+  },
+  "manifest": {
+    "types": "011100",
+    "notice": "分片扩大可检索样本，不能证明官方设施全量；原始记录与历史批次保留。",
+    "shards": [
+      {
+        "depth": 0,
+        "index": 0,
+        "adcode": "430102",
+        "bounds": [112.976012, 28.17299, 113.110984, 28.223091],
+        "status": "split"
+      },
+      {
+        "depth": 0,
+        "index": 1,
+        "adcode": "430103",
+        "bounds": [112.927954, 27.965156, 113.041286, 28.195622],
+        "status": "split"
+      },
+      {
+        "depth": 0,
+        "index": 2,
+        "adcode": "430104",
+        "bounds": [112.612861, 27.971062, 112.971802, 28.275308],
+        "status": "split"
+      },
+      {
+        "depth": 0,
+        "index": 3,
+        "adcode": "430105",
+        "bounds": [112.907568, 28.195305, 113.082178, 28.390879],
+        "status": "split"
+      },
+      {
+        "depth": 0,
+        "index": 4,
+        "adcode": "430111",
+        "bounds": [112.983982, 27.912706, 113.186736, 28.189655],
+        "status": "split"
+      },
+      {
+        "depth": 0,
+        "index": 5,
+        "adcode": "430112",
+        "bounds": [112.651127, 28.138146, 113.049682, 28.559894],
+        "status": "split"
+      },
+      {
+        "depth": 0,
+        "index": 6,
+        "adcode": "430121",
+        "bounds": [112.978495, 28.03087, 113.507363, 28.661612],
+        "status": "split"
+      },
+      {
+        "depth": 0,
+        "index": 7,
+        "adcode": "430181",
+        "bounds": [113.177228, 27.848072, 114.261265, 28.564899],
+        "status": "exhausted"
+      },
+      {
+        "depth": 0,
+        "index": 8,
+        "adcode": "430182",
+        "bounds": [111.896398, 27.879663, 112.78468, 28.487833],
+        "status": "split"
+      },
+      {
+        "depth": 0,
+        "index": 9,
+        "adcode": "430281",
+        "bounds": [113.170952, 27.374454, 113.767673, 27.964629],
+        "status": "split"
+      },
+      {
+        "depth": 0,
+        "index": 10,
+        "adcode": "430602",
+        "bounds": [113.071849, 29.236184, 113.351395, 29.455378],
+        "status": "split"
+      },
+      {
+        "depth": 0,
+        "index": 11,
+        "adcode": "430702",
+        "bounds": [111.588532, 28.887515, 111.820775, 29.137846],
+        "status": "split"
+      },
+      {
+        "depth": 0,
+        "index": 12,
+        "adcode": "430802",
+        "bounds": [110.070059, 28.874109, 110.915131, 29.376901],
+        "status": "split"
+      },
+      {
+        "depth": 0,
+        "index": 13,
+        "adcode": "430903",
+        "bounds": [112.196587, 28.27446, 112.736107, 28.6548],
+        "status": "split"
+      },
+      {
+        "depth": 0,
+        "index": 14,
+        "adcode": "431002",
+        "bounds": [112.697478, 25.43216, 113.083947, 25.876649],
+        "status": "split"
+      },
+      {
+        "depth": 0,
+        "index": 15,
+        "adcode": "431302",
+        "bounds": [111.865193, 27.539832, 112.191188, 27.969409],
+        "status": "split"
+      },
+      {
+        "depth": 0,
+        "index": 16,
+        "adcode": "431322",
+        "bounds": [110.767768, 27.525104, 111.691305, 28.234214],
+        "status": "split"
+      },
+      {
+        "depth": 1,
+        "index": 17,
+        "adcode": "430102",
+        "bounds": [112.976012, 28.17299, 113.043498, 28.1980405],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 18,
+        "adcode": "430102",
+        "bounds": [113.043498, 28.17299, 113.110984, 28.1980405],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 19,
+        "adcode": "430102",
+        "bounds": [112.976012, 28.1980405, 113.043498, 28.223091],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 20,
+        "adcode": "430102",
+        "bounds": [113.043498, 28.1980405, 113.110984, 28.223091],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 21,
+        "adcode": "430103",
+        "bounds": [112.927954, 27.965156, 112.98462, 28.080389],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 22,
+        "adcode": "430103",
+        "bounds": [112.98462, 27.965156, 113.041286, 28.080389],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 23,
+        "adcode": "430103",
+        "bounds": [112.927954, 28.080389, 112.98462, 28.195622],
+        "status": "split"
+      },
+      {
+        "depth": 1,
+        "index": 24,
+        "adcode": "430103",
+        "bounds": [112.98462, 28.080389, 113.041286, 28.195622],
+        "status": "split"
+      },
+      {
+        "depth": 1,
+        "index": 25,
+        "adcode": "430104",
+        "bounds": [112.612861, 27.971062, 112.7923315, 28.123185],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 26,
+        "adcode": "430104",
+        "bounds": [112.7923315, 27.971062, 112.971802, 28.123185],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 27,
+        "adcode": "430104",
+        "bounds": [112.612861, 28.123185, 112.7923315, 28.275308],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 28,
+        "adcode": "430104",
+        "bounds": [112.7923315, 28.123185, 112.971802, 28.275308],
+        "status": "split"
+      },
+      {
+        "depth": 1,
+        "index": 29,
+        "adcode": "430105",
+        "bounds": [112.907568, 28.195305, 112.994873, 28.293092],
+        "status": "split"
+      },
+      {
+        "depth": 1,
+        "index": 30,
+        "adcode": "430105",
+        "bounds": [112.994873, 28.195305, 113.082178, 28.293092],
+        "status": "split"
+      },
+      {
+        "depth": 1,
+        "index": 31,
+        "adcode": "430105",
+        "bounds": [112.907568, 28.293092, 112.994873, 28.390879],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 32,
+        "adcode": "430105",
+        "bounds": [112.994873, 28.293092, 113.082178, 28.390879],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 33,
+        "adcode": "430111",
+        "bounds": [112.983982, 27.912706, 113.085359, 28.0511805],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 34,
+        "adcode": "430111",
+        "bounds": [113.085359, 27.912706, 113.186736, 28.0511805],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 35,
+        "adcode": "430111",
+        "bounds": [112.983982, 28.0511805, 113.085359, 28.189655],
+        "status": "split"
+      },
+      {
+        "depth": 1,
+        "index": 36,
+        "adcode": "430111",
+        "bounds": [113.085359, 28.0511805, 113.186736, 28.189655],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 37,
+        "adcode": "430112",
+        "bounds": [112.651127, 28.138146, 112.8504045, 28.34902],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 38,
+        "adcode": "430112",
+        "bounds": [112.8504045, 28.138146, 113.049682, 28.34902],
+        "status": "split"
+      },
+      {
+        "depth": 1,
+        "index": 39,
+        "adcode": "430112",
+        "bounds": [112.651127, 28.34902, 112.8504045, 28.559894],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 40,
+        "adcode": "430112",
+        "bounds": [112.8504045, 28.34902, 113.049682, 28.559894],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 41,
+        "adcode": "430121",
+        "bounds": [112.978495, 28.03087, 113.242929, 28.346241],
+        "status": "split"
+      },
+      {
+        "depth": 1,
+        "index": 42,
+        "adcode": "430121",
+        "bounds": [113.242929, 28.03087, 113.507363, 28.346241],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 43,
+        "adcode": "430121",
+        "bounds": [112.978495, 28.346241, 113.242929, 28.661612],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 44,
+        "adcode": "430121",
+        "bounds": [113.242929, 28.346241, 113.507363, 28.661612],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 45,
+        "adcode": "430182",
+        "bounds": [111.896398, 27.879663, 112.340539, 28.183748],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 46,
+        "adcode": "430182",
+        "bounds": [112.340539, 27.879663, 112.78468, 28.183748],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 47,
+        "adcode": "430182",
+        "bounds": [111.896398, 28.183748, 112.340539, 28.487833],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 48,
+        "adcode": "430182",
+        "bounds": [112.340539, 28.183748, 112.78468, 28.487833],
+        "status": "split"
+      },
+      {
+        "depth": 1,
+        "index": 49,
+        "adcode": "430281",
+        "bounds": [113.170952, 27.374454, 113.4693125, 27.6695415],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 50,
+        "adcode": "430281",
+        "bounds": [113.4693125, 27.374454, 113.767673, 27.6695415],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 51,
+        "adcode": "430281",
+        "bounds": [113.170952, 27.6695415, 113.4693125, 27.964629],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 52,
+        "adcode": "430281",
+        "bounds": [113.4693125, 27.6695415, 113.767673, 27.964629],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 53,
+        "adcode": "430602",
+        "bounds": [113.071849, 29.236184, 113.211622, 29.345781],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 54,
+        "adcode": "430602",
+        "bounds": [113.211622, 29.236184, 113.351395, 29.345781],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 55,
+        "adcode": "430602",
+        "bounds": [113.071849, 29.345781, 113.211622, 29.455378],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 56,
+        "adcode": "430602",
+        "bounds": [113.211622, 29.345781, 113.351395, 29.455378],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 57,
+        "adcode": "430702",
+        "bounds": [111.588532, 28.887515, 111.7046535, 29.0126805],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 58,
+        "adcode": "430702",
+        "bounds": [111.7046535, 28.887515, 111.820775, 29.0126805],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 59,
+        "adcode": "430702",
+        "bounds": [111.588532, 29.0126805, 111.7046535, 29.137846],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 60,
+        "adcode": "430702",
+        "bounds": [111.7046535, 29.0126805, 111.820775, 29.137846],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 61,
+        "adcode": "430802",
+        "bounds": [110.070059, 28.874109, 110.492595, 29.125505],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 62,
+        "adcode": "430802",
+        "bounds": [110.492595, 28.874109, 110.915131, 29.125505],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 63,
+        "adcode": "430802",
+        "bounds": [110.070059, 29.125505, 110.492595, 29.376901],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 64,
+        "adcode": "430802",
+        "bounds": [110.492595, 29.125505, 110.915131, 29.376901],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 65,
+        "adcode": "430903",
+        "bounds": [112.196587, 28.27446, 112.466347, 28.46463],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 66,
+        "adcode": "430903",
+        "bounds": [112.466347, 28.27446, 112.736107, 28.46463],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 67,
+        "adcode": "430903",
+        "bounds": [112.196587, 28.46463, 112.466347, 28.6548],
+        "status": "split"
+      },
+      {
+        "depth": 1,
+        "index": 68,
+        "adcode": "430903",
+        "bounds": [112.466347, 28.46463, 112.736107, 28.6548],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 69,
+        "adcode": "431002",
+        "bounds": [112.697478, 25.43216, 112.8907125, 25.6544045],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 70,
+        "adcode": "431002",
+        "bounds": [112.8907125, 25.43216, 113.083947, 25.6544045],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 71,
+        "adcode": "431002",
+        "bounds": [112.697478, 25.6544045, 112.8907125, 25.876649],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 72,
+        "adcode": "431002",
+        "bounds": [112.8907125, 25.6544045, 113.083947, 25.876649],
+        "status": "split"
+      },
+      {
+        "depth": 1,
+        "index": 73,
+        "adcode": "431302",
+        "bounds": [111.865193, 27.539832, 112.0281905, 27.7546205],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 74,
+        "adcode": "431302",
+        "bounds": [112.0281905, 27.539832, 112.191188, 27.7546205],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 75,
+        "adcode": "431302",
+        "bounds": [111.865193, 27.7546205, 112.0281905, 27.969409],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 76,
+        "adcode": "431302",
+        "bounds": [112.0281905, 27.7546205, 112.191188, 27.969409],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 77,
+        "adcode": "431322",
+        "bounds": [110.767768, 27.525104, 111.2295365, 27.879659],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 78,
+        "adcode": "431322",
+        "bounds": [111.2295365, 27.525104, 111.691305, 27.879659],
+        "status": "split"
+      },
+      {
+        "depth": 1,
+        "index": 79,
+        "adcode": "431322",
+        "bounds": [110.767768, 27.879659, 111.2295365, 28.234214],
+        "status": "exhausted"
+      },
+      {
+        "depth": 1,
+        "index": 80,
+        "adcode": "431322",
+        "bounds": [111.2295365, 27.879659, 111.691305, 28.234214],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 81,
+        "adcode": "430103",
+        "bounds": [112.927954, 28.080389, 112.956287, 28.1380055],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 82,
+        "adcode": "430103",
+        "bounds": [112.956287, 28.080389, 112.98462, 28.1380055],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 83,
+        "adcode": "430103",
+        "bounds": [112.927954, 28.1380055, 112.956287, 28.195622],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 84,
+        "adcode": "430103",
+        "bounds": [112.956287, 28.1380055, 112.98462, 28.195622],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 85,
+        "adcode": "430103",
+        "bounds": [112.98462, 28.080389, 113.012953, 28.1380055],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 86,
+        "adcode": "430103",
+        "bounds": [113.012953, 28.080389, 113.041286, 28.1380055],
+        "status": "outside"
+      },
+      {
+        "depth": 2,
+        "index": 87,
+        "adcode": "430103",
+        "bounds": [112.98462, 28.1380055, 113.012953, 28.195622],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 88,
+        "adcode": "430103",
+        "bounds": [113.012953, 28.1380055, 113.041286, 28.195622],
+        "status": "outside"
+      },
+      {
+        "depth": 2,
+        "index": 89,
+        "adcode": "430104",
+        "bounds": [112.7923315, 28.123185, 112.88206675, 28.1992465],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 90,
+        "adcode": "430104",
+        "bounds": [112.88206675, 28.123185, 112.971802, 28.1992465],
+        "status": "split"
+      },
+      {
+        "depth": 2,
+        "index": 91,
+        "adcode": "430104",
+        "bounds": [112.7923315, 28.1992465, 112.88206675, 28.275308],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 92,
+        "adcode": "430104",
+        "bounds": [112.88206675, 28.1992465, 112.971802, 28.275308],
+        "status": "split"
+      },
+      {
+        "depth": 2,
+        "index": 93,
+        "adcode": "430105",
+        "bounds": [112.907568, 28.195305, 112.9512205, 28.244198500000003],
+        "status": "outside"
+      },
+      {
+        "depth": 2,
+        "index": 94,
+        "adcode": "430105",
+        "bounds": [112.9512205, 28.195305, 112.994873, 28.244198500000003],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 95,
+        "adcode": "430105",
+        "bounds": [112.907568, 28.244198500000003, 112.9512205, 28.293092],
+        "status": "outside"
+      },
+      {
+        "depth": 2,
+        "index": 96,
+        "adcode": "430105",
+        "bounds": [112.9512205, 28.244198500000003, 112.994873, 28.293092],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 97,
+        "adcode": "430105",
+        "bounds": [112.994873, 28.195305, 113.0385255, 28.244198500000003],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 98,
+        "adcode": "430105",
+        "bounds": [113.0385255, 28.195305, 113.082178, 28.244198500000003],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 99,
+        "adcode": "430105",
+        "bounds": [112.994873, 28.244198500000003, 113.0385255, 28.293092],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 100,
+        "adcode": "430105",
+        "bounds": [113.0385255, 28.244198500000003, 113.082178, 28.293092],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 101,
+        "adcode": "430111",
+        "bounds": [112.983982, 28.0511805, 113.0346705, 28.12041775],
+        "status": "split"
+      },
+      {
+        "depth": 2,
+        "index": 102,
+        "adcode": "430111",
+        "bounds": [113.0346705, 28.0511805, 113.085359, 28.12041775],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 103,
+        "adcode": "430111",
+        "bounds": [112.983982, 28.12041775, 113.0346705, 28.189655],
+        "status": "split"
+      },
+      {
+        "depth": 2,
+        "index": 104,
+        "adcode": "430111",
+        "bounds": [113.0346705, 28.12041775, 113.085359, 28.189655],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 105,
+        "adcode": "430112",
+        "bounds": [112.8504045, 28.138146, 112.95004325, 28.243583],
+        "status": "split"
+      },
+      {
+        "depth": 2,
+        "index": 106,
+        "adcode": "430112",
+        "bounds": [112.95004325, 28.138146, 113.049682, 28.243583],
+        "status": "outside"
+      },
+      {
+        "depth": 2,
+        "index": 107,
+        "adcode": "430112",
+        "bounds": [112.8504045, 28.243583, 112.95004325, 28.34902],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 108,
+        "adcode": "430112",
+        "bounds": [112.95004325, 28.243583, 113.049682, 28.34902],
+        "status": "split"
+      },
+      {
+        "depth": 2,
+        "index": 109,
+        "adcode": "430121",
+        "bounds": [112.978495, 28.03087, 113.110712, 28.1885555],
+        "status": "split"
+      },
+      {
+        "depth": 2,
+        "index": 110,
+        "adcode": "430121",
+        "bounds": [113.110712, 28.03087, 113.242929, 28.1885555],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 111,
+        "adcode": "430121",
+        "bounds": [112.978495, 28.1885555, 113.110712, 28.346241],
+        "status": "split"
+      },
+      {
+        "depth": 2,
+        "index": 112,
+        "adcode": "430121",
+        "bounds": [113.110712, 28.1885555, 113.242929, 28.346241],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 113,
+        "adcode": "430182",
+        "bounds": [112.340539, 28.183748, 112.5626095, 28.3357905],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 114,
+        "adcode": "430182",
+        "bounds": [112.5626095, 28.183748, 112.78468, 28.3357905],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 115,
+        "adcode": "430182",
+        "bounds": [112.340539, 28.3357905, 112.5626095, 28.487833],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 116,
+        "adcode": "430182",
+        "bounds": [112.5626095, 28.3357905, 112.78468, 28.487833],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 117,
+        "adcode": "430903",
+        "bounds": [112.196587, 28.46463, 112.331467, 28.559715],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 118,
+        "adcode": "430903",
+        "bounds": [112.331467, 28.46463, 112.466347, 28.559715],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 119,
+        "adcode": "430903",
+        "bounds": [112.196587, 28.559715, 112.331467, 28.6548],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 120,
+        "adcode": "430903",
+        "bounds": [112.331467, 28.559715, 112.466347, 28.6548],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 121,
+        "adcode": "431002",
+        "bounds": [112.8907125, 25.6544045, 112.98732975, 25.76552675],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 122,
+        "adcode": "431002",
+        "bounds": [112.98732975, 25.6544045, 113.083947, 25.76552675],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 123,
+        "adcode": "431002",
+        "bounds": [112.8907125, 25.76552675, 112.98732975, 25.876649],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 124,
+        "adcode": "431002",
+        "bounds": [112.98732975, 25.76552675, 113.083947, 25.876649],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 125,
+        "adcode": "431322",
+        "bounds": [111.2295365, 27.525104, 111.46042075, 27.7023815],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 126,
+        "adcode": "431322",
+        "bounds": [111.46042075, 27.525104, 111.691305, 27.7023815],
+        "status": "outside"
+      },
+      {
+        "depth": 2,
+        "index": 127,
+        "adcode": "431322",
+        "bounds": [111.2295365, 27.7023815, 111.46042075, 27.879659],
+        "status": "exhausted"
+      },
+      {
+        "depth": 2,
+        "index": 128,
+        "adcode": "431322",
+        "bounds": [111.46042075, 27.7023815, 111.691305, 27.879659],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 129,
+        "adcode": "430104",
+        "bounds": [112.88206675, 28.123185, 112.926934375, 28.16121575],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 130,
+        "adcode": "430104",
+        "bounds": [112.926934375, 28.123185, 112.971802, 28.16121575],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 131,
+        "adcode": "430104",
+        "bounds": [112.88206675, 28.16121575, 112.926934375, 28.1992465],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 132,
+        "adcode": "430104",
+        "bounds": [112.926934375, 28.16121575, 112.971802, 28.1992465],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 133,
+        "adcode": "430104",
+        "bounds": [112.88206675, 28.1992465, 112.926934375, 28.23727725],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 134,
+        "adcode": "430104",
+        "bounds": [112.926934375, 28.1992465, 112.971802, 28.23727725],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 135,
+        "adcode": "430104",
+        "bounds": [112.88206675, 28.23727725, 112.926934375, 28.275308],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 136,
+        "adcode": "430104",
+        "bounds": [112.926934375, 28.23727725, 112.971802, 28.275308],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 137,
+        "adcode": "430111",
+        "bounds": [112.983982, 28.0511805, 113.00932625, 28.085799125],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 138,
+        "adcode": "430111",
+        "bounds": [113.00932625, 28.0511805, 113.0346705, 28.085799125],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 139,
+        "adcode": "430111",
+        "bounds": [112.983982, 28.085799125, 113.00932625, 28.12041775],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 140,
+        "adcode": "430111",
+        "bounds": [113.00932625, 28.085799125, 113.0346705, 28.12041775],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 141,
+        "adcode": "430111",
+        "bounds": [112.983982, 28.12041775, 113.00932625, 28.155036375],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 142,
+        "adcode": "430111",
+        "bounds": [113.00932625, 28.12041775, 113.0346705, 28.155036375],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 143,
+        "adcode": "430111",
+        "bounds": [112.983982, 28.155036375, 113.00932625, 28.189655],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 144,
+        "adcode": "430111",
+        "bounds": [113.00932625, 28.155036375, 113.0346705, 28.189655],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 145,
+        "adcode": "430112",
+        "bounds": [112.8504045, 28.138146, 112.900223875, 28.1908645],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 146,
+        "adcode": "430112",
+        "bounds": [112.900223875, 28.138146, 112.95004325, 28.1908645],
+        "status": "outside"
+      },
+      {
+        "depth": 3,
+        "index": 147,
+        "adcode": "430112",
+        "bounds": [112.8504045, 28.1908645, 112.900223875, 28.243583],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 148,
+        "adcode": "430112",
+        "bounds": [112.900223875, 28.1908645, 112.95004325, 28.243583],
+        "status": "outside"
+      },
+      {
+        "depth": 3,
+        "index": 149,
+        "adcode": "430112",
+        "bounds": [112.95004325, 28.243583, 112.999862625, 28.2963015],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 150,
+        "adcode": "430112",
+        "bounds": [112.999862625, 28.243583, 113.049682, 28.2963015],
+        "status": "outside"
+      },
+      {
+        "depth": 3,
+        "index": 151,
+        "adcode": "430112",
+        "bounds": [112.95004325, 28.2963015, 112.999862625, 28.34902],
+        "status": "outside"
+      },
+      {
+        "depth": 3,
+        "index": 152,
+        "adcode": "430112",
+        "bounds": [112.999862625, 28.2963015, 113.049682, 28.34902],
+        "status": "outside"
+      },
+      {
+        "depth": 3,
+        "index": 153,
+        "adcode": "430121",
+        "bounds": [112.978495, 28.03087, 113.0446035, 28.10971275],
+        "status": "outside"
+      },
+      {
+        "depth": 3,
+        "index": 154,
+        "adcode": "430121",
+        "bounds": [113.0446035, 28.03087, 113.110712, 28.10971275],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 155,
+        "adcode": "430121",
+        "bounds": [112.978495, 28.10971275, 113.0446035, 28.1885555],
+        "status": "outside"
+      },
+      {
+        "depth": 3,
+        "index": 156,
+        "adcode": "430121",
+        "bounds": [113.0446035, 28.10971275, 113.110712, 28.1885555],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 157,
+        "adcode": "430121",
+        "bounds": [112.978495, 28.1885555, 113.0446035, 28.26739825],
+        "status": "split"
+      },
+      {
+        "depth": 3,
+        "index": 158,
+        "adcode": "430121",
+        "bounds": [113.0446035, 28.1885555, 113.110712, 28.26739825],
+        "status": "split"
+      },
+      {
+        "depth": 3,
+        "index": 159,
+        "adcode": "430121",
+        "bounds": [112.978495, 28.26739825, 113.0446035, 28.346241],
+        "status": "exhausted"
+      },
+      {
+        "depth": 3,
+        "index": 160,
+        "adcode": "430121",
+        "bounds": [113.0446035, 28.26739825, 113.110712, 28.346241],
+        "status": "exhausted"
+      },
+      {
+        "depth": 4,
+        "index": 161,
+        "adcode": "430121",
+        "bounds": [112.978495, 28.1885555, 113.01154925, 28.227976875],
+        "status": "outside"
+      },
+      {
+        "depth": 4,
+        "index": 162,
+        "adcode": "430121",
+        "bounds": [113.01154925, 28.1885555, 113.0446035, 28.227976875],
+        "status": "outside"
+      },
+      {
+        "depth": 4,
+        "index": 163,
+        "adcode": "430121",
+        "bounds": [112.978495, 28.227976875, 113.01154925, 28.26739825],
+        "status": "outside"
+      },
+      {
+        "depth": 4,
+        "index": 164,
+        "adcode": "430121",
+        "bounds": [113.01154925, 28.227976875, 113.0446035, 28.26739825],
+        "status": "exhausted"
+      },
+      {
+        "depth": 4,
+        "index": 165,
+        "adcode": "430121",
+        "bounds": [113.0446035, 28.1885555, 113.07765775, 28.227976875],
+        "status": "exhausted"
+      },
+      {
+        "depth": 4,
+        "index": 166,
+        "adcode": "430121",
+        "bounds": [113.07765775, 28.1885555, 113.110712, 28.227976875],
+        "status": "exhausted"
+      },
+      {
+        "depth": 4,
+        "index": 167,
+        "adcode": "430121",
+        "bounds": [113.0446035, 28.227976875, 113.07765775, 28.26739825],
+        "status": "exhausted"
+      },
+      {
+        "depth": 4,
+        "index": 168,
+        "adcode": "430121",
+        "bounds": [113.07765775, 28.227976875, 113.110712, 28.26739825],
+        "status": "exhausted"
+      }
+    ],
+    "keyword": "充电站",
+    "retries": 2,
+    "targets": [
+      {
+        "name": "芙蓉区",
+        "adcode": "430102",
+        "cityCode": "430100",
+        "cityName": "长沙市",
+        "beforeCount": 179,
+        "boundaryHash": "4d1fd601f29529b34aa8779233b22307bf1ad661ece6103d57f6cda58c063544"
+      },
+      {
+        "name": "天心区",
+        "adcode": "430103",
+        "cityCode": "430100",
+        "cityName": "长沙市",
+        "beforeCount": 188,
+        "boundaryHash": "a1b8e2ebccfa2103c4a76d06f75e8f271306c696e458419c3eabcb2aafb1b5d7"
+      },
+      {
+        "name": "岳麓区",
+        "adcode": "430104",
+        "cityCode": "430100",
+        "cityName": "长沙市",
+        "beforeCount": 192,
+        "boundaryHash": "5fdd21b86325362f1ac04e163ace71436c3fa81f77ad26a1e91f61712df742c8"
+      },
+      {
+        "name": "开福区",
+        "adcode": "430105",
+        "cityCode": "430100",
+        "cityName": "长沙市",
+        "beforeCount": 187,
+        "boundaryHash": "c25629dabd9bd979e0374cf642c02179e93d5473efa3fa997d86c47044876fd5"
+      },
+      {
+        "name": "雨花区",
+        "adcode": "430111",
+        "cityCode": "430100",
+        "cityName": "长沙市",
+        "beforeCount": 193,
+        "boundaryHash": "42c0ef06e4d4cba148e6ba9108d89147adbc66694939bbdcf2f4e1adddf9a16c"
+      },
+      {
+        "name": "望城区",
+        "adcode": "430112",
+        "cityCode": "430100",
+        "cityName": "长沙市",
+        "beforeCount": 187,
+        "boundaryHash": "cfd20294e6af418785ec9dff630270f642bda8574d15a468ef260e2d7359a699"
+      },
+      {
+        "name": "长沙县",
+        "adcode": "430121",
+        "cityCode": "430100",
+        "cityName": "长沙市",
+        "beforeCount": 195,
+        "boundaryHash": "6827a99a25552b58db72920f568825dfa7a5e690edd4cc4d3397429bcf647567"
+      },
+      {
+        "name": "浏阳市",
+        "adcode": "430181",
+        "cityCode": "430100",
+        "cityName": "长沙市",
+        "beforeCount": 193,
+        "boundaryHash": "1e985f7c4e55041c04e357c1c5d04efba6d33ded8d084d73c2fbb13504254771"
+      },
+      {
+        "name": "宁乡市",
+        "adcode": "430182",
+        "cityCode": "430100",
+        "cityName": "长沙市",
+        "beforeCount": 186,
+        "boundaryHash": "8435ad234f1c9b25892d2ace40d28176b414351bc3c011afef4f5acbb43ad3b6"
+      },
+      {
+        "name": "醴陵市",
+        "adcode": "430281",
+        "cityCode": "430200",
+        "cityName": "株洲市",
+        "beforeCount": 183,
+        "boundaryHash": "4b58f11a118d0ea6efe4a6b4b3de7bece72ae59db30a66900099d4689335a4d3"
+      },
+      {
+        "name": "岳阳楼区",
+        "adcode": "430602",
+        "cityCode": "430600",
+        "cityName": "岳阳市",
+        "beforeCount": 190,
+        "boundaryHash": "9db5b41d77cdc3fc2f8b7786e90e72fdd62fb6e14f8ae1f7c90ade10417531a1"
+      },
+      {
+        "name": "武陵区",
+        "adcode": "430702",
+        "cityCode": "430700",
+        "cityName": "常德市",
+        "beforeCount": 176,
+        "boundaryHash": "4971d243bae494e02a0f721af797ac10d7bc54826ac6169877506a3fc64bd02d"
+      },
+      {
+        "name": "永定区",
+        "adcode": "430802",
+        "cityCode": "430800",
+        "cityName": "张家界市",
+        "beforeCount": 180,
+        "boundaryHash": "230dbc26c42ba0fed82fbfd43c9d35f5158ae1a9c2dd990733bad6d416f7d101"
+      },
+      {
+        "name": "赫山区",
+        "adcode": "430903",
+        "cityCode": "430900",
+        "cityName": "益阳市",
+        "beforeCount": 188,
+        "boundaryHash": "8a5a21f4f9e0917bc3c6cde0dc121ae683a90fa427a0137968ec0b3f97eca8b0"
+      },
+      {
+        "name": "北湖区",
+        "adcode": "431002",
+        "cityCode": "431000",
+        "cityName": "郴州市",
+        "beforeCount": 181,
+        "boundaryHash": "e6c18e1f539039cc08919cebbfe9c614b70b40ca4614a921e590cc7b45a776dd"
+      },
+      {
+        "name": "娄星区",
+        "adcode": "431302",
+        "cityCode": "431300",
+        "cityName": "娄底市",
+        "beforeCount": 182,
+        "boundaryHash": "2499c423b8b48606216d0c0c6c8aeb5d9302cf15fb32f3b891a4b3a25e510783"
+      },
+      {
+        "name": "新化县",
+        "adcode": "431322",
+        "cityCode": "431300",
+        "cityName": "娄底市",
+        "beforeCount": 183,
+        "boundaryHash": "cd5974ac93d630d21dcecd4d69a61c3fabf91505bd8a0249beafb2dc73aeb8b7"
+      }
+    ],
+    "version": 2,
+    "interval": 1.0,
+    "maxDepth": 5,
+    "maxPages": 8,
+    "pageSize": 25,
+    "strategy": "adaptive_polygon_v1",
+    "parentRunId": "77751da1e930432394ebe8325068c3b6",
+    "minSpanDegrees": 0.002,
+    "coordinateSystem": "GCJ-02"
+  },
+  "notice": "分片扩大可检索样本，不能证明官方设施全量；原始记录与历史批次保留。"
+}
