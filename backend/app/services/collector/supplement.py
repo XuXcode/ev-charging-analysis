@@ -331,7 +331,9 @@ def main():
                 if not run or run.manifest.get("version") != 2:
                     raise CollectionError("未找到补采批次")
                 report = supplement_report(session, run)
-            destination = Path(__file__).resolve().parents[4] / "docs/SUPPLEMENT_REPORT.json"
+            destination = (
+                Path(__file__).resolve().parents[4] / "docs/reports/SUPPLEMENT_REPORT.json"
+            )
             destination.write_text(
                 json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
             )

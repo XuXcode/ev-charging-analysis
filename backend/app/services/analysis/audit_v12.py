@@ -86,7 +86,7 @@ def main():
                 "https://shapely.readthedocs.io/en/stable/manual.html",
             ],
         }
-        path = Path(__file__).resolve().parents[4] / "docs/GEOMETRY_V12_AUDIT.json"
+        path = Path(__file__).resolve().parents[4] / "docs/reports/GEOMETRY_V12_AUDIT.json"
         path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
         print(json.dumps(report, ensure_ascii=True, indent=2))
     finally:

@@ -34,8 +34,8 @@ def main():
     settings = Settings()
     if not settings.amap_webservice_key:
         parser.error("未配置Web Service Key")
-    baseline = json.loads((ROOT / "docs/ADMIN_REVIEW_BASELINE.json").read_text(encoding="utf-8"))
-    path = ROOT / "docs/ADMIN_REVIEW_PROVIDER.json"
+    baseline = json.loads((ROOT / "docs/reports/ADMIN_REVIEW_BASELINE.json").read_text(encoding="utf-8"))
+    path = ROOT / "docs/reports/ADMIN_REVIEW_PROVIDER.json"
     report = (
         json.loads(path.read_text(encoding="utf-8"))
         if path.exists()

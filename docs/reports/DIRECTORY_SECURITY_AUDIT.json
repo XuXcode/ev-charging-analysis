@@ -1,0 +1,15 @@
+{
+  "scannedFiles": 349,
+  "historyBlobs": 385,
+  "buildFiles": 33,
+  "privateBuildSecretsChecked": 2,
+  "configuredSecretsChecked": 4,
+  "ignoredEnvironmentFiles": {
+    ".env": true,
+    "fortend/.env.local": true,
+    "backend/.env": true
+  },
+  "trackedSecretEnvironmentFiles": [],
+  "locations": [],
+  "passed": true
+}

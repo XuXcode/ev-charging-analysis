@@ -4,9 +4,9 @@
 
 ## 省级专题地图
 
-`MapView`在没有`cityCode`时优先使用`SpatialMap`读取持久化分析快照；没有快照时使用`ProvinceMap`读取真实采集汇总。注册已有`src/assets/hunan.geojson.json`真实行政边界，以ECharts Map绘制14市州；省级页面不加载高德道路底图或全省站点Marker。
+`MapView`在没有`cityCode`时优先使用`SpatialMap`读取持久化分析快照；没有快照时使用`ProvinceMap`读取真实采集汇总。注册已有`fortend/src/assets/hunan.geojson.json`真实行政边界，以ECharts Map绘制14市州；省级页面不加载高德道路底图或全省站点Marker。
 
-`src/config/maps.js`从GeoJSON派生行政代码、名称、中心点和边界，统一两个地图渲染器的市州映射。正式快照提供样本数量、POI样本密度、1km直线样本覆盖率三指标以及网格、聚集、覆盖、未覆盖图层；按固定快照和行政区范围读取。后备数量值来自`GET /collection/summary`的`cities[].storedCount`，比例分母为`storedCount`。固定数量分级：小于500、500–749、750–999、1,000–1,499、至少1,500条。它们只用于显示POI样本差异，不代表设施密度或服务能力。
+`fortend/src/config/maps.js`从GeoJSON派生行政代码、名称、中心点和边界，统一两个地图渲染器的市州映射。正式快照提供样本数量、POI样本密度、1km直线样本覆盖率三指标以及网格、聚集、覆盖、未覆盖图层；按固定快照和行政区范围读取。后备数量值来自`GET /collection/summary`的`cities[].storedCount`，比例分母为`storedCount`。固定数量分级：小于500、500–749、750–999、1,000–1,499、至少1,500条。它们只用于显示POI样本差异，不代表设施密度或服务能力。
 
 地图区域点击直接进入`/city/:cityCode`。地图Hover、右侧排名Hover/键盘焦点和对比图定位共用Pinia高亮状态。Tooltip给出完整样本单位、比例和口径；密度和1km直线样本覆盖来自真实计算，Hover含质量及完整性警告；道路分钟可达性、供需指数保持待接入。专题点击用于选择范围，总览点击保留市州详情路由。支持缩放、重置、全屏，ResizeObserver跳过零尺寸布局，卸载销毁实例。
 
@@ -52,15 +52,15 @@ API分页属于传输细节，适配层内部读完当前范围后发布完整�
 
 检查截图：
 
-![省级专题地图](screenshots/province-thematic.png)
+![省级专题地图](../screenshots/province-thematic.png)
 
-![市州聚合与区县边界](screenshots/city-clusters.png)
+![市州聚合与区县边界](../screenshots/city-clusters.png)
 
-![市州等权POI热力图](screenshots/city-heatmap.png)
+![市州等权POI热力图](../screenshots/city-heatmap.png)
 
 ## 后续建议
 
-先核验行政边界版本和坐标系，复核POI分类与营业状态，补充可靠的设施统计与区县口径。完成这些数据条件后再接入独立分析结果。已实现1km直线样本覆盖；未实现道路分钟可达性、供需、OR-Tools或AI。公式和模型限制见[空间方法](SPATIAL_METHODS.md)，当前结果和证据见[完成审计](COMPLETION_AUDIT.md)。
+先核验行政边界版本和坐标系，复核POI分类与营业状态，补充可靠的设施统计与区县口径。完成这些数据条件后再接入独立分析结果。已实现1km直线样本覆盖；未实现道路分钟可达性、供需、OR-Tools或AI。公式和模型限制见[空间方法](SPATIAL_METHODS.md)，当前结果和证据见[完成审计](../history/COMPLETION_AUDIT.md)。
 
 ## 2026-10-04质量优化补充
 

@@ -105,7 +105,7 @@ def main():
             "live OpenAPI descriptions",
         ],
     }
-    target = ROOT / "docs" / "DEEP_RUNTIME_AUDIT.json"
+    target = ROOT / "docs/reports" / "DEEP_RUNTIME_AUDIT.json"
     target.write_text(
         json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
     )

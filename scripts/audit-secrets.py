@@ -12,6 +12,8 @@ from dotenv import dotenv_values
 ROOT = Path(__file__).resolve().parents[1]
 IGNORED_DIRS = {
     ".git",
+    ".workbuddy",
+    ".idea",
     "node_modules",
     ".conda",
     ".runtime",
@@ -54,7 +56,7 @@ def git(*arguments):
 
 def audit():
     values = {}
-    for filename in ("backend/.env", ".env.local"):
+    for filename in ("backend/.env", "fortend/.env.local"):
         path = ROOT / filename
         if path.exists():
             values.update(dotenv_values(path))
@@ -104,7 +106,7 @@ def audit():
         if suspected_literal(content) and Path(name).name != ".env.example":
             hits.append({"scope": "history_literal", "path": name, "object": object_id})
     ignored = {}
-    for filename in (".env", ".env.local", "backend/.env"):
+    for filename in (".env", "fortend/.env.local", "backend/.env"):
         result = subprocess.run(
             ["git", "-C", str(ROOT), "check-ignore", "--quiet", filename],
             capture_output=True,
@@ -120,7 +122,7 @@ def audit():
     if password:
         private_values.add(unquote(password))
     private_secrets = {value.encode() for value in private_values if len(value) >= 8}
-    build_files = list((ROOT / "dist").rglob("*"))
+    build_files = list((ROOT / "fortend/dist").rglob("*"))
     build_scanned = 0
     for path in build_files:
         if not path.is_file():
@@ -140,7 +142,7 @@ def audit():
         "passed": not hits and not tracked_env and all(ignored.values()),
     }
     print(json.dumps(report, ensure_ascii=False, indent=2))
-    (ROOT / "docs" / "SECURITY_AUDIT.json").write_text(
+    (ROOT / "docs/reports" / "SECURITY_AUDIT.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
     return report

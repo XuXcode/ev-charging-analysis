@@ -49,7 +49,9 @@ def import_boundaries(session):
     scopes = {row.adcode: row for row in session.scalars(select(AnalysisScopeQuality))}
     if len(scopes) != 122:
         raise ValueError("需先执行治理任务，确认122区县采集范围")
-    province = json.loads((ROOT / "src/assets/hunan.geojson.json").read_text(encoding="utf-8"))
+    province = json.loads(
+        (ROOT / "fortend/src/assets/hunan.geojson.json").read_text(encoding="utf-8")
+    )
     prepared = []
     found = set()
     for city in province["features"]:

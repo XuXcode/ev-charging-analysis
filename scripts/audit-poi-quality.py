@@ -35,7 +35,7 @@ def canonical_hash(value):
 
 
 def audit_boundary(verify_source):
-    boundary = json.loads((ROOT / "src/assets/hunan.geojson.json").read_text(encoding="utf-8"))
+    boundary = json.loads((ROOT / "fortend/src/assets/hunan.geojson.json").read_text(encoding="utf-8"))
     features = boundary["features"]
     invalid_coordinates = unclosed_rings = 0
     points = []
@@ -82,7 +82,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--verify-boundary-source", action="store_true")
     args = parser.parse_args()
-    rules = json.loads((ROOT / "src/config/poi-quality-rules.json").read_text(encoding="utf-8"))
+    rules = json.loads((ROOT / "fortend/src/config/poi-quality-rules.json").read_text(encoding="utf-8"))
     engine = create_db_engine(Settings())
     # Read-only transaction is enforced by MySQL in addition to SELECT-only code.
     with engine.connect() as connection:
@@ -170,7 +170,7 @@ def main():
         "boundary": audit_boundary(args.verify_boundary_source),
         "notice": "离线只读核验快照；名称与原始类别仅提供复核线索，不判定真实营业状态或车辆类型。重叠线索不能相加推算无效总量，所有样本均保留。",
     }
-    output = ROOT / "public/data-quality"
+    output = ROOT / "fortend/public/data-quality"
     output.mkdir(parents=True, exist_ok=True)
     (output / "poi-audit.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     review_path = ROOT / "docs/data-quality/poi-review.csv"

@@ -125,7 +125,7 @@ def main():
             "medianMs": round(statistics.median(times), 2),
             "maxMs": round(max(times), 2),
         }
-    output = ROOT / "docs" / args.output
+    output = ROOT / "docs/reports" / args.output
     output.write_text(
         json.dumps(report, ensure_ascii=False, indent=2, default=str) + "\n",
         encoding="utf-8",

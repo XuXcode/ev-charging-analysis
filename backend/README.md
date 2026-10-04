@@ -3,8 +3,8 @@
 本目录是 FastAPI 后端基座。使用 Conda + Python 3.12，MySQL 8、SQLAlchemy 2、Alembic。
 已提供统计快照读取、行政区查询、站点检索和按市州发起的高德地点搜索。
 已增加独立行政区分页采集器、清洗去重、页面断点和质量审计。
-独立任务提供POI样本密度、5km网格、描述性聚集和1km直线样本覆盖；独立道路任务新增122区县内部代表点到候选POI的真实驾车观测，见[道路说明](../docs/ROAD_ACCESSIBILITY.md)。未实现人口/面积等时圈、供需、AI或权限系统。新增需求与 Greedy/MCLP 选址基座，真实输入缺失不生成实际方案，见[需求与选址说明](../docs/DEMAND_PLANNING.md)。
-运行和配置详情见 [真实数据链路说明](../docs/COLLECTOR.md)。
+独立任务提供POI样本密度、5km网格、描述性聚集和1km直线样本覆盖；独立道路任务新增122区县内部代表点到候选POI的真实驾车观测，见[道路说明](../docs/guides/ROAD_ACCESSIBILITY.md)。未实现人口/面积等时圈、供需、AI或权限系统。新增需求与 Greedy/MCLP 选址基座，真实输入缺失不生成实际方案，见[需求与选址说明](../docs/guides/DEMAND_PLANNING.md)。
+运行和配置详情见 [真实数据链路说明](../docs/guides/COLLECTOR.md)。
 
 默认连接真实接口，业务统计缺失时返回 null / 空序列，前端显示“暂无数据”。
 地点搜索条目不用于填充官方设施总量、充电桩数量或历史趋势；POI样本密度单独标明真实边界模型口径。
@@ -114,7 +114,7 @@ downgrade 会删除对应表和数据，只用于可重建测试库；不要在�
 
 申请两种用途不同的 Key：
 
-1. 根目录 .env.local 的 VITE_AMAP_KEY：Web端（JS API）Key。
+1. fortend/.env.local 的 VITE_AMAP_KEY：Web端（JS API）Key。
    设置 VITE_AMAP_SECURITY_JS_CODE，或使用 VITE_AMAP_SECURITY_SERVICE_HOST 安全代理。
 2. backend/.env 的 AMAP_WEBSERVICE_KEY：Web服务 API Key，供后端地点查询使用。
 
@@ -130,11 +130,11 @@ VITE_AMAP_SECURITY_JS_CODE=your_security_code
 不要把 Web服务 Key 放进 VITE_ 变量或提交仓库。
 
 在总览或 /city/:cityCode 自动读取 `/stations` 真实入库站点，点击“刷新站点”更新，
-每页最多200个 Marker，可上一页 / 下一页。切换市州清除旧站点，过期响应不会覆盖新选择。
+接口内部每页最多200条，地图按市州或bbox加载，不提供列表翻页按钮。切换市州清除旧站点，过期响应不会覆盖新选择。
 Hover和页面访问不发起高德POI查询。地图“数据来源与采集记录”展示库内数量和最新批次质量。
 保留 `/amap/stations` 单页检索接口用于调试，前端主流程不再调用该接口。
 2026-10-03 两类 Key 已验证，原 blocked 批次已在配置凭据后续跑。
-实际结果见 [采集说明](../docs/COLLECTOR.md)；入库清单不代表完整设施总量。
+实际结果见 [采集说明](../docs/guides/COLLECTOR.md)；入库清单不代表完整设施总量。
 
 公开 POI 2.0 不保证完整站点普查，同一搜索参数最多获取200条，每页1–25条。
 API 返回 returnedCount（当前页有效地点数），不返回伪造的全市总量。
@@ -239,8 +239,8 @@ backend/
 新增 CollectionRun / CollectionPage 两张审计表，提交页事务同时保存原始记录与断点。
 没有写入伪造 StatisticSnapshot，详细规则见 docs/COLLECTOR.md。
 正式分析任务读取站点投影字段、质量与真实边界，持久化AnalysisSnapshot，记录输入、参数、算法和来源版本；相同输入复用快照。新增PoiQuality、AnalysisBoundary、AnalysisScopeQuality和PublicStatistic为独立派生/统计结构，原始站点全部保留。
-公开统计CLI、原子校验及来源口径见[导入说明](../docs/PUBLIC_STATISTICS.md)。真实库公开统计为0条，没有补造统计。分析命令与公式见[空间方法](../docs/SPATIAL_METHODS.md)，完成证据见[审计](../docs/COMPLETION_AUDIT.md)。
-api/v1/analysis/spatial、accessibility、supply_demand、weak_areas、optimization 尚未注册路由，
+公开统计CLI、原子校验及来源口径见[导入说明](../docs/guides/PUBLIC_STATISTICS.md)。真实库公开统计为0条，没有补造统计。分析命令与公式见[空间方法](../docs/guides/SPATIAL_METHODS.md)，完成证据见[审计](../docs/history/COMPLETION_AUDIT.md)。
+实际分析接口由 analysis/routes.py、accessibility.py 和 planning.py 注册；无代码且未注册的旧占位文件已清理，
 不会返回模拟分析结果。没有 Redis、Celery、JWT 或 GeoPandas；选址模块使用 SciPy milp/HiGHS，不使用 OR-Tools。
 
 参考：[FastAPI Settings](https://fastapi.tiangolo.com/advanced/settings/)、

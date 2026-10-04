@@ -190,7 +190,9 @@ def main():
         with create_session_factory(engine)() as session, session.begin():
             result = install(session, report, apply=args.apply)
         path = root / (
-            "docs/BOUNDARY_REVIEW_APPLIED.json" if args.apply else "docs/BOUNDARY_REVIEW_PLAN.json"
+            "docs/reports/BOUNDARY_REVIEW_APPLIED.json"
+            if args.apply
+            else "docs/reports/BOUNDARY_REVIEW_PLAN.json"
         )
         if path.exists():
             path = path.with_name(f"{path.stem}_{utc_now():%Y%m%d%H%M%S}.json")

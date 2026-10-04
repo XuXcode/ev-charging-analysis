@@ -24,7 +24,7 @@ backend/app/services/analysis/
 backend/app/schemas/planning.py      严格输入契约
 backend/app/models/planning.py       PlanningDataset / PlanningRun
 backend/app/api/v1/analysis/planning.py
-src/components/analysis/
+fortend/src/components/analysis/
   OptimizationWorkbench.vue         现状 / 方案双栏与参数
   PlanningMap.vue                   原有站、候选、推荐、需求点
   LowAccessibility.vue              真实道路低可达性清单与区县定位
@@ -104,4 +104,4 @@ python -m app.services.analysis.planning_replay --run-id <方案ID>
 - 实际启动前后端，真实数据集目录返回 200 且为空；既有道路结果接口返回 200。隔离测试验证数据导入、需求预览、完整缓存道路求解、缺失缓存拒绝及 MySQL 冻结重放。
 - 浏览器检查了算法/N 切换、缺失数据禁用、区域跨菜单保持、低可达性阈值切换、点击龙山县加载真实高德地图和 64 条 POI；控制台无错误。
 - 因缺少真实需求/候选，尚未用湖南实际方案验证推荐图层；其输入与求解链已用隔离固定用例验证，不把测试点写入真实数据库。
-- [数据库与调用计数核验](PLANNING_VERIFICATION.json)、[优化工作台截图](screenshots/planning-workbench.png)、[区县地图联动截图](screenshots/planning-low-accessibility.png)。
+- [数据库与调用计数核验](../reports/PLANNING_VERIFICATION.json)、[优化工作台截图](../screenshots/planning-workbench.png)、[区县地图联动截图](../screenshots/planning-low-accessibility.png)。

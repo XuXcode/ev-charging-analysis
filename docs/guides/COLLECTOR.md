@@ -180,7 +180,7 @@ CLI 输出进度和脱敏错误，并自动保存 `.runtime/collector/<run_id>.l
 前端 `npm run build` 通过，保留 ECharts 分包体积提示。
 浏览器验证了1920×1080总览、详情路由、市州联动、200个 Marker、翻页、图层开关与来源弹窗。
 修复在线模式下隐藏 ECharts 地图的零尺寸报错，以及续跑批次被较新试采批次遮蔽的问题。
-截图见 [市州真实站点](screenshots/live-city-poi.png) 和 [全省采集质量](screenshots/live-province-quality.png)。
+截图见 [市州真实站点](../screenshots/live-city-poi.png) 和 [全省采集质量](../screenshots/live-province-quality.png)。
 
 下一阶段建议先人工抽查分类、运营状态和重复合并，再结合可靠设施统计来源补充桩数，
 核实触及返回上限区县的数据完整性。分析算法仍保持预留，待数据质量口径确定后再推进。

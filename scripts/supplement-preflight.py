@@ -67,7 +67,7 @@ def main():
             result["probe"] = {"permissionVerified": False, "error": str(failure)}
         finally:
             client.close()
-        destination = Path(__file__).resolve().parents[1] / "docs/SUPPLEMENT_BASELINE.json"
+        destination = Path(__file__).resolve().parents[1] / "docs/reports/SUPPLEMENT_BASELINE.json"
         destination.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
         print(
             json.dumps(

@@ -20,7 +20,7 @@
 
 线索可能重叠，不可相加。没有命中线索也不表示已确认正常营业。现有 `station_type` 是采集器统一分类，不能替代原始 `type` / `typecode`。完整原始类别计数在数据质量抽屉中查看。
 
-人工复核清单：[poi-review.csv](data-quality/poi-review.csv)。优先检查暂停营业、已拆除、个人或专用站点，再核验类别和车辆适用范围；本轮未自动删除或修正这些记录。
+人工复核清单：[poi-review.csv](../data-quality/poi-review.csv)。优先检查暂停营业、已拆除、个人或专用站点，再核验类别和车辆适用范围；本轮未自动删除或修正这些记录。
 
 ## 边界与坐标
 
@@ -48,4 +48,4 @@ npm.cmd run build
 
 输出 `public/data-quality/poi-audit.json` 离线快照和上述 CSV。页面仅在快照的批次 ID、样本数量和更新时间都与真实接口匹配时展示核验数量；旧快照不冒充当前核验结果。重新生成后应刷新开发页面，发布环境需重新构建。
 
-名称提示规则集中在 `src/config/poi-quality-rules.json`。站点信息窗展示命中的名称线索，同时明确“营业状态尚未核验”。本轮没有实现可达性、供需、选址优化或 AI。
+名称提示规则集中在 `fortend/src/config/poi-quality-rules.json`。站点信息窗展示命中的名称线索，同时明确“营业状态尚未核验”。本轮没有实现可达性、供需、选址优化或 AI。

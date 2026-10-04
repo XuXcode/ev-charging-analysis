@@ -3,7 +3,7 @@
 沿用现有 FastAPI 分层服务。前端始终调用真实接口；没有站点 mock 回退。
 成功：`{ "code": 200, "message": "success", "data": ... }`，Axios统一解包data。
 错误：真实HTTP状态码和 `{code,message,data:{}}`，请求标识位于 `X-Request-ID` 响应头，不回传密钥或内部异常。
-完整环境和启动见 [后端说明](../backend/README.md)，采集规则见 [采集说明](COLLECTOR.md)。
+完整环境和启动见 [后端说明](../../backend/README.md)，采集规则见 [采集说明](COLLECTOR.md)。
 
 ## 统计与页面框架
 

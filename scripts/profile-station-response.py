@@ -87,7 +87,7 @@ def main():
                     event.remove(connection, "after_cursor_execute", after)
                     connection.rollback()
     engine.dispose()
-    target = ROOT / "docs" / "STATION_RESPONSE_PROFILE.json"
+    target = ROOT / "docs/reports" / "STATION_RESPONSE_PROFILE.json"
     target.write_text(
         json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
     )

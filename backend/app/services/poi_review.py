@@ -162,8 +162,12 @@ def main():
     if not args.apply:
         parser.error("需要--apply；此任务不会删除站点或确认停业")
     root = Path(__file__).resolve().parents[3]
-    baseline = json.loads((root / "docs/ADMIN_REVIEW_BASELINE.json").read_text(encoding="utf-8"))
-    provider = json.loads((root / "docs/ADMIN_REVIEW_PROVIDER.json").read_text(encoding="utf-8"))
+    baseline = json.loads(
+        (root / "docs/reports/ADMIN_REVIEW_BASELINE.json").read_text(encoding="utf-8")
+    )
+    provider = json.loads(
+        (root / "docs/reports/ADMIN_REVIEW_PROVIDER.json").read_text(encoding="utf-8")
+    )
     engine = create_db_engine(Settings())
     try:
         with create_session_factory(engine)() as session, session.begin():
@@ -175,9 +179,9 @@ def main():
             "highRisk": high_risk,
             "notice": "自动证据复核/分流，不证明法律行政归属或营业状态；原始站点、坐标、采集页面未删除。",
         }
-        target = root / "docs/POI_REVIEW_CHANGES.json"
+        target = root / "docs/reports/POI_REVIEW_CHANGES.json"
         if target.exists():
-            target = root / f"docs/POI_REVIEW_CHANGES_{utc_now():%Y%m%d%H%M%S}.json"
+            target = root / f"docs/reports/POI_REVIEW_CHANGES_{utc_now():%Y%m%d%H%M%S}.json"
         target.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
         print(
             {

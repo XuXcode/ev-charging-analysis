@@ -16,7 +16,7 @@ cd backend
 
 ## 格式与校验
 
-[CSV空表头模板](statistics-template.csv)没有示例业务数值。UTF-8 CSV（可带BOM）与JSON记录数组使用以下相同字段，全部必填；JSON不得包装在`data`对象中。
+[CSV空表头模板](../templates/statistics-template.csv)没有示例业务数值。UTF-8 CSV（可带BOM）与JSON记录数组使用以下相同字段，全部必填；JSON不得包装在`data`对象中。
 
 | 字段              | 含义                                                      |
 | ----------------- | --------------------------------------------------------- |
