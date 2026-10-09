@@ -23,10 +23,9 @@ class Settings(BaseSettings):
     db_pool_size: int = Field(default=5, ge=1, le=50)
     db_max_overflow: int = Field(default=5, ge=0, le=50)
     db_pool_recycle: int = Field(default=1800, ge=60)
-    test_database_url: SecretStr | None = None
     amap_webservice_key: SecretStr | None = None
 
-    @field_validator("database_url", "test_database_url")
+    @field_validator("database_url")
     @classmethod
     def mysql_only(cls, value):
         if value is not None and make_url(value.get_secret_value()).drivername != "mysql+pymysql":

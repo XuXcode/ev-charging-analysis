@@ -1,0 +1,5 @@
+{
+  "chargingStationCount": 12601,
+  "chargingStationRowsSha256": "5cd7cee28427cd5d00e0d6ff7779bde0bc9f96da9e5507633fb090245712b42a",
+  "stationHashMethod": "all stored columns; id order; sorted-key UTF8 JSON per row; Decimal/datetime via str; newline separator"
+}

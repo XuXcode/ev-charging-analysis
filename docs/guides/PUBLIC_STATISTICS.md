@@ -12,7 +12,7 @@ cd backend
 
 读取接口 `GET /api/v1/statistics/official` 支持与公开接口相同的行政编码、年份、指标及分页参数。新增 `pile_count`（个）、`charging_gun_count`（把）、`public_charging_gun_count`（把）；充电桩与充电枪禁止互相替代。每条返回来源、原文URL、年份、单位、口径、更新时间与文件哈希。空表仍返回空记录，不能由POI推算官方数量。
 
-公开统计与POI样本分开存储：`public_statistics`按单个指标记录来源、年份、口径和单位，允许只导入已知指标。不会用缺失字段补零，也不会自动填充要求完整桩型拆分的旧`StatisticSnapshot`或推算增长率。当前真实库没有可靠统计文件，导入记录为0，页面仍显示“—”。
+公开统计与POI样本分开存储：`public_statistics`按单个指标记录来源、年份、口径和单位，允许只导入已知指标。不会用缺失字段补零，也不会自动填充要求完整桩型拆分的旧`StatisticSnapshot`或推算增长率。当前库已有独立官方/公开背景记录；缺少可靠公共桩总量或可比时序时，对应页面仍显示“—”。同年来源差异及本轮追加见[统计来源核对](STATISTICS_SOURCE_REVIEW.md)。
 
 ## 格式与校验
 
@@ -55,4 +55,4 @@ cd backend
 
 `GET /api/v1/statistics/public`支持adcode（精确行政编码）、year、metric、page、page_size（最多100）。前端“查看数据质量”抽屉提供已导入统计来源入口。没有开放写入API或上传页面，导入由本地CLI执行，不新增用户权限系统。
 
-CSV/JSON、幂等、整批拒绝、来源隔离与读取接口均使用独立MySQL测试库验证；测试数值没有写入应用数据库。实际运行空表头模板，插入0行，没有为了展示添加模拟统计。
+来源、年份和口径独立保存，不向正式数据库补造统计。

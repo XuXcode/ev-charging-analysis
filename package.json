@@ -3,17 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "tokens": "npm --prefix fortend run tokens",
-    "check:tokens": "npm --prefix fortend run check:tokens",
-    "test:frontend": "npm --prefix fortend run test:frontend",
-    "dev": "npm --prefix fortend run dev",
-    "build": "npm --prefix fortend run build",
-    "preview": "npm --prefix fortend run preview",
-    "check": "npm --prefix fortend run check",
-    "check:quality": "npm --prefix fortend run check:quality",
-    "format": "npm --prefix fortend run format",
-    "format:check": "npm --prefix fortend run format:check",
-    "install:frontend": "npm --prefix fortend ci"
+    "tokens": "npm --prefix frontend run tokens",
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview",
+    "format": "npm --prefix frontend run format",
+    "format:check": "npm --prefix frontend run format:check",
+    "install:frontend": "npm --prefix frontend ci"
   },
   "engines": {
     "node": "^20.19.0 || >=22.12.0"

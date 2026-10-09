@@ -127,7 +127,7 @@ CLI 输出进度和脱敏错误，并自动保存 `.runtime/collector/<run_id>.l
 | `/api/v1/collection/summary`       | 库内真实累计去重数、14市州入库数、来源、UTC更新时间、最新批次质量报告           |
 | `/api/v1/collection/runs/{run_id}` | 指定批次报告，未知批次404、非法ID422                                            |
 
-接口遵循 `{code,message,data}`。旧测试联调可显式 `real_only=false`，
+接口遵循 `{code,message,data}`。显式读取历史演示记录可使用 `real_only=false`，
 前端始终 `real_only=true`，不会回退站点 mock。总览与市州详情进入页面/切换市州自动读库，
 每页最多200个 Marker，可翻页、刷新、查看来源与采集记录；不把第一页面当全部站点。
 统计总量、公共充电桩、历史趋势、密度等仍只读取可靠统计快照；缺失显示“暂无数据”。
@@ -149,7 +149,7 @@ CLI 输出进度和脱敏错误，并自动保存 `.runtime/collector/<run_id>.l
 排除 **110条**，排除原因均为 `not_ev_charging_station`。
 本批次新增9,045次、更新2,120次、别名合并7次；长沙试采已入库的1,700条再次更新，
 没有重复插入。当前正式库累计10,745条，全部具有 POI ID、身份哈希、来源与采集时间。
-504个 POI 页面均首个请求成功；失败重试与事务回滚另由隔离测试验证。
+504个 POI 页面均首个请求成功；该历史数量仅对应当时采集批次。
 
 | 市州     | 原始记录 | 有效去重 / 当前入库 | 重复 | 排除 |
 | -------- | -------: | ------------------: | ---: | ---: |
@@ -176,15 +176,3 @@ CLI 输出进度和脱敏错误，并自动保存 `.runtime/collector/<run_id>.l
 
 已实际核对 `/stations` 分页、市州/区县过滤、`/collection/summary` 及最新续跑批次。
 正式库公共桩数均为空、统计快照0条，前端相应指标继续显示“暂无数据”。
-后端 **64项测试通过**（实际MySQL，供应方异常由独立测试 transport 模拟），
-前端 `npm run build` 通过，保留 ECharts 分包体积提示。
-浏览器验证了1920×1080总览、详情路由、市州联动、200个 Marker、翻页、图层开关与来源弹窗。
-修复在线模式下隐藏 ECharts 地图的零尺寸报错，以及续跑批次被较新试采批次遮蔽的问题。
-截图见 [市州真实站点](../screenshots/live-city-poi.png) 和 [全省采集质量](../screenshots/live-province-quality.png)。
-
-下一阶段建议先人工抽查分类、运营状态和重复合并，再结合可靠设施统计来源补充桩数，
-核实触及返回上限区县的数据完整性。分析算法仍保持预留，待数据质量口径确定后再推进。
-
-官方依据：[POI 2.0](https://lbs.amap.com/api/webservice/guide/api-advanced/newpoisearch)、
-[行政区域查询](https://lbs.amap.com/api/webservice/guide/api/district/)、
-[JS安全配置](https://lbs.amap.com/api/javascript-api-v2/guide/abc/jscode)。

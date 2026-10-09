@@ -36,7 +36,9 @@ def suspected_literal(content):
         value = match.group(1)
         decoded = value.decode("utf-8", errors="ignore")
         documented_placeholder = (
-            decoded.upper().startswith("URL") and "编码" in decoded and "密码" in decoded
+            decoded.upper().startswith("URL")
+            and "编码" in decoded
+            and "密码" in decoded
         )
         if not documented_placeholder and value not in {
             b"replace_me",
@@ -56,7 +58,7 @@ def git(*arguments):
 
 def audit():
     values = {}
-    for filename in ("backend/.env", "fortend/.env.local"):
+    for filename in ("backend/.env", "frontend/.env.local"):
         path = ROOT / filename
         if path.exists():
             values.update(dotenv_values(path))
@@ -71,7 +73,9 @@ def audit():
     scanned = 0
     paths = []
     for directory, subdirectories, filenames in os.walk(ROOT):
-        subdirectories[:] = [name for name in subdirectories if name not in IGNORED_DIRS]
+        subdirectories[:] = [
+            name for name in subdirectories if name not in IGNORED_DIRS
+        ]
         paths.extend(Path(directory) / name for name in filenames)
     for path in paths:
         if path.name.startswith(".env") and path.name != ".env.example":
@@ -83,7 +87,9 @@ def audit():
         if any(secret in content for secret in secrets):
             hits.append({"scope": "working_tree", "path": str(path.relative_to(ROOT))})
         if suspected_literal(content) and path.name != ".env.example":
-            hits.append({"scope": "suspected_literal", "path": str(path.relative_to(ROOT))})
+            hits.append(
+                {"scope": "suspected_literal", "path": str(path.relative_to(ROOT))}
+            )
         if path.suffix in {".js", ".vue"} and re.search(
             rb"(?:AMAP_WEBSERVICE_KEY|DATABASE_URL)\s*[:=]\s*['\"][^'\"]{8,}", content
         ):
@@ -93,20 +99,36 @@ def audit():
                     "path": str(path.relative_to(ROOT)),
                 }
             )
-    objects = git("rev-list", "--objects", "--all").decode().splitlines()
+    objects = [
+        line.split(" ", 1)
+        for line in git("rev-list", "--objects", "--all").decode().splitlines()
+        if " " in line
+    ]
+    # Batch object reads avoid spawning a Git process for every historical blob.
+    contents = subprocess.run(
+        ["git", "-C", str(ROOT), "cat-file", "--batch"],
+        input="".join(object_id + "\n" for object_id, _ in objects).encode(),
+        capture_output=True,
+        check=True,
+    ).stdout
+    cursor = 0
     history_blobs = 0
-    for line in objects:
-        object_id, _, name = line.partition(" ")
-        if not name or git("cat-file", "-t", object_id).strip() != b"blob":
+    for object_id, name in objects:
+        header_end = contents.index(b"\n", cursor)
+        _, object_type, size = contents[cursor:header_end].split()
+        content_start = header_end + 1
+        content_end = content_start + int(size)
+        content = contents[content_start:content_end]
+        cursor = content_end + 1
+        if object_type != b"blob":
             continue
-        content = git("cat-file", "blob", object_id)
         history_blobs += 1
         if any(secret in content for secret in secrets):
             hits.append({"scope": "git_history", "path": name, "object": object_id})
         if suspected_literal(content) and Path(name).name != ".env.example":
             hits.append({"scope": "history_literal", "path": name, "object": object_id})
     ignored = {}
-    for filename in (".env", "fortend/.env.local", "backend/.env"):
+    for filename in (".env", "frontend/.env.local", "backend/.env"):
         result = subprocess.run(
             ["git", "-C", str(ROOT), "check-ignore", "--quiet", filename],
             capture_output=True,
@@ -122,14 +144,16 @@ def audit():
     if password:
         private_values.add(unquote(password))
     private_secrets = {value.encode() for value in private_values if len(value) >= 8}
-    build_files = list((ROOT / "fortend/dist").rglob("*"))
+    build_files = list((ROOT / "frontend/dist").rglob("*"))
     build_scanned = 0
     for path in build_files:
         if not path.is_file():
             continue
         build_scanned += 1
         if any(secret in path.read_bytes() for secret in private_secrets):
-            hits.append({"scope": "build_private_secret", "path": str(path.relative_to(ROOT))})
+            hits.append(
+                {"scope": "build_private_secret", "path": str(path.relative_to(ROOT))}
+            )
     report = {
         "scannedFiles": scanned,
         "historyBlobs": history_blobs,

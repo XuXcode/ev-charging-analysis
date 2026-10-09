@@ -1,0 +1,167 @@
+[
+  {
+    "region_adcode": "430000",
+    "year": 2020,
+    "metric": "population",
+    "value": 66444864,
+    "unit": "人",
+    "source_name": "湖南省统计局：湖南省第七次全国人口普查公报（第二号）表2-1",
+    "source_url": "https://tjj.hunan.gov.cn/hntj/wzzl/hnsdqcqgrkpc/qrptzgg/202105/t20210519_19050124.html",
+    "source_kind": "official",
+    "scope_description": "湖南省2020年11月1日零时常住人口，按普查时点行政区划汇总；历史区域背景，不是2026年人口，不是网格人口、充电需求或道路覆盖人口。"
+  },
+  {
+    "region_adcode": "430100",
+    "year": 2020,
+    "metric": "population",
+    "value": 10047914,
+    "unit": "人",
+    "source_name": "湖南省统计局：湖南省第七次全国人口普查公报（第二号）表2-1",
+    "source_url": "https://tjj.hunan.gov.cn/hntj/wzzl/hnsdqcqgrkpc/qrptzgg/202105/t20210519_19050124.html",
+    "source_kind": "official",
+    "scope_description": "长沙市2020年11月1日零时常住人口，按普查时点行政区划汇总；历史区域背景，不是2026年人口，不是网格人口、充电需求或道路覆盖人口。"
+  },
+  {
+    "region_adcode": "430200",
+    "year": 2020,
+    "metric": "population",
+    "value": 3902738,
+    "unit": "人",
+    "source_name": "湖南省统计局：湖南省第七次全国人口普查公报（第二号）表2-1",
+    "source_url": "https://tjj.hunan.gov.cn/hntj/wzzl/hnsdqcqgrkpc/qrptzgg/202105/t20210519_19050124.html",
+    "source_kind": "official",
+    "scope_description": "株洲市2020年11月1日零时常住人口，按普查时点行政区划汇总；历史区域背景，不是2026年人口，不是网格人口、充电需求或道路覆盖人口。"
+  },
+  {
+    "region_adcode": "430300",
+    "year": 2020,
+    "metric": "population",
+    "value": 2726181,
+    "unit": "人",
+    "source_name": "湖南省统计局：湖南省第七次全国人口普查公报（第二号）表2-1",
+    "source_url": "https://tjj.hunan.gov.cn/hntj/wzzl/hnsdqcqgrkpc/qrptzgg/202105/t20210519_19050124.html",
+    "source_kind": "official",
+    "scope_description": "湘潭市2020年11月1日零时常住人口，按普查时点行政区划汇总；历史区域背景，不是2026年人口，不是网格人口、充电需求或道路覆盖人口。"
+  },
+  {
+    "region_adcode": "430400",
+    "year": 2020,
+    "metric": "population",
+    "value": 6645243,
+    "unit": "人",
+    "source_name": "湖南省统计局：湖南省第七次全国人口普查公报（第二号）表2-1",
+    "source_url": "https://tjj.hunan.gov.cn/hntj/wzzl/hnsdqcqgrkpc/qrptzgg/202105/t20210519_19050124.html",
+    "source_kind": "official",
+    "scope_description": "衡阳市2020年11月1日零时常住人口，按普查时点行政区划汇总；历史区域背景，不是2026年人口，不是网格人口、充电需求或道路覆盖人口。"
+  },
+  {
+    "region_adcode": "430500",
+    "year": 2020,
+    "metric": "population",
+    "value": 6563520,
+    "unit": "人",
+    "source_name": "湖南省统计局：湖南省第七次全国人口普查公报（第二号）表2-1",
+    "source_url": "https://tjj.hunan.gov.cn/hntj/wzzl/hnsdqcqgrkpc/qrptzgg/202105/t20210519_19050124.html",
+    "source_kind": "official",
+    "scope_description": "邵阳市2020年11月1日零时常住人口，按普查时点行政区划汇总；历史区域背景，不是2026年人口，不是网格人口、充电需求或道路覆盖人口。"
+  },
+  {
+    "region_adcode": "430600",
+    "year": 2020,
+    "metric": "population",
+    "value": 5051922,
+    "unit": "人",
+    "source_name": "湖南省统计局：湖南省第七次全国人口普查公报（第二号）表2-1",
+    "source_url": "https://tjj.hunan.gov.cn/hntj/wzzl/hnsdqcqgrkpc/qrptzgg/202105/t20210519_19050124.html",
+    "source_kind": "official",
+    "scope_description": "岳阳市2020年11月1日零时常住人口，按普查时点行政区划汇总；历史区域背景，不是2026年人口，不是网格人口、充电需求或道路覆盖人口。"
+  },
+  {
+    "region_adcode": "430700",
+    "year": 2020,
+    "metric": "population",
+    "value": 5279102,
+    "unit": "人",
+    "source_name": "湖南省统计局：湖南省第七次全国人口普查公报（第二号）表2-1",
+    "source_url": "https://tjj.hunan.gov.cn/hntj/wzzl/hnsdqcqgrkpc/qrptzgg/202105/t20210519_19050124.html",
+    "source_kind": "official",
+    "scope_description": "常德市2020年11月1日零时常住人口，按普查时点行政区划汇总；历史区域背景，不是2026年人口，不是网格人口、充电需求或道路覆盖人口。"
+  },
+  {
+    "region_adcode": "430800",
+    "year": 2020,
+    "metric": "population",
+    "value": 1517027,
+    "unit": "人",
+    "source_name": "湖南省统计局：湖南省第七次全国人口普查公报（第二号）表2-1",
+    "source_url": "https://tjj.hunan.gov.cn/hntj/wzzl/hnsdqcqgrkpc/qrptzgg/202105/t20210519_19050124.html",
+    "source_kind": "official",
+    "scope_description": "张家界市2020年11月1日零时常住人口，按普查时点行政区划汇总；历史区域背景，不是2026年人口，不是网格人口、充电需求或道路覆盖人口。"
+  },
+  {
+    "region_adcode": "430900",
+    "year": 2020,
+    "metric": "population",
+    "value": 3851564,
+    "unit": "人",
+    "source_name": "湖南省统计局：湖南省第七次全国人口普查公报（第二号）表2-1",
+    "source_url": "https://tjj.hunan.gov.cn/hntj/wzzl/hnsdqcqgrkpc/qrptzgg/202105/t20210519_19050124.html",
+    "source_kind": "official",
+    "scope_description": "益阳市2020年11月1日零时常住人口，按普查时点行政区划汇总；历史区域背景，不是2026年人口，不是网格人口、充电需求或道路覆盖人口。"
+  },
+  {
+    "region_adcode": "431000",
+    "year": 2020,
+    "metric": "population",
+    "value": 4667134,
+    "unit": "人",
+    "source_name": "湖南省统计局：湖南省第七次全国人口普查公报（第二号）表2-1",
+    "source_url": "https://tjj.hunan.gov.cn/hntj/wzzl/hnsdqcqgrkpc/qrptzgg/202105/t20210519_19050124.html",
+    "source_kind": "official",
+    "scope_description": "郴州市2020年11月1日零时常住人口，按普查时点行政区划汇总；历史区域背景，不是2026年人口，不是网格人口、充电需求或道路覆盖人口。"
+  },
+  {
+    "region_adcode": "431100",
+    "year": 2020,
+    "metric": "population",
+    "value": 5289824,
+    "unit": "人",
+    "source_name": "湖南省统计局：湖南省第七次全国人口普查公报（第二号）表2-1",
+    "source_url": "https://tjj.hunan.gov.cn/hntj/wzzl/hnsdqcqgrkpc/qrptzgg/202105/t20210519_19050124.html",
+    "source_kind": "official",
+    "scope_description": "永州市2020年11月1日零时常住人口，按普查时点行政区划汇总；历史区域背景，不是2026年人口，不是网格人口、充电需求或道路覆盖人口。"
+  },
+  {
+    "region_adcode": "431200",
+    "year": 2020,
+    "metric": "population",
+    "value": 4587594,
+    "unit": "人",
+    "source_name": "湖南省统计局：湖南省第七次全国人口普查公报（第二号）表2-1",
+    "source_url": "https://tjj.hunan.gov.cn/hntj/wzzl/hnsdqcqgrkpc/qrptzgg/202105/t20210519_19050124.html",
+    "source_kind": "official",
+    "scope_description": "怀化市2020年11月1日零时常住人口，按普查时点行政区划汇总；历史区域背景，不是2026年人口，不是网格人口、充电需求或道路覆盖人口。"
+  },
+  {
+    "region_adcode": "431300",
+    "year": 2020,
+    "metric": "population",
+    "value": 3826996,
+    "unit": "人",
+    "source_name": "湖南省统计局：湖南省第七次全国人口普查公报（第二号）表2-1",
+    "source_url": "https://tjj.hunan.gov.cn/hntj/wzzl/hnsdqcqgrkpc/qrptzgg/202105/t20210519_19050124.html",
+    "source_kind": "official",
+    "scope_description": "娄底市2020年11月1日零时常住人口，按普查时点行政区划汇总；历史区域背景，不是2026年人口，不是网格人口、充电需求或道路覆盖人口。"
+  },
+  {
+    "region_adcode": "433100",
+    "year": 2020,
+    "metric": "population",
+    "value": 2488105,
+    "unit": "人",
+    "source_name": "湖南省统计局：湖南省第七次全国人口普查公报（第二号）表2-1",
+    "source_url": "https://tjj.hunan.gov.cn/hntj/wzzl/hnsdqcqgrkpc/qrptzgg/202105/t20210519_19050124.html",
+    "source_kind": "official",
+    "scope_description": "湘西自治州2020年11月1日零时常住人口，按普查时点行政区划汇总；历史区域背景，不是2026年人口，不是网格人口、充电需求或道路覆盖人口。"
+  }
+]

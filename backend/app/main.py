@@ -13,8 +13,9 @@ from starlette.middleware.gzip import GZipMiddleware
 from app.api.health import router as health_router
 from app.api.v1.amap import router as amap_router
 from app.api.v1.analysis.accessibility import router as accessibility_router
-from app.api.v1.analysis.planning import router as planning_router
 from app.api.v1.analysis.routes import router as analysis_router
+from app.api.v1.exports import AttachmentPool
+from app.api.v1.exports import router as exports_router
 from app.api.v1.public_statistics import router as public_statistics_router
 from app.api.v1.quality import router as quality_router
 from app.api.v1.router import router as v1_router
@@ -51,7 +52,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     application.include_router(public_statistics_router)
     application.include_router(analysis_router)
     application.include_router(accessibility_router)
-    application.include_router(planning_router)
+    application.include_router(exports_router)
+    application.state.attachment_pool = AttachmentPool()
     application.state.settings = settings
     application.state.engine = engine
     application.state.session_factory = create_session_factory(engine)
@@ -84,7 +86,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         CORSMiddleware,
         allow_origins=settings.cors_origins,
         allow_credentials=False,
-        allow_methods=["GET", "OPTIONS"],
+        allow_methods=["GET", "POST", "OPTIONS"],
         allow_headers=["Accept", "Content-Type"],
         expose_headers=["X-Request-ID"],
     )

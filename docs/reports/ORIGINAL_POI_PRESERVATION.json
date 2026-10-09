@@ -1,0 +1,11 @@
+{
+  "verifiedAt": "2026-10-09T03:27:27.913411+00:00",
+  "stationCount": 12601,
+  "stationRowsSha256": "5cd7cee28427cd5d00e0d6ff7779bde0bc9f96da9e5507633fb090245712b42a",
+  "baselineStationCount": 12601,
+  "baselineStationRowsSha256": "5cd7cee28427cd5d00e0d6ff7779bde0bc9f96da9e5507633fb090245712b42a",
+  "matched": true,
+  "databaseWrites": 0,
+  "providerCalls": 0,
+  "notice": "All stored station columns compared; does not validate truth or completeness of provider POIs."
+}

@@ -1,5 +1,6 @@
 """Deterministic sample geometry; GCJ-02 chart metrics are explicitly approximate."""
 
+import hashlib
 import math
 from collections import Counter
 
@@ -41,6 +42,24 @@ def polygons_only(geometry):
                     candidate.geoms if candidate.geom_type == "MultiPolygon" else [candidate]
                 )
     return union_all(polygons) if polygons else GeometryCollection()
+
+
+def prepare_display_boundary(raw_geometry):
+    """Preserve GCJ coordinates; repair topology only and retain explicit evidence."""
+    original = shape(raw_geometry)
+    repaired = not original.is_valid
+    geometry = polygons_only(make_valid(original)) if repaired else original
+    if geometry.is_empty or not geometry.is_valid or geometry.area <= 0:
+        raise ValueError("边界无法形成有效面，停止分析")
+    return geometry, {
+        "version": "gcj-topology-boundary-v1",
+        "repaired": repaired,
+        "method": "GEOS make_valid + polygons_only" if repaired else None,
+        "originalGeometryHash": hashlib.sha256(original.wkb).hexdigest(),
+        "normalizedGeometryHash": hashlib.sha256(geometry.wkb).hexdigest(),
+        "areaChangeDegreesSquared": geometry.area - original.area,
+        "notice": "仅规范化拓扑，保留原始GCJ坐标；角度面积变化不是平方公里统计。",
+    }
 
 
 def prepare_boundary(raw_geometry):

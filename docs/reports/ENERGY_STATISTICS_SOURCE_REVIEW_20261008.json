@@ -1,0 +1,59 @@
+{
+  "verifiedAt": "2026-10-08T13:03:22.589554+00:00",
+  "sources": [
+    {
+      "year": 2023,
+      "value": 227300,
+      "sourceUrl": "https://fgw.hunan.gov.cn/fgw/tayabl22/202412/t20241216_33526498.html",
+      "sourceHtmlSha256": "c5ef76af1a7cc498945a0836889bdb24562af20678a08999264d6e44df79ff08",
+      "publicationDate": "2024-12-16",
+      "referenceTime": "2023-12-31",
+      "originalUnit": "万个",
+      "unit": "个",
+      "conversionFactor": 10000,
+      "sourceKind": "official"
+    },
+    {
+      "year": 2024,
+      "value": 421500,
+      "sourceUrl": "https://fgw.hunan.gov.cn/xxgk_70899/zcfg/zcjd/202506/t20250609_33703758.html",
+      "sourceHtmlSha256": "0a7d9be12a7e3373c88b11a0f9a73a42c03c6e78948c4bb96193080dd65f26f2",
+      "publicationDate": "2025-06-09",
+      "referenceTime": "2024-12-31",
+      "originalUnit": "万个",
+      "unit": "个",
+      "conversionFactor": 10000,
+      "sourceKind": "official"
+    }
+  ],
+  "importResult": {
+    "table": "official_statistics",
+    "file": "hunan-energy-official-2023-2024.json",
+    "fileSha256": "91cb9fe17e85f1ce109eb46319098ce7420fa0f1fc13ff5adb0b3edc5418e106",
+    "rows": 2,
+    "inserted": 2,
+    "duplicates": 0
+  },
+  "repeatResult": {
+    "table": "official_statistics",
+    "file": "hunan-energy-official-2023-2024.json",
+    "fileSha256": "91cb9fe17e85f1ce109eb46319098ce7420fa0f1fc13ff5adb0b3edc5418e106",
+    "rows": 2,
+    "inserted": 0,
+    "duplicates": 2
+  },
+  "countsBefore": {
+    "official": 17,
+    "public": 1,
+    "stations": 12601
+  },
+  "countsAfter": {
+    "official": 19,
+    "public": 1,
+    "stations": 12601
+  },
+  "newSpatialDemandPoints": 0,
+  "amapCalls": 0,
+  "sourceDifferencesUnresolved": true,
+  "notice": "Independent source records; same-year differences retained, not merged or used for growth, public pile totals or spatial demand. National charging-gun statistics reviewed for unit definition only, not imported as Hunan values."
+}

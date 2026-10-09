@@ -53,9 +53,9 @@ def main():
         parser.error("区县核验额度须在1至122之间")
     logging.getLogger("httpx").setLevel(logging.WARNING)
     logging.getLogger("httpcore").setLevel(logging.WARNING)
-    baseline = json.loads((ROOT / "docs/reports/ADMIN_REVIEW_BASELINE.json").read_text(encoding="utf-8"))[
-        "records"
-    ]
+    baseline = json.loads(
+        (ROOT / "docs/reports/ADMIN_REVIEW_BASELINE.json").read_text(encoding="utf-8")
+    )["records"]
     codes = sorted({r["sourceAdcode"] for r in baseline})
     settings = Settings()
     if args.all_counties:

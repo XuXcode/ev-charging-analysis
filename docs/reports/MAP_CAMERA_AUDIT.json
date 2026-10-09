@@ -1,8 +1,0 @@
-{
-  "cityCode": "430100",
-  "districtCode": "430102",
-  "action": "city zoom, select county, return city; read again after build verification",
-  "before": "级别 9.7 · 中心 113.09466, 28.24117 · GCJ-02",
-  "after": "级别 9.7 · 中心 113.09466, 28.24117 · GCJ-02",
-  "equal": true
-}

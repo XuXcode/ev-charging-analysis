@@ -1,0 +1,13 @@
+[
+  {
+    "region_adcode": "430000",
+    "year": 2023,
+    "metric": "pile_count",
+    "value": 244400,
+    "unit": "个",
+    "source_name": "湖南省工业和信息化厅：湘工信建议函〔2024〕231号",
+    "source_url": "https://gxt.hunan.gov.cn/xxgk_71033/jyta/rd/202406/t20240619_33330537.html",
+    "source_kind": "official",
+    "scope_description": "截至2023年底，湖南省累计建成充电桩。原文24.44万个换算为244400个；包含范围未逐类披露，不是公共桩总量，不是站点POI数量。"
+  }
+]

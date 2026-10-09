@@ -48,4 +48,4 @@ npm.cmd run build
 
 输出 `public/data-quality/poi-audit.json` 离线快照和上述 CSV。页面仅在快照的批次 ID、样本数量和更新时间都与真实接口匹配时展示核验数量；旧快照不冒充当前核验结果。重新生成后应刷新开发页面，发布环境需重新构建。
 
-名称提示规则集中在 `fortend/src/config/poi-quality-rules.json`。站点信息窗展示命中的名称线索，同时明确“营业状态尚未核验”。本轮没有实现可达性、供需、选址优化或 AI。
+名称提示规则集中在 `frontend/src/config/poi-quality-rules.json`。站点信息窗展示命中的名称线索，同时明确“营业状态尚未核验”。道路代表点分析另见ROAD_ACCESSIBILITY.md；不提供供需、选址或AI业务。

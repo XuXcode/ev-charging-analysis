@@ -1,6 +1,6 @@
 # 本机启动
 
-项目：`R:\ev-charging-analysis`。前端：`fortend`；后端：`backend`。
+项目：`R:\ev-charging-analysis`。前端：`frontend`；后端：`backend`。
 
 ## 当前电脑
 
@@ -23,7 +23,7 @@ cd R:\ev-charging-analysis
 
 MySQL 脚本只启动现有 `backend/.runtime/mysql`，不初始化、不删除数据。端口23306已监听时不启动第二份实例。安装位置不同时传 `-ServerHome` 或设置 `MYSQL_SERVER_HOME`。
 
-前端默认5173端口，后端8000。根目录 `npm.cmd run dev` 仍有效；也可进入 `fortend` 执行 `npm.cmd run dev`。配置位置改为 `fortend/.env.local`，后端仍为 `backend/.env`。
+前端默认5173端口，后端8000。根目录 `npm.cmd run dev` 仍有效；也可进入 `frontend` 执行 `npm.cmd run dev`。配置位置改为 `frontend/.env.local`，后端仍为 `backend/.env`。
 
 ## PyCharm
 
@@ -41,6 +41,6 @@ conda env create --prefix .\.conda --file environment.yml
 conda activate .\.conda
 ```
 
-仅在配置不存在时复制模板；前端模板在 `fortend/.env.example`，后端在 `backend/.env.example`。按 [后端说明](../../backend/README.md)配置 MySQL，执行 `python -m alembic upgrade head` 与 `python -m app.db.import_regions`。
+仅在配置不存在时复制模板；前端模板在 `frontend/.env.example`，后端在 `backend/.env.example`。按 [后端说明](../../backend/README.md)配置 MySQL，执行 `python -m alembic upgrade head` 与 `python -m app.db.import_regions`。
 
 远程仓库不包含真实数据库、Key或虚拟环境；原有站点须从独立数据库备份恢复。目录规范与清理范围见 [目录说明](DIRECTORY_LAYOUT.md)。

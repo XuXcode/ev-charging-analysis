@@ -16,7 +16,7 @@ from app.models.entities import utc_now
 
 RULES_VERSION = "poi-evidence-v1.1"
 RULES = json.loads(
-    (Path(__file__).resolve().parents[3] / "fortend/src/config/poi-quality-rules.json").read_text(
+    (Path(__file__).resolve().parents[3] / "frontend/src/config/poi-quality-rules.json").read_text(
         encoding="utf-8"
     )
 )

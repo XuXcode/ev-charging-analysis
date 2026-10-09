@@ -1,6 +1,6 @@
 # 工程、数据字典与演示指南
 
-这是现有Vue3 + FastAPI + MySQL工程的质量优化说明，不引入新后端架构。真实来源、公式和限制分别以COLLECTOR.md、POI_QUALITY.md、SPATIAL_METHODS.md为准。历史完成审计是对应阶段的快照，当前优化验收以QUALITY_OPTIMIZATION.md为准。
+这是现有Vue3 + FastAPI + MySQL工程的质量优化说明，不引入新后端架构。真实来源、公式和限制分别以COLLECTOR.md、POI_QUALITY.md、SPATIAL_METHODS.md为准。目录与部署以根README和DEPLOYMENT.md为准，本轮未运行测试或功能验证。
 
 ## 分层与生命周期
 
@@ -40,7 +40,7 @@ cd backend
 
 开发环境按根README和backend/README准备Node、Conda Python及MySQL。不要覆盖已有.env；对照.env.example补字段。前端VITE_AMAP_KEY与VITE_AMAP_SECURITY_JS_CODE（兼容旧名VITE_AMAP_SECURITY_CODE）用于浏览器JS API，后端AMAP_WEBSERVICE_KEY及DATABASE_URL留在backend/.env。前端JS凭据在浏览器可见，Web服务Key和数据库密码不得进入Vite变量或产物。
 
-本地先启动MySQL与FastAPI，再运行npm run dev，以终端端口为准。生产前运行迁移、pytest、前端测试和构建；部署dist静态文件时配置Vue history回退到index.html，反向代理/api至FastAPI，配置实际CORS域名。数据库、采集和分析任务不由网页请求启动；备份原始页、数据库、参数快照与环境配置。正式部署应使用本机或部署平台的进程管理器，不把开发服务器暴露为正式服务。
+本地先启动MySQL与FastAPI，再运行npm run dev，以终端端口为准。生产部署前备份数据库、审核迁移并构建前端；部署dist静态文件时配置Vue history回退到index.html，反向代理/api至FastAPI，配置实际CORS域名。数据库、采集和分析任务不由网页请求启动；备份原始页、数据库、参数快照与环境配置。正式部署应使用本机或部署平台的进程管理器，不把开发服务器暴露为正式服务。
 
 ## 性能与安全复核
 

@@ -1,11 +1,11 @@
 **/node_modules
 **/dist
 **/package-lock.json
-fortend/src/assets/*.json
+frontend/src/assets/*.json
 backend/.venv/
 backend/.conda/
 backend/.runtime/
-fortend/src/styles/tokens.css
+frontend/src/styles/tokens.css
 .workbuddy/
 .idea/
 **/.git/

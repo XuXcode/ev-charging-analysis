@@ -1,0 +1,13 @@
+[
+  {
+    "region_adcode": "430000",
+    "year": 2023,
+    "metric": "new_energy_vehicle_count",
+    "value": 565000,
+    "unit": "辆",
+    "source_name": "湖南省统计局：新中国75年湖南经济社会发展成就系列报告之九",
+    "source_url": "https://tjj.hunan.gov.cn/hntj/tjfx/jmxx/2024sjjd/202409/t20240929_33465665.html",
+    "source_kind": "official",
+    "scope_description": "2023年湖南省新能源汽车保有量，原文56.50万辆换算为565000辆；原文报告精度为0.01万辆，不表示逐辆精确登记记录。2024年9月29日发布，属于历史全省背景，不是2026年保有量、充电人数、充电量或空间需求点。未披露市州/区县分布，不按人口或POI数量拆分，不与异年充电桩或2026年POI样本计算车桩比。"
+  }
+]

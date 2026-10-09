@@ -1,0 +1,13 @@
+[
+  {
+    "region_adcode": "430000",
+    "year": 2024,
+    "metric": "pile_count",
+    "value": 384000,
+    "unit": "个",
+    "source_name": "湖南日报报道，湖南省人民政府门户网站转载（2025-01-11）",
+    "source_url": "https://www.hunan.gov.cn/hnszf/hnyw/zwdt/202501/t20250111_33561528.html",
+    "source_kind": "public",
+    "scope_description": "2025年全省能源和运行工作会议报道中的湖南累计建成充电桩，归入2024年度背景统计。原文38.4万个换算为384000个；属于媒体会议报道，不升级为官方统计；分类范围未详述，不与POI比较覆盖率。"
+  }
+]

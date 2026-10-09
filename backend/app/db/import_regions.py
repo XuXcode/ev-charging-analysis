@@ -11,7 +11,7 @@ from app.models import Region
 
 
 def import_regions(session):
-    data = json.loads((Path(__file__).parent / "fixtures/regions.json").read_text(encoding="utf-8"))
+    data = json.loads((Path(__file__).parent / "data/regions.json").read_text(encoding="utf-8"))
     for record in data["regions"]:
         row = session.scalar(select(Region).where(Region.adcode == record["adcode"]))
         if row is None:
