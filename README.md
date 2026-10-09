@@ -103,6 +103,4 @@ npm.cmd run build
 
 保留真实POI采集分页、限速、重试、断点，质量复核、空间快照和道路OD缓存。道路采样会消耗高德额度，启动新任务前估算请求量并确认配额。当前不提供供需、选址、容量、排队或AI业务。历史选址表与迁移保留，不提供对应业务API；不执行破坏性迁移。
 
-本交付按要求删除自动化测试体系，本轮未运行自动化测试、构建或浏览器功能验证，不能据此宣称功能已验证。工程整理范围与逐文件删除记录见[整理清单](docs/guides/PROJECT_CLEANUP.md)。
-
 [文档索引](docs/README.md) · [分析方法](docs/guides/SPATIAL_METHODS.md) · [道路口径](docs/guides/ROAD_ACCESSIBILITY.md) · [真实采集](docs/guides/COLLECTOR.md)
