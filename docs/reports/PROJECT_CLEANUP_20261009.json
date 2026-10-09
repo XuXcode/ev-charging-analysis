@@ -1,6 +1,7 @@
 {
   "renamed": {
-    "fortend": "frontend"
+    "fortend": "frontend",
+    "backend/app/db/fixtures/regions.json": "backend/app/db/data/regions.json"
   },
   "deletedFiles": [
     "backend/.runtime/cleanup-deleted-documents.json",
@@ -26,7 +27,6 @@
     "backend/.runtime/verify-support-browser.cjs",
     "backend/app/db/fixtures/README.md",
     "backend/app/db/fixtures/dashboard.json",
-    "backend/app/db/fixtures/regions.json",
     "backend/app/db/seed.py",
     "backend/tests/conftest.py",
     "backend/tests/test_amap.py",
@@ -221,5 +221,6 @@
     "scannedFiles": 222,
     "historyBlobs": 644,
     "trackedPrivateEnvironmentFiles": []
-  }
+  },
+  "administrativeMetadata": "Restored byte-for-byte from safe backup; tracked in delivery branch."
 }

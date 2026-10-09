@@ -45,7 +45,6 @@
 - `backend/.runtime/verify-support-browser.cjs`
 - `backend/app/db/fixtures/README.md`
 - `backend/app/db/fixtures/dashboard.json`
-- `backend/app/db/fixtures/regions.json`
 - `backend/app/db/seed.py`
 - `backend/tests/conftest.py`
 - `backend/tests/test_amap.py`
