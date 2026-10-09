@@ -8,7 +8,6 @@
 - [部署](guides/DEPLOYMENT.md)
 - [目录与分层](guides/DIRECTORY_LAYOUT.md)
 - [工程与数据字典](guides/ENGINEERING_GUIDE.md)
-- [本次整理清单](guides/PROJECT_CLEANUP.md)
 
 ## 数据与方法
 

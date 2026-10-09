@@ -12,4 +12,12 @@ npm.cmd run dev
 
 构建命令npm.cmd run build，产物dist；格式命令npm.cmd run format。根目录提供相应命令转发。部署配置history回退，详见[部署指南](../docs/guides/DEPLOYMENT.md)。
 
-自动化测试体系已按交付要求移除，本轮未运行测试或功能验证。
+## 地图交互
+
+全省专题地图和空间分析地图支持左键拖动、滚轮缩放及悬停联动；市州/区县高德地图支持站点、聚合、热力和边界图层。站点弹窗将来源、坐标和质量批次折叠为详情，保留样本完整性提醒。
+
+正式路由：`/`、`/analysis/spatial`、`/analysis/accessibility`、`/analysis/differences`；市州详情为 `/city/:cityCode`。
+
+省级GeoJSON地图不需要高德JS Key；高德实景地图需要Key与安全配置。前端环境变量在启动/构建时读取，修改后需要重启开发服务器或重新构建。API默认指向 `http://localhost:8000/api/v1`；更换后端端口须同步修改。
+
+仓库不包含自动化测试套件。构建、格式检查与浏览器功能核验应分别说明结果，不能互相替代。

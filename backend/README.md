@@ -11,7 +11,7 @@ conda env create --prefix .\.conda --file environment.yml
 conda activate .\.conda
 ```
 
-运行依赖在requirements.txt；requirements.lock.txt是既有环境的运行版本参考，本轮未重新验证依赖可安装性。Ruff为可选开发工具，通过requirements-dev.txt安装。HTTPX用于真实高德API，不是测试专用依赖。
+运行依赖在requirements.txt；requirements.lock.txt是既有环境的运行版本参考，安装时应以实际依赖解析结果为准。Ruff为可选开发工具，通过requirements-dev.txt安装。HTTPX用于真实高德API，不是测试专用依赖。
 
 仅在不存在时将.env.example复制为.env。配置DATABASE_URL、AMAP_WEBSERVICE_KEY和CORS_ORIGINS；已有私有.env不覆盖。默认.env模板使用3306，本机专用MySQL脚本使用23306，以实际服务为准。
 
@@ -25,7 +25,7 @@ CREATE USER 'ev_app'@'localhost' IDENTIFIED BY 'replace_me';
 GRANT ALL PRIVILEGES ON ev_charging.* TO 'ev_app'@'localhost';
 ```
 
-全新库准备好凭据后，按需运行alembic upgrade head，再运行python -m app.db.import_regions导入真实行政区元数据；不会导入站点或模拟统计。本轮没有执行迁移。已有库应先备份并审核迁移，禁止downgrade或自动重建。
+全新库准备好凭据后，按需运行alembic upgrade head，再运行python -m app.db.import_regions导入真实行政区元数据；不会导入站点或模拟统计。迁移操作必须由部署者显式执行。已有库应先备份并审核迁移，禁止downgrade或自动重建。
 
 ```powershell
 .\.conda\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000
@@ -44,4 +44,4 @@ GRANT ALL PRIVILEGES ON ev_charging.* TO 'ev_app'@'localhost';
 
 backend/.runtime保存私有MySQL、采集页、检查点、边界证据、快照和道路结果，不提交Git；backend/.conda也不提交。历史planning_datasets/planning_runs表与Alembic revision链保留，解除业务ORM和API注册；retained_schema过滤器避免自动生成删除这两张表。
 
-本轮已删除测试目录、配置和测试依赖，未执行自动化测试、构建或功能验证。
+健康检查路径为 `/api/health`，会执行数据库连接检查；启动成功不代表数据库或历史快照已准备齐全。仓库不包含自动化测试套件。PyCharm解释器和运行配置详见[本机启动](../docs/guides/LOCAL_STARTUP.md)。

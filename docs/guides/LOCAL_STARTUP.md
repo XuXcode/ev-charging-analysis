@@ -31,6 +31,19 @@ MySQL 脚本只启动现有 `backend/.runtime/mysql`，不初始化、不删除�
 
 Python运行配置：模块 `uvicorn`；参数 `app.main:app --host 127.0.0.1 --port 8000 --reload --no-access-log`；工作目录 `R:\ev-charging-analysis\backend`。先启动 MySQL，前端可在 PyCharm Terminal 运行 `npm.cmd run dev`。
 
+若选择FastAPI专用运行配置，应用程序文件为 `R:\ev-charging-analysis\backend\app\main.py`，应用程序名称为 `app`，运行选项仅填 `--host 127.0.0.1 --port 8000 --reload`；不要重复填写 `app.main:app`。
+
+解释器使用项目 `.conda/python.exe`，不要误选缺依赖的 `.venv`。依赖缺失时在backend目录运行 `.\.conda\python.exe -m pip install -r requirements.txt` 安装完整运行依赖。
+
+## 访问与常见问题
+
+- 前端：http://localhost:5173；若端口占用，以Vite实际输出为准，并确认后端CORS允许该来源。
+- 接口文档：http://127.0.0.1:8000/docs；数据库健康检查：http://127.0.0.1:8000/api/health。
+- `Got unexpected extra argument (app.main:app)`：FastAPI专用配置的运行选项重复填写了应用入口。
+- WinError 10013或端口占用：检查已有后端实例、Windows保留端口；临时改为其他可用端口时同步修改前端 `VITE_API_BASE_URL`。
+- 前端环境配置变更：重启Vite；生产环境重新构建。
+- 克隆后没有站点或历史分析：Git不包含MySQL数据，须恢复授权备份或显式执行数据任务；不能用模拟数据补齐。
+
 ## 新电脑
 
 ```powershell
