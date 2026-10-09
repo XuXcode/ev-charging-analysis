@@ -161,11 +161,27 @@ function pointKey(point) {
 function stationContent(station) {
   const hints = getPoiNameHints(station.name)
   const hintContent = hints.length
-    ? `<p class="cm-review-hint">名称提示：${hints.map((hint) => escapeHtml(hint.label)).join(' / ')}<br/>仅为名称线索，实际状态与车辆类型尚未核验。</p>`
+    ? `<p class="cm-review-hint">名称线索：${hints.map((hint) => escapeHtml(hint.label)).join(' / ')}（待核验）</p>`
     : ''
-  return `<div class="cm-info-content"><strong>${escapeHtml(station.name)}</strong><p>${escapeHtml(station.address || station.district)}</p>${hintContent}${station.completenessWarning ? '<p class="cm-review-hint">区县检索触及上限，样本可能不完整。</p>' : ''}<dl><div><dt>POI ID</dt><dd>${escapeHtml(station.poiId || '—')}</dd></div><div><dt>数据来源</dt><dd>高德开放平台 · 入库POI样本</dd></div><div><dt>采集时间</dt><dd>${escapeHtml(station.collectedAt ? new Date(station.collectedAt).toLocaleString('zh-CN', { hour12: false }) : '—')}</dd></div><div><dt>坐标</dt><dd>${station.position.map((value) => value.toFixed(6)).join(', ')} · GCJ-02</dd></div><div><dt>保守分类</dt><dd>${escapeHtml(classificationLabels[station.classification] || '待分类')}</dd></div><div><dt>复核状态</dt><dd>${escapeHtml(reviewStatusLabels[station.reviewStatus] || '未核验')}</dd></div><div><dt>质量批次</dt><dd>${escapeHtml(station.batch || '—')}</dd></div><div><dt>营业状态</dt><dd>尚未全面核验</dd></div></dl><small>POI位置记录，不代表官方设施总量或营业状态。</small></div>`
+  const collectedAt = station.collectedAt
+    ? new Date(station.collectedAt).toLocaleString('zh-CN', { hour12: false })
+    : '—'
+  return `<div class="cm-info-content">
+    <strong>${escapeHtml(station.name)}</strong>
+    <p>${escapeHtml(station.address || station.district)}</p>
+    <div class="cm-info-tags"><span>${escapeHtml(classificationLabels[station.classification] || '待分类')}</span><span>${escapeHtml(reviewStatusLabels[station.reviewStatus] || '未核验')}</span></div>
+    ${hintContent}
+    ${station.completenessWarning ? '<p class="cm-review-hint">检索触及上限，区县样本可能不完整</p>' : ''}
+    <details class="cm-info-details"><summary>数据来源与详情</summary><dl>
+      <div><dt>来源</dt><dd>高德开放平台 · 入库POI样本</dd></div>
+      <div><dt>采集时间</dt><dd>${escapeHtml(collectedAt)}</dd></div>
+      <div><dt>POI ID</dt><dd>${escapeHtml(station.poiId || '—')}</dd></div>
+      <div><dt>坐标</dt><dd>${station.position.map((value) => value.toFixed(6)).join(', ')} · GCJ-02</dd></div>
+      <div><dt>质量批次</dt><dd>${escapeHtml(station.batch || '—')}</dd></div>
+    </dl></details>
+    <small>高德POI样本 · 非官方设施统计 · 营业状态待核验</small>
+  </div>`
 }
-
 function markerContent(selected = false) {
   return `<span class="cm-poi-marker${selected ? ' is-selected' : ''}" aria-hidden="true"><svg width="10" height="12" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 10-13h-7z" fill="currentColor"/></svg></span>`
 }
@@ -521,6 +537,9 @@ async function initializeMap() {
       center: city.value.center,
       zoom: 10,
       viewMode: '2D',
+      dragEnable: true,
+      jogEnable: false,
+      scrollWheel: true,
       features: ['bg', 'road', 'point'],
       mapStyle: 'amap://styles/normal',
       resizeEnable: true,
@@ -1259,6 +1278,36 @@ defineExpose({
   color: #5c7164;
   font-size: 12px;
   line-height: 1.6;
+}
+.city-map :deep(.cm-info-tags) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.city-map :deep(.cm-info-tags span) {
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #edf4ef;
+  color: #3f6251;
+  font-size: 12px;
+}
+.city-map :deep(.cm-info-details) {
+  border-top: 1px solid #e3eae1;
+  padding-top: 9px;
+}
+.city-map :deep(.cm-info-details summary) {
+  cursor: pointer;
+  color: #1e604a;
+  font-size: 12px;
+  padding: 2px 0;
+}
+.city-map :deep(.cm-info-details summary:focus-visible) {
+  outline: 2px solid #258368;
+  outline-offset: 3px;
+}
+.city-map :deep(.cm-info-details[open] dl) {
+  margin-top: 8px;
 }
 .city-map :deep(.cm-info-content dl) {
   margin: 0;

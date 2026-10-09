@@ -222,21 +222,51 @@ onMounted(() => store.selectCity(analysis.cityCode))
 </template>
 
 <style scoped>
-@media (min-width: 1700px) and (min-height: 950px) {
-  .dashboard-grid {
-    height: 620px;
-    min-height: 0;
+.overview-page .dashboard-grid {
+  grid-template-columns: clamp(220px, 13vw, 260px) minmax(0, 1fr) clamp(240px, 15vw, 300px);
+  gap: 16px;
+  height: clamp(650px, calc(100vh - 410px), 900px);
+  min-height: 0;
+}
+.dashboard-grid > .sample-context-panel,
+.dashboard-grid :deep(.ranking-panel) {
+  min-height: 0;
+  max-height: 100%;
+  overflow-y: auto;
+}
+.dashboard-grid :deep(.map-view),
+.dashboard-grid :deep(.spatial-map) {
+  height: 100%;
+  min-height: 0;
+}
+@media (max-width: 1500px) {
+  .overview-page .dashboard-grid {
+    grid-template-columns: 215px minmax(0, 1fr) 245px;
+    gap: 12px;
+  }
+}
+@media (max-width: 1050px) {
+  .overview-page .dashboard-grid {
+    grid-template-columns: minmax(0, 1fr) 240px;
+    height: 700px;
   }
   .dashboard-grid > .sample-context-panel {
-    max-height: 620px;
-    overflow-y: auto;
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .overview-page .dashboard-grid {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .dashboard-grid :deep(.map-view) {
+    width: 100%;
+    height: 650px;
+    flex: none;
   }
   .dashboard-grid :deep(.ranking-panel) {
-    max-height: 620px;
-    overflow-y: auto;
-  }
-  .dashboard-grid :deep(.spatial-map) {
-    min-height: 0;
+    max-height: none;
   }
 }
 </style>

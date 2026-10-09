@@ -294,6 +294,30 @@ watch(
   >
 </template>
 <style scoped>
+.city-layout {
+  grid-template-columns: minmax(0, 1fr) clamp(320px, 21vw, 400px);
+  gap: 18px;
+}
+.city-layout :deep(.city-map-shell) {
+  min-height: clamp(780px, calc(100vh - 260px), 980px);
+}
+.city-layout :deep(.cm-map-body) {
+  min-height: clamp(530px, calc(100vh - 430px), 780px);
+}
+@media (max-width: 1400px) {
+  .city-layout {
+    grid-template-columns: minmax(0, 1fr) 310px;
+  }
+}
+@media (max-width: 1050px) {
+  .city-layout {
+    grid-template-columns: 1fr;
+  }
+  .city-layout :deep(.city-map-shell) {
+    min-height: 740px;
+  }
+}
+
 .city-back-links,
 .city-scope-controls {
   display: flex;

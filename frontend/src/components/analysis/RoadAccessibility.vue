@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref, shallowRef, watch, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import * as echarts from 'echarts/core'
+import { bindMapDrag } from '@/utils/map-drag'
 import { MapChart, LineChart } from 'echarts/charts'
 import { TooltipComponent, VisualMapComponent, GridComponent } from 'echarts/components'
 import { CanvasRenderer } from 'echarts/renderers'
@@ -31,6 +32,7 @@ const error = ref(''),
 const mapElement = ref(null),
   curveElement = ref(null)
 let mapChart,
+  removeMapDrag,
   curveChart,
   observer,
   controller,
@@ -161,6 +163,7 @@ async function render() {
     return
   if (!mapChart) {
     mapChart = echarts.init(mapElement.value)
+    removeMapDrag = bindMapDrag(mapChart, mapElement.value)
     mapChart.on('click', (p) => p.data?.code && select(p.data.code))
     mapChart.on('mouseover', (p) => p.data?.code && dashboard.hoverCity(p.data.code))
     mapChart.on('globalout', () => dashboard.hoverCity(''))
@@ -211,7 +214,9 @@ async function render() {
         {
           type: 'map',
           map: name,
-          roam: true,
+          roam: 'scale',
+          zoomOnMouseWheel: true,
+          moveOnMouseWheel: false,
           selectedMode: 'single',
           data: mapRows,
           label: { show: true, color: '#163f30', fontSize: 12 },
@@ -280,6 +285,7 @@ onBeforeUnmount(() => {
   controller?.abort()
   boundaryController?.abort()
   observer?.disconnect()
+  removeMapDrag?.()
   mapChart?.dispose()
   curveChart?.dispose()
 })

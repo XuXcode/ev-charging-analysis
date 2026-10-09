@@ -2,6 +2,7 @@
 import { ref, computed, watch, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
 import * as echarts from 'echarts/core'
+import { bindMapDrag } from '@/utils/map-drag'
 import { MapChart } from 'echarts/charts'
 import { TooltipComponent, VisualMapComponent } from 'echarts/components'
 import { CanvasRenderer } from 'echarts/renderers'
@@ -71,6 +72,7 @@ const number = (value, key = definition.value?.key) =>
       })
     : '—'
 let chart,
+  removeMapDrag,
   observer,
   abort,
   generation = 0,
@@ -137,7 +139,7 @@ function render() {
         max,
         orient: 'horizontal',
         left: 20,
-        bottom: 62,
+        bottom: 18,
         calculable: false,
         text: [`${number(max)} ${definition.value?.unit || ''}`, '0'],
         inRange: {
@@ -149,11 +151,13 @@ function render() {
         {
           type: 'map',
           map: mapName,
-          roam: true,
+          roam: 'scale',
+          zoomOnMouseWheel: true,
+          moveOnMouseWheel: false,
           zoom,
           center,
-          layoutCenter: ['52%', '49%'],
-          layoutSize: '92%',
+          layoutCenter: ['50%', '50%'],
+          layoutSize: '98%',
           aspectScale: 0.88,
           data: rows.map((row) => ({
             name: row.code,
@@ -163,7 +167,7 @@ function render() {
             label: {
               color: row.value >= max * 0.65 ? token('white') : token('primary-dark'),
               textBorderColor: row.value >= max * 0.65 ? token('map-scale-3') : token('white'),
-              textBorderWidth: 3,
+              textBorderWidth: 1.5,
             },
           })),
           itemStyle: {
@@ -175,10 +179,17 @@ function render() {
             show: !props.compact && layer.value === 'regions',
             color: '#244b39',
             fontSize: 13,
+            lineHeight: 18,
             formatter: (p) => `${p.data?.regionName}\n${number(p.value)}`,
           },
           emphasis: {
-            label: { show: !props.compact && layer.value === 'regions', color: '#fff' },
+            label: {
+              show: !props.compact && layer.value === 'regions',
+              color: '#fff',
+              fontWeight: 600,
+              textBorderColor: 'transparent',
+              textBorderWidth: 0,
+            },
             itemStyle: {
               areaColor: token('map-hover'),
               borderColor: token('border-strong'),
@@ -334,6 +345,7 @@ function select(code) {
 }
 onMounted(() => {
   chart = echarts.init(canvas.value, themeName)
+  removeMapDrag = bindMapDrag(chart, canvas.value)
   chart.on('click', (p) => select(p.name))
   chart.on('mouseover', (p) => {
     if (layer.value === 'regions') dashboard.hoverCity(p.name)
@@ -375,6 +387,7 @@ onBeforeUnmount(() => {
   ++generation
   abort?.abort()
   observer?.disconnect()
+  removeMapDrag?.()
   chart?.dispose()
 })
 </script>
@@ -543,7 +556,7 @@ header p {
 }
 .spatial-canvas {
   position: absolute;
-  inset: 125px 0 110px;
+  inset: 112px 12px 58px;
 }
 .spatial-status {
   position: absolute;

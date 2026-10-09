@@ -2,6 +2,7 @@
 import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import * as echarts from 'echarts/core'
+import { bindMapDrag } from '@/utils/map-drag'
 import { MapChart } from 'echarts/charts'
 import { TooltipComponent, VisualMapComponent } from 'echarts/components'
 import { CanvasRenderer } from 'echarts/renderers'
@@ -35,6 +36,7 @@ const description = computed(() =>
     : '湖南省14市州 · 样本数据正在读取 · 高德开放平台',
 )
 let chart,
+  removeMapDrag,
   observer,
   zoom = 1,
   center
@@ -66,12 +68,14 @@ function option() {
         id: 'hunan-samples',
         type: 'map',
         map: 'hunan-province-samples',
-        roam: true,
+        roam: 'scale',
+        zoomOnMouseWheel: true,
+        moveOnMouseWheel: false,
         zoom,
         center,
         scaleLimit: { min: 0.8, max: 3 },
-        layoutCenter: ['52%', '50%'],
-        layoutSize: '98%',
+        layoutCenter: ['50%', '50%'],
+        layoutSize: '99%',
         aspectScale: 0.88,
         selectedMode: false,
         data: cities.value.map((city) => ({
@@ -97,7 +101,12 @@ function option() {
           shadowOffsetY: 4,
         },
         emphasis: {
-          label: { show: !props.compact, color: '#ffffff', fontWeight: 600 },
+          label: {
+            show: !props.compact,
+            color: '#ffffff',
+            fontWeight: 600,
+            textBorderWidth: 0,
+          },
           itemStyle: { areaColor: MAP_COLORS.emphasis, borderColor: '#b1d2bd', borderWidth: 2.5 },
         },
       },
@@ -149,6 +158,7 @@ function openCity(code) {
 onMounted(() => {
   echarts.registerMap('hunan-province-samples', hunan)
   chart = echarts.init(canvas.value)
+  removeMapDrag = bindMapDrag(chart, canvas.value)
   render()
   chart.on('click', (params) => openCity(params.data?.code))
   chart.on('mouseover', (params) => {
@@ -178,6 +188,7 @@ watch(() => store.collectionInfo, render)
 watch(() => store.highlightedCodes, highlight, { deep: true })
 onBeforeUnmount(() => {
   observer?.disconnect()
+  removeMapDrag?.()
   chart?.dispose()
   chart = null
   store.hoverCity()
