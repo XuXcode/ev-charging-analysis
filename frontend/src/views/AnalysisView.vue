@@ -4,6 +4,8 @@ import { useRoute, useRouter } from 'vue-router'
 import { topics } from '@/config/topics'
 import { useDashboardStore } from '@/stores/dashboard'
 import { useAnalysisStore } from '@/stores/analysis'
+import { usePlanningStore } from '@/stores/planning'
+import PlanningMap from '@/components/maps/PlanningMap.vue'
 import { cityMapConfig } from '@/config/maps'
 import MapView from '@/components/MapView.vue'
 import ChartContainer from '@/components/ChartContainer.vue'
@@ -24,6 +26,7 @@ const route = useRoute()
 const router = useRouter()
 const store = useDashboardStore()
 const analysis = useAnalysisStore()
+const planning = usePlanningStore()
 const slug = computed(() => route.params.topic)
 const topic = computed(() => topics.find((t) => t.slug === slug.value))
 const mode = computed({
@@ -71,6 +74,51 @@ const scopeMetrics = computed(() =>
       ? analysis.cities.find((r) => r.code === selected.value)
       : analysis.snapshot?.province,
 )
+// 规划参考页：从需求评分快照的区县聚合构建排行。
+const planningDistricts = computed(() => {
+  const aggregates = planning.snapshot?.metadata?.districtAggregates || {}
+  const rows = Object.values(aggregates).map((row) => ({
+    code: row.adcode,
+    name: analysis.districtCatalog.find((item) => item.code === row.adcode)?.name || row.adcode,
+    meanPlanning: row.meanPlanning,
+    maxPlanning: row.maxPlanning,
+    cells: row.cells,
+  }))
+  return rows
+    .filter((row) => !selected.value || row.code.startsWith(selected.value.slice(0, 4)))
+    .sort((a, b) => b.meanPlanning - a.meanPlanning)
+})
+const planningSummary = computed(() => {
+  const s = planning.snapshot
+  if (!s) return null
+  return {
+    demandCount: s.metadata?.demandCount,
+    gridCount: s.metadata?.gridCellCount,
+    supplyCount: s.metadata?.supplyCount,
+    demandTypeCounts: s.metadata?.demandTypeCounts || {},
+    totalDemandWeighted: s.summary?.totalDemandWeighted,
+    avgPlanningScore: s.summary?.avgPlanningScore,
+  }
+})
+const planningTop = computed(() => planning.snapshot?.summary?.topDistricts || [])
+const demandTypeLabels = {
+  shopping: '购物中心',
+  hospital: '医院',
+  office: '写字楼',
+  parking: '停车场',
+  residential: '住宅小区',
+}
+function planningName(code) {
+  return analysis.districtCatalog.find((item) => item.code === code)?.name || code
+}
+function planningCityCode(code) {
+  return analysis.districtCatalog.find((item) => item.code === code)?.cityCode || ''
+}
+function planningLocate(code) {
+  const district = analysis.districtCatalog.find((item) => item.code === code)
+  if (district) focus(district.cityCode)
+  locatedDistrict.value = code
+}
 const spatialRows = computed(() =>
   selected.value ? [...districts.value].sort((a, b) => b.count - a.count) : cityRows.value,
 )
@@ -93,6 +141,7 @@ function locate(row) {
 }
 onMounted(() => {
   analysis.load()
+  planning.load()
   store.loadCollectionInfo()
 })
 function focus(code) {
@@ -339,7 +388,7 @@ watch(slug, () => {
           />
         </aside>
       </div>
-      <details class="analysis-extension">
+<details class="analysis-extension">
         <summary>区县对比与分布异常值</summary>
         <CountyComparison
           :rows="analysis.districts.filter((row) => !selected || row.cityCode === selected)"
@@ -350,6 +399,108 @@ watch(slug, () => {
           @hover="store.hoverCity"
         />
       </details>
+    </template>
+    <template v-else-if="slug === 'planning'">
+      <p v-if="planning.loading" class="analysis-warning" role="status">
+        正在读取需求代理评分快照…
+      </p>
+      <p v-else-if="planning.error" class="analysis-warning" role="alert">
+        规划参考暂不可用：{{ planning.error }}
+        <button @click="planning.load(true)">重试规划快照</button>
+      </p>
+      <p v-else-if="planning.pending" class="analysis-warning" role="status">
+        尚未生成需求代理评分快照。请先完成需求POI采集并运行评分任务。
+      </p>
+      <template v-if="planning.snapshot">
+        <div class="analysis-split planning">
+          <section class="analysis-main-map analysis-plan-map">
+            <PlanningMap
+              :parent-code="selected || '430000'"
+              :focus-code="locatedDistrict"
+              :scope-code="locatedDistrict"
+              @district-select="planningLocate"
+            />
+          </section>
+          <aside class="analysis-stack">
+            <section class="panel analysis-panel">
+              <h2>区县需求代理评分排行</h2>
+              <p>按平均需求代理评分从高到低 · 展示前12个区县</p>
+              <ol class="analysis-rank planning-rank">
+                <li v-for="row in planningDistricts.slice(0, 12)" :key="row.code">
+                  <button
+                    :class="{ active: locatedDistrict === row.code }"
+                    @click="planningLocate(row.code)"
+                    @mouseenter="store.hoverCity(planningCityCode(row.code))"
+                    @mouseleave="store.hoverCity('')"
+                  >
+                    <span>{{ row.name }}</span
+                    ><strong>{{ formatNumber(row.meanPlanning, 1) }} 分</strong>
+                  </button>
+                </li>
+              </ol>
+              <p class="planning-note">
+                平均分 = 区县内网格需求代理评分均值；仅表示需求与供给的相对缺口，非建设决策依据。
+              </p>
+            </section>
+            <section class="panel analysis-panel">
+              <h2>评分口径</h2>
+              <dl class="planning-params">
+                <dt>需求代理评分</dt>
+                <dd>
+                  需求密度分 × (1 − 周边供给占比)。需求密度高、周边站点薄弱的网格得分更高。
+                </dd>
+                <dt>需求权重</dt>
+                <dd>购物1.0 / 医院1.2 / 写字楼1.0 / 停车场0.8 / 住宅1.1</dd>
+                <dt>供给口径</dt>
+                <dd>本网格及相邻8网格内的公共候选站点数</dd>
+                <dt>网格</dt>
+                <dd>5km裁切网格 · {{ planningSummary?.gridCount?.toLocaleString() }} 个</dd>
+              </dl>
+            </section>
+          </aside>
+        </div>
+        <div class="analysis-metrics planning-metrics">
+          <section class="panel analysis-kpi">
+            <span>需求POI样本</span
+            ><strong>{{ formatNumber(planningSummary?.demandCount) }}<small>条</small></strong>
+            <p>购物 / 医院 / 写字楼 / 停车场 / 住宅样本</p>
+          </section>
+          <section class="panel analysis-kpi">
+            <span>平均需求代理评分</span
+            ><strong>{{ formatNumber(planningSummary?.avgPlanningScore, 1) }}<small>分</small></strong
+            ><p>全部网格均值 · 0-100</p>
+          </section>
+          <section class="panel analysis-kpi">
+            <span>周边公共站点</span
+            ><strong>{{ formatNumber(planningSummary?.supplyCount) }}<small>座</small></strong
+            ><p>参与供给充足度计算的候选站点</p>
+          </section>
+        </div>
+        <div class="analysis-two-up planning-types">
+          <section class="panel analysis-panel">
+            <h2>需求类型构成</h2>
+            <p>各类型需求POI样本量（加权需求评分使用相同权重）</p>
+            <ul class="planning-type-list">
+              <li v-for="(label, key) in demandTypeLabels" :key="key">
+                <span>{{ label }}</span
+                ><strong>{{ formatNumber(planningSummary?.demandTypeCounts?.[key]) }} 条</strong>
+              </li>
+            </ul>
+          </section>
+          <section class="panel analysis-panel">
+            <h2>高需求代理评分区县</h2>
+            <p>平均评分最高的10个区县（含网格数）</p>
+            <ol class="analysis-rank">
+              <li v-for="(row, index) in planningTop" :key="row.adcode">
+                <button @click="planningLocate(row.adcode)">
+                  <span>{{ index + 1 }}. {{ planningName(row.adcode) }}</span
+                  ><strong>{{ formatNumber(row.meanPlanning, 1) }} 分</strong>
+                </button>
+              </li>
+            </ol>
+          </section>
+        </div>
+      </template>
     </template>
     <footer class="analysis-method">
       <strong>数据与方法</strong
@@ -374,6 +525,49 @@ watch(slug, () => {
 .topic-differences .analysis-split {
   grid-template-columns: minmax(0, 2.2fr) minmax(310px, 1fr);
 }
+.topic-planning .analysis-split {
+  grid-template-columns: minmax(0, 1.9fr) minmax(320px, 1fr);
+}
+.planning-rank .active {
+  background: var(--primary-soft);
+  color: #16644f;
+}
+.planning-note {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 12px 0 0;
+}
+.planning-params {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  font-size: 13px;
+}
+.planning-params dt {
+  font-weight: 600;
+  color: var(--text);
+}
+.planning-params dd {
+  margin: 2px 0 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.planning-type-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.planning-type-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.planning-type-list strong {
+  font-variant-numeric: tabular-nums;
+}
 @media (min-width: 1700px) {
   .topic-spatial .analysis-main-map {
     min-height: 620px;
@@ -394,6 +588,9 @@ watch(slug, () => {
 }
 @media (max-width: 900px) {
   .topic-differences .analysis-split {
+    grid-template-columns: 1fr;
+  }
+  .topic-planning .analysis-split {
     grid-template-columns: 1fr;
   }
 }

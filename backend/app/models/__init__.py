@@ -1,4 +1,5 @@
 from app.models.analysis import AnalysisBoundary, AnalysisScopeQuality, AnalysisSnapshot, PoiQuality
+from app.models.demand import DemandPoi, DemandRun, DemandScoreRun
 from app.models.entities import (
     ChargingStation,
     CollectionPage,
@@ -15,6 +16,9 @@ from app.models.road_accessibility import RoadAccessibilityRun, RoadODCache
 __all__ = [
     "BoundaryRevision",
     "PoiReviewEvent",
+    "DemandPoi",
+    "DemandRun",
+    "DemandScoreRun",
     "RoadAccessibilityRun",
     "RoadODCache",
     "OfficialStatistic",

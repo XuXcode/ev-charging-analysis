@@ -105,7 +105,7 @@ const status = computed(() =>
     ? `正在加载样本 ${formatNumber(loadedCount.value)}${Number.isFinite(total.value) ? ` / ${formatNumber(total.value)}` : ''}`
     : `${district.value?.name || (viewportOnly.value ? '当前视野' : '当前市州')} · ${formatNumber(stationCount.value)} 条POI样本`,
 )
-let AMap, map, cluster, heatmap, popup, resizeObserver
+let AMap, Loca, map, cluster, heatmap, loca, locaLayer, locaSource, popup, resizeObserver
 let markers = []
 let clusterStations = new Map()
 let selectedMarker
@@ -230,6 +230,13 @@ function clearStationLayers() {
   cluster = null
   heatmap?.setMap(null)
   heatmap = null
+  if (locaLayer) {
+    loca?.remove(locaLayer)
+    locaLayer.destroy()
+    locaLayer = null
+  }
+  locaSource?.destroy()
+  locaSource = null
   if (markers.length) map?.remove(markers)
   markers = []
 }
@@ -270,6 +277,30 @@ function renderStations() {
         count: 1,
       })),
     })
+    return
+  }
+  if (layer.value === 'loca') {
+    loca ||= new Loca.Container({ map })
+    locaSource = new Loca.GeoJSONSource({
+      data: {
+        type: 'FeatureCollection',
+        features: stations.value.map((station) => ({
+          type: 'Feature',
+          properties: { name: station.name, poiId: station.poiId },
+          geometry: { type: 'Point', coordinates: station.position },
+        })),
+      },
+    })
+    locaLayer = new Loca.PointLayer({ zIndex: 130, blend: 'lighter' })
+    locaLayer.setSource(locaSource)
+    locaLayer.setStyle({
+      radius: 6,
+      color: '#2f956e',
+      borderWidth: 1,
+      borderColor: '#ffffff',
+      unit: 'px',
+    })
+    loca.add(locaLayer)
     return
   }
   if (layer.value === 'markers' && stationCount.value > markerLimit) {
@@ -530,6 +561,8 @@ async function initializeMap() {
   mapError.value = ''
   try {
     AMap = await loadAMap()
+    Loca = window.Loca
+    if (!Loca) throw new Error('LOCA 2.0 加载失败')
     if (disposed || !city.value) return
     await nextTick()
     if (disposed) return
@@ -687,6 +720,8 @@ onBeforeUnmount(() => {
   clearTimeout(viewportTimer)
   resizeObserver?.disconnect()
   clearStationLayers()
+  loca?.destroy()
+  loca = null
   map?.off('moveend', onMoveEnd)
   map?.off('zoomend', onMoveEnd)
   map?.off('click', clearMapSelection)
@@ -717,7 +752,7 @@ defineExpose({
         </p>
       </div>
       <div class="cm-header-actions">
-        <span class="cm-live-chip">高德 JS API 2.0</span
+        <span class="cm-live-chip">{{ layer === 'loca' ? '高德 JS API + LOCA 2.0' : '高德 JS API 2.0' }}</span
         ><button class="icon-button" aria-label="市州地图全屏" @click="fullscreen">
           <AppIcon name="expand" :size="17" />
         </button>
@@ -751,6 +786,13 @@ defineExpose({
           @click="layer = 'heatmap'"
         >
           POI样本聚集度
+        </button>
+        <button
+          :class="{ active: layer === 'loca' }"
+          :aria-pressed="layer === 'loca'"
+          @click="layer = 'loca'"
+        >
+          LOCA散点
         </button>
       </div>
       <a-checkbox v-model:checked="cityBoundaryVisible">市州边界</a-checkbox>
@@ -820,7 +862,7 @@ defineExpose({
         ref="canvas"
         class="cm-canvas"
         role="img"
-        :aria-label="`${district?.name || city?.name}高德地图，支持站点标记、点聚合、热力图与区县边界`"
+        :aria-label="`${district?.name || city?.name}高德地图，支持站点标记、点聚合、热力图、LOCA散点与区县边界`"
       />
       <div
         v-if="mapError || !mapReady"
@@ -873,6 +915,7 @@ defineExpose({
       <div class="cm-layer-note">
         <template v-if="layer === 'heatmap'"
           ><span class="cm-heat-key" />低 → 高 · POI样本聚集度</template
+        ><template v-else-if="layer === 'loca'">LOCA 2.0 · POI样本散点</template
         ><template v-else
           >点击{{
             layer === 'cluster' ? '聚合点放大，单点查看来源' : '站点查看来源与采集时间'
@@ -885,7 +928,9 @@ defineExpose({
       <span>{{
         layer === 'heatmap'
           ? '等权POI点热力，不作为设施密度或服务覆盖分析结果。'
-          : '按当前市州或视野读取已入库样本，不代表官方设施总量。'
+          : layer === 'loca'
+            ? 'LOCA散点仅展示已入库POI位置，不代表功率、规模或官方设施总量。'
+            : '按当前市州或视野读取已入库样本，不代表官方设施总量。'
       }}</span>
       <div class="cm-reserved" aria-label="空间分析入口">
         <button @click="emit('analysis-select', 'coverage')">1km样本覆盖 ↘</button

@@ -16,6 +16,7 @@ export function loadAMap() {
     loader = AMapLoader.load({
       key,
       version: '2.0',
+      Loca: { version: '2.0.0' },
       plugins: [
         'AMap.Scale',
         'AMap.ToolBar',

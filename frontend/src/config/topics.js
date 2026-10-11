@@ -29,6 +29,16 @@ export const topics = [
     input: '同一批次POI样本、真实行政边界与空间快照',
     icon: 'bars',
   },
+  {
+    slug: 'planning',
+    title: '充电桩规划参考',
+    shortTitle: '规划参考',
+    eyebrow: 'PLANNING REFERENCE',
+    description: '基于需求POI样本与现有站点分布，查看需求代理评分的规划参考。',
+    outputs: ['需求代理评分网格', '区县需求聚合', '周边站点分布'],
+    input: '需求类POI样本（购物/医院/写字楼/停车场/住宅）、公共候选站点、行政边界',
+    icon: 'target',
+  },
 ]
 export const cityModules = [
   { title: '区县充电设施分布', description: '区县边界与设施分级展示', key: 'district' },

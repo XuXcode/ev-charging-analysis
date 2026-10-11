@@ -16,6 +16,8 @@ IGNORED_DIRS = {
     ".idea",
     "node_modules",
     ".conda",
+    ".venv",
+    "venv",
     ".runtime",
     "__pycache__",
     ".pytest_cache",
