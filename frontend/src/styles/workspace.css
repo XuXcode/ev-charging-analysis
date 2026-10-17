@@ -731,20 +731,6 @@ summary:focus-visible {
 .map-legend strong small {
   font-size: 11px;
 }
-.map-city-tooltip {
-  position: absolute;
-  right: 55px;
-  bottom: 70px;
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 12px 16px;
-  font-size: 13px;
-  line-height: 1.9;
-  z-index: 10;
-  box-shadow: 0 4px 20px #244a3d14;
-  pointer-events: none;
-}
 .ranking-panel > .ant-segmented {
   margin: 0 18px 10px;
   width: calc(100% - 36px);
@@ -1302,29 +1288,6 @@ a:focus-visible {
 }
 .sample-data-badge {
   color: var(--primary);
-}
-.province-tooltip strong {
-  font-size: 15px;
-}
-.province-tooltip dl {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 8px 24px;
-  margin: 13px 0;
-}
-.province-tooltip dt {
-  color: #526e5c;
-}
-.province-tooltip dd {
-  margin: 0;
-  font-weight: 600;
-  text-align: right;
-}
-.province-tooltip p,
-.province-tooltip small {
-  font-size: 12px;
-  color: #5f7568;
-  line-height: 1.8;
 }
 .city-detail-panel > .data-status-card {
   margin: 18px 18px 0;

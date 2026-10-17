@@ -195,6 +195,8 @@
 
 /* ---- 省级 / 市州 / 区县 / 网格 Tooltip 统一风格 ---- */
 .map-region-tooltip {
+  min-width: 168px;
+  max-width: 260px;
   padding: 12px 14px;
   border-radius: 12px;
   border: 1px solid rgba(79, 132, 104, 0.25);
@@ -216,27 +218,28 @@
 
 .map-region-tooltip__metric {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
 }
 
 .map-region-tooltip__metric span {
-  color: #5c7164;
+  color: #526d5c;
 }
 
 .map-region-tooltip__metric b {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 650;
-  color: #1e604a;
+  color: #175d44;
+  line-height: 1.2;
   font-variant-numeric: tabular-nums;
 }
 
 .map-region-tooltip__metric small {
-  font-size: 11px;
-  color: #6b7e70;
-  margin-left: 3px;
+  margin-left: 4px;
+  font-size: 12px;
+  color: #526d5c;
 }
 
 .map-region-tooltip__row {
@@ -244,8 +247,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 4px;
-  color: #5c7164;
+  margin-top: 4px;
+  color: #526d5c;
 }
 
 .map-region-tooltip__row span:last-child {
@@ -254,13 +257,13 @@
 }
 
 .map-region-tooltip__risk {
-  margin-top: 8px;
+  margin-top: 9px;
   padding: 5px 8px;
-  background: rgba(250, 232, 190, 0.55);
+  background: rgba(249, 232, 188, 0.55);
   border-radius: 6px;
   border-left: 2px solid #b99659;
-  color: #735b31;
-  font-size: 11px;
+  color: #7a6030;
+  font-size: 12px;
 }
 
 /* ---- 高德 InfoWindow 容器重置（让所有弹窗卡片透出自定义样式） ---- */
