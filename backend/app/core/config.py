@@ -25,8 +25,6 @@ class Settings(BaseSettings):
     db_pool_recycle: int = Field(default=1800, ge=60)
     amap_webservice_key: SecretStr | None = None
     custom_accessibility_enabled: bool = False
-    custom_driving_daily_limit: int = Field(default=20, ge=0, le=100)
-    custom_places_daily_limit: int = Field(default=30, ge=0, le=100)
 
     @field_validator("database_url")
     @classmethod

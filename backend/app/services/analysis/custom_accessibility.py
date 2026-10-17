@@ -48,8 +48,9 @@ def policy(session, settings):
     enabled = settings.custom_accessibility_enabled and bool(settings.amap_webservice_key)
     return {
         "enabled": enabled,
-        "drivingRemaining": max(0, settings.custom_driving_daily_limit - usage(session, "driving")),
-        "placesRemaining": max(0, settings.custom_places_daily_limit - usage(session, "places")),
+        "dailyLimitEnabled": False,
+        "drivingCallsToday": usage(session, "driving"),
+        "placesCallsToday": usage(session, "places"),
         "providerQuotaKnown": False,
         "version": VERSION,
         "notice": NOTICE,
@@ -58,17 +59,10 @@ def policy(session, settings):
 
 def provider_get(session, settings, kind, endpoint, params, accounting=None):
     if not settings.custom_accessibility_enabled or not settings.amap_webservice_key:
-        raise HTTPException(403, "真实查询尚未启用；请先确认账号免费配额并配置调用上限")
+        raise HTTPException(403, "真实查询尚未启用；请先确认账号配额和服务权限")
     key = budget_key(kind)
     row = session.get(RoadODCache, key)
     state = dict(row.response) if row else {}
-    limit = (
-        settings.custom_driving_daily_limit
-        if kind == "driving"
-        else settings.custom_places_daily_limit
-    )
-    if int(state.get("used", 0)) >= limit:
-        raise HTTPException(429, "本地每日调用上限已达到；缓存仍可读取")
     pause = 1.05 - (time.time() - float(state.get("lastAt", 0)))
     if pause > 0:
         time.sleep(pause)
@@ -96,7 +90,7 @@ def provider_get(session, settings, kind, endpoint, params, accounting=None):
             response.raise_for_status()
             return response.json()
     except (httpx.HTTPError, ValueError):
-        raise HTTPException(502, "高德请求失败，本次已计入调用上限；未自动重试") from None
+        raise HTTPException(502, "高德请求失败，本次调用已记录；未自动重试") from None
 
 
 def route_with_geometry(body):
@@ -211,8 +205,6 @@ def execute(session, query, settings):
             raise HTTPException(409, "候选数据发生变化，请重新估算后确认")
         if query.max_api_calls and result["requiredCalls"] > query.max_api_calls:
             raise HTTPException(409, "所需调用超过本次授权上限，请重新确认")
-        if query.max_api_calls and result["requiredCalls"] > result["policy"]["drivingRemaining"]:
-            raise HTTPException(429, "本地剩余调用预算不足，未请求高德")
         accounting = {"apiCalls": 0}
         stopped = None
         position = [query.origin.longitude, query.origin.latitude]

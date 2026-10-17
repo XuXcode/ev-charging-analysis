@@ -170,8 +170,8 @@ async function query() {
     }
     let allowed = 0
     if (plan.requiredCalls > 0) {
-      if (!plan.policy.enabled || plan.requiredCalls > plan.policy.drivingRemaining) {
-        error.value = '查询未启用或本地预算不足，仅展示已有缓存；缺失路线未请求高德'
+      if (!plan.policy.enabled) {
+        error.value = '查询尚未启用，仅展示已有缓存；缺失路线未请求高德'
       } else {
         const confirmed = await new Promise((resolve) => {
           Modal.confirm({
@@ -360,11 +360,11 @@ onBeforeUnmount(() => {
         结果按候选驾车时间排序，不保证全库最快。5/10/15分钟为起点到站点的判断，不代表人口、面积覆盖或实时营业状态。与122区县代表点统计独立，不写入其快照。
       </p>
       <p>
-        路线缓存有效期7天，地点提示6小时；失败计入上限，不自动重试。页面预算是本地安全上限，不等于高德账户剩余额度。
+        路线缓存有效期7天，地点提示6小时；失败不自动重试。项目不设每日调用次数上限，高德账号配额与计费规则仍然适用。
       </p>
       <p v-if="policy">
-        本地今日剩余：驾车 {{ policy.drivingRemaining }} 次，地点提示
-        {{ policy.placesRemaining }} 次（UTC日）。
+        今日已请求：驾车 {{ policy.drivingCallsToday }} 次，地点提示
+        {{ policy.placesCallsToday }} 次（UTC日计数，无本地每日上限）。
       </p>
     </details>
   </section>

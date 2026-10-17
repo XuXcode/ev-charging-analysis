@@ -164,4 +164,4 @@ npm.cmd run build
 
 此模式与122区县代表点统计隔离，不改写其快照。直线距离仅用于筛选候选，不替代道路结果，不保证全库最快。详见[接口与配额说明](docs/custom-accessibility.md)。
 
-默认只读取缓存。确认高德账户免费配额和服务权限后，在 `backend/.env` 配置 `CUSTOM_ACCESSIBILITY_ENABLED=true`；`CUSTOM_DRIVING_DAILY_LIMIT` 和 `CUSTOM_PLACES_DAILY_LIMIT` 分别限制每日新增驾车、地点提示请求。默认20/30次，按UTC日计数，失败计次且不重试；页面每次道路查询还会确认请求数。自动补全默认关闭，启用后输入会触发地点请求。本地预算不代表账户剩余额度，不会自动充值或购买服务。
+默认只读取缓存。确认高德账户配额和服务权限后，在 `backend/.env` 配置 `CUSTOM_ACCESSIBILITY_ENABLED=true`。项目不设置每日调用次数上限；保留单次3/5候选查询、请求限速、缓存复用和新增道路请求前确认，失败不自动重试。自动补全默认关闭，启用后输入会触发地点请求。高德账号自身的配额和计费规则仍然有效，项目不会自动充值或购买服务。
