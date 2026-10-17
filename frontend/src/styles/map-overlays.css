@@ -1,0 +1,371 @@
+/* 公共地图弹窗 / Tooltip 样式 —— 磨砂玻璃卡片，统一圆角、描边、阴影与关闭按钮 */
+
+/* ---- 基础卡片（充电站、区县详情共用） ---- */
+.map-overlay-card {
+  box-sizing: border-box;
+  width: min(304px, calc(100vw - 64px));
+  padding: 15px;
+  border: 1px solid rgba(24, 99, 74, 0.55);
+  border-radius: 16px;
+  background:
+    linear-gradient(125deg, rgba(255, 255, 255, 0.14), transparent 55%),
+    rgba(237, 248, 241, 0.78);
+  background-clip: padding-box;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 12px 30px rgba(20, 58, 43, 0.14),
+    0 2px 6px rgba(20, 58, 43, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  max-height: min(460px, 68dvh);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  color: #2e4839;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .map-overlay-card {
+    background: #f4faf6;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .map-overlay-card {
+    background: rgba(237, 248, 241, 0.96);
+  }
+}
+
+.map-overlay-card__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+
+.map-overlay-card__title {
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.45;
+  color: #1e604a;
+}
+
+.map-overlay-card__subtitle {
+  font-size: 11px;
+  color: #5c7164;
+  margin-top: 2px;
+}
+
+.map-overlay-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ---- 核心指标行 ---- */
+.map-overlay-metric {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(75, 119, 94, 0.12);
+}
+
+.map-overlay-metric:first-of-type {
+  padding-top: 0;
+}
+
+.map-overlay-metric:last-of-type {
+  border-bottom: 0;
+}
+
+.map-overlay-metric__label {
+  font-size: 12px;
+  color: #5c7164;
+}
+
+.map-overlay-metric__value {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.map-overlay-metric__value b {
+  font-size: 17px;
+  font-weight: 650;
+  color: #1e604a;
+}
+
+.map-overlay-metric__value small {
+  font-size: 11px;
+  color: #6b7e70;
+  font-weight: 400;
+}
+
+/* ---- 可展开详情 ---- */
+.map-overlay-details {
+  border-top: 1px solid rgba(75, 119, 94, 0.16);
+  padding-top: 10px;
+}
+
+.map-overlay-details summary {
+  cursor: pointer;
+  color: #1e604a;
+  font-size: 12px;
+  padding: 2px 0;
+  user-select: none;
+}
+
+.map-overlay-details summary:focus-visible {
+  outline: 2px solid #258368;
+  outline-offset: 3px;
+}
+
+.map-overlay-details[open] .map-overlay-details__content {
+  margin-top: 10px;
+}
+
+.map-overlay-details dl {
+  margin: 0;
+}
+
+.map-overlay-details dl div {
+  display: flex;
+  gap: 8px;
+  margin: 5px 0;
+  font-size: 11px;
+}
+
+.map-overlay-details dt {
+  flex: 0 0 60px;
+  color: #6c8073;
+}
+
+.map-overlay-details dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: #3f5648;
+}
+
+/* ---- 风险提示与备注 ---- */
+.map-overlay-risk {
+  padding: 8px 10px;
+  background: rgba(250, 232, 190, 0.48);
+  border-radius: 8px;
+  border-left: 2px solid #b99659;
+  color: #735b31;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.map-overlay-note {
+  display: block;
+  margin-top: 6px;
+  color: #6b7e70;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.map-overlay-note + .map-overlay-note {
+  margin-top: 4px;
+}
+
+/* ---- 标签 ---- */
+.map-overlay-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.map-overlay-tags span {
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(84, 139, 109, 0.16);
+  background: rgba(216, 239, 225, 0.52);
+  color: #3f6251;
+  font-size: 12px;
+}
+
+/* ---- 省级 / 市州 / 区县 / 网格 Tooltip 统一风格 ---- */
+.map-region-tooltip {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(79, 132, 104, 0.25);
+  background: rgba(247, 253, 249, 0.95);
+  box-shadow: 0 6px 20px rgba(25, 65, 45, 0.12);
+  color: #294b39;
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: normal;
+}
+
+.map-region-tooltip__name {
+  display: block;
+  font-size: 14px;
+  font-weight: 650;
+  color: #1e604a;
+  margin-bottom: 8px;
+}
+
+.map-region-tooltip__metric {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+
+.map-region-tooltip__metric span {
+  color: #5c7164;
+}
+
+.map-region-tooltip__metric b {
+  font-size: 16px;
+  font-weight: 650;
+  color: #1e604a;
+  font-variant-numeric: tabular-nums;
+}
+
+.map-region-tooltip__metric small {
+  font-size: 11px;
+  color: #6b7e70;
+  margin-left: 3px;
+}
+
+.map-region-tooltip__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 4px;
+  color: #5c7164;
+}
+
+.map-region-tooltip__row span:last-child {
+  color: #3f5648;
+  font-variant-numeric: tabular-nums;
+}
+
+.map-region-tooltip__risk {
+  margin-top: 8px;
+  padding: 5px 8px;
+  background: rgba(250, 232, 190, 0.55);
+  border-radius: 6px;
+  border-left: 2px solid #b99659;
+  color: #735b31;
+  font-size: 11px;
+}
+
+/* ---- 高德 InfoWindow 容器重置（让所有弹窗卡片透出自定义样式） ---- */
+.amap-info-contentContainer:has(.map-overlay-card),
+.amap-info-content:has(.map-overlay-card),
+.amap-info-outer:has(.map-overlay-card) {
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.amap-info:has(.map-overlay-card) .amap-info-close {
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  color: #436553;
+  font-size: 18px;
+  background: rgba(244, 253, 248, 0.42);
+  transition: background 0.15s, color 0.15s;
+}
+
+.amap-info:has(.map-overlay-card) .amap-info-close:hover {
+  background: rgba(212, 237, 222, 0.9);
+  color: #155d46;
+}
+
+.amap-info:has(.map-overlay-card) .amap-info-sharp {
+  width: 12px;
+  height: 12px;
+  margin: -7px auto 0;
+  background: rgba(237, 248, 241, 0.85);
+  border: 1px solid rgba(24, 99, 74, 0.55);
+  border-top: 0;
+  border-left: 0;
+  transform: rotate(45deg);
+  box-shadow: none;
+  filter: none;
+}
+
+.amap-info:has(.map-overlay-card) .amap-info-sharp::after {
+  content: none;
+  filter: none;
+  box-shadow: none;
+}
+
+/* ---- Marker 聚合圆点 ---- */
+.cm-cluster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  color: #fff;
+  background: rgba(42, 128, 100, 0.9);
+  box-shadow: 0 2px 9px rgba(40, 77, 59, 0.2);
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.cm-cluster:hover,
+.cm-cluster.is-hovered {
+  transform: scale(1.08);
+  background: rgba(34, 112, 86, 0.95);
+  box-shadow: 0 4px 14px rgba(34, 88, 66, 0.28);
+}
+
+.cm-cluster.is-active {
+  transform: scale(1.12);
+  background: rgba(24, 99, 74, 0.98);
+  box-shadow: 0 0 0 4px rgba(42, 128, 100, 0.22);
+}
+
+/* ---- POI Marker ---- */
+.cm-poi-marker {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  color: #fff;
+  background: #22795e;
+  box-shadow: 0 1px 5px rgba(22, 60, 64, 0.3);
+  transition: transform 0.12s, background 0.12s;
+}
+
+.cm-poi-marker:hover {
+  transform: scale(1.12);
+  background: #1b614a;
+}
+
+.cm-poi-marker.is-selected {
+  outline: 3px solid var(--primary-dark, #1e604a);
+  outline-offset: 3px;
+  transform: scale(1.2);
+  background: #155d46;
+}

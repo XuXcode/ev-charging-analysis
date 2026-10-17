@@ -164,25 +164,31 @@ function pointKey(point) {
 function stationContent(station) {
   const hints = getPoiNameHints(station.name)
   const hintContent = hints.length
-    ? `<p class="cm-review-hint">名称线索：${hints.map((hint) => escapeHtml(hint.label)).join(' / ')}（待核验）</p>`
+    ? `<p class="map-overlay-risk">名称线索：${hints.map((hint) => escapeHtml(hint.label)).join(' / ')}（待核验）</p>`
     : ''
   const collectedAt = station.collectedAt
     ? new Date(station.collectedAt).toLocaleString('zh-CN', { hour12: false })
     : '—'
-  return `<div class="cm-info-content">
-    <strong>${escapeHtml(station.name)}</strong>
-    <p>${escapeHtml(station.address || station.district)}</p>
-    <div class="cm-info-tags"><span>${escapeHtml(classificationLabels[station.classification] || '待分类')}</span><span>${escapeHtml(reviewStatusLabels[station.reviewStatus] || '未核验')}</span></div>
-    ${station.completenessWarning ? '<p class="cm-review-hint">检索触及上限，区县样本可能不完整</p>' : ''}
-    <details class="cm-info-details"><summary>数据来源与详情</summary><dl>
-      <div><dt>来源</dt><dd>高德开放平台 · 入库POI样本</dd></div>
-      <div><dt>采集时间</dt><dd>${escapeHtml(collectedAt)}</dd></div>
-      <div><dt>POI ID</dt><dd>${escapeHtml(station.poiId || '—')}</dd></div>
-      <div><dt>坐标</dt><dd>${station.position.map((value) => value.toFixed(6)).join(', ')} · GCJ-02</dd></div>
-      <div><dt>质量批次</dt><dd>${escapeHtml(station.batch || '—')}</dd></div>
-    </dl>
-    ${hintContent}
-    <p class="cm-info-note">POI样本不代表官方设施统计，营业状态待核验。</p></details>
+  return `<div class="map-overlay-card">
+    <div class="map-overlay-card__head">
+      <div>
+        <div class="map-overlay-card__title">${escapeHtml(station.name)}</div>
+        <div class="map-overlay-card__subtitle">${escapeHtml(station.address || station.district)}</div>
+      </div>
+    </div>
+    <div class="map-overlay-card__body">
+      <div class="map-overlay-tags"><span>${escapeHtml(classificationLabels[station.classification] || '待分类')}</span><span>${escapeHtml(reviewStatusLabels[station.reviewStatus] || '未核验')}</span></div>
+      ${station.completenessWarning ? '<p class="map-overlay-risk">检索触及上限，区县样本可能不完整</p>' : ''}
+      <details class="map-overlay-details"><summary>数据来源与详情</summary><div class="map-overlay-details__content"><dl>
+        <div><dt>来源</dt><dd>高德开放平台 · 入库POI样本</dd></div>
+        <div><dt>采集时间</dt><dd>${escapeHtml(collectedAt)}</dd></div>
+        <div><dt>POI ID</dt><dd>${escapeHtml(station.poiId || '—')}</dd></div>
+        <div><dt>坐标</dt><dd>${station.position.map((value) => value.toFixed(6)).join(', ')} · GCJ-02</dd></div>
+        <div><dt>质量批次</dt><dd>${escapeHtml(station.batch || '—')}</dd></div>
+      </dl>
+      ${hintContent}</div></details>
+      <span class="map-overlay-note">POI样本不代表官方设施统计，营业状态待核验。</span>
+    </div>
   </div>`
 }
 function markerContent(selected = false) {
@@ -529,8 +535,30 @@ async function loadDistrictBoundaries() {
           polygon.setOptions({ fillOpacity: 0.2, strokeWeight: 2 })
           if (selectedStation) return
           const metrics = analysis.districts.find((row) => row.code === district.code)
+          const coreMetrics = metrics
+            ? `<div class="map-overlay-metric"><span class="map-overlay-metric__label">POI样本数量</span><div class="map-overlay-metric__value"><b>${formatNumber(metrics.count)}</b><small>条</small></div></div>
+               <div class="map-overlay-metric"><span class="map-overlay-metric__label">样本密度</span><div class="map-overlay-metric__value"><b>${formatNumber(metrics.density, 3)}</b><small>条/km²</small></div></div>
+               <div class="map-overlay-metric"><span class="map-overlay-metric__label">1km直线样本覆盖率</span><div class="map-overlay-metric__value"><b>${formatNumber(metrics.coveragePercent, 2)}</b><small>%</small></div></div>`
+            : '<div class="map-overlay-metric"><span class="map-overlay-metric__label">分析快照</span><div class="map-overlay-metric__value"><b>—</b></div></div>'
+          const warningBlock = metrics?.completenessWarning
+            ? '<p class="map-overlay-risk">检索触及上限，样本可能不完整</p>'
+            : ''
+          const detailsBlock = metrics
+            ? `<details class="map-overlay-details"><summary>详情与口径</summary><div class="map-overlay-details__content"><dl>
+                 <div><dt>行政代码</dt><dd>${escapeHtml(district.code)}</dd></div>
+                 <div><dt>数据来源</dt><dd>${escapeHtml(district.source)}</dd></div>
+                 <div><dt>核验状态</dt><dd>${escapeHtml(metrics.qualityStatus)}</dd></div>
+                 <div><dt>待复核线索</dt><dd>${formatNumber(metrics.reviewCount)} 条</dd></div>
+               </dl></div></details>`
+            : `<details class="map-overlay-details"><summary>详情与口径</summary><div class="map-overlay-details__content"><dl>
+                 <div><dt>行政代码</dt><dd>${escapeHtml(district.code)}</dd></div>
+                 <div><dt>数据来源</dt><dd>${escapeHtml(district.source)}</dd></div>
+               </dl></div></details>`
           popup.setContent(
-            `<div class="cm-district-tip"><strong>${escapeHtml(district.name)}</strong><p>行政代码 ${district.code} · ${escapeHtml(district.source)}</p>${metrics ? `<p>POI样本：${formatNumber(metrics.count)} 条<br/>POI样本密度：${formatNumber(metrics.density, 3)} 条/km²<br/>1km直线样本覆盖率：${formatNumber(metrics.coveragePercent, 2)}%<br/>待复核线索：${formatNumber(metrics.reviewCount)} 条<br/>${escapeHtml(metrics.qualityStatus)}${metrics.completenessWarning ? '<br/><b>检索触及上限，样本可能不完整</b>' : ''}</p>` : '<p>分析快照待接入</p>'}<small>点击区县查看站点；样本指标非官方统计。</small></div>`,
+            `<div class="map-overlay-card">
+              <div class="map-overlay-card__head"><div class="map-overlay-card__title">${escapeHtml(district.name)}</div></div>
+              <div class="map-overlay-card__body">${coreMetrics}${warningBlock}${detailsBlock}<span class="map-overlay-note">点击区县查看站点；样本指标非官方统计。</span></div>
+            </div>`,
           )
           popup.open(map, polygon.getBounds().getCenter())
         })
@@ -1309,194 +1337,10 @@ defineExpose({
   border: 0;
   border-radius: 0;
 }
-.city-map :deep(.cm-poi-marker) {
-  width: 22px;
-  height: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  color: #fff;
-  background: #22795e;
-  box-shadow: 0 1px 5px #163c404d;
-}
-.city-map :deep(.cm-cluster) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 2px solid #ffffffe8;
-  color: #fff;
-  background: #2a8064e8;
-  box-shadow: 0 2px 9px #284d3b33;
-  font-size: 13px;
-  font-weight: 650;
-  cursor: pointer;
-}
-/* The card owns its material; SDK wrappers remain transparent. */
-.city-map :deep(.amap-info-contentContainer:has(.cm-info-content)),
-.city-map :deep(.amap-info-content:has(.cm-info-content)),
-.city-map :deep(.amap-info-outer:has(.cm-info-content)) {
-  padding: 0;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-}
-.city-map :deep(.amap-info:has(.cm-info-content) .amap-info-close) {
-  top: 7px;
-  right: 7px;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  text-align: center;
-  border-radius: 50%;
-  color: #436553;
-  font-size: 18px;
-  background: rgba(244, 253, 248, 0.38);
-}
-.city-map :deep(.amap-info:has(.cm-info-content) .amap-info-close:hover) {
-  background: rgba(212, 237, 222, 0.85);
-  color: #155d46;
-}
-.city-map :deep(.amap-info:has(.cm-info-content) .amap-info-sharp) {
-  width: 12px;
-  height: 12px;
-  margin: -7px auto 0;
-  background: rgba(237, 248, 241, 0.8);
-  border: 1px solid rgba(24, 99, 74, 0.6);
-  border-top: 0;
-  border-left: 0;
-  transform: rotate(45deg);
-  box-shadow: none;
-  filter: none;
-}
-/* SDK ::after adds a blurred dark arrow shadow; reset only station InfoWindows. */
-.city-map :deep(.amap-info:has(.cm-info-content) .amap-info-sharp::after) {
-  content: none;
-  filter: none;
-  box-shadow: none;
-}
-
-.city-map :deep(.cm-info-content) {
-  box-sizing: border-box;
-  width: min(304px, calc(100vw - 64px));
-  padding: 15px;
-  border: 1px solid #18634a;
-  border-radius: 16px;
-  background:
-    linear-gradient(125deg, rgba(255, 255, 255, 0.12), transparent 55%), rgba(237, 248, 241, 0.76);
-  background-clip: padding-box;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow:
-    0 12px 30px rgba(20, 58, 43, 0.14),
-    0 2px 6px rgba(20, 58, 43, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.85);
-  max-height: min(440px, 65dvh);
-  overflow-y: auto;
-  scrollbar-width: thin;
-  color: #2e4839;
-  font-family: inherit;
-}
-@media (prefers-reduced-transparency: reduce) {
-  .city-map :deep(.cm-info-content) {
-    background: #f4faf6;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-  }
-}
-@supports not (backdrop-filter: blur(1px)) {
-  .city-map :deep(.cm-info-content) {
-    background: rgba(237, 248, 241, 0.96);
-  }
-}
-.city-map :deep(.cm-info-content > strong) {
-  display: block;
-  padding-right: 16px;
-  line-height: 1.5;
-  font-weight: 650;
-}
-.city-map :deep(.cm-info-content strong),
-.city-map :deep(.cm-district-tip strong) {
-  font-size: 14px;
-  color: #1e604a;
-}
-.city-map :deep(.cm-info-content p) {
-  margin: 5px 0 8px;
-  color: #5c7164;
-  font-size: 12px;
-  line-height: 1.6;
-}
-.city-map :deep(.cm-info-tags) {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 10px;
-}
-.city-map :deep(.cm-info-tags span) {
-  padding: 3px 9px;
-  border-radius: 999px;
-  border: 1px solid rgba(84, 139, 109, 0.16);
-  background: rgba(216, 239, 225, 0.52);
-  color: #3f6251;
-  font-size: 12px;
-}
-.city-map :deep(.cm-info-details) {
-  border-top: 1px solid rgba(75, 119, 94, 0.16);
-  padding-top: 9px;
-}
-.city-map :deep(.cm-info-details summary) {
-  cursor: pointer;
-  color: #1e604a;
-  font-size: 12px;
-  padding: 2px 0;
-}
-.city-map :deep(.cm-info-details summary:focus-visible) {
-  outline: 2px solid #258368;
+/* Marker 选中状态在公共样式基础上微调 */
+.city-map :deep(.cm-poi-marker.is-selected) {
+  outline: 3px solid var(--primary-dark);
   outline-offset: 3px;
-}
-.city-map :deep(.cm-info-details[open] dl) {
-  margin-top: 8px;
-}
-.city-map :deep(.cm-info-content dl) {
-  margin: 0;
-}
-.city-map :deep(.cm-info-content .cm-review-hint) {
-  padding: 8px;
-  background: rgba(250, 232, 190, 0.48);
-  border-radius: 8px;
-  border-left: 2px solid #b99659;
-  color: #735b31;
-}
-.city-map :deep(.cm-info-content dl div) {
-  display: flex;
-  gap: 8px;
-  margin: 4px 0;
-  font-size: 11px;
-}
-.city-map :deep(.cm-info-content dt) {
-  flex: 0 0 52px;
-  color: #6c8073;
-}
-.city-map :deep(.cm-info-content dd) {
-  margin: 0;
-  overflow-wrap: anywhere;
-}
-.city-map :deep(.cm-info-content .cm-info-note) {
-  display: block;
-  margin-top: 8px;
-  border-top: 1px solid rgba(75, 119, 94, 0.16);
-  padding-top: 7px;
-  color: #6b7e70;
-  font-size: 10px;
-}
-.city-map :deep(.cm-district-tip p) {
-  margin: 5px 0 0;
-  font-size: 11px;
-  color: #5c7164;
 }
 @media (max-width: 1100px) {
   .cm-header {
