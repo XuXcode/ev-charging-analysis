@@ -52,6 +52,10 @@ function clearOverlays() {
   })
   overlays = []
 }
+const originIcon =
+  '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>'
+const destinationIcon =
+  '<svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="m13 2-9 12h7l-1 8L20 10h-7l1-8Z"/></svg>'
 function draw() {
   if (!map || !AMap) return
   clearOverlays()
@@ -59,7 +63,7 @@ function draw() {
   const start = new AMap.Marker({
     position: [origin.value.longitude, origin.value.latitude],
     title: `起点：${origin.value.name}`,
-    content: '<span class="access-map-pin is-origin">起</span>',
+    content: `<span class="access-map-pin is-origin">${originIcon}</span>`,
     offset: new AMap.Pixel(-15, -15),
     zIndex: 120,
   })
@@ -69,7 +73,7 @@ function draw() {
     const marker = new AMap.Marker({
       position: station.position,
       title: station.name,
-      content: `<span class="access-map-pin ${active ? 'is-destination' : ''}">${index + 1}</span>`,
+      content: `<span class="access-map-pin ${active ? 'is-destination' : ''}">${active ? destinationIcon : index + 1}</span>`,
       offset: new AMap.Pixel(-15, -15),
       zIndex: active ? 115 : 110,
     })

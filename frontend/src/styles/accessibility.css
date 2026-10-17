@@ -579,8 +579,8 @@
   height: 30px;
   border: 2px solid rgba(255, 255, 255, 0.95);
   border-radius: 50%;
-  background: rgba(238, 250, 243, 0.95);
-  color: #2c7558;
+  background: #3288cc;
+  color: #fff;
   box-shadow: 0 2px 6px rgba(20, 65, 42, 0.23);
   font-size: 12px;
   font-weight: 650;
@@ -590,11 +590,16 @@
   color: #fff;
 }
 .access-map-pin.is-destination {
-  background: #1677ed;
+  background: #dc4c4c;
   color: #fff;
   box-shadow:
-    0 0 0 4px rgba(22, 119, 237, 0.15),
-    0 3px 8px rgba(20, 65, 90, 0.22);
+    0 0 0 4px rgba(220, 76, 76, 0.13),
+    0 3px 8px rgba(106, 35, 35, 0.2);
+}
+.access-map-pin svg {
+  width: 18px;
+  height: 18px;
+  display: block;
 }
 @media (max-width: 1440px) {
   .app-monitor[data-scene='accessibility']:not([data-right='true']):not([data-pure='true']) {
