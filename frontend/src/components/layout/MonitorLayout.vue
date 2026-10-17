@@ -44,7 +44,8 @@ const navItems = computed(() => [
     subtitle: topic.description,
     icon: topic.icon,
     to: { path: `/analysis/${topic.slug}`, query: analysisFilterQuery(analysis) },
-    active: route.params.topic === topic.slug,
+    active:
+      route.params.topic === topic.slug || (route.name === 'insights' && topic.slug === 'insights'),
   })),
 ])
 
@@ -62,9 +63,11 @@ const breadcrumbStation = computed(() =>
 const pageLabel = computed(() =>
   route.name === 'city'
     ? '市州详情'
-    : route.name === 'analysis'
-      ? topics.find((t) => t.slug === route.params.topic)?.shortTitle || '专题分析'
-      : '全省总览',
+    : route.name === 'insights'
+      ? '数据洞察'
+      : route.name === 'analysis'
+        ? topics.find((t) => t.slug === route.params.topic)?.shortTitle || '专题分析'
+        : '全省总览',
 )
 
 const isDemo = computed(() => demoMode.value || store.sourceInfo?.simulated === true)

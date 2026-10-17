@@ -29,6 +29,16 @@ export const topics = [
     input: '同一批次POI样本、真实行政边界与空间快照',
     icon: 'bars',
   },
+  {
+    slug: 'insights',
+    title: '数据洞察',
+    shortTitle: '数据洞察',
+    eyebrow: 'DATA INSIGHTS',
+    description: '从数据质量、网格集中度与道路观测理解样本结构。',
+    outputs: ['数据质量', '网格集中度', '可达性差异'],
+    input: '真实治理记录与空间、道路快照',
+    icon: 'chart',
+  },
 ]
 export const cityModules = [
   { title: '区县充电设施分布', description: '区县边界与设施分级展示', key: 'district' },

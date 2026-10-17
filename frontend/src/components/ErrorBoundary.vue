@@ -14,7 +14,21 @@ function retry() {
   failed.value = false
   revision.value++
 }
-watch(() => route.fullPath, retry)
+// Filter selections are mirrored into the query string, so fullPath also changes
+// while the user stays on the same page. Bumping `revision` there would recreate the
+// whole route subtree: expanded <details> groups and scroll position would be lost and
+// every ECharts instance torn down and rebuilt. Only reset when the route itself
+// changes or when a caught error has to be cleared.
+let mountedPath = route.path
+watch(
+  () => route.fullPath,
+  () => {
+    const pathChanged = route.path !== mountedPath
+    mountedPath = route.path
+    if (!failed.value && !pathChanged) return
+    retry()
+  },
+)
 </script>
 <template>
   <ViewState

@@ -1,9 +1,10 @@
+import json
 from typing import Literal
 
 from fastapi import APIRouter, HTTPException, Query
 from shapely import make_valid
 from shapely.geometry import box, shape
-from sqlalchemy import and_, func, or_, select
+from sqlalchemy import func, select
 
 from app.api.dependencies import SessionDep
 from app.models import AnalysisBoundary, AnalysisScopeQuality, AnalysisSnapshot, ChargingStation
@@ -18,40 +19,74 @@ router = APIRouter(prefix="/api/v1/analysis", tags=["POI样本空间分析"])
 LISA_CLASS_CODE = {"HH": 1, "LL": 2, "HL": 3, "LH": 4, "NS": 5}
 
 
+# Snapshots generated before the batch was persisted in `parameters.filters` recorded the
+# quality batch only inside the frozen document (`result.metadata.datasetQualityRunIds`).
+# Reading that path costs roughly 0.2s per row because MySQL has to parse the whole
+# multi-megabyte JSON document, so testing it in the same OR as the cheap predicate made
+# the query scan every row and blow through the 15s read timeout (surfacing as a 503).
+# Only the newest candidates are inspected instead; older legacy snapshots stay reachable
+# through classification/review filters, and a batch without a frozen snapshot answers 404.
+LEGACY_BATCH_WINDOW = 24
+
+
 def latest_id(session, classification=None, review_status=None, batch=None, needs_review=None):
-    snapshot_id = session.scalar(
-        select(AnalysisSnapshot.id)
-        .where(AnalysisSnapshot.status == "completed")
-        .where(
-            func.coalesce(AnalysisSnapshot.parameters["filters"]["needsReview"].as_string(), "")
-            == ("" if needs_review is None else str(needs_review).lower())
-        )
-        .where(
-            func.coalesce(AnalysisSnapshot.parameters["filters"]["classification"].as_string(), "")
-            == (classification or "")
-        )
-        .where(
-            func.coalesce(AnalysisSnapshot.parameters["filters"]["reviewStatus"].as_string(), "")
-            == (review_status or "")
-        )
-        .where(
-            or_(
-                func.coalesce(AnalysisSnapshot.parameters["filters"]["batch"].as_string(), "")
-                == (batch or ""),
-                and_(
-                    batch is not None,
-                    func.coalesce(AnalysisSnapshot.parameters["filters"]["batch"].as_string(), "")
-                    == "",
-                    func.json_length(AnalysisSnapshot.result["metadata"]["datasetQualityRunIds"])
-                    == 1,
-                    AnalysisSnapshot.result["metadata"]["datasetQualityRunIds"][0].as_string()
-                    == batch,
-                ),
+    batch_column = func.coalesce(
+        AnalysisSnapshot.parameters["filters"]["batch"].as_string(), ""
+    )
+
+    def base(statement):
+        return (
+            statement.where(AnalysisSnapshot.status == "completed")
+            .where(
+                func.coalesce(
+                    AnalysisSnapshot.parameters["filters"]["needsReview"].as_string(), ""
+                )
+                == ("" if needs_review is None else str(needs_review).lower())
+            )
+            .where(
+                func.coalesce(
+                    AnalysisSnapshot.parameters["filters"]["classification"].as_string(), ""
+                )
+                == (classification or "")
+            )
+            .where(
+                func.coalesce(
+                    AnalysisSnapshot.parameters["filters"]["reviewStatus"].as_string(), ""
+                )
+                == (review_status or "")
             )
         )
+
+    snapshot_id = session.scalar(
+        base(select(AnalysisSnapshot.id))
+        .where(batch_column == (batch or ""))
         .order_by(AnalysisSnapshot.computed_at.desc())
         .limit(1)
     )
+    if snapshot_id is None and batch is not None:
+        run_ids = AnalysisSnapshot.result["metadata"]["datasetQualityRunIds"]
+        window = (
+            base(select(AnalysisSnapshot.id))
+            .where(batch_column == "")
+            .order_by(AnalysisSnapshot.computed_at.desc())
+            .limit(LEGACY_BATCH_WINDOW)
+            .subquery()
+        )
+        candidates = session.execute(
+            select(AnalysisSnapshot.id, run_ids.as_string())
+            .where(AnalysisSnapshot.id.in_(select(window.c.id)))
+            .order_by(AnalysisSnapshot.computed_at.desc())
+        ).all()
+        for candidate_id, raw in candidates:
+            if raw is None:
+                continue
+            try:
+                recorded = json.loads(raw)
+            except ValueError:
+                continue
+            if recorded == [batch]:
+                snapshot_id = candidate_id
+                break
     if snapshot_id is None:
         raise HTTPException(
             404, "该筛选口径尚未生成真实空间分析快照，请运行对应分析任务；不会回退全样本结果"

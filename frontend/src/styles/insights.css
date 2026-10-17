@@ -1,0 +1,359 @@
+/* Dedicated chart workspace: no map, no changes to the four map scenes. */
+.app-monitor[data-scene='insights'] {
+  --hud-right: 0px;
+  background: radial-gradient(ellipse at 40% 15%, #f7fcf8, #e9f3ed);
+}
+.app-monitor[data-scene='insights'] .hud-rail--right,
+.app-monitor[data-scene='insights'] .hud-focus-button,
+.app-monitor[data-scene='insights'] .map-stage {
+  display: none;
+}
+.app-monitor[data-scene='insights'] .hud-workspace {
+  top: 134px;
+  right: 18px;
+  bottom: 18px;
+  border-radius: 0;
+}
+.app-monitor[data-scene='insights'] .hud-filterstrip {
+  right: 18px;
+}
+.insights-page {
+  padding: 2px 3px 24px;
+  color: #264c39;
+}
+.insights-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 13px;
+}
+.insights-eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #688674;
+}
+.insights-heading h1 {
+  margin: 5px 0 0;
+  font-size: 25px;
+  font-weight: 650;
+  letter-spacing: -0.5px;
+}
+.insights-heading h1 small {
+  margin-left: 10px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #5d7d69;
+}
+.insights-page button {
+  cursor: pointer;
+  border: 1px solid #b9d1c2;
+  border-radius: 8px;
+  padding: 6px 10px;
+  background: #edf8f0b3;
+  color: #31664b;
+  font: inherit;
+  font-size: 12px;
+}
+.insights-page button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.insights-page :is(button, select, summary):focus-visible {
+  outline: 2px solid #358561;
+  outline-offset: 3px;
+}
+.insights-filters {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: linear-gradient(125deg, #f6fff8ba, #e0f1e57a);
+  backdrop-filter: blur(4px);
+}
+.insights-filters label {
+  display: grid;
+  gap: 4px;
+  font-size: 11px;
+  color: #58735f;
+}
+.insights-filters select {
+  height: 31px;
+  min-width: 150px;
+  border: 1px solid #c4d8ca;
+  border-radius: 7px;
+  color: #2b5841;
+  background: #f7fcf8b3;
+  padding: 0 9px;
+  font: inherit;
+  font-size: 12px;
+}
+.insights-filter-note {
+  flex: 1;
+  font-size: 11px;
+  color: #65816c;
+  padding-bottom: 8px;
+}
+.insights-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding: 12px 2px;
+}
+.insights-metrics > div {
+  border-left: 2px solid #b0cdbb;
+  padding: 0 12px;
+}
+.insights-metrics span {
+  display: block;
+  font-size: 11px;
+  color: #64816c;
+}
+.insights-metrics strong {
+  font-size: 24px;
+  line-height: 1.45;
+  font-weight: 650;
+  letter-spacing: -0.6px;
+}
+.insights-metrics small {
+  font-size: 11px;
+  font-weight: 400;
+  margin-left: 5px;
+  color: #64816c;
+}
+.insights-section-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+  margin: 1px 0 9px;
+}
+.insights-section-title h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+.insights-section-title > span {
+  font-size: 10px;
+  color: #76907b;
+}
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.app-monitor[data-scene='insights'] .insights-grid .chart-panel {
+  min-height: 0;
+  height: clamp(235px, 27vh, 300px);
+  display: flex;
+  background: linear-gradient(135deg, rgba(249, 255, 251, 0.8), rgba(233, 247, 238, 0.54));
+  border: 1px solid rgba(85, 136, 103, 0.21);
+  border-radius: 13px;
+  box-shadow:
+    inset 0 1px #fff9,
+    0 6px 20px #224e3610;
+  overflow: hidden;
+}
+.app-monitor[data-scene='insights'] .insights-grid .panel-heading {
+  flex: none;
+  padding: 12px 13px 0;
+  align-items: flex-start;
+  gap: 8px;
+}
+.app-monitor[data-scene='insights'] .insights-grid .panel-heading h2 {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.app-monitor[data-scene='insights'] .insights-grid .panel-heading p {
+  font-size: 10px;
+  color: #6a8572;
+  margin-top: 3px;
+  line-height: 1.4;
+}
+.app-monitor[data-scene='insights'] .insights-grid .chart-canvas {
+  min-height: 0;
+  height: 0;
+  flex: 1;
+  margin-bottom: 0;
+}
+.app-monitor[data-scene='insights'] .insights-grid .chart-tools {
+  flex: none;
+  gap: 4px;
+}
+.app-monitor[data-scene='insights'] .insights-grid .chart-tools button {
+  min-height: 25px;
+  padding: 3px 7px;
+  font-size: 10px;
+  background: rgba(239, 249, 242, 0.7);
+}
+.insights-reading {
+  flex: none;
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 0 13px 10px;
+  color: #53725d;
+}
+.insights-group {
+  margin-top: 16px;
+  border-top: 1px solid #c9ddcf;
+  padding-top: 13px;
+}
+.insights-group > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  padding: 4px 2px 12px;
+}
+.insights-group > summary b {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+.insights-group > summary small {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #63816c;
+}
+.insights-group > summary > span:last-child {
+  font-size: 11px;
+  color: #347655;
+}
+/* Label the control by its current state; <details> already exposes open/collapsed to AT. */
+.insights-group__toggle::after {
+  content: '展开图表';
+}
+.insights-group[open] > summary > .insights-group__toggle::after {
+  content: '收起图表';
+}
+.insights-group[open] > summary > span:last-child {
+  opacity: 0.55;
+}
+.insights-method {
+  font-size: 12px;
+  line-height: 1.8;
+  border: 1px solid #c8ddce;
+  border-radius: 12px;
+  background: #f2faf4a3;
+  padding: 12px 14px;
+  margin-top: 16px;
+  color: #577660;
+}
+.insights-method summary {
+  cursor: pointer;
+  color: #38674a;
+}
+.insights-method dl {
+  margin-top: 10px;
+}
+.insights-method dl > div {
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid #d6e4da;
+  padding: 5px 0;
+}
+.insights-method dt {
+  flex: none;
+  width: 90px;
+}
+.insights-method dd {
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+.insights-method p {
+  margin-top: 8px;
+}
+.insights-notice {
+  background: #fff5d9b3;
+  border-left: 2px solid #bb9c56;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  margin: 9px 0;
+}
+@media (max-height: 850px) and (min-width: 1000px) {
+  .app-monitor[data-scene='insights'] .insights-grid .chart-panel {
+    height: 222px;
+  }
+  .insights-heading {
+    margin-bottom: 8px;
+  }
+  .insights-heading h1 {
+    font-size: 22px;
+  }
+  .insights-filters {
+    padding: 7px 10px;
+  }
+  .insights-metrics {
+    padding: 9px 2px;
+  }
+  .insights-reading {
+    font-size: 10px;
+    margin-bottom: 7px;
+  }
+}
+@media (max-width: 1100px) {
+  .insights-filters {
+    gap: 8px;
+  }
+  .insights-filters select {
+    min-width: 125px;
+  }
+  .insights-filter-note {
+    display: none;
+  }
+  .insights-section-title > span {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .insights-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .insights-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .insights-heading h1 small {
+    display: block;
+    margin: 5px 0 0;
+  }
+  .insights-filters label {
+    flex: 1;
+  }
+  .insights-filters select {
+    width: 100%;
+  }
+}
+
+.app-monitor[data-scene='insights'] .insights-grid .view-state {
+  flex: 1;
+  min-height: 0;
+  padding: 12px;
+  gap: 6px;
+}
+.app-monitor[data-scene='insights'] .insights-grid .view-state p {
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+@media (max-height: 850px) and (min-width: 1000px) {
+  .insights-eyebrow {
+    display: none;
+  }
+  .insights-filters label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .insights-metrics strong {
+    font-size: 21px;
+    line-height: 1.3;
+  }
+  .app-monitor[data-scene='insights'] .insights-grid .chart-panel {
+    height: 218px;
+  }
+}

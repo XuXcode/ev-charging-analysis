@@ -16,6 +16,12 @@ const router = createRouter({
       meta: { title: '市州详情' },
     },
     {
+      path: '/analysis/insights',
+      name: 'insights',
+      component: () => import('@/views/InsightsView.vue'),
+      meta: { title: '数据洞察' },
+    },
+    {
       path: '/analysis/:topic',
       name: 'analysis',
       component: () => import('@/views/AnalysisView.vue'),

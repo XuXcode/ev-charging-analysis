@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
 import * as echarts from 'echarts/core'
-import { LineChart, BarChart, ScatterChart } from 'echarts/charts'
+import { LineChart, BarChart, ScatterChart, PieChart } from 'echarts/charts'
 import {
   GridComponent,
   TooltipComponent,
@@ -18,6 +18,7 @@ import ViewState from '@/components/ViewState.vue'
 import { snapshotProvenance } from '@/utils/analysis-provenance'
 echarts.use([
   LineChart,
+  PieChart,
   BarChart,
   ScatterChart,
   GridComponent,
@@ -37,6 +38,7 @@ const props = defineProps({
   empty: Boolean,
   loading: Boolean,
   error: String,
+  unavailable: Boolean,
   explanation: String,
   sampleBased: { type: Boolean, default: true },
   source: String,
@@ -73,6 +75,10 @@ function ensureChart() {
   chart.on('mouseout', () => emit('city-leave'))
   chart.on('globalout', () => emit('city-leave'))
   chart.on('click', (p) => {
+    if (p.data?.insightClassification) {
+      emit('point-select', p.data)
+      return
+    }
     if (p.data?.gridCellId) {
       emit('point-select', p.data)
       return
@@ -98,7 +104,9 @@ function highlight() {
   chart.dispatchAction({ type: 'downplay' })
   const data = props.option?.series?.[0]?.data || []
   data.forEach((item, i) => {
-    if (props.highlightedCodes.includes(item.cityCode))
+    // Series data may contain null placeholders (e.g. a rate with no denominator);
+    // reading through them used to throw and let the error boundary blank the group.
+    if (item && props.highlightedCodes.includes(item.cityCode))
       chart.dispatchAction({ type: 'highlight', seriesIndex: 0, dataIndex: i })
   })
 }
@@ -206,8 +214,11 @@ async function exportResult(format) {
     />
     <ViewState
       v-if="loading || error || empty"
-      :kind="loading ? 'loading' : error ? 'error' : 'pending'"
-      :description="error || '当前范围尚无可展示的数据；缺失值不等于零。'"
+      :kind="loading ? 'loading' : error && !unavailable ? 'error' : 'pending'"
+      :description="
+        error ||
+        (loading ? '正在读取当前口径数据，请稍候。' : '当前范围尚无可展示的数据；缺失值不等于零。')
+      "
       @retry="emit('retry')"
     />
     <p v-if="exportError" role="alert" class="export-error">{{ exportError }}</p>

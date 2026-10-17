@@ -37,16 +37,21 @@ export function chartRows(option) {
           ? datum
           : { value: datum }
       const vector = Array.isArray(data.value)
-      const category =
-        option.yAxis?.type === 'category' ? option.yAxis.data?.[i] : option.xAxis?.data?.[i]
+      const yAxis = Array.isArray(option.yAxis)
+        ? option.yAxis[series.yAxisIndex || 0]
+        : option.yAxis
+      const xAxis = Array.isArray(option.xAxis)
+        ? option.xAxis[series.xAxisIndex || 0]
+        : option.xAxis
+      const category = yAxis?.type === 'category' ? yAxis.data?.[i] : xAxis?.data?.[i]
       rows.push({
         series: series.name || series.type,
         region: data.regionName || category || data.name || '',
         code: data.regionCode || data.cityCode || data.code || '',
         x: vector ? data.value[0] : '',
         value: vector ? data.value[1] : data.value,
-        unitX: vector ? option.xAxis?.name || '' : '',
-        unit: option.yAxis?.name || option.xAxis?.name || '',
+        unitX: vector ? xAxis?.name || '' : '',
+        unit: data.unit || series.unit || yAxis?.name || xAxis?.name || '',
         warning: data.warning ? '检索触及上限，样本可能不完整' : '',
       })
     }
