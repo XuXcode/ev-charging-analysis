@@ -72,6 +72,9 @@ const root = ref(null),
 const mapData = ref(null)
 const boundaryData = ref(null)
 const lisaStats = ref(null)
+const lisaRangeCount = computed(() =>
+  layer.value === 'lisa' ? mapData.value?.features?.length || 0 : 0,
+)
 const gridDensityScale = computed(() => {
   if (layer.value !== 'grid' && layer.value !== 'hotspots') return null
   const densities = (mapData.value?.features || [])
@@ -720,6 +723,12 @@ onBeforeUnmount(() => {
           <dd>{{ lisaStats.rawSignificantCount }}<small>个</small></dd>
         </div>
       </dl>
+      <p
+        v-if="lisaRangeCount && lisaRangeCount !== lisaStats.cellCount"
+        class="lisa-panel__range"
+      >
+        当前地图 {{ lisaRangeCount }} 格 · 统计量为全省口径，不随范围筛选重算
+      </p>
       <ul class="lisa-panel__classes">
         <li v-for="piece in LISA_PIECES" :key="piece.value">
           <i :style="{ background: piece.color }" />
@@ -1016,6 +1025,15 @@ footer {
   font-size: 10.5px;
   font-weight: 400;
   color: #7b9184;
+}
+.lisa-panel__range {
+  margin: 0;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: rgba(201, 138, 43, 0.1);
+  color: #8a5a12;
+  font-size: 11px;
+  line-height: 1.5;
 }
 .lisa-panel__classes {
   list-style: none;
