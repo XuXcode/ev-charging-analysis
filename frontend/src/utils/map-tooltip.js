@@ -1,5 +1,16 @@
 import { escapeHtml, formatNumber } from '@/utils/format'
 
+// Grid density tooltip: count, effective area, density, hotspot status.
+export function gridTooltip({ id, count, areaKm2, density, hotspot }) {
+  return `<div class="map-region-tooltip">
+    <strong class="map-region-tooltip__name">网格 ${escapeHtml(id)}</strong>
+    <div class="map-region-tooltip__metric"><span>POI样本数</span><div><b>${formatNumber(count)}</b><small>条</small></div></div>
+    <div class="map-region-tooltip__row"><span>有效面积</span><span>${formatNumber(areaKm2, 2)} km²</span></div>
+    <div class="map-region-tooltip__row"><span>样本密度</span><span>${formatNumber(density, 3)} 条/km²</span></div>
+    ${hotspot ? '<div class="map-region-tooltip__risk">描述性热点网格</div>' : ''}
+  </div>`
+}
+
 // Shared presentation only. Missing quality fields stay absent rather than invented.
 export function regionTooltip({
   name,

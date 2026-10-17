@@ -16,8 +16,10 @@ import { CanvasRenderer } from 'echarts/renderers'
 import { useAnalysisStore } from '@/stores/analysis'
 import { useDashboardStore } from '@/stores/dashboard'
 import { getAnalysisLayer } from '@/api/analysis'
-import { regionTooltip, regionTooltipStyle } from '@/utils/map-tooltip'
+import { regionTooltip, gridTooltip, regionTooltipStyle } from '@/utils/map-tooltip'
 import {
+  hunan,
+  labeledHunan,
   cityMapConfig,
   MAP_COLORS,
   mapColorScale,
@@ -53,6 +55,14 @@ const root = ref(null),
   error = ref(''),
   loading = ref(false)
 const mapData = ref(null)
+const boundaryData = ref(null)
+const gridDensityScale = computed(() => {
+  if (layer.value !== 'grid' && layer.value !== 'hotspots') return null
+  const densities = (mapData.value?.features || [])
+    .map((feature) => feature.properties?.density)
+    .filter((value) => Number.isFinite(value) && value >= 0)
+  return mapColorScale(densities, (value) => number(value, 'density'))
+})
 const regions = computed(() =>
   props.parentCode === '430000'
     ? analysis.cities
@@ -127,14 +137,25 @@ function featureRows() {
 function tooltip(row) {
   if (!row) return ''
   const grid = layer.value === 'grid' || layer.value === 'hotspots'
+  if (grid) {
+    return gridTooltip({
+      id: row.code,
+      count: row.data.count,
+      areaKm2: row.data.areaKm2,
+      density: row.data.density,
+      hotspot: row.data.hotspot,
+    })
+  }
   return regionTooltip({
-    name: grid ? '网格 ' + row.code : row.name,
+    name: row.name,
     count: row.data.count,
     sharePercent: row.data.sharePercent,
     reviewCount: row.data.reviewCount,
     completenessWarning: row.data.completenessWarning,
   })
 }
+
+const boundaryMapName = () => `boundary-${props.parentCode}-${mapName}`
 
 function render() {
   if (!chart || !mapData.value || !canvas.value?.clientWidth || !canvas.value?.clientHeight) return
@@ -156,14 +177,94 @@ function render() {
       },
     })),
   })
+  const isGrid = layer.value === 'grid' || layer.value === 'hotspots'
+  const classified = layer.value === 'regions' || layer.value === 'coverage' || isGrid
+  // For grid density use a province-wide fixed scale so colors mean the same density
+  // regardless of which city or county is selected.
+  const scale = isGrid
+    ? gridDensityScale.value
+    : mapColorScale(
+        regions.value.map((row) => row[definition.value?.key]),
+        (value) => number(value),
+      )
   const max = Math.max(0.001, ...rows.map((row) => row.value || 0))
-  const classified = layer.value === 'regions' || layer.value === 'coverage'
-  // Provincial miniatures always use the full provincial distribution, not the selected city.
-  const scale = mapColorScale(
-    regions.value.map((row) => row[definition.value?.key]),
-    (value) => number(value),
-  )
   const selectedCode = props.focusCode || analysis.cityCode || dashboard.selectedCityCode
+  const hasBoundaryOverlay = boundaryData.value && layer.value !== 'regions'
+  const boundaryName = boundaryMapName()
+  if (hasBoundaryOverlay) {
+    echarts.registerMap(boundaryName, boundaryData.value)
+  }
+  const gridBaseColor = (row) => {
+    if (!Number.isFinite(row.value)) return MAP_COLORS.empty
+    return isGrid ? scale.color(row.value) : mapPalette[0]
+  }
+  const series = [
+    {
+      id: 'analysis-layer',
+      type: 'map',
+      map: mapName,
+      roam: 'scale',
+      zoomOnMouseWheel: true,
+      moveOnMouseWheel: false,
+      zoom,
+      center,
+      layoutCenter: ['50%', '50%'],
+      layoutSize: '98%',
+      ...mapViewport(canvas.value, { features: rows.map((row) => row.feature) }),
+      aspectScale: 0.88,
+      data: rows.map((row) => {
+        const base = classified ? scale.color(row.value) : gridBaseColor(row)
+        const selected = row.code === selectedCode
+        const color = selected ? MAP_COLORS.selected : base
+        const hover = selected ? color : mapHoverColor(base)
+        return {
+          name: row.code,
+          code: row.code,
+          value: row.value,
+          sampleCount: row.data.count,
+          regionName: cityMapConfig[row.code]?.shortName || row.name,
+          ...(selected ? { itemStyle: { areaColor: color } } : {}),
+          label: { show: false },
+          emphasis: { itemStyle: { areaColor: hover }, label: { show: false } },
+        }
+      }),
+      itemStyle: {
+        borderColor: isGrid ? '#7ba88f' : '#fff',
+        borderWidth: isGrid ? 0.8 : 1.4,
+        areaColor: isGrid ? MAP_COLORS.empty : '#f0f4ef',
+      },
+      emphasis: {
+        itemStyle: {
+          borderColor: MAP_COLORS.border,
+          borderWidth: isGrid ? 1.2 : 2,
+        },
+      },
+      select: { disabled: true },
+    },
+  ]
+  if (hasBoundaryOverlay) {
+    series.push({
+      id: 'boundary-overlay',
+      type: 'map',
+      map: boundaryName,
+      roam: false,
+      zoom,
+      center,
+      layoutCenter: ['50%', '50%'],
+      layoutSize: '98%',
+      aspectScale: 0.88,
+      silent: true,
+      data: [],
+      itemStyle: {
+        areaColor: 'transparent',
+        borderColor: '#23725a',
+        borderWidth: 1.8,
+        shadowColor: 'transparent',
+      },
+      emphasis: { disabled: true },
+      z: 10,
+    })
+  }
   chart.setOption(
     {
       animation: false,
@@ -182,13 +283,17 @@ function render() {
               pieces: scale.pieces,
               seriesIndex: 0,
               outOfRange: { color: MAP_COLORS.empty },
-              itemWidth: 15,
-              itemHeight: 10,
-              itemGap: 10,
+              itemWidth: 18,
+              itemHeight: 14,
+              itemGap: 8,
             }
           : {}),
-        min: 0,
-        max,
+        ...(isGrid
+          ? {}
+          : {
+              min: 0,
+              max: Math.max(0.001, ...rows.map((row) => row.value || 0)),
+            }),
         orient: 'horizontal',
         left: 20,
         bottom: 18,
@@ -200,64 +305,7 @@ function render() {
         },
         textStyle: { color: '#435e50', fontSize: 12 },
       },
-      series: [
-        {
-          type: 'map',
-          map: mapName,
-          roam: 'scale',
-          zoomOnMouseWheel: true,
-          moveOnMouseWheel: false,
-          zoom,
-          center,
-          layoutCenter: ['50%', '50%'],
-          layoutSize: '98%',
-          ...mapViewport(canvas.value, { features: rows.map((row) => row.feature) }),
-          aspectScale: 0.88,
-          data: rows.map((row) => {
-            const base = classified
-              ? scale.color(row.value)
-              : mapPalette[Math.min(4, Math.max(0, Math.round(((row.value || 0) / max) * 4)))]
-            const selected = row.code === selectedCode
-            const color = selected ? MAP_COLORS.selected : base
-            const hover = selected ? color : mapHoverColor(base)
-            return {
-              name: row.code,
-              code: row.code,
-              value: row.value,
-              sampleCount: row.data.count,
-              regionName: cityMapConfig[row.code]?.shortName || row.name,
-              ...(selected ? { itemStyle: { areaColor: color } } : {}),
-              label: { color: mapLabelColor(color), textBorderWidth: 0 },
-              emphasis: { itemStyle: { areaColor: hover }, label: { color: mapLabelColor(hover) } },
-            }
-          }),
-          itemStyle: {
-            borderColor: '#fff',
-            borderWidth: layer.value === 'grid' || layer.value === 'hotspots' ? 0.1 : 1.4,
-            areaColor: '#f0f4ef',
-          },
-          label: {
-            show: !props.compact && layer.value === 'regions',
-            ...cityLabelStyle,
-            color: '#244b39',
-            formatter: cityLabelFormatter,
-          },
-          labelLayout: { hideOverlap: true },
-          emphasis: {
-            label: {
-              show: !props.compact && layer.value === 'regions',
-              color: '#fff',
-              fontWeight: 600,
-              textBorderColor: 'transparent',
-              textBorderWidth: 0,
-            },
-            itemStyle: {
-              borderColor: MAP_COLORS.border,
-              borderWidth: 2,
-            },
-          },
-        },
-      ],
+      series,
     },
     true,
   )
@@ -321,19 +369,36 @@ async function exportMap(format) {
     exporting.value = false
   }
 }
+async function loadBoundaryOverlay() {
+  if (layer.value === 'regions' || props.compact) {
+    boundaryData.value = null
+    return
+  }
+  if (props.parentCode === '430000') {
+    boundaryData.value = labeledHunan
+    return
+  }
+  try {
+    boundaryData.value = await analysis.boundaries(props.parentCode)
+  } catch {
+    boundaryData.value = null
+  }
+}
+
 async function load() {
   const current = ++generation
   abort?.abort()
   abort = new AbortController()
   loading.value = true
   mapData.value = null
+  boundaryData.value = null
   chart?.clear()
   error.value = ''
   try {
-    const data =
+    const [data] = await Promise.all([
       layer.value === 'regions'
-        ? await analysis.boundaries(props.parentCode, abort.signal)
-        : await getAnalysisLayer(
+        ? analysis.boundaries(props.parentCode, abort.signal)
+        : getAnalysisLayer(
             layer.value,
             {
               snapshot_id: analysis.snapshot.snapshotId,
@@ -341,7 +406,9 @@ async function load() {
               adcode: props.scopeCode || undefined,
             },
             abort.signal,
-          )
+          ),
+      loadBoundaryOverlay(),
+    ])
     if (current !== generation) return
     mapData.value = data
     focusRegion()
