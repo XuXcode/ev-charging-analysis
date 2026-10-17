@@ -354,17 +354,6 @@
 .access-query-block {
   gap: 10px;
 }
-.access-count {
-  padding: 2px;
-  width: 110px;
-  border-radius: 8px;
-}
-.access-count button {
-  min-height: 25px;
-  font-size: 12px;
-  padding: 3px 6px;
-  border-radius: 6px;
-}
 .access-primary-action {
   display: flex;
   align-items: center;

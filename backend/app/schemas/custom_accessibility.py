@@ -13,6 +13,6 @@ class CustomOrigin(BaseModel):
 
 class CustomQuery(BaseModel):
     origin: CustomOrigin
-    candidate_count: Literal[3, 5] = 3
-    max_api_calls: int = Field(default=0, ge=0, le=5)
+    candidate_count: Literal[3] = 3
+    max_api_calls: int = Field(default=0, ge=0, le=3)
     plan_id: str | None = Field(default=None, max_length=64)

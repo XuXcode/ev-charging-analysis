@@ -12,7 +12,6 @@ import {
 const canvas = ref(null)
 const origin = ref(null)
 const keyword = ref('')
-const count = ref(3)
 const result = shallowRef(null)
 const selectedId = ref(null)
 const policy = ref(null)
@@ -166,7 +165,7 @@ async function query() {
   const current = revision
   const body = {
     origin: { ...origin.value },
-    candidate_count: Number(count.value),
+    candidate_count: 3,
     max_api_calls: 0,
   }
   try {
@@ -211,12 +210,6 @@ async function query() {
   }
 }
 watch(selectedId, draw)
-watch(count, () => {
-  revision++
-  result.value = null
-  selectedId.value = null
-  draw()
-})
 onMounted(async () => {
   getCustomPolicy()
     .then((p) => {
@@ -325,21 +318,6 @@ onBeforeUnmount(() => {
       </div>
     </section>
     <section class="access-block access-query-block">
-      <div class="query-controls">
-        <span class="access-section-label">附近候选</span>
-        <div class="access-segmented access-count" role="group" aria-label="候选站点数量">
-          <button
-            v-for="number in [3, 5]"
-            :key="number"
-            :class="{ active: count === number }"
-            :aria-pressed="count === number"
-            :disabled="busy"
-            @click="count = number"
-          >
-            {{ number }} 个
-          </button>
-        </div>
-      </div>
       <button class="access-primary-action" :disabled="!origin || busy" @click="query">
         {{ busy ? '正在获取道路结果…' : '分析驾车可达性' }}<span aria-hidden="true">→</span>
       </button>
@@ -442,7 +420,7 @@ onBeforeUnmount(() => {
         {{ origin.latitude.toFixed(6) }} · GCJ-02
       </p>
       <p>
-        在现有真实POI库中筛选20km直线范围内最近的3或5个公共候选站点，仅用于候选筛选；道路时间、距离与蓝色轨迹均来自高德驾车结果。旧缓存缺少轨迹时需补查，不绘制直线替代路线。
+        在现有真实POI库中筛选20km直线范围内最近的3个公共候选站点，仅用于候选筛选；道路时间、距离与蓝色轨迹均来自高德驾车结果。旧缓存缺少轨迹时需补查，不绘制直线替代路线。
       </p>
       <p>
         结果按候选驾车时间排序，不保证全库最快。5/10/15分钟为起点到站点的判断，不代表人口、面积覆盖或实时营业状态。与122区县代表点统计独立，不写入其快照。
