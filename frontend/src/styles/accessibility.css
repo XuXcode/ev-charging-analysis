@@ -627,3 +627,23 @@
 .app-monitor[data-scene='accessibility'] .access-search-options {
   min-height: 20px;
 }
+
+.access-button-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: access-query-spin 0.7s linear infinite;
+  flex: none;
+}
+@keyframes access-query-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .access-button-spinner {
+    animation: none;
+  }
+}

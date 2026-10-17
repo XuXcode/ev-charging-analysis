@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref, shallowRef, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
-import { Modal } from 'ant-design-vue'
+import { message } from 'ant-design-vue'
 import { loadAMap } from '@/utils/amap'
 import { mapInsets } from '@/utils/map-viewport'
 import {
@@ -191,26 +191,19 @@ async function query() {
     if (disposed || current !== revision) return
     if (!plan.candidates.length) {
       result.value = plan
-      error.value = '20km范围内暂无公共候选POI，可重新选择起点'
+      message.info({
+        key: 'custom-driving-query',
+        content: '20km范围内暂无公共候选POI，请重新选择起点',
+      })
       return
     }
-    let allowed = 0
-    if (plan.requiredCalls > 0) {
-      if (!plan.policy.enabled) {
-        error.value = '查询尚未启用，仅展示已有缓存；缺失路线未请求高德'
-      } else {
-        const confirmed = await new Promise((resolve) => {
-          Modal.confirm({
-            title: '确认真实道路查询',
-            content: `可复用 ${plan.cacheHits} 条缓存，最多新增 ${plan.requiredCalls} 次高德驾车请求。请确保账号免费额度充足；失败不自动重试。`,
-            okText: '确认查询',
-            cancelText: '仅看缓存',
-            onOk: () => resolve(true),
-            onCancel: () => resolve(false),
-          })
-        })
-        if (confirmed) allowed = plan.requiredCalls
-      }
+    // One click authorizes this bounded query; the server still validates plan and call count.
+    const allowed = plan.policy.enabled ? Math.min(plan.requiredCalls, 3) : 0
+    if (plan.requiredCalls > 0 && !plan.policy.enabled) {
+      message.warning({
+        key: 'custom-driving-query',
+        content: '真实查询未启用，仅展示已有路线缓存',
+      })
     }
     if (disposed || current !== revision) return
     const data = await queryCustomRoutes({ ...body, plan_id: plan.planId, max_api_calls: allowed })
@@ -218,11 +211,18 @@ async function query() {
     result.value = data
     policy.value = data.policy
     selectedId.value = data.candidates.find(resolved)?.id ?? data.candidates[0]?.id
-    if (data.warning) error.value = data.warning
+    if (data.warning) message.warning({ key: 'custom-driving-query', content: data.warning })
+    else if (plan.policy.enabled && !data.candidates.some(resolved)) {
+      message.warning({
+        key: 'custom-driving-query',
+        content: '未获取到可用道路轨迹，请检查候选站点状态或稍后手动重试',
+      })
+    }
     draw()
     // Fitting is an explicit control. Querying or selecting a route never moves the camera.
   } catch (e) {
-    if (!disposed && current === revision) error.value = e.message
+    if (!disposed && current === revision)
+      message.error({ key: 'custom-driving-query', content: e.message })
   } finally {
     busy.value = false
   }
@@ -345,8 +345,15 @@ onBeforeUnmount(() => {
       </div>
     </section>
     <section class="access-block access-query-block">
-      <button class="access-primary-action" :disabled="!origin || busy" @click="query">
-        {{ busy ? '正在获取道路结果…' : '分析驾车可达性' }}<span aria-hidden="true">→</span>
+      <button
+        class="access-primary-action"
+        :disabled="!origin || busy"
+        :aria-busy="busy"
+        @click="query"
+      >
+        <span v-if="busy" class="access-button-spinner" aria-hidden="true"></span>
+        {{ busy ? '正在获取道路结果…' : '分析驾车可达性'
+        }}<span v-if="!busy" aria-hidden="true">→</span>
       </button>
       <p v-if="!origin" class="hint">选定起点后，比较附近公共候选站点。</p>
     </section>
