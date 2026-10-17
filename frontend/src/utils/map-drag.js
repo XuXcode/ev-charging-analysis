@@ -6,11 +6,31 @@ export function bindMapDrag(chart, element, getTarget = () => ({ componentType: 
   let previous = null
   let moved = false
   let suppressClick = false
+  let frame = 0
+  let pendingX = 0
+  let pendingY = 0
   const previousUserSelect = element.style.userSelect
   element.style.userSelect = 'none'
 
+  // A single mouse drag emits far more mousemove events than the browser can paint
+  // frames, and every roam action re-rasterises the whole 5km lattice. Merge the
+  // deltas and dispatch at most one roam action per animation frame.
+  function commit() {
+    frame = 0
+    const dx = pendingX
+    const dy = pendingY
+    pendingX = pendingY = 0
+    if (!start || (!dx && !dy) || chart.isDisposed()) return
+    chart.dispatchAction({ type: 'geoRoam', ...getTarget(), dx, dy })
+  }
   function end() {
     if (!start) return
+    if (frame) {
+      cancelAnimationFrame(frame)
+      frame = 0
+    }
+    // Apply the tail of the movement so the final position matches the cursor.
+    commit()
     suppressClick = moved
     start = previous = null
     moved = false
@@ -20,6 +40,7 @@ export function bindMapDrag(chart, element, getTarget = () => ({ componentType: 
     if (event.button !== 0 || !event.target.closest('canvas')) return
     start = previous = [event.clientX, event.clientY]
     moved = suppressClick = false
+    pendingX = pendingY = 0
   }
   function move(event) {
     if (!start) return
@@ -34,7 +55,9 @@ export function bindMapDrag(chart, element, getTarget = () => ({ componentType: 
     const dy = current[1] - previous[1]
     previous = current
     chart.getZr().setCursorStyle('grabbing')
-    chart.dispatchAction({ type: 'geoRoam', ...getTarget(), dx, dy })
+    pendingX += dx
+    pendingY += dy
+    if (!frame) frame = requestAnimationFrame(commit)
     event.preventDefault()
   }
   function click(event) {
@@ -56,6 +79,10 @@ export function bindMapDrag(chart, element, getTarget = () => ({ componentType: 
     window.removeEventListener('mouseup', end)
     window.removeEventListener('blur', end)
     element.style.userSelect = previousUserSelect
+    if (frame) {
+      cancelAnimationFrame(frame)
+      frame = 0
+    }
     end()
   }
 }

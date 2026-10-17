@@ -135,6 +135,19 @@ function restoreCamera() {
   zoom = saved?.zoom || 1
   center = saved?.center ? [...saved.center] : undefined
 }
+// ECharts syncs roam back into the parsed model option, so the live camera can be
+// read from the model. `chart.getOption()` would deep-clone every datum (8895 grid
+// cells) and used to run on each roam frame, which was the main drag bottleneck.
+function readCamera() {
+  const model = chart?.getModel?.()
+  const target =
+    layer.value === 'regions' ? model?.getSeriesByIndex?.(0) : model?.getComponent?.('geo', 0)
+  if (!target?.get) return null
+  const nextZoom = target.get('zoom')
+  if (!Number.isFinite(nextZoom)) return null
+  const nextCenter = target.get('center')
+  return { zoom: nextZoom, center: Array.isArray(nextCenter) ? [...nextCenter] : undefined }
+}
 const mapName = `sample-analysis-${Math.random().toString(36).slice(2)}`
 
 function featureRows() {
@@ -590,13 +603,11 @@ onMounted(() => {
   chart.on('globalout', () => dashboard.hoverCity(''))
   chart.on('georoam', () => {
     // Region view roams its internal series geo; grid/coverage views roam geo 0.
-    const option = chart.getOption()
-    const current = layer.value === 'regions' ? option.series?.[0] : option.geo?.[0]
-    if (current) {
-      zoom = current.zoom
-      center = current.center
-      rememberCamera()
-    }
+    const camera = readCamera()
+    if (!camera) return
+    zoom = camera.zoom
+    center = camera.center
+    rememberCamera()
   })
   observer = new ResizeObserver(resizeSpatialMap)
   observer.observe(canvas.value)

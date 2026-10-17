@@ -24,9 +24,21 @@ export function bindProvinceOutline(chart, enabled = () => true) {
   paths.forEach((path) => group.add(path))
   chart.getZr().add(group)
   let lastTransform = ''
+
+  // `rendered` fires on every roam frame. Reading the option here with
+  // `chart.getOption()` deep-clones the whole option — 8895 grid features with
+  // itemStyle/emphasis/label objects — which dominated the drag cost. Probe the
+  // already-parsed series model instead: same answer, no allocation.
+  function mapSeriesReady() {
+    const model = chart.getModel?.()
+    if (!model?.getSeriesByIndex) return Boolean(chart.getOption?.()?.series?.[0]?.map)
+    const series = model.getSeriesByIndex(0)
+    return Boolean(series && series.get('map'))
+  }
+
   function sync() {
     if (chart.isDisposed()) return
-    const visible = enabled() && Boolean(chart.getOption()?.series?.[0]?.map)
+    const visible = enabled() && mapSeriesReady()
     if (group.ignore === visible) group.attr('ignore', !visible)
     if (!visible) {
       lastTransform = ''
@@ -50,6 +62,12 @@ export function bindProvinceOutline(chart, enabled = () => true) {
       }),
     )
   }
+  // A roam changes the projection, so the outline must be reshaped too. Doing that
+  // from `rendered` would dirty the canvas again right after a full paint and force
+  // a second complete repaint of every region (measured: 2x canvas work per drag
+  // step). `georoam` fires while the action is still being applied — before the
+  // frame is painted — so the new shape lands in the same repaint.
+  chart.on('georoam', sync)
   chart.on('rendered', sync)
   return () => {
     chart.off('rendered', sync)
