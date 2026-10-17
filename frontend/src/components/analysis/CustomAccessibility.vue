@@ -100,6 +100,20 @@ function draw() {
 function fitRoutes() {
   if (map && overlays.length) map.setFitView(overlays, true, mapInsets(canvas.value), 17)
 }
+function focusOrigin() {
+  if (!map || !AMap || !origin.value || !canvas.value) return
+  const zoom = 16.5
+  const [top, right, bottom, left] = mapInsets(canvas.value)
+  const point = map.lngLatToPixel([origin.value.longitude, origin.value.latitude], zoom)
+  // Place the origin at the center of the existing HUD safe area at the target zoom.
+  // Resolve both camera coordinates before animating; no moveend correction or drag hooks.
+  const center = map.pixelToLngLat(
+    new AMap.Pixel(point.getX() + (right - left) / 2, point.getY() + (bottom - top) / 2),
+    zoom,
+  )
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  map.setZoomAndCenter(zoom, center, reducedMotion, reducedMotion ? 0 : 450)
+}
 function clearQuery() {
   revision++
   result.value = null
@@ -124,7 +138,7 @@ function choose(point, name = '地图选点', locate = false) {
   suggestions.value = []
   error.value = ''
   draw()
-  if (locate && map) map.setZoomAndCenter(Math.max(13, map.getZoom()), point, true)
+  if (locate) focusOrigin()
 }
 async function search() {
   const term = keyword.value.trim()
@@ -228,7 +242,7 @@ onMounted(async () => {
       viewMode: '2D',
       dragEnable: true,
       jogEnable: false,
-      animateEnable: false,
+      animateEnable: true,
       resizeEnable: true,
     })
     map.addControl(new AMap.Scale({ position: 'LB', offset: new AMap.Pixel(16, 20) }))
@@ -306,8 +320,17 @@ onBeforeUnmount(() => {
       </ul>
       <div v-if="origin" class="origin-summary">
         <span class="access-origin-dot"></span
-        ><strong :title="origin.name">{{ origin.name }}</strong
-        ><button
+        ><strong :title="origin.name">{{ origin.name }}</strong>
+        <button
+          class="access-text-button"
+          :disabled="busy"
+          @click="focusOrigin"
+          aria-label="定位起点"
+          title="放大并定位起点"
+        >
+          定位
+        </button>
+        <button
           class="access-text-button"
           :disabled="busy"
           @click="clearQuery"
