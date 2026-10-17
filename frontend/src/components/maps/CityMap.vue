@@ -619,7 +619,12 @@ async function initializeMap() {
       mapStyle: 'amap://styles/normal',
       resizeEnable: true,
     })
-    popup = new AMap.InfoWindow({ offset: new AMap.Pixel(0, -18), closeWhenClickMap: true })
+    // autoMove 必须为 false，否则悬停打开弹窗时高德会自动平移地图以容纳弹窗。
+    popup = new AMap.InfoWindow({
+      offset: new AMap.Pixel(0, -18),
+      closeWhenClickMap: true,
+      autoMove: false,
+    })
     map.addControl(new AMap.Scale())
     map.on('moveend', onMoveEnd)
     map.on('zoomend', onMoveEnd)
