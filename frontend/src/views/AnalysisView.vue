@@ -1,5 +1,5 @@
 <script setup>
-import { computed, watch, onMounted } from 'vue'
+import { computed, watch, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { topics } from '@/config/topics'
 import { useDashboardStore } from '@/stores/dashboard'
@@ -10,6 +10,7 @@ import MapView from '@/components/MapView.vue'
 import ChartContainer from '@/components/ChartContainer.vue'
 import AnalysisProvenance from '@/components/analysis/AnalysisProvenance.vue'
 import CountyComparison from '@/components/analysis/CountyComparison.vue'
+import CustomAccessibility from '@/components/analysis/CustomAccessibility.vue'
 import RoadAccessibility from '@/components/analysis/RoadAccessibility.vue'
 import LowAccessibility from '@/components/analysis/LowAccessibility.vue'
 import RegionalTypes from '@/components/analysis/RegionalTypes.vue'
@@ -21,6 +22,7 @@ import {
   coverageDistribution,
   densityCoverageOption,
 } from '@/utils/analysis-charts'
+const accessibilityMode = ref('county')
 const route = useRoute()
 const router = useRouter()
 const store = useDashboardStore()
@@ -112,9 +114,19 @@ watch(slug, () => {
   <MonitorLayout
     v-if="topic"
     :scene="slug"
-    :panel-eyebrow="selected ? cityMapConfig[selected]?.name : '湖南省 · 14市州'"
+    :panel-eyebrow="
+      slug === 'accessibility' && accessibilityMode === 'custom'
+        ? '湖南省 · 自定义起点'
+        : selected
+          ? cityMapConfig[selected]?.name
+          : '湖南省 · 14市州'
+    "
     :panel-title="topic.title"
-    :panel-subtitle="topic.description"
+    :panel-subtitle="
+      slug === 'accessibility' && accessibilityMode === 'custom'
+        ? '比较附近公共候选POI的真实驾车路线、时间与距离。'
+        : topic.description
+    "
   >
     <template #panel-actions
       ><router-link
@@ -126,7 +138,7 @@ watch(slug, () => {
     >
     <template #map>
       <MapView
-        v-if="slug === 'accessibility' && locatedDistrict"
+        v-if="slug === 'accessibility' && accessibilityMode === 'county' && locatedDistrict"
         :city-code="selected"
         :district-code="locatedDistrict"
         @district-select="(code) => (locatedDistrict = code)"
@@ -279,37 +291,56 @@ watch(slug, () => {
         </section>
       </template>
       <template v-else-if="slug === 'accessibility'">
-        <div class="analysis-tabs" role="group" aria-label="道路时间阈值">
+        <div class="analysis-tabs" role="group" aria-label="可达性分析模式">
           <button
-            v-for="item in ['5分钟', '10分钟', '15分钟']"
-            :key="item"
-            :class="{ active: mode === item }"
-            :aria-pressed="mode === item"
-            @click="mode = item"
+            :class="{ active: accessibilityMode === 'county' }"
+            :aria-pressed="accessibilityMode === 'county'"
+            @click="accessibilityMode = 'county'"
           >
-            {{ item }}
+            区县统计
+          </button>
+          <button
+            :class="{ active: accessibilityMode === 'custom' }"
+            :aria-pressed="accessibilityMode === 'custom'"
+            @click="accessibilityMode = 'custom'"
+          >
+            自定义地点分析
           </button>
         </div>
-        <p class="analysis-note">区县代表点的道路观测，不代表人口或面积覆盖；缺失观测单列。</p>
-        <button v-if="locatedDistrict" class="back-link" @click="locatedDistrict = ''">
-          ← 返回道路时间专题
-        </button>
-        <RoadAccessibility
-          :minutes="parseInt(mode)"
-          map-target="#gis-map-stage"
-          :map-visible="!locatedDistrict"
-        />
-        <LowAccessibility
-          :show-map="false"
-          @update:minutes="mode = $event + '分钟'"
-          v-if="
-            analysis.classification === 'public_candidate' &&
-            !analysis.reviewStatus &&
-            !analysis.needsReview &&
-            !analysis.batch
-          "
-          :minutes="parseInt(mode)"
-        />
+        <CustomAccessibility v-if="accessibilityMode === 'custom'" />
+        <div v-show="accessibilityMode === 'county'">
+          <div class="analysis-tabs" role="group" aria-label="道路时间阈值">
+            <button
+              v-for="item in ['5分钟', '10分钟', '15分钟']"
+              :key="item"
+              :class="{ active: mode === item }"
+              :aria-pressed="mode === item"
+              @click="mode = item"
+            >
+              {{ item }}
+            </button>
+          </div>
+          <p class="analysis-note">区县代表点的道路观测，不代表人口或面积覆盖；缺失观测单列。</p>
+          <button v-if="locatedDistrict" class="back-link" @click="locatedDistrict = ''">
+            ← 返回道路时间专题
+          </button>
+          <RoadAccessibility
+            :minutes="parseInt(mode)"
+            map-target="#gis-map-stage"
+            :map-visible="accessibilityMode === 'county' && !locatedDistrict"
+          />
+          <LowAccessibility
+            :show-map="false"
+            @update:minutes="mode = $event + '分钟'"
+            v-if="
+              analysis.classification === 'public_candidate' &&
+              !analysis.reviewStatus &&
+              !analysis.needsReview &&
+              !analysis.batch
+            "
+            :minutes="parseInt(mode)"
+          />
+        </div>
       </template>
       <template v-else-if="slug === 'differences'">
         <section class="panel analysis-panel">

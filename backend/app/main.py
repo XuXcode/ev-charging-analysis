@@ -13,6 +13,7 @@ from starlette.middleware.gzip import GZipMiddleware
 from app.api.health import router as health_router
 from app.api.v1.amap import router as amap_router
 from app.api.v1.analysis.accessibility import router as accessibility_router
+from app.api.v1.analysis.custom_accessibility import router as custom_accessibility_router
 from app.api.v1.analysis.routes import router as analysis_router
 from app.api.v1.exports import AttachmentPool
 from app.api.v1.exports import router as exports_router
@@ -52,6 +53,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     application.include_router(public_statistics_router)
     application.include_router(analysis_router)
     application.include_router(accessibility_router)
+    application.include_router(custom_accessibility_router)
     application.include_router(exports_router)
     application.state.attachment_pool = AttachmentPool()
     application.state.settings = settings
