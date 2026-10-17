@@ -16,7 +16,7 @@ import { CanvasRenderer } from 'echarts/renderers'
 import { useAnalysisStore } from '@/stores/analysis'
 import { useDashboardStore } from '@/stores/dashboard'
 import { getAnalysisLayer } from '@/api/analysis'
-import { regionTooltip, gridTooltip, regionTooltipStyle } from '@/utils/map-tooltip'
+import { regionTooltip, gridTooltip, lisaTooltip, regionTooltipStyle } from '@/utils/map-tooltip'
 import {
   labeledHunan,
   cityMapConfig,
@@ -40,6 +40,15 @@ echarts.use([
   CanvasRenderer,
 ])
 echarts.registerTheme(themeName, chartTheme)
+// Fixed LISA classes. Numbers match the API's lisaCode, so legend and cells cannot drift.
+const LISA_PIECES = [
+  { value: 1, key: 'HH', label: 'HH 高—高', color: '#b4372e' },
+  { value: 2, key: 'LL', label: 'LL 低—低', color: '#2b5f8a' },
+  { value: 3, key: 'HL', label: 'HL 高—低', color: '#c98a2b' },
+  { value: 4, key: 'LH', label: 'LH 低—高', color: '#4f9aa0' },
+  { value: 5, key: 'NS', label: '不显著', color: '#ccd8d1' },
+]
+const LISA_COLOR = Object.fromEntries(LISA_PIECES.map((piece) => [piece.value, piece.color]))
 const exporting = ref(false),
   exportError = ref('')
 const props = defineProps({
@@ -62,6 +71,7 @@ const root = ref(null),
   loading = ref(false)
 const mapData = ref(null)
 const boundaryData = ref(null)
+const lisaStats = ref(null)
 const gridDensityScale = computed(() => {
   if (layer.value !== 'grid' && layer.value !== 'hotspots') return null
   const densities = (mapData.value?.features || [])
@@ -77,11 +87,13 @@ const regions = computed(() =>
 const definition = computed(() =>
   layer.value === 'grid' || layer.value === 'hotspots'
     ? { label: '网格POI样本密度', unit: '条/km²', key: 'density' }
-    : layer.value === 'coverage'
-      ? { label: '1km样本覆盖率', unit: '%', key: 'coveragePercent' }
-      : layer.value === 'uncovered'
-        ? { label: '样本未覆盖面积', unit: 'km²', key: 'uncoveredAreaKm2' }
-        : analysis.definition,
+    : layer.value === 'lisa'
+      ? { label: 'LISA局部空间关联', unit: '', key: 'lisaCode' }
+      : layer.value === 'coverage'
+        ? { label: '1km样本覆盖率', unit: '%', key: 'coveragePercent' }
+        : layer.value === 'uncovered'
+          ? { label: '样本未覆盖面积', unit: 'km²', key: 'uncoveredAreaKm2' }
+          : analysis.definition,
 )
 const title = computed(() =>
   layer.value === 'regions'
@@ -89,6 +101,7 @@ const title = computed(() =>
     : {
         grid: '5km网格POI样本密度',
         hotspots: 'POI样本聚集分布',
+        lisa: "LISA空间关联（Moran's I）",
         coverage: '1km直线样本覆盖',
         uncovered: '样本未覆盖区域',
       }[layer.value],
@@ -100,6 +113,7 @@ const number = (value, key = definition.value?.key) =>
         maximumFractionDigits: key === 'count' ? 0 : key === 'density' ? 3 : 2,
       })
     : '—'
+const fixed = (value, digits = 2) => (Number.isFinite(value) ? Number(value).toFixed(digits) : '—')
 let chart,
   removeMapDrag,
   removeOutline,
@@ -142,6 +156,21 @@ function featureRows() {
 }
 function tooltip(row) {
   if (!row) return ''
+  if (layer.value === 'lisa') {
+    return lisaTooltip({
+      id: row.code,
+      count: row.data.count,
+      areaKm2: row.data.areaKm2,
+      density: row.data.density,
+      lisaClass: row.data.lisaClass,
+      lisaClassLabel: row.data.lisaClassLabel,
+      localI: row.data.localI,
+      pSim: row.data.pSim,
+      qFdr: row.data.qFdr,
+      significant: row.data.significant,
+      rawSignificant: row.data.rawSignificant,
+    })
+  }
   const grid = layer.value === 'grid' || layer.value === 'hotspots'
   if (grid) {
     return gridTooltip({
@@ -204,23 +233,27 @@ function render() {
     })),
   })
   const isGrid = layer.value === 'grid' || layer.value === 'hotspots'
+  const isLisa = layer.value === 'lisa'
+  const gridLike = isGrid || isLisa
   const isRegion = layer.value === 'regions'
-  const classified = isRegion || layer.value === 'coverage' || isGrid
+  const classified = isRegion || layer.value === 'coverage' || isGrid || isLisa
   // For grid density use a province-wide fixed scale so colors mean the same density
-  // regardless of which city or county is selected.
-  const scale = isGrid
-    ? gridDensityScale.value
-    : mapColorScale(
-        regions.value.map((row) => row[definition.value?.key]),
-        (value) => number(value),
-      )
+  // regardless of which city or county is selected. LISA uses fixed class colours.
+  const scale = isLisa
+    ? { pieces: LISA_PIECES, color: (value) => LISA_COLOR[Number(value)] || LISA_COLOR[5] }
+    : isGrid
+      ? gridDensityScale.value
+      : mapColorScale(
+          regions.value.map((row) => row[definition.value?.key]),
+          (value) => number(value),
+        )
   const max = Math.max(0.001, ...rows.map((row) => row.value || 0))
   const selectedCode = props.focusCode || analysis.cityCode || dashboard.selectedCityCode
   const hasBoundaryOverlay = boundaryData.value && !isRegion
   const viewport = mapViewport(canvas.value, { features: rows.map((row) => row.feature) })
   const gridBaseColor = (row) => {
     if (!Number.isFinite(row.value)) return MAP_COLORS.empty
-    return isGrid ? scale.color(row.value) : mapPalette[0]
+    return gridLike ? scale.color(row.value) : mapPalette[0]
   }
   const data = rows.map((row) => {
     const base = classified ? scale.color(row.value) : gridBaseColor(row)
@@ -245,14 +278,14 @@ function render() {
     map: mapName,
     data,
     itemStyle: {
-      borderColor: isGrid ? '#7ba88f' : '#fff',
-      borderWidth: isGrid ? 0.8 : 1.4,
-      areaColor: isGrid ? MAP_COLORS.empty : '#f0f4ef',
+      borderColor: gridLike ? '#7ba88f' : '#fff',
+      borderWidth: gridLike ? 0.8 : 1.4,
+      areaColor: gridLike ? MAP_COLORS.empty : '#f0f4ef',
     },
     emphasis: {
       itemStyle: {
         borderColor: MAP_COLORS.border,
-        borderWidth: isGrid ? 1.2 : 2,
+        borderWidth: gridLike ? 1.2 : 2,
       },
     },
     select: { disabled: true },
@@ -318,7 +351,7 @@ function render() {
             itemGap: 8,
           }
         : {}),
-      ...(isGrid ? {} : { min: 0, max }),
+      ...(gridLike ? {} : { min: 0, max }),
       orient: 'horizontal',
       left: 20,
       bottom: 18,
@@ -346,12 +379,12 @@ function render() {
       aspectScale: 0.88,
       itemStyle: {
         areaColor: MAP_COLORS.empty,
-        borderColor: isGrid ? '#7ba88f' : '#dbe5df',
-        borderWidth: isGrid ? 0.8 : 1.2,
+        borderColor: gridLike ? '#7ba88f' : '#dbe5df',
+        borderWidth: gridLike ? 0.8 : 1.2,
       },
       label: { show: false },
       emphasis: {
-        itemStyle: { borderColor: MAP_COLORS.border, borderWidth: isGrid ? 1.4 : 1.8 },
+        itemStyle: { borderColor: MAP_COLORS.border, borderWidth: gridLike ? 1.4 : 1.8 },
         label: { show: false },
       },
       select: { disabled: true },
@@ -442,6 +475,7 @@ async function load() {
   loading.value = true
   mapData.value = null
   boundaryData.value = null
+  lisaStats.value = null
   chart?.clear()
   error.value = ''
   try {
@@ -461,6 +495,7 @@ async function load() {
     ])
     if (current !== generation) return
     mapData.value = data
+    lisaStats.value = layer.value === 'lisa' ? data.statistics : null
     focusRegion()
     render()
   } catch (failure) {
@@ -634,6 +669,7 @@ onBeforeUnmount(() => {
       ><select v-if="layers" v-model="layer" aria-label="分析图层">
         <option value="regions">行政区指标</option>
         <option value="grid">5km网格样本密度</option>
+        <option value="lisa">LISA空间关联</option>
         <option value="hotspots">描述性样本聚集分布</option>
         <option value="coverage">1km直线样本覆盖</option>
         <option value="uncovered">样本未覆盖区域</option>
@@ -645,6 +681,52 @@ onBeforeUnmount(() => {
       role="img"
       :aria-label="`${title}，颜色表示${definition?.label}，可点击行政区钻取`"
     />
+    <aside
+      v-if="!compact && layer === 'lisa' && lisaStats"
+      class="lisa-panel"
+      aria-label="LISA空间自相关统计"
+    >
+      <div class="lisa-panel__head">
+        <span>LISA 空间关联</span>
+        <small>离线置换检验 · 全省口径</small>
+      </div>
+      <div class="lisa-panel__hero">
+        <strong>{{ fixed(lisaStats.global?.moranI, 4) }}</strong>
+        <span>全局 Moran's I</span>
+        <em>p = {{ fixed(lisaStats.global?.pSim, 4) }}</em>
+      </div>
+      <dl class="lisa-panel__stats">
+        <div>
+          <dt>z 分数</dt>
+          <dd>{{ fixed(lisaStats.global?.zScore, 2) }}</dd>
+        </div>
+        <div>
+          <dt>FDR q&lt;0.05</dt>
+          <dd>{{ lisaStats.significantCount }}<small>/ {{ lisaStats.cellCount }}</small></dd>
+        </div>
+        <div>
+          <dt>未校正 p&lt;0.05</dt>
+          <dd>{{ lisaStats.rawSignificantCount }}<small>个</small></dd>
+        </div>
+      </dl>
+      <ul class="lisa-panel__classes">
+        <li v-for="piece in LISA_PIECES" :key="piece.value">
+          <i :style="{ background: piece.color }" />
+          <span>{{ piece.label }}</span>
+          <b>{{ lisaStats.classCounts?.[piece.key] ?? 0 }}</b>
+        </li>
+      </ul>
+      <p class="lisa-panel__summary">{{ lisaStats.summary }}</p>
+      <details class="lisa-panel__detail">
+        <summary>口径与局限</summary>
+        <p>{{ lisaStats.conclusion }}</p>
+        <p>
+          {{ lisaStats.weights?.type === 'queen' ? 'Queen' : 'Rook' }}邻接 · 行标准化 ·
+          {{ lisaStats.permutations }} 次置换 · 零样本 {{ fixed(lisaStats.zeroSharePercent, 1) }}% ·
+          计算 {{ fixed(lisaStats.seconds, 1) }}s
+        </p>
+      </details>
+    </aside>
     <div v-if="loading || error" class="spatial-status" :role="error ? 'alert' : 'status'">
       {{ error || '读取分析快照图层…' }}<button v-if="error" @click="load">重试</button>
     </div>
@@ -676,6 +758,7 @@ onBeforeUnmount(() => {
       <span v-if="layer === 'grid' || layer === 'hotspots'">
         · 固定全省网格；选区展示相交完整网格，不重算局部密度</span
       >
+      <span v-if="layer === 'lisa'"> · LISA为离线置换检验；空间显著不代表充电需求不足</span>
     </footer>
   </section>
 </template>
@@ -830,5 +913,140 @@ footer {
   .spatial-map:not(.compact) .spatial-canvas {
     top: 170px;
   }
+  .lisa-panel {
+    display: none;
+  }
+}
+
+/* LISA statistics float: frosted glass, same material as the shared map overlays. */
+.lisa-panel {
+  position: absolute;
+  top: 96px;
+  right: 18px;
+  z-index: 3;
+  width: 274px;
+  max-height: calc(100% - 176px);
+  overflow-y: auto;
+  padding: 14px 16px;
+  display: grid;
+  gap: 10px;
+  color: #244b39;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 14px;
+  border: 1px solid rgba(24, 99, 74, 0.55);
+  background: rgba(248, 252, 249, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 12px 30px rgba(25, 65, 45, 0.16),
+    0 1px 0 rgba(255, 255, 255, 0.7) inset;
+}
+.lisa-panel__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+.lisa-panel__head span {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.lisa-panel__head small {
+  font-size: 11px;
+  color: #6b8577;
+}
+.lisa-panel__hero {
+  display: grid;
+  gap: 2px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(35, 114, 90, 0.07);
+}
+.lisa-panel__hero strong {
+  font-size: 26px;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  color: #18634a;
+}
+.lisa-panel__hero span {
+  font-size: 11px;
+  color: #5d7568;
+}
+.lisa-panel__hero em {
+  font-style: normal;
+  font-size: 11px;
+  color: #6b8577;
+}
+.lisa-panel__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+}
+.lisa-panel__stats div {
+  display: grid;
+  gap: 2px;
+}
+.lisa-panel__stats dt {
+  font-size: 10.5px;
+  color: #6b8577;
+}
+.lisa-panel__stats dd {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.lisa-panel__stats dd small {
+  font-size: 10.5px;
+  font-weight: 400;
+  color: #7b9184;
+}
+.lisa-panel__classes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+.lisa-panel__classes li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lisa-panel__classes i {
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  flex: none;
+}
+.lisa-panel__classes span {
+  flex: 1;
+  color: #3d5a4b;
+}
+.lisa-panel__classes b {
+  font-variant-numeric: tabular-nums;
+  color: #18634a;
+}
+.lisa-panel__summary {
+  margin: 0;
+  padding-top: 8px;
+  border-top: 1px solid rgba(24, 99, 74, 0.14);
+  font-size: 12px;
+  color: #34503f;
+}
+.lisa-panel__detail summary {
+  cursor: pointer;
+  font-size: 11.5px;
+  color: #18634a;
+  font-weight: 600;
+}
+.lisa-panel__detail p {
+  margin: 6px 0 0;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #5d7568;
 }
 </style>

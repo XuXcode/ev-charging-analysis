@@ -41,6 +41,7 @@ from app.services.analysis.geometry import (
     sample_coverage_union,
     to_metric,
 )
+from app.services.analysis.lisa import LISA_VERSION, lisa_analysis
 from app.services.governance import latest_province_run
 
 ALGORITHM_VERSION = "sample-spatial-v1.2"
@@ -318,6 +319,13 @@ def run_analysis(
                 )
     cells, grid_metadata = grid_analysis(province, points, PARAMETERS["gridStepM"])
     grid_features = [display_feature(cell, properties, 0) for cell, properties in cells]
+    try:
+        lisa_items, lisa_metadata = lisa_analysis(
+            {"type": "FeatureCollection", "features": grid_features}
+        )
+    except ValueError as failure:
+        # LISA is a derived layer: a lattice problem must not discard the base snapshot.
+        lisa_items, lisa_metadata = [], {"version": LISA_VERSION, "error": str(failure)}
     province_metrics, _, _ = region_metrics(province, coverage, len(rows), len(rows))
     if not rows:
         province_metrics["sharePercent"] = None
@@ -360,6 +368,7 @@ def run_analysis(
             [row.adcode for row in rows],
         ),
         "grid": grid_metadata,
+        "lisa": lisa_metadata,
         "seconds": time.perf_counter() - started,
         "notice": (
             "按明确分类/复核/批次条件选择保留POI，不删除原始记录；"
@@ -379,6 +388,7 @@ def run_analysis(
                 for name, layer in features.items()
             },
             "grid": {"type": "FeatureCollection", "features": grid_features},
+            "lisa": {"type": "LISAProperties", "items": lisa_items},
         },
     }
     for evidence in metadata["assignment"]["evidence"]:
@@ -447,9 +457,16 @@ def main():
                     frozen_input=frozen,
                 )
                 recreated = session.get(AnalysisSnapshot, result["snapshotId"])
-                keys = ("province", "regions", "layers")
-                matches = digest({key: source.result[key] for key in keys}) == digest(
-                    {key: recreated.result[key] for key in keys}
+                matches = digest(
+                    {key: source.result[key] for key in ("province", "regions")}
+                ) == digest({key: recreated.result[key] for key in ("province", "regions")})
+                # Derived layers added after a snapshot was frozen (for example LISA)
+                # are not part of the original contract. Every layer present in the
+                # source snapshot must still reproduce byte-for-byte.
+                matches = matches and all(
+                    digest(source.result["layers"][name])
+                    == digest(recreated.result["layers"].get(name))
+                    for name in source.result["layers"]
                 )
                 if not matches:
                     raise ValueError("重放结果与原快照不一致，事务回滚")

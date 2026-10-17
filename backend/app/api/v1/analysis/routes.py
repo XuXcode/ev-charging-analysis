@@ -14,6 +14,9 @@ from app.utils.bbox import parse_bbox
 
 router = APIRouter(prefix="/api/v1/analysis", tags=["POI样本空间分析"])
 
+# Stable numeric codes so the map legend does not depend on Chinese label matching.
+LISA_CLASS_CODE = {"HH": 1, "LL": 2, "HL": 3, "LH": 4, "NS": 5}
+
 
 def latest_id(session, classification=None, review_status=None, batch=None, needs_review=None):
     snapshot_id = session.scalar(
@@ -195,18 +198,18 @@ def boundaries(session: SessionDep, parent: str = Query("430000", pattern=r"^43\
     "/layers/{layer}",
     response_model=APIResponse[dict],
     summary="读取固定版本的样本分析图层",
-    description="只读取快照中既有网格、描述性聚集、1km覆盖或未覆盖几何。snapshot_id固定分析版本；city、adcode及GCJ-02 bbox筛选范围。热点为描述性阈值，未覆盖不代表实际服务风险。",
+    description="只读取快照中既有网格、描述性聚集、1km覆盖或未覆盖几何。snapshot_id固定分析版本；city、adcode及GCJ-02 bbox筛选范围。热点为描述性阈值，未覆盖不代表实际服务风险。lisa为离线计算的Moran's I/LISA结果，几何复用同一网格。",
 )
 def layer_geometry(
     session: SessionDep,
-    layer: Literal["grid", "hotspots", "coverage", "uncovered"],
+    layer: Literal["grid", "hotspots", "coverage", "uncovered", "lisa"],
     snapshot_id: str | None = Query(None, pattern=r"^[a-f0-9]{32}$"),
     city: str | None = Query(None, pattern=r"^43\d{4}$"),
     adcode: str | None = Query(None, pattern=r"^43\d{4}$"),
     bbox: str | None = Query(None, max_length=150),
 ):
     snapshot_id = snapshot_id or latest_id(session)
-    key = "grid" if layer == "hotspots" else layer
+    key = "grid" if layer in ("hotspots", "lisa") else layer
     data = session.scalar(
         select(AnalysisSnapshot.result["layers"][key]).where(
             AnalysisSnapshot.id == snapshot_id, AnalysisSnapshot.status == "completed"
@@ -248,6 +251,47 @@ def layer_geometry(
             if not shape(feature["geometry"]).is_empty
             and shape(feature["geometry"]).intersects(selection)
         ]
+    statistics = None
+    if layer == "lisa":
+        # LISA is stored as per-cell statistics only; geometry stays in the grid layer so
+        # the map cannot drift and the snapshot does not duplicate 8,895 polygons.
+        stored = session.scalar(
+            select(AnalysisSnapshot.result["layers"]["lisa"]).where(
+                AnalysisSnapshot.id == snapshot_id, AnalysisSnapshot.status == "completed"
+            )
+        )
+        statistics = session.scalar(
+            select(AnalysisSnapshot.result["metadata"]["lisa"]).where(
+                AnalysisSnapshot.id == snapshot_id, AnalysisSnapshot.status == "completed"
+            )
+        )
+        if not stored or not stored.get("items"):
+            raise HTTPException(
+                404, "该快照尚未计算LISA空间自相关，请先运行离线补算任务；不会在前端估算"
+            )
+        index = {item["id"]: item for item in stored["items"]}
+        merged = []
+        for feature in features:
+            stat = index.get(feature["properties"].get("id"))
+            if stat is None:
+                continue
+            merged.append(
+                {
+                    **feature,
+                    "properties": {
+                        **feature["properties"],
+                        "lisaClass": stat["class"],
+                        "lisaClassLabel": stat["classLabel"],
+                        "lisaCode": LISA_CLASS_CODE.get(stat["class"], 5),
+                        "localI": stat.get("localI"),
+                        "pSim": stat.get("pSim"),
+                        "qFdr": stat.get("qFdr"),
+                        "significant": stat.get("significant"),
+                        "rawSignificant": stat.get("rawSignificant"),
+                    },
+                }
+            )
+        features = merged
     return APIResponse(
         data={
             "type": "FeatureCollection",
@@ -255,6 +299,7 @@ def layer_geometry(
             "snapshotId": snapshot_id,
             "layer": layer,
             "coordinateSystem": "GCJ-02",
-            "notice": "仅展示几何采用25m拓扑保留简化；面积指标使用未简化计算几何。网格边界未简化。范围筛选保留相交的全省固定网格，不重新计算局部网格密度。",
+            "statistics": statistics,
+            "notice": "仅展示几何采用25m拓扑保留简化；面积指标使用未简化计算几何。网格边界未简化。范围筛选保留相交的全省固定网格，不重新计算局部网格密度。LISA统计量由离线置换检验生成，局部显著性经FDR校正。",
         }
     )
