@@ -353,22 +353,17 @@ onBeforeUnmount(() => {
           <p>{{ metrics.reached }}/{{ metrics.resolved }} 个完整起点</p>
         </section>
         <section class="panel">
-          <span>平均候选最短时间</span
+          <span>平均驾车时间</span
           ><strong>{{ formatNumber(metrics.meanMinutes, 1) }}<small>分钟</small></strong>
           <p>{{ metrics.measured }} 个有路线的完整起点</p>
         </section>
         <section class="panel">
-          <span>对应平均道路距离</span
+          <span>平均道路距离</span
           ><strong>{{ formatNumber(metrics.meanDistanceKm, 2) }}<small>km</small></strong>
           <p>时间最短候选对应路线</p>
         </section>
       </div>
       <button @click="exportRoad">导出当前范围道路观测 CSV</button>
-      <p class="road-finding">{{ finding }}</p>
-      <p v-if="warnings || metrics.resolved < metrics.total" class="road-warning">
-        {{ warnings }} 个区县存在POI完整性警告；{{ metrics.total - metrics.resolved }}
-        个起点尚未完整查询。结果不能解释为实际设施全量或全区县服务覆盖。
-      </p>
     </template>
     <div v-show="supported && data" class="road-layout">
       <Teleport :to="mapTarget || 'body'" :disabled="!mapTarget" defer>
@@ -386,11 +381,13 @@ onBeforeUnmount(() => {
       </Teleport>
       <aside class="road-side">
         <section class="panel">
-          <h2>候选最短时间累计分布</h2>
+          <h2>驾车时间累计分布</h2>
           <div ref="curveElement" class="road-curve" aria-label="道路时间累计曲线" />
         </section>
-        <section class="panel">
-          <h2>区县代表点排行</h2>
+        <details class="panel access-ranking">
+          <summary>
+            区县代表点排行 <small>{{ ranked.length }}</small>
+          </summary>
           <p>候选最短驾车时间 · 缺失排在最后</p>
           <ol class="road-rank">
             <li v-for="row in ranked" :key="row.adcode">
@@ -415,11 +412,17 @@ onBeforeUnmount(() => {
               </button>
             </li>
           </ol>
-        </section>
+        </details>
       </aside>
     </div>
     <details v-if="supported && data" class="panel road-provenance">
-      <summary>道路计算口径与追溯</summary>
+      <summary>数据与方法</summary>
+      <p class="road-finding">{{ finding }}</p>
+      <p v-if="warnings || metrics.resolved < metrics.total" class="road-warning">
+        {{ warnings }} 个区县存在POI完整性警告；{{ metrics.total - metrics.resolved }}
+        个起点尚未完整查询。结果不能解释为实际设施全量或全区县服务覆盖。
+      </p>
+
       <p>{{ data.notice }}</p>
       <p>版本：{{ data.algorithmVersion }} · 任务：{{ data.id }} · 状态：{{ data.status }}</p>
       <p>

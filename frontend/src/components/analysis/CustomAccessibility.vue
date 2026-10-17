@@ -1,5 +1,5 @@
 <script setup>
-import { ref, shallowRef, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
+import { computed, ref, shallowRef, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
 import { Modal } from 'ant-design-vue'
 import { loadAMap } from '@/utils/amap'
 import { mapInsets } from '@/utils/map-viewport'
@@ -22,6 +22,13 @@ const searching = ref(false)
 const autocomplete = ref(false)
 const error = ref('')
 const mapError = ref('')
+const picking = ref(true)
+const expandedId = ref(null)
+const validRoutes = computed(() => (result.value?.candidates || []).filter(resolved))
+const fastest = computed(() => validRoutes.value[0])
+const withinTen = computed(
+  () => validRoutes.value.filter((s) => s.route.durationSeconds <= 600).length,
+)
 let AMap,
   map,
   overlays = [],
@@ -53,7 +60,8 @@ function draw() {
   const start = new AMap.Marker({
     position: [origin.value.longitude, origin.value.latitude],
     title: `起点：${origin.value.name}`,
-    label: { content: '起点', direction: 'top' },
+    content: '<span class="access-map-pin is-origin">起</span>',
+    offset: new AMap.Pixel(-15, -15),
     zIndex: 120,
   })
   overlays.push(start)
@@ -62,14 +70,15 @@ function draw() {
     const marker = new AMap.Marker({
       position: station.position,
       title: station.name,
-      label: { content: `${index + 1}${active ? ' · 当前路线' : ''}`, direction: 'top' },
+      content: `<span class="access-map-pin ${active ? 'is-destination' : ''}">${index + 1}</span>`,
+      offset: new AMap.Pixel(-15, -15),
       zIndex: active ? 115 : 110,
     })
     marker.on('click', () => {
       selectedId.value = station.id
     })
     overlays.push(marker)
-    if (resolved(station)) {
+    if (active && resolved(station)) {
       // One polyline per provider step: never bridge missing geometry with a straight line.
       for (const segment of station.route.segments) {
         overlays.push(
@@ -231,7 +240,9 @@ onMounted(async () => {
     })
     map.addControl(new AMap.Scale({ position: 'LB', offset: new AMap.Pixel(16, 20) }))
     initialView = { zoom: map.getZoom(), center: map.getCenter() }
-    map.on('click', (e) => choose([e.lnglat.getLng(), e.lnglat.getLat()]))
+    map.on('click', (e) => {
+      if (picking.value) choose([e.lnglat.getLng(), e.lnglat.getLat()])
+    })
   } catch {
     mapError.value = '高德地图加载失败，请检查 JS Key、网络和域名配置'
   }
@@ -257,102 +268,179 @@ onBeforeUnmount(() => {
       <p v-if="mapError" class="custom-map-error" role="alert">{{ mapError }}</p>
     </div>
   </Teleport>
-  <section class="custom-driving-panel" aria-label="自定义地点驾车查询">
-    <h2>从任意地点出发</h2>
-    <p class="hint">
-      搜索湖南省内地点，或单击地图设置起点。候选来自全省公共候选库，独立于区县统计筛选。
-    </p>
-    <div class="place-search">
-      <input
-        v-model="keyword"
-        aria-label="高德地点搜索"
-        placeholder="输入地点名称"
-        maxlength="80"
-        :disabled="busy"
-        @input="inputChanged"
-        @keydown.enter="search"
-      /><button
-        :disabled="searching || busy || keyword.trim().length < 2 || !policy?.enabled"
-        @click="search"
-      >
-        {{ searching ? '搜索中…' : '搜索' }}
-      </button>
-    </div>
-    <label class="hint"
-      ><input v-model="autocomplete" type="checkbox" :disabled="!policy?.enabled" />
-      自动补全（输入会消耗地点提示配额）</label
-    >
-    <ul v-if="suggestions.length" class="place-suggestions">
-      <li v-for="(item, index) in suggestions" :key="index">
-        <button :disabled="busy" @click="choose(item.position, item.name, true)">
-          <strong>{{ item.name }}</strong
-          ><span>{{ item.address }}</span>
+  <section class="custom-driving-panel" aria-label="自定义地点驾车查询" :aria-busy="busy">
+    <section class="access-block access-search-block">
+      <label class="access-section-label" for="access-place">出发地点</label>
+      <div class="place-search">
+        <input
+          id="access-place"
+          v-model="keyword"
+          aria-label="高德地点搜索"
+          placeholder="搜索地点，或在地图选点"
+          maxlength="80"
+          :disabled="busy"
+          @input="inputChanged"
+          @keydown.enter="search"
+        />
+        <button
+          :disabled="searching || busy || keyword.trim().length < 2 || !policy?.enabled"
+          @click="search"
+        >
+          {{ searching ? '搜索中' : '搜索' }}
         </button>
-      </li>
-    </ul>
-    <div class="origin-summary">
-      <span>驾车起点</span><strong>{{ origin?.name || '尚未选点' }}</strong
-      ><small v-if="origin"
-        >{{ origin.longitude.toFixed(6) }}, {{ origin.latitude.toFixed(6) }} · GCJ-02</small
-      >
-    </div>
-    <div class="query-controls">
-      <label
-        >候选站点
-        <select v-model="count" :disabled="busy">
-          <option :value="3">3 个</option>
-          <option :value="5">5 个</option>
-        </select></label
-      ><button class="primary" :disabled="!origin || busy" @click="query">
-        {{ busy ? '正在查询道路…' : '查询驾车路线' }}
-      </button>
-    </div>
-    <div class="query-controls">
-      <button :disabled="busy || !origin" @click="clearQuery">清除并恢复视角</button
-      ><button :disabled="!result?.candidates.length" @click="fitRoutes">查看全部路线</button>
-    </div>
-    <p v-if="error" class="query-warning" role="alert">{{ error }}</p>
-    <p v-if="policy && !policy.enabled" class="query-warning">
-      真实查询未启用。可选点并读取路线缓存，启用前请确认免费配额。
-    </p>
-    <div v-if="result" class="route-results">
-      <div class="result-summary">
-        <strong>{{ result.candidates.length }} 个公共候选站点</strong
-        ><span>缓存 {{ result.cacheHits }} · 新请求 {{ result.apiCalls || 0 }}</span>
       </div>
-      <button
+      <div class="access-search-options">
+        <button
+          class="access-text-button"
+          :aria-pressed="picking"
+          :disabled="busy"
+          @click="picking = !picking"
+        >
+          {{ picking ? '地图选点已开启' : '开启地图选点' }}
+        </button>
+        <label title="启用后输入会请求高德地点提示"
+          ><input v-model="autocomplete" type="checkbox" :disabled="busy || !policy?.enabled" />
+          自动补全</label
+        >
+      </div>
+      <ul v-if="suggestions.length" class="place-suggestions" aria-label="地点搜索建议">
+        <li v-for="(item, index) in suggestions" :key="index">
+          <button :disabled="busy" @click="choose(item.position, item.name, true)">
+            <strong>{{ item.name }}</strong
+            ><span>{{ item.address }}</span>
+          </button>
+        </li>
+      </ul>
+      <div v-if="origin" class="origin-summary">
+        <span class="access-origin-dot"></span
+        ><strong :title="origin.name">{{ origin.name }}</strong
+        ><button
+          class="access-text-button"
+          :disabled="busy"
+          @click="clearQuery"
+          title="清除查询并恢复选点前视角"
+        >
+          清除
+        </button>
+      </div>
+    </section>
+    <section class="access-block access-query-block">
+      <div class="query-controls">
+        <span class="access-section-label">附近候选</span>
+        <div class="access-segmented access-count" role="group" aria-label="候选站点数量">
+          <button
+            v-for="number in [3, 5]"
+            :key="number"
+            :class="{ active: count === number }"
+            :aria-pressed="count === number"
+            :disabled="busy"
+            @click="count = number"
+          >
+            {{ number }} 个
+          </button>
+        </div>
+      </div>
+      <button class="access-primary-action" :disabled="!origin || busy" @click="query">
+        {{ busy ? '正在获取道路结果…' : '分析驾车可达性' }}<span aria-hidden="true">→</span>
+      </button>
+      <p v-if="!origin" class="hint">选定起点后，比较附近公共候选站点。</p>
+    </section>
+    <p v-if="error" class="query-warning" role="alert">{{ error }}</p>
+    <p v-if="policy && !policy.enabled" class="query-warning">真实查询未启用，当前仅可读取缓存。</p>
+    <section
+      v-if="result && fastest"
+      class="access-block access-result-summary"
+      aria-label="驾车结果摘要"
+      aria-live="polite"
+    >
+      <div class="access-section-heading">
+        <span class="access-section-label">结果摘要</span
+        ><span class="access-tag"
+          >{{ validRoutes.length }}/{{ result.candidates.length }} 已查询</span
+        >
+      </div>
+      <div class="access-summary-metrics">
+        <div>
+          <span>最快预计驾车</span><strong>{{ minutes(fastest) }}<small>分钟</small></strong>
+        </div>
+        <div>
+          <span>10分钟内可达</span><strong>{{ withinTen }}<small>个站点</small></strong>
+        </div>
+      </div>
+      <p class="access-fastest-name" :title="fastest.name">最快候选 · {{ fastest.name }}</p>
+    </section>
+    <section v-if="result" class="route-results" aria-label="候选站点列表">
+      <div class="access-section-heading">
+        <h2>
+          候选站点 <small>{{ result.candidates.length }}</small>
+        </h2>
+        <button class="access-text-button" @click="fitRoutes" :disabled="!result.candidates.length">
+          定位路线 ↗
+        </button>
+      </div>
+      <article
         v-for="(station, index) in result.candidates"
         :key="station.id"
         class="route-station"
         :class="{ selected: selectedId === station.id }"
-        :aria-pressed="selectedId === station.id"
-        @click="selectedId = station.id"
       >
-        <strong>{{ index + 1 }}. {{ station.name }}</strong
-        ><span class="station-address">{{ station.address || '暂无地址' }}</span
-        ><template v-if="resolved(station)"
-          ><span class="route-metrics"
-            ><b>{{ minutes(station) }}<small> 分钟</small></b
-            ><span>{{ distance(station) }} km</span
-            ><em v-if="station.id === result.candidates.find(resolved)?.id">已查询中最快</em></span
-          ><span class="thresholds"
-            ><span
-              v-for="minute in [5, 10, 15]"
-              :key="minute"
-              :class="{ reachable: station.route.durationSeconds <= minute * 60 }"
-              >{{ minute }}分钟
-              {{ station.route.durationSeconds <= minute * 60 ? '可达' : '不可达' }}</span
-            ></span
-          ></template
-        ><span v-else class="hint">{{
-          statuses[station.route?.status] || '暂无道路轨迹，尚未调用高德'
-        }}</span></button
-      ><time class="hint" v-if="result.queriedAt"
-        >本次查询 {{ new Date(result.queriedAt).toLocaleString('zh-CN') }}</time
-      >
-    </div>
+        <button
+          class="access-route-select"
+          :aria-pressed="selectedId === station.id"
+          @click="selectedId = station.id"
+        >
+          <span class="access-station-number">{{ index + 1 }}</span
+          ><span class="access-station-content"
+            ><strong class="access-station-name" :title="station.name">{{ station.name }}</strong
+            ><span class="access-selected-label" v-if="selectedId === station.id">当前路线</span
+            ><span class="route-metrics" v-if="resolved(station)"
+              ><b>{{ minutes(station) }}<small> 分钟</small></b
+              ><span>{{ distance(station) }} km</span></span
+            ><span v-else class="hint">{{
+              statuses[station.route?.status] || '暂无道路轨迹'
+            }}</span></span
+          >
+        </button>
+        <div v-if="resolved(station)" class="thresholds">
+          <span
+            v-for="minute in [5, 10, 15]"
+            :key="minute"
+            :class="{ reachable: station.route.durationSeconds <= minute * 60 }"
+            >{{ minute }}分钟
+            {{ station.route.durationSeconds <= minute * 60 ? '可达' : '不可达' }}</span
+          >
+        </div>
+        <button
+          class="access-text-button access-address-toggle"
+          :aria-expanded="expandedId === station.id"
+          @click="expandedId = expandedId === station.id ? null : station.id"
+        >
+          {{ expandedId === station.id ? '收起地址' : '查看地址' }}
+          <span aria-hidden="true">{{ expandedId === station.id ? '−' : '+' }}</span>
+        </button>
+        <p v-if="expandedId === station.id" class="station-address">
+          {{ station.address || '暂无地址' }}
+        </p>
+      </article>
+      <div class="access-result-foot">
+        <span>缓存 {{ result.cacheHits }} · 新请求 {{ result.apiCalls || 0 }}</span
+        ><time v-if="result.queriedAt"
+          >{{
+            new Date(result.queriedAt).toLocaleTimeString('zh-CN', {
+              hour: '2-digit',
+              minute: '2-digit',
+            })
+          }}
+          更新</time
+        >
+      </div>
+    </section>
     <details class="query-method">
-      <summary>查询口径与调用说明</summary>
+      <summary>数据与方法</summary>
+      <p v-if="origin">
+        起点：{{ origin.name }} · {{ origin.longitude.toFixed(6) }},
+        {{ origin.latitude.toFixed(6) }} · GCJ-02
+      </p>
       <p>
         在现有真实POI库中筛选20km直线范围内最近的3或5个公共候选站点，仅用于候选筛选；道路时间、距离与蓝色轨迹均来自高德驾车结果。旧缓存缺少轨迹时需补查，不绘制直线替代路线。
       </p>
@@ -376,167 +464,6 @@ onBeforeUnmount(() => {
   inset: 0;
   width: 100%;
   height: 100%;
-}
-.custom-driving-panel {
-  display: grid;
-  gap: 12px;
-  color: #254f40;
-}
-.custom-driving-panel h2 {
-  font-size: 18px;
-  margin: 0;
-}
-.hint,
-.station-address {
-  font-size: 12px;
-  line-height: 1.6;
-  color: #506e61;
-  margin: 0;
-}
-.place-search,
-.query-controls {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.place-search input {
-  flex: 1;
-  min-width: 120px;
-  width: 0;
-}
-.custom-driving-panel input:not([type='checkbox']),
-.custom-driving-panel select,
-.custom-driving-panel button {
-  border: 1px solid rgba(64, 119, 90, 0.23);
-  border-radius: 9px;
-  padding: 7px 10px;
-  background: rgba(242, 251, 245, 0.65);
-  color: inherit;
-  font: inherit;
-  font-size: 13px;
-}
-.custom-driving-panel button {
-  cursor: pointer;
-}
-.custom-driving-panel button:disabled {
-  cursor: default;
-  opacity: 0.5;
-}
-.custom-driving-panel .primary {
-  background: #1c775e;
-  color: #fff;
-}
-.origin-summary {
-  display: grid;
-  gap: 4px;
-  padding: 12px;
-  border-block: 1px solid rgba(87, 132, 107, 0.18);
-}
-.origin-summary > span,
-.origin-summary small {
-  font-size: 12px;
-  color: #557466;
-}
-.query-controls {
-  justify-content: space-between;
-}
-.query-warning {
-  font-size: 12px;
-  background: rgba(255, 244, 207, 0.8);
-  padding: 10px;
-  border-left: 2px solid #bc9b49;
-  border-radius: 8px;
-  margin: 0;
-}
-.place-suggestions {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  max-height: 220px;
-  overflow: auto;
-}
-.place-suggestions button {
-  width: 100%;
-  text-align: left;
-  display: grid;
-  gap: 4px;
-}
-.place-suggestions span {
-  font-size: 12px;
-}
-.route-results {
-  display: grid;
-  gap: 8px;
-}
-.result-summary {
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-  font-size: 12px;
-}
-.custom-driving-panel .route-station {
-  display: grid;
-  gap: 7px;
-  text-align: left;
-  padding: 12px;
-  background: linear-gradient(135deg, rgba(233, 249, 239, 0.55), rgba(225, 244, 232, 0.25));
-  border: 1px solid rgba(75, 134, 104, 0.16);
-}
-.custom-driving-panel .route-station.selected {
-  border-color: #308b70;
-  box-shadow: inset 3px 0 #2e8a6d;
-}
-.route-metrics {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  color: #195941;
-}
-.route-metrics b {
-  font-size: 22px;
-}
-.route-metrics small {
-  font-size: 12px;
-  font-weight: 400;
-}
-.route-metrics em {
-  font-size: 11px;
-  font-style: normal;
-  color: #1f719e;
-}
-.thresholds {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-.thresholds > span {
-  font-size: 11px;
-  background: rgba(101, 120, 109, 0.1);
-  border-radius: 20px;
-  padding: 3px 6px;
-  color: #647268;
-}
-.thresholds > span.reachable {
-  background: rgba(38, 142, 97, 0.13);
-  color: #226d4f;
-}
-.query-method {
-  font-size: 12px;
-  line-height: 1.8;
-  border-top: 1px solid rgba(87, 132, 107, 0.2);
-  padding-top: 10px;
-}
-.query-method summary {
-  cursor: pointer;
-}
-.custom-map-error {
-  position: absolute;
-  top: 160px;
-  left: 30%;
-  background: #fff7df;
-  padding: 16px;
-  border-radius: 12px;
 }
 .custom-map-controls {
   position: absolute;

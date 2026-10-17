@@ -254,6 +254,9 @@ onBeforeUnmount(() => {
       <div v-if="$slots['panel-actions']" class="hud-panel__tools">
         <slot name="panel-actions" />
       </div>
+      <div v-if="$slots['panel-controls']" class="hud-panel__controls">
+        <slot name="panel-controls" />
+      </div>
       <div class="hud-panel__body">
         <ViewState
           v-if="analysis.filterError"
