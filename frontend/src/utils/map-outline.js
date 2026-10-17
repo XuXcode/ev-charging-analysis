@@ -70,6 +70,7 @@ export function bindProvinceOutline(chart, enabled = () => true) {
   chart.on('georoam', sync)
   chart.on('rendered', sync)
   return () => {
+    chart.off('georoam', sync)
     chart.off('rendered', sync)
     if (!chart.isDisposed()) chart.getZr().remove(group)
   }

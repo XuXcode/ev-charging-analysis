@@ -6,6 +6,7 @@ import { ref, computed, watch, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
 import * as echarts from 'echarts/core'
 import { bindMapDrag } from '@/utils/map-drag'
+import { createGridDragPreview } from '@/utils/grid-drag-preview'
 import { cityLabelStyle, cityLabelFormatter } from '@/utils/map-label'
 import { bindProvinceOutline } from '@/utils/map-outline'
 import { mapViewport, observeMapViewport, mapLegend } from '@/utils/map-viewport'
@@ -119,6 +120,7 @@ const number = (value, key = definition.value?.key) =>
 const fixed = (value, digits = 2) => (Number.isFinite(value) ? Number(value).toFixed(digits) : '—')
 let chart,
   removeMapDrag,
+  gridDragPreview,
   removeOutline,
   observer,
   abort,
@@ -229,6 +231,7 @@ function boundaryPolylines(geojson) {
 }
 
 function render() {
+  gridDragPreview?.cancel()
   if (!chart || !mapData.value || !canvas.value?.clientWidth || !canvas.value?.clientHeight) return
   const rows = featureRows()
   if (!rows.length) {
@@ -355,6 +358,7 @@ function render() {
       formatter: (p) => tooltip(rows.find((row) => row.code === p.name)),
     },
     visualMap: {
+      zlevel: gridLike ? 10 : 0,
       show: !props.compact,
       type: classified ? 'piecewise' : 'continuous',
       ...(classified
@@ -407,6 +411,20 @@ function render() {
     }
   }
   chart.setOption(option, true)
+  gridDragPreview?.setScene(
+    gridLike
+      ? {
+          cells: rows.map((row, i) => ({
+            geometry: row.feature.geometry,
+            fill: data[i].itemStyle?.areaColor || scale.color(row.value),
+          })),
+          boundaries: hasBoundaryOverlay
+            ? boundaryPolylines(boundaryData.value).map((line) => line.coords)
+            : [],
+          provinceOutline: props.parentCode === '430000' && !props.scopeCode,
+        }
+      : null,
+  )
   highlight()
 }
 function highlight() {
@@ -578,8 +596,12 @@ function select(code) {
   } else router.push(cityAnalysisRoute(analysis, code))
 }
 function resizeSpatialMap() {
+  gridDragPreview?.finish()
   if (!chart || chart.isDisposed() || !canvas.value?.clientWidth || !canvas.value?.clientHeight)
     return
+  // ResizeObserver can fire before the first async layer arrives. Do not create
+  // a typeless placeholder series that poisons the first real map option.
+  if (!chart.getModel()?.getSeriesByIndex?.(0)) return
   chart.resize()
   const viewport = mapViewport(canvas.value)
   if (!viewport.layoutSize) return
@@ -590,10 +612,15 @@ function resizeSpatialMap() {
 
 onMounted(() => {
   chart = echarts.init(canvas.value, themeName)
-  removeMapDrag = bindMapDrag(chart, canvas.value, () =>
-    layer.value === 'regions'
-      ? { componentType: 'series', seriesIndex: 0 }
-      : { componentType: 'geo', geoIndex: 0 },
+  gridDragPreview = createGridDragPreview(chart, canvas.value)
+  removeMapDrag = bindMapDrag(
+    chart,
+    canvas.value,
+    () =>
+      layer.value === 'regions'
+        ? { componentType: 'series', seriesIndex: 0 }
+        : { componentType: 'geo', geoIndex: 0 },
+    () => gridDragPreview,
   )
   removeOutline = bindProvinceOutline(
     chart,
@@ -637,6 +664,7 @@ onBeforeUnmount(() => {
   observer?.disconnect()
   removeOutline?.()
   removeMapDrag?.()
+  gridDragPreview?.dispose()
   chart?.dispose()
 })
 </script>
@@ -716,17 +744,16 @@ onBeforeUnmount(() => {
         </div>
         <div>
           <dt>FDR q&lt;0.05</dt>
-          <dd>{{ lisaStats.significantCount }}<small>/ {{ lisaStats.cellCount }}</small></dd>
+          <dd>
+            {{ lisaStats.significantCount }}<small>/ {{ lisaStats.cellCount }}</small>
+          </dd>
         </div>
         <div>
           <dt>未校正 p&lt;0.05</dt>
           <dd>{{ lisaStats.rawSignificantCount }}<small>个</small></dd>
         </div>
       </dl>
-      <p
-        v-if="lisaRangeCount && lisaRangeCount !== lisaStats.cellCount"
-        class="lisa-panel__range"
-      >
+      <p v-if="lisaRangeCount && lisaRangeCount !== lisaStats.cellCount" class="lisa-panel__range">
         当前地图 {{ lisaRangeCount }} 格 · 统计量为全省口径，不随范围筛选重算
       </p>
       <ul class="lisa-panel__classes">
