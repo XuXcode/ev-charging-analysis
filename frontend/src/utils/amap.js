@@ -16,7 +16,6 @@ export function loadAMap() {
     loader = AMapLoader.load({
       key,
       version: '2.0',
-      Loca: { version: '2.0.0' },
       plugins: [
         'AMap.Scale',
         'AMap.ToolBar',
@@ -30,4 +29,25 @@ export function loadAMap() {
     })
   }
   return loader
+}
+
+let locaLoader
+export async function loadLoca() {
+  await loadAMap()
+  if (!locaLoader) {
+    locaLoader = AMapLoader.load({
+      key: import.meta.env.VITE_AMAP_KEY,
+      version: '2.0',
+      Loca: { version: '2.0.0' },
+    })
+      .then(() => {
+        if (!window.Loca) throw new Error('LOCA 2.0 加载失败')
+        return window.Loca
+      })
+      .catch((error) => {
+        locaLoader = null
+        throw error
+      })
+  }
+  return locaLoader
 }

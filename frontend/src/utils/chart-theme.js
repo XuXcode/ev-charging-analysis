@@ -4,7 +4,7 @@ export function token(name) {
   const value = flat[name]
   return value?.startsWith('var(') ? token(value.slice(6, -1)) : value
 }
-export const mapPalette = [0, 1, 2, 3].map((i) => token(`map-scale-${i}`))
+export const mapPalette = [0, 1, 2, 3, 4].map((i) => token(`map-scale-${i}`))
 export const themeName = 'hunan-light'
 export const chartTheme = {
   color: ['green-600', 'blue-600', 'amber-700', 'green-400'].map(token),

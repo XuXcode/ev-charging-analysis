@@ -5,7 +5,11 @@ import { useAnalysisStore } from '@/stores/analysis'
 import MapView from '@/components/MapView.vue'
 import { formatNumber } from '@/utils/format'
 import { lowAccessibility } from '@/utils/road-gaps'
-const props = defineProps({ minutes: { type: Number, default: 15 } })
+const props = defineProps({
+  minutes: { type: Number, default: 15 },
+  showMap: { type: Boolean, default: true },
+})
+const emit = defineEmits(['update:minutes'])
 const analysis = useAnalysisStore(),
   data = ref(null),
   error = ref(''),
@@ -16,6 +20,9 @@ watch(
     threshold.value = value
   },
 )
+watch(threshold, (value) => {
+  if (value !== props.minutes) emit('update:minutes', value)
+})
 const controller = new AbortController()
 const supported = computed(
   () =>
@@ -97,12 +104,18 @@ onBeforeUnmount(() => controller.abort())
       <h2>定位与判断依据</h2>
       <p>点击清单切换对应区县高德地图，查看真实站点。</p>
       <MapView
-        v-if="analysis.districtCode"
+        v-if="showMap && analysis.districtCode"
         :city-code="analysis.cityCode"
         :district-code="analysis.districtCode"
         compact
       />
-      <p v-else>选择区县后展示站点定位地图。</p>
+      <p v-else>
+        {{
+          analysis.districtCode
+            ? '所选区县已在主地图定位，可返回道路专题继续比较。'
+            : '选择区县后展示真实站点定位地图。'
+        }}
+      </p>
       <h3>判断范围与限制</h3>
       <p>
         代表点不代表整个区县，空间邻近的3个站点不保证道路全局最近。容量、桩数、功率和等待时间缺失，当前不作排队或容量短缺判断。

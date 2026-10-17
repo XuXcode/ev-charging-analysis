@@ -2,6 +2,7 @@
 import { computed, ref, shallowRef, watch, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import * as echarts from 'echarts/core'
 import { bindMapDrag } from '@/utils/map-drag'
+import { mapViewport, observeMapViewport, mapLegend, resizeMapViewport } from '@/utils/map-viewport'
 import { MapChart, LineChart } from 'echarts/charts'
 import { TooltipComponent, VisualMapComponent, GridComponent } from 'echarts/components'
 import { CanvasRenderer } from 'echarts/renderers'
@@ -21,7 +22,11 @@ echarts.use([
   GridComponent,
   CanvasRenderer,
 ])
-const props = defineProps({ minutes: { type: Number, required: true } })
+const props = defineProps({
+  minutes: { type: Number, required: true },
+  mapTarget: { type: String, default: '' },
+  mapVisible: { type: Boolean, default: true },
+})
 const analysis = useAnalysisStore(),
   dashboard = useDashboardStore()
 const data = shallowRef(null),
@@ -150,6 +155,15 @@ function escape(value) {
     (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c],
   )
 }
+function zoomMap(delta) {
+  if (!mapChart) return
+  const zoom = mapChart.getOption()?.series?.[0]?.zoom || 1
+  mapChart.setOption({ series: [{ zoom: Math.max(0.7, Math.min(5, zoom + delta)) }] })
+}
+function resetMap() {
+  mapChart?.clear()
+  render()
+}
 async function render() {
   await nextTick()
   if (
@@ -201,6 +215,7 @@ async function render() {
         type: 'piecewise',
         left: 12,
         bottom: 12,
+        ...mapLegend(mapElement.value),
         pieces: [
           { value: -1, label: '未完成', color: '#e4e9e6' },
           { min: 0, max: 25, label: '0–25%', color: '#e1eedf' },
@@ -214,14 +229,30 @@ async function render() {
         {
           type: 'map',
           map: name,
+          aspectScale: 0.88,
+          ...mapViewport(mapElement.value, geometry.value),
+          zoom:
+            mapChart.getOption()?.series?.[0]?.map === name
+              ? mapChart.getOption()?.series[0].zoom
+              : 1,
+          center:
+            mapChart.getOption()?.series?.[0]?.map === name
+              ? mapChart.getOption()?.series[0].center
+              : undefined,
           roam: 'scale',
           zoomOnMouseWheel: true,
           moveOnMouseWheel: false,
           selectedMode: 'single',
-          data: mapRows,
+          data: mapRows.map((row) => ({
+            ...row,
+            label: { color: row.value > 50 ? '#fff' : '#244a3d', textBorderWidth: 0 },
+          })),
           label: { show: true, color: '#163f30', fontSize: 12 },
           itemStyle: { borderColor: '#ffffff', borderWidth: 1.5 },
-          emphasis: { itemStyle: { areaColor: '#edce85' } },
+          emphasis: {
+            label: { color: '#244a3d', textBorderWidth: 0 },
+            itemStyle: { areaColor: '#edce85' },
+          },
           select: { itemStyle: { borderColor: '#c29d35', borderWidth: 3 } },
         },
       ],
@@ -272,10 +303,13 @@ watch(
 )
 onMounted(async () => {
   observer = new ResizeObserver(() => {
-    mapChart?.resize()
+    resizeMapViewport(mapChart, mapElement.value)
     curveChart?.resize()
   })
-  if (mapElement.value) observer.observe(mapElement.value)
+  if (mapElement.value) {
+    observer.observe(mapElement.value)
+    observeMapViewport(observer, mapElement.value)
+  }
   if (curveElement.value) observer.observe(curveElement.value)
   await load()
   await render()
@@ -337,12 +371,19 @@ onBeforeUnmount(() => {
       </p>
     </template>
     <div v-show="supported && data" class="road-layout">
-      <section class="panel road-map-panel">
-        <h2>道路时间专题地图 · {{ minutes }}分钟</h2>
-        <p>市州以区县代表点等权汇总；区县每区一个代表点。</p>
-        <p v-if="boundaryError" role="alert">{{ boundaryError }}</p>
-        <div ref="mapElement" class="road-map" aria-label="道路可达性行政区专题地图" />
-      </section>
+      <Teleport :to="mapTarget || 'body'" :disabled="!mapTarget" defer>
+        <section v-show="supported && data && mapVisible" class="panel road-map-panel">
+          <div class="road-map-tools">
+            <button aria-label="放大道路地图" @click="zoomMap(0.25)">+</button
+            ><button aria-label="缩小道路地图" @click="zoomMap(-0.25)">−</button
+            ><button aria-label="重置道路地图" @click="resetMap">↺</button>
+          </div>
+          <h2>道路时间专题地图 · {{ minutes }}分钟</h2>
+          <p>市州以区县代表点等权汇总；区县每区一个代表点。</p>
+          <p v-if="boundaryError" role="alert">{{ boundaryError }}</p>
+          <div ref="mapElement" class="road-map" aria-label="道路可达性行政区专题地图" />
+        </section>
+      </Teleport>
       <aside class="road-side">
         <section class="panel">
           <h2>候选最短时间累计分布</h2>

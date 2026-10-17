@@ -1,9 +1,9 @@
 {
-  "scannedFiles": 225,
-  "historyBlobs": 479,
+  "scannedFiles": 222,
+  "historyBlobs": 644,
   "buildFiles": 0,
-  "privateBuildSecretsChecked": 0,
-  "configuredSecretsChecked": 0,
+  "privateBuildSecretsChecked": 2,
+  "configuredSecretsChecked": 4,
   "ignoredEnvironmentFiles": {
     ".env": true,
     "frontend/.env.local": true,

@@ -1,23 +1,36 @@
+<script>
+const spatialCameraCache = new Map()
+</script>
 <script setup>
 import { ref, computed, watch, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
 import * as echarts from 'echarts/core'
 import { bindMapDrag } from '@/utils/map-drag'
+import { cityLabelStyle, cityLabelFormatter } from '@/utils/map-label'
+import { bindProvinceOutline } from '@/utils/map-outline'
+import { mapViewport, observeMapViewport, mapLegend, resizeMapViewport } from '@/utils/map-viewport'
 import { MapChart } from 'echarts/charts'
+import { LabelLayout } from 'echarts/features'
 import { TooltipComponent, VisualMapComponent } from 'echarts/components'
 import { CanvasRenderer } from 'echarts/renderers'
 import { useAnalysisStore } from '@/stores/analysis'
 import { useDashboardStore } from '@/stores/dashboard'
 import { getAnalysisLayer } from '@/api/analysis'
-import { escapeHtml } from '@/utils/format'
-import { cityMapConfig } from '@/config/maps'
+import { regionTooltip, regionTooltipStyle } from '@/utils/map-tooltip'
+import {
+  cityMapConfig,
+  MAP_COLORS,
+  mapColorScale,
+  mapHoverColor,
+  mapLabelColor,
+} from '@/config/maps'
 import AppIcon from '@/components/AppIcon.vue'
-import { chartTheme, themeName, mapPalette, token } from '@/utils/chart-theme'
+import { chartTheme, themeName, mapPalette } from '@/utils/chart-theme'
 import { exportChartPng, exportChartCsv } from '@/utils/export'
 import { snapshotProvenance } from '@/utils/analysis-provenance'
 import { cityAnalysisRoute } from '@/utils/analysis-filters'
 
-echarts.use([MapChart, TooltipComponent, VisualMapComponent, CanvasRenderer])
+echarts.use([LabelLayout, MapChart, TooltipComponent, VisualMapComponent, CanvasRenderer])
 echarts.registerTheme(themeName, chartTheme)
 const exporting = ref(false),
   exportError = ref('')
@@ -73,11 +86,25 @@ const number = (value, key = definition.value?.key) =>
     : '—'
 let chart,
   removeMapDrag,
+  removeOutline,
   observer,
   abort,
   generation = 0,
   zoom = 1,
   center
+let activeCameraKey = ''
+const cameraKey = () => `${props.parentCode}:${props.scopeCode}:${layer.value}`
+function rememberCamera() {
+  if (!activeCameraKey) return
+  spatialCameraCache.set(activeCameraKey, { zoom, center: center ? [...center] : undefined })
+  if (spatialCameraCache.size > 32)
+    spatialCameraCache.delete(spatialCameraCache.keys().next().value)
+}
+function restoreCamera() {
+  const saved = spatialCameraCache.get(activeCameraKey)
+  zoom = saved?.zoom || 1
+  center = saved?.center ? [...saved.center] : undefined
+}
 const mapName = `sample-analysis-${Math.random().toString(36).slice(2)}`
 
 function featureRows() {
@@ -99,10 +126,16 @@ function featureRows() {
 }
 function tooltip(row) {
   if (!row) return ''
-  const d = row.data
   const grid = layer.value === 'grid' || layer.value === 'hotspots'
-  return `<strong>${escapeHtml(grid ? '网格 ' + row.code : row.name)}</strong><br/>${escapeHtml(definition.value?.label)}：<b>${number(row.value)} ${escapeHtml(definition.value?.unit)}</b><br/>POI样本：${number(d.count, 'count')} 条${grid ? `<br/>裁切网格面积：${number(d.areaKm2)} km²<br/>${escapeHtml(analysis.snapshot?.metadata.grid.hotspotMethod)}` : `<br/>占全省样本：${number(d.sharePercent, 'sharePercent')}%<br/>待复核线索：${number(d.reviewCount, 'count')} 条<br/>${escapeHtml(d.qualityStatus)}${d.completenessWarning ? '<br/><b>检索触及上限：样本可能不完整</b>' : ''}`}<br/><small>米制近似 · 非官方统计 · ${escapeHtml(analysis.snapshot?.metadata.algorithmVersion)}</small>`
+  return regionTooltip({
+    name: grid ? '网格 ' + row.code : row.name,
+    count: row.data.count,
+    sharePercent: row.data.sharePercent,
+    reviewCount: row.data.reviewCount,
+    completenessWarning: row.data.completenessWarning,
+  })
 }
+
 function render() {
   if (!chart || !mapData.value || !canvas.value?.clientWidth || !canvas.value?.clientHeight) return
   const rows = featureRows()
@@ -124,6 +157,13 @@ function render() {
     })),
   })
   const max = Math.max(0.001, ...rows.map((row) => row.value || 0))
+  const classified = layer.value === 'regions' || layer.value === 'coverage'
+  // Provincial miniatures always use the full provincial distribution, not the selected city.
+  const scale = mapColorScale(
+    regions.value.map((row) => row[definition.value?.key]),
+    (value) => number(value),
+  )
+  const selectedCode = props.focusCode || analysis.cityCode || dashboard.selectedCityCode
   chart.setOption(
     {
       animation: false,
@@ -131,17 +171,30 @@ function render() {
         trigger: 'item',
         confine: true,
         ...chartTheme.tooltip,
+        ...regionTooltipStyle,
         formatter: (p) => tooltip(rows.find((row) => row.code === p.name)),
       },
       visualMap: {
         show: !props.compact,
+        type: classified ? 'piecewise' : 'continuous',
+        ...(classified
+          ? {
+              pieces: scale.pieces,
+              seriesIndex: 0,
+              outOfRange: { color: MAP_COLORS.empty },
+              itemWidth: 15,
+              itemHeight: 10,
+              itemGap: 10,
+            }
+          : {}),
         min: 0,
         max,
         orient: 'horizontal',
         left: 20,
         bottom: 18,
         calculable: false,
-        text: [`${number(max)} ${definition.value?.unit || ''}`, '0'],
+        ...mapLegend(canvas.value),
+        text: classified ? undefined : [`${number(max)} ${definition.value?.unit || ''}`, '0'],
         inRange: {
           color: layer.value === 'uncovered' ? ['#f5eddc', '#b18b4b'] : mapPalette,
         },
@@ -158,30 +211,38 @@ function render() {
           center,
           layoutCenter: ['50%', '50%'],
           layoutSize: '98%',
+          ...mapViewport(canvas.value, { features: rows.map((row) => row.feature) }),
           aspectScale: 0.88,
-          data: rows.map((row) => ({
-            name: row.code,
-            code: row.code,
-            value: row.value,
-            regionName: cityMapConfig[row.code]?.shortName || row.name,
-            label: {
-              color: row.value >= max * 0.65 ? token('white') : token('primary-dark'),
-              textBorderColor: row.value >= max * 0.65 ? token('map-scale-3') : token('white'),
-              textBorderWidth: 1.5,
-            },
-          })),
+          data: rows.map((row) => {
+            const base = classified
+              ? scale.color(row.value)
+              : mapPalette[Math.min(4, Math.max(0, Math.round(((row.value || 0) / max) * 4)))]
+            const selected = row.code === selectedCode
+            const color = selected ? MAP_COLORS.selected : base
+            const hover = selected ? color : mapHoverColor(base)
+            return {
+              name: row.code,
+              code: row.code,
+              value: row.value,
+              sampleCount: row.data.count,
+              regionName: cityMapConfig[row.code]?.shortName || row.name,
+              ...(selected ? { itemStyle: { areaColor: color } } : {}),
+              label: { color: mapLabelColor(color), textBorderWidth: 0 },
+              emphasis: { itemStyle: { areaColor: hover }, label: { color: mapLabelColor(hover) } },
+            }
+          }),
           itemStyle: {
             borderColor: '#fff',
-            borderWidth: layer.value === 'grid' || layer.value === 'hotspots' ? 0.1 : 1.5,
+            borderWidth: layer.value === 'grid' || layer.value === 'hotspots' ? 0.1 : 1.4,
             areaColor: '#f0f4ef',
           },
           label: {
             show: !props.compact && layer.value === 'regions',
+            ...cityLabelStyle,
             color: '#244b39',
-            fontSize: 13,
-            lineHeight: 18,
-            formatter: (p) => `${p.data?.regionName}\n${number(p.value)}`,
+            formatter: cityLabelFormatter,
           },
+          labelLayout: { hideOverlap: true },
           emphasis: {
             label: {
               show: !props.compact && layer.value === 'regions',
@@ -191,8 +252,7 @@ function render() {
               textBorderWidth: 0,
             },
             itemStyle: {
-              areaColor: token('map-hover'),
-              borderColor: token('border-strong'),
+              borderColor: MAP_COLORS.border,
               borderWidth: 2,
             },
           },
@@ -293,6 +353,12 @@ async function load() {
   }
 }
 function focusRegion() {
+  // A scoped county already has its own fitted geometry; doubling zoom clips its boundary.
+  if (props.scopeCode && props.scopeCode === props.focusCode) {
+    zoom = 1
+    center = undefined
+    return
+  }
   if (!props.focusCode) return
   const row = featureRows().find((item) => item.code === props.focusCode)
   if (!row) return
@@ -346,6 +412,10 @@ function select(code) {
 onMounted(() => {
   chart = echarts.init(canvas.value, themeName)
   removeMapDrag = bindMapDrag(chart, canvas.value)
+  removeOutline = bindProvinceOutline(
+    chart,
+    () => props.parentCode === '430000' && !props.scopeCode,
+  )
   chart.on('click', (p) => select(p.name))
   chart.on('mouseover', (p) => {
     if (layer.value === 'regions') dashboard.hoverCity(p.name)
@@ -356,37 +426,37 @@ onMounted(() => {
     if (current) {
       zoom = current.zoom
       center = current.center
+      rememberCamera()
     }
   })
   observer = new ResizeObserver(() => {
     if (canvas.value?.clientWidth && canvas.value?.clientHeight) {
-      chart.resize()
-      render()
+      resizeMapViewport(chart, canvas.value)
     }
   })
   observer.observe(canvas.value)
+  observeMapViewport(observer, canvas.value)
+  activeCameraKey = cameraKey()
+  restoreCamera()
   load()
 })
-watch(
-  () => props.parentCode,
-  () => {
-    reset()
-    load()
-  },
-)
-watch(layer, () => {
-  reset()
+watch([() => props.parentCode, () => props.scopeCode, layer], () => {
+  rememberCamera()
+  activeCameraKey = cameraKey()
+  restoreCamera()
   load()
 })
 watch(() => analysis.activeMetric, render)
 watch(() => analysis.snapshot?.snapshotId, load)
-watch(() => props.scopeCode, load)
 watch(() => dashboard.hoveredCityCode, highlight)
-watch(() => dashboard.selectedCityCode, highlight)
+watch(() => dashboard.selectedCityCode, render)
+watch(() => analysis.cityCode, render)
 onBeforeUnmount(() => {
+  rememberCamera()
   ++generation
   abort?.abort()
   observer?.disconnect()
+  removeOutline?.()
   removeMapDrag?.()
   chart?.dispose()
 })

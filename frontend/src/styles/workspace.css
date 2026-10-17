@@ -48,19 +48,11 @@
   background: transparent;
   border-radius: 0;
 }
+/* Metric layout must not paint an opaque board behind glass cards. */
 .metric-grid {
-  gap: 0;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
-.metric-card {
+  background: transparent;
   border: 0;
-  border-right: 1px solid var(--border);
-  border-radius: 0;
-}
-.metric-card:last-child {
-  border-right: 0;
+  box-shadow: none;
 }
 .metric-label {
   min-height: 25px;

@@ -5,8 +5,6 @@ parking lot matches both "医院" and "停车场"); keeping one row per type is
 intentional evidence, not a duplicate.
 """
 
-import sqlalchemy as sa
-
 from alembic import op
 
 revision = "b1c2d3e4f5a6"
@@ -17,9 +15,7 @@ depends_on = None
 
 def upgrade():
     op.drop_constraint("uq_demand_pois_poi_id", "demand_pois", type_="unique")
-    op.create_unique_constraint(
-        "uq_demand_pois_poi_type", "demand_pois", ["poi_id", "demand_type"]
-    )
+    op.create_unique_constraint("uq_demand_pois_poi_type", "demand_pois", ["poi_id", "demand_type"])
 
 
 def downgrade():

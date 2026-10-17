@@ -42,6 +42,10 @@ GRANT ALL PRIVILEGES ON ev_charging.* TO 'ev_app'@'localhost';
 
 所有采集和道路计算按[采集说明](../docs/guides/COLLECTOR.md)与[道路方法](../docs/guides/ROAD_ACCESSIBILITY.md)显式运行；新外部请求需要配额确认。保留旧API与历史模型中正式业务仍使用的字段，不因当前页面暂不展示而删除数据库记录。
 
-backend/.runtime保存私有MySQL、采集页、检查点、边界证据、快照和道路结果，不提交Git；backend/.conda也不提交。历史planning_datasets/planning_runs表与Alembic revision链保留，解除业务ORM和API注册；retained_schema过滤器避免自动生成删除这两张表。
+backend/.runtime保存私有MySQL、采集页、检查点、边界证据、快照和道路结果，不提交Git；backend/.conda也不提交。历史planning_datasets/planning_runs表与Alembic revision链保留，解除业务ORM和API注册；retained_schema过滤器避免自动生成删除历史表。
 
 健康检查路径为 `/api/health`，会执行数据库连接检查；启动成功不代表数据库或历史快照已准备齐全。仓库不包含自动化测试套件。PyCharm解释器和运行配置详见[本机启动](../docs/guides/LOCAL_STARTUP.md)。
+
+## 历史表保护
+
+规划与需求代理的业务代码及API已移除；既有Alembic迁移链保留。`app/db/retained_schema.py`保护planning_datasets、planning_runs、demand_pois、demand_runs、demand_score_runs五张历史表，避免自动生成删表操作。本次整理不执行迁移，不删除数据库记录。

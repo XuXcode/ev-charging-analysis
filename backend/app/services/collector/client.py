@@ -137,31 +137,6 @@ class AMapClient:
             raise CollectionError("POI 响应列表格式或页大小异常")
         return pois, response.attempts
 
-    def demand_pois(self, adcode, keywords, page):
-        """Demand-side POI search with custom keywords (bounded evidence, not a census).
-
-        region scoping + city_limit keeps results inside the requested district;
-        page 8 is the upstream hard cap, same as the station collector.
-        """
-        if not 1 <= page <= 8:
-            raise CollectionError("同一行政区搜索最多8页，每页25条")
-        if not isinstance(keywords, str) or not keywords.strip():
-            raise CollectionError("需求POI关键词不能为空")
-        response = self.request(
-            POI_URL,
-            {
-                "keywords": keywords,
-                "region": adcode,
-                "city_limit": "true",
-                "page_num": page,
-                "page_size": 25,
-            },
-        )
-        pois = response.body.get("pois")
-        if not isinstance(pois, list) or len(pois) > 25:
-            raise CollectionError("需求POI响应列表格式或页大小异常")
-        return pois, response.attempts
-
     def polygon_pois(self, bounds, page):
         """One bounded rectangular shard; caller validates source district and checkpoints."""
         west, south, east, north = bounds

@@ -5,7 +5,8 @@ import ViewState from './ViewState.vue'
 const failed = ref(false),
   revision = ref(0),
   route = useRoute()
-onErrorCaptured(() => {
+onErrorCaptured((error, instance, info) => {
+  if (import.meta.env.DEV) console.error('[UI boundary]', error.message, info)
   failed.value = true
   return false
 })

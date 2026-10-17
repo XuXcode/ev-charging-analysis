@@ -2,7 +2,7 @@ param([string]$ServerHome = $env:MYSQL_SERVER_HOME)
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path -Parent $PSScriptRoot
 $dataPath = Join-Path $projectRoot 'backend\.runtime\mysql'
-if (-not $ServerHome) { $ServerHome = 'C:\Users\Lenovo\Desktop\mysql-8.0.46-winx64' }
+if (-not $ServerHome) { $ServerHome = 'R:\Program Files\MySQL\MySQL Server 8.4' }
 $serverPath = Join-Path $ServerHome 'bin\mysqld.exe'
 if (-not (Test-Path -LiteralPath $serverPath)) { throw 'Set MYSQL_SERVER_HOME to the installed MySQL 8 directory.' }
 if (-not (Test-Path -LiteralPath (Join-Path $dataPath 'auto.cnf'))) {

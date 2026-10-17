@@ -1,0 +1,30 @@
+import { escapeHtml, formatNumber } from '@/utils/format'
+
+// Shared presentation only. Missing quality fields stay absent rather than invented.
+export function regionTooltip({
+  name,
+  count,
+  sharePercent,
+  shareText,
+  reviewCount,
+  completenessWarning,
+}) {
+  const share =
+    shareText ?? (Number.isFinite(sharePercent) ? `${formatNumber(sharePercent, 2)}%` : '—')
+  return `<div class="map-region-tooltip">
+    <strong class="map-region-tooltip__name">${escapeHtml(name)}</strong>
+    <div class="map-region-tooltip__metric"><span>POI样本数</span><div><b>${formatNumber(count)}</b><small>条</small></div></div>
+    <div class="map-region-tooltip__row"><span>占全省样本</span><span>${escapeHtml(share)}</span></div>
+    ${Number.isFinite(reviewCount) && reviewCount > 0 ? `<div class="map-region-tooltip__row"><span>待复核线索</span><span>${formatNumber(reviewCount)} 条</span></div>` : ''}
+    ${completenessWarning ? '<div class="map-region-tooltip__risk">样本可能不完整</div>' : ''}
+  </div>`
+}
+export const regionTooltipStyle = {
+  backgroundColor: 'rgba(247, 253, 249, 0.95)',
+  borderColor: 'rgba(79, 132, 104, 0.25)',
+  borderWidth: 1,
+  padding: [12, 14],
+  textStyle: { color: '#294b39', fontSize: 12 },
+  extraCssText:
+    'border-radius:12px;box-shadow:0 6px 20px rgba(25,65,45,.12);line-height:1.5;white-space:normal;',
+}

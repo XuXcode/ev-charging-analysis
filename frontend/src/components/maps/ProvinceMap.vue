@@ -3,14 +3,27 @@ import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import * as echarts from 'echarts/core'
 import { bindMapDrag } from '@/utils/map-drag'
+import { cityLabelStyle, cityLabelFormatter } from '@/utils/map-label'
+import { bindProvinceOutline } from '@/utils/map-outline'
+import { mapViewport, observeMapViewport, mapLegend, resizeMapViewport } from '@/utils/map-viewport'
 import { MapChart } from 'echarts/charts'
+import { LabelLayout } from 'echarts/features'
 import { TooltipComponent, VisualMapComponent } from 'echarts/components'
 import { CanvasRenderer } from 'echarts/renderers'
 import { useDashboardStore } from '@/stores/dashboard'
-import { hunan, cityMapConfig, MAP_COLORS, SAMPLE_CLASSES } from '@/config/maps'
-import { escapeHtml, formatNumber } from '@/utils/format'
+import {
+  hunan,
+  labeledHunan,
+  cityMapConfig,
+  MAP_COLORS,
+  mapColorScale,
+  mapHoverColor,
+  mapLabelColor,
+} from '@/config/maps'
+import { formatNumber } from '@/utils/format'
+import { regionTooltip, regionTooltipStyle } from '@/utils/map-tooltip'
 import AppIcon from '../AppIcon.vue'
-echarts.use([MapChart, TooltipComponent, VisualMapComponent, CanvasRenderer])
+echarts.use([LabelLayout, MapChart, TooltipComponent, VisualMapComponent, CanvasRenderer])
 const props = defineProps({ linked: Boolean, selectionOnly: Boolean, compact: Boolean })
 const emit = defineEmits(['city-select'])
 const store = useDashboardStore()
@@ -25,6 +38,12 @@ const cities = computed(() =>
     count: summary.value?.cities.find((item) => item.cityCode === city.code)?.storedCount ?? null,
   })),
 )
+const colorScale = computed(() =>
+  mapColorScale(
+    cities.value.map((city) => city.count),
+    (value) => formatNumber(value, 0),
+  ),
+)
 const focusedCity = computed(() => cities.value.find((city) => city.code === hoverCode.value))
 const percent = (count) =>
   Number.isFinite(count) && summary.value?.storedCount > 0
@@ -37,29 +56,35 @@ const description = computed(() =>
 )
 let chart,
   removeMapDrag,
+  removeOutline,
   observer,
   zoom = 1,
   center
 function tooltip(city) {
   if (!city) return ''
-  return `<div class="province-tooltip"><strong>${escapeHtml(city.name)}</strong><dl><dt>高德可检索POI样本</dt><dd>${formatNumber(city.count)} 条</dd><dt>占全省样本比例</dt><dd>${percent(city.count)}</dd></dl><small>检索样本不代表官方设施总量<br/>点击进入市州站点地图 ↗</small></div>`
+  const quality = summary.value?.cities.find((item) => item.cityCode === city.code)
+  return regionTooltip({
+    name: city.name,
+    count: city.count,
+    shareText: percent(city.count),
+    reviewCount: quality?.reviewCount,
+    completenessWarning: quality?.completenessWarning,
+  })
 }
+
 function option() {
   return {
     animation: false,
     tooltip: {
       trigger: 'item',
       confine: true,
-      backgroundColor: '#fff',
-      borderColor: '#d6e3d9',
-      textStyle: { color: '#293e33', fontSize: 13 },
-      padding: 16,
+      ...regionTooltipStyle,
       formatter: (params) => tooltip(cities.value.find((city) => city.code === params.data?.code)),
     },
     visualMap: {
       show: false,
       type: 'piecewise',
-      pieces: SAMPLE_CLASSES,
+      pieces: colorScale.value.pieces,
       seriesIndex: 0,
       outOfRange: { color: MAP_COLORS.empty },
     },
@@ -76,30 +101,38 @@ function option() {
         scaleLimit: { min: 0.8, max: 3 },
         layoutCenter: ['50%', '50%'],
         layoutSize: '99%',
+        ...mapViewport(canvas.value, hunan),
         aspectScale: 0.88,
         selectedMode: false,
-        data: cities.value.map((city) => ({
-          name: city.name,
-          code: city.code,
-          value: city.count,
-          shortName: city.shortName,
-          label: { color: city.count >= 1000 ? '#ffffff' : '#244b39' },
-        })),
+        data: cities.value.map((city) => {
+          const selected = city.code === store.selectedCityCode
+          const color = selected ? MAP_COLORS.selected : colorScale.value.color(city.count)
+          const hover = selected ? color : mapHoverColor(color)
+          return {
+            name: city.name,
+            code: city.code,
+            value: city.count,
+            sampleCount: city.count,
+            shortName: city.shortName,
+            ...(selected ? { itemStyle: { areaColor: color } } : {}),
+            label: { color: mapLabelColor(color) },
+            emphasis: { itemStyle: { areaColor: hover }, label: { color: mapLabelColor(hover) } },
+          }
+        }),
         label: {
           show: !props.compact,
-          fontSize: 13,
-          lineHeight: 18,
-          formatter: (params) =>
-            `${params.data?.shortName || params.name}\n${Number.isFinite(params.value) ? params.value.toLocaleString('zh-CN') : '—'}`,
+          ...cityLabelStyle,
+          formatter: cityLabelFormatter,
         },
         itemStyle: {
           areaColor: MAP_COLORS.empty,
           borderColor: '#ffffff',
-          borderWidth: 2,
+          borderWidth: 1.4,
           shadowColor: '#2b61441a',
           shadowBlur: 15,
           shadowOffsetY: 4,
         },
+        labelLayout: { hideOverlap: true },
         emphasis: {
           label: {
             show: !props.compact,
@@ -107,7 +140,7 @@ function option() {
             fontWeight: 600,
             textBorderWidth: 0,
           },
-          itemStyle: { areaColor: MAP_COLORS.emphasis, borderColor: '#b1d2bd', borderWidth: 2.5 },
+          itemStyle: { borderColor: MAP_COLORS.border, borderWidth: 2.5 },
         },
       },
     ],
@@ -156,9 +189,10 @@ function openCity(code) {
   router.push(`/city/${code}`)
 }
 onMounted(() => {
-  echarts.registerMap('hunan-province-samples', hunan)
+  echarts.registerMap('hunan-province-samples', labeledHunan)
   chart = echarts.init(canvas.value)
   removeMapDrag = bindMapDrag(chart, canvas.value)
+  removeOutline = bindProvinceOutline(chart)
   render()
   chart.on('click', (params) => openCity(params.data?.code))
   chart.on('mouseover', (params) => {
@@ -179,15 +213,18 @@ onMounted(() => {
     const height = canvas.value?.clientHeight
     // Fullscreen and responsive layout can briefly report a zero-sized container.
     // A zero-sized Geo transform has no inverse; wait for the next valid layout.
-    if (width > 0 && height > 0) chart?.resize({ width, height })
+    if (width > 0 && height > 0) resizeMapViewport(chart, canvas.value)
   })
   observer.observe(canvas.value)
+  observeMapViewport(observer, canvas.value)
   if (!summary.value) store.loadCollectionInfo()
 })
 watch(() => store.collectionInfo, render)
+watch(() => store.selectedCityCode, render)
 watch(() => store.highlightedCodes, highlight, { deep: true })
 onBeforeUnmount(() => {
   observer?.disconnect()
+  removeOutline?.()
   removeMapDrag?.()
   chart?.dispose()
   chart = null
@@ -214,10 +251,10 @@ onBeforeUnmount(() => {
     />
     <aside class="province-map-legend">
       <strong>POI样本数 <small>条</small></strong>
-      <span v-for="piece in SAMPLE_CLASSES" :key="piece.label"
+      <span v-for="piece in colorScale.pieces" :key="piece.label"
         ><i :style="{ background: piece.color }" />{{ piece.label }}</span
       >
-      <small>固定数量区间<br />无统计密度含义</small>
+      <small>市州样本数量分位分级<br />仅用于视觉设色</small>
     </aside>
     <div class="province-focus" aria-live="polite">
       <template v-if="focusedCity"

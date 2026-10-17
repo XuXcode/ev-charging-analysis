@@ -6,11 +6,13 @@ import { useDashboardStore } from '@/stores/dashboard'
 import { useAnalysisStore } from '@/stores/analysis'
 import { comparisonOption } from '@/utils/charts'
 import { cityMapConfig } from '@/config/maps'
+import { demoMode } from '@/api/demo-fallback'
 import MetricCard from '@/components/MetricCard.vue'
 import MapView from '@/components/MapView.vue'
 import RankingList from '@/components/RankingList.vue'
 import CollectionInfo from '@/components/CollectionInfo.vue'
 import ChartContainer from '@/components/ChartContainer.vue'
+import MonitorLayout from '@/components/layout/MonitorLayout.vue'
 import { formatNumber } from '@/utils/format'
 import { coreFindings } from '@/utils/findings'
 import { cityAnalysisRoute } from '@/utils/analysis-filters'
@@ -49,6 +51,7 @@ const overviewMetrics = computed(() => [
     unit: '条/km²',
     precision: 3,
     change: '当前样本 / 行政边界模型面积',
+    pendingLabel: '该口径未记录密度',
   },
   {
     key: 'cities',
@@ -63,6 +66,7 @@ const overviewMetrics = computed(() => [
     value: analysis.districtCatalog.length || undefined,
     unit: '个',
     change: '真实行政区边界目录',
+    pendingLabel: '区县目录待接口提供',
   },
 ])
 const focusedCity = computed(() =>
@@ -99,24 +103,25 @@ const compareChart = computed(() =>
 onMounted(() => store.selectCity(analysis.cityCode))
 </script>
 <template>
-  <div class="overview-page">
-    <div class="page-intro">
-      <div>
-        <h1>湖南省充电设施空间格局</h1>
-        <p>省级专题地图 / 市州站点地图 · <span class="sample-data-badge">真实高德POI样本</span></p>
+  <MonitorLayout
+    panel-eyebrow="省级空间格局"
+    panel-title="湖南省充电设施空间格局"
+    panel-subtitle="省级专题地图 / 市州站点地图 · 真实高德POI样本"
+  >
+    <template #panel-actions>
+      <span class="hud-scope">真实POI样本 · 非官方设施统计</span>
+      <button class="methodology-button" @click="methodologyOpen = true">指标与分析口径 ↗</button>
+    </template>
+    <template #map><MapView linked /></template>
+
+    <div class="overview-page">
+      <div class="hud-metrics">
+        <MetricCard v-for="metric in overviewMetrics" :key="metric.key" :metric="metric" />
       </div>
-      <div class="intro-actions">
-        <span class="page-date">真实POI样本 · 非官方设施统计</span
-        ><button class="methodology-button" @click="methodologyOpen = true">
-          指标与分析口径 ↗
-        </button>
-      </div>
-    </div>
-    <div class="metric-grid">
-      <MetricCard v-for="metric in overviewMetrics" :key="metric.key" :metric="metric" />
-    </div>
-    <div class="dashboard-grid">
-      <section class="panel regional-panel sample-context-panel">
+
+      <RankingList sample-mode />
+      <details class="overview-disclosure">
+        <summary>样本概况与数据质量</summary>
         <div class="panel-heading">
           <div>
             <h2>样本概况</h2>
@@ -157,32 +162,42 @@ onMounted(() => store.selectCity(analysis.cityCode))
           </ol>
           <p v-else>等待真实分析快照，当前不生成结论。</p>
         </div>
-      </section>
-      <MapView linked /><RankingList sample-mode />
-    </div>
-    <AnalysisProvenance />
-    <div class="overview-comparison">
-      <ChartContainer
-        :loading="analysis.loading"
-        :title="`市州${analysis.definition?.label || 'POI样本'}对比`"
-        subtitle="按当前样本指标降序 · 虚线为14市州算术均值"
-        :option="compareChart"
-        :empty="!sampleCities.some((c) => Number.isFinite(c.samples))"
-        :highlighted-codes="store.highlightedCodes"
-        @city-hover="store.hoverCity"
-        @city-leave="store.hoverCity()"
-        @city-select="(code) => router.push(cityAnalysisRoute(analysis, code))"
-      >
-        <template #actions
-          ><span class="chart-scope"
-            >{{ analysis.definition?.unit || '条' }} · 非官方统计</span
-          ></template
+      </details>
+
+      <details class="overview-comparison">
+        <summary>市州指标对比</summary>
+        <ChartContainer
+          :loading="analysis.loading"
+          :title="`市州${analysis.definition?.label || 'POI样本'}对比`"
+          subtitle="按当前样本指标降序 · 虚线为14市州算术均值"
+          :option="compareChart"
+          :empty="!sampleCities.some((c) => Number.isFinite(c.samples))"
+          :highlighted-codes="store.highlightedCodes"
+          @city-hover="store.hoverCity"
+          @city-leave="store.hoverCity()"
+          @city-select="(code) => router.push(cityAnalysisRoute(analysis, code))"
         >
-      </ChartContainer>
+          <template #actions
+            ><span class="chart-scope"
+              >{{ analysis.definition?.unit || '条' }} · 非官方统计</span
+            ></template
+          >
+        </ChartContainer>
+      </details>
+
+      <AnalysisProvenance />
     </div>
+
     <Modal v-model:open="methodologyOpen" title="指标与分析口径" :footer="null" :width="640">
       <div class="methodology-content">
-        <p v-if="store.sourceInfo.simulated" class="methodology-notice">
+        <p v-if="demoMode" class="methodology-notice">
+          当前为演示数据：后端接口不可用，界面正在回放仓库内离线产物（
+          <code>docs/exports/city-poi-samples.csv</code>、
+          <code>docs/reports/GEOMETRY_V12_AUDIT.json</code>、
+          <code>public/data-quality/poi-audit.json</code
+          >）。这些数值不是实时统计，接口恢复后自动失效。
+        </p>
+        <p v-else-if="store.sourceInfo.simulated" class="methodology-notice">
           当前为模拟数据。以下口径用于统一前端展示，不代表正式统计结果。
         </p>
         <dl>
@@ -218,55 +233,5 @@ onMounted(() => store.selectCity(analysis.cityCode))
         </div>
       </div>
     </Modal>
-  </div>
+  </MonitorLayout>
 </template>
-
-<style scoped>
-.overview-page .dashboard-grid {
-  grid-template-columns: clamp(220px, 13vw, 260px) minmax(0, 1fr) clamp(240px, 15vw, 300px);
-  gap: 16px;
-  height: clamp(650px, calc(100vh - 410px), 900px);
-  min-height: 0;
-}
-.dashboard-grid > .sample-context-panel,
-.dashboard-grid :deep(.ranking-panel) {
-  min-height: 0;
-  max-height: 100%;
-  overflow-y: auto;
-}
-.dashboard-grid :deep(.map-view),
-.dashboard-grid :deep(.spatial-map) {
-  height: 100%;
-  min-height: 0;
-}
-@media (max-width: 1500px) {
-  .overview-page .dashboard-grid {
-    grid-template-columns: 215px minmax(0, 1fr) 245px;
-    gap: 12px;
-  }
-}
-@media (max-width: 1050px) {
-  .overview-page .dashboard-grid {
-    grid-template-columns: minmax(0, 1fr) 240px;
-    height: 700px;
-  }
-  .dashboard-grid > .sample-context-panel {
-    display: none;
-  }
-}
-@media (max-width: 760px) {
-  .overview-page .dashboard-grid {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-  }
-  .dashboard-grid :deep(.map-view) {
-    width: 100%;
-    height: 650px;
-    flex: none;
-  }
-  .dashboard-grid :deep(.ranking-panel) {
-    max-height: none;
-  }
-}
-</style>

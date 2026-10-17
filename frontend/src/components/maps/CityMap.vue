@@ -11,7 +11,8 @@ import { useRoute, useRouter } from 'vue-router'
 import { cityMapConfig } from '@/config/maps'
 import { useCityStations } from '@/composables/useCityStations'
 import { useAnalysisStore } from '@/stores/analysis'
-import { loadAMap } from '@/utils/amap'
+import { loadAMap, loadLoca } from '@/utils/amap'
+import { mapInsets } from '@/utils/map-viewport'
 import { escapeHtml, formatNumber } from '@/utils/format'
 import { getPoiNameHints } from '@/utils/poiQuality'
 import { classificationLabels, reviewStatusLabels } from '@/config/analysis'
@@ -36,6 +37,7 @@ const district = computed(() =>
 )
 const city = computed(() => cityMapConfig[props.cityCode])
 const wrapper = ref(null)
+const toolbarHost = ref(null)
 const canvas = ref(null)
 const layer = ref('cluster')
 const cityBoundaryVisible = ref(true)
@@ -148,6 +150,7 @@ function restoreCamera() {
   if (saved && map) map.setZoomAndCenter(saved.zoom, saved.center, false, 450)
   else reset()
 }
+const locaAvailable = ref(false)
 const markerStations = new WeakMap()
 const markerClusterCounts = new WeakMap()
 const boundMarkers = new WeakSet()
@@ -170,7 +173,6 @@ function stationContent(station) {
     <strong>${escapeHtml(station.name)}</strong>
     <p>${escapeHtml(station.address || station.district)}</p>
     <div class="cm-info-tags"><span>${escapeHtml(classificationLabels[station.classification] || '待分类')}</span><span>${escapeHtml(reviewStatusLabels[station.reviewStatus] || '未核验')}</span></div>
-    ${hintContent}
     ${station.completenessWarning ? '<p class="cm-review-hint">检索触及上限，区县样本可能不完整</p>' : ''}
     <details class="cm-info-details"><summary>数据来源与详情</summary><dl>
       <div><dt>来源</dt><dd>高德开放平台 · 入库POI样本</dd></div>
@@ -178,8 +180,9 @@ function stationContent(station) {
       <div><dt>POI ID</dt><dd>${escapeHtml(station.poiId || '—')}</dd></div>
       <div><dt>坐标</dt><dd>${station.position.map((value) => value.toFixed(6)).join(', ')} · GCJ-02</dd></div>
       <div><dt>质量批次</dt><dd>${escapeHtml(station.batch || '—')}</dd></div>
-    </dl></details>
-    <small>高德POI样本 · 非官方设施统计 · 营业状态待核验</small>
+    </dl>
+    ${hintContent}
+    <p class="cm-info-note">POI样本不代表官方设施统计，营业状态待核验。</p></details>
   </div>`
 }
 function markerContent(selected = false) {
@@ -280,6 +283,7 @@ function renderStations() {
     return
   }
   if (layer.value === 'loca') {
+    if (!Loca) return
     loca ||= new Loca.Container({ map })
     locaSource = new Loca.GeoJSONSource({
       data: {
@@ -383,10 +387,10 @@ function reset() {
     (polygon) => districtPolygonCodes.get(polygon) === props.districtCode,
   )
   if (selectedPolygons.length) {
-    map.setFitView(selectedPolygons, false, [45, 55, 45, 55], 14)
+    map.setFitView(selectedPolygons, false, mapInsets(canvas.value), 14)
     return
   }
-  if (cityPolygons.length) map.setFitView(cityPolygons, false, [45, 55, 45, 55], 12)
+  if (cityPolygons.length) map.setFitView(cityPolygons, false, mapInsets(canvas.value), 12)
   else map.setZoomAndCenter(10, city.value.center)
 }
 
@@ -561,11 +565,19 @@ async function initializeMap() {
   mapError.value = ''
   try {
     AMap = await loadAMap()
-    Loca = window.Loca
-    if (!Loca) throw new Error('LOCA 2.0 加载失败')
     if (disposed || !city.value) return
     await nextTick()
     if (disposed) return
+    loadLoca()
+      .then((sdk) => {
+        if (disposed) return
+        Loca = sdk
+        locaAvailable.value = true
+      })
+      .catch(() => {
+        // Optional visualization SDK failure must not disable the base map.
+        locaAvailable.value = false
+      })
     map = new AMap.Map(canvas.value, {
       center: city.value.center,
       zoom: 10,
@@ -604,6 +616,9 @@ async function fullscreen() {
 }
 
 onMounted(() => {
+  // Move only presentation controls into the shared shell; keep all map handlers intact.
+  toolbarHost.value =
+    wrapper.value?.closest('.app-monitor')?.querySelector('#gis-map-tools') || null
   initializeMap()
   resizeObserver = new ResizeObserver(() => map?.resize())
   resizeObserver.observe(wrapper.value)
@@ -752,111 +767,133 @@ defineExpose({
         </p>
       </div>
       <div class="cm-header-actions">
-        <span class="cm-live-chip">{{ layer === 'loca' ? '高德 JS API + LOCA 2.0' : '高德 JS API 2.0' }}</span
+        <span class="cm-live-chip">{{
+          layer === 'loca' ? '高德 JS API + LOCA 2.0' : '高德 JS API 2.0'
+        }}</span
         ><button class="icon-button" aria-label="市州地图全屏" @click="fullscreen">
           <AppIcon name="expand" :size="17" />
         </button>
       </div>
     </header>
-    <div class="cm-toolbar">
-      <div class="cm-layer-switch" role="group" aria-label="站点展示图层">
-        <button
-          :class="{ active: layer === 'cluster' }"
-          :aria-pressed="layer === 'cluster'"
-          @click="layer = 'cluster'"
-        >
-          点聚合
-        </button>
-        <button
-          :class="{ active: layer === 'markers' }"
-          :aria-pressed="layer === 'markers'"
-          :disabled="stationCount > markerLimit"
-          :title="
-            stationCount > markerLimit
-              ? '请先选择区县或缩小当前视野，单独Marker最多显示500条'
-              : '逐点显示当前样本'
-          "
-          @click="layer = 'markers'"
-        >
-          Marker
-        </button>
-        <button
-          :class="{ active: layer === 'heatmap' }"
-          :aria-pressed="layer === 'heatmap'"
-          @click="layer = 'heatmap'"
-        >
-          POI样本聚集度
-        </button>
-        <button
-          :class="{ active: layer === 'loca' }"
-          :aria-pressed="layer === 'loca'"
-          @click="layer = 'loca'"
-        >
-          LOCA散点
-        </button>
-      </div>
-      <a-checkbox v-model:checked="cityBoundaryVisible">市州边界</a-checkbox>
-      <a-checkbox v-model:checked="districtVisible">区县边界</a-checkbox>
-      <a-checkbox v-model:checked="viewportOnly" :disabled="!mapReady">仅当前视野</a-checkbox>
-      <span v-if="stationCount > markerLimit" class="cm-marker-limit"
-        >样本较多，使用聚合；区县或视野内≤500条可逐点显示</span
-      >
-    </div>
-    <div class="cm-search">
-      <span class="cm-search-label">全库站点检索</span>
-      <input
-        aria-label="搜索入库站点"
-        v-model="searchText"
-        type="search"
-        placeholder="输入站点名称、地址或POI ID"
-        @input="searchOpen = true"
-        @focus="searchOpen = true"
-        @keydown.esc="searchOpen = false"
-        @keydown.enter.prevent="searchResult.items[0] && chooseSearchStation(searchResult.items[0])"
-      />
-      <button v-if="searchText" type="button" @click="clearSearch">清除</button>
-      <a-checkbox v-model:checked="searchCurrentScope">仅当前行政区</a-checkbox>
-      <span v-if="searchText" role="status">{{
-        remoteSearch.loading.value ? '检索中…' : `${searchResult.total} 条匹配`
-      }}</span>
-      <div v-if="searchOpen && searchText.trim()" class="cm-search-results">
-        <button
-          v-for="station in searchResult.items"
-          :key="station.id"
-          type="button"
-          @click="chooseSearchStation(station)"
-        >
-          <strong>{{ station.name }}</strong
-          ><small>{{ station.address || station.district }}</small>
-        </button>
-        <p v-if="remoteSearch.loading.value" role="status">正在检索入库样本…</p>
-        <p v-else-if="remoteSearch.error.value" role="alert">
-          {{ remoteSearch.error.value }} <button @click="runSearch(1, true)">重试</button>
-        </p>
-        <p v-else-if="!searchResult.total">没有匹配的入库站点，请调整名称或筛选条件。</p>
-        <div v-if="searchResult.total > remoteSearch.pageSize" class="cm-search-pagination">
+    <Teleport :to="toolbarHost || 'body'" :disabled="!toolbarHost">
+      <div class="cm-toolbar">
+        <select v-model="layer" class="cm-layer-compact" aria-label="站点展示图层">
+          <option value="cluster">点聚合</option>
+          <option value="markers" :disabled="stationCount > markerLimit">Marker</option>
+          <option value="heatmap">POI样本聚集度</option>
+          <option value="loca" :disabled="!mapReady || !locaAvailable">LOCA散点</option>
+        </select>
+        <div class="cm-layer-switch" role="group" aria-label="站点展示图层">
           <button
-            :disabled="remoteSearch.loading.value || remoteSearch.page.value === 1"
-            @click="runSearch(remoteSearch.page.value - 1, true)"
+            :class="{ active: layer === 'cluster' }"
+            :aria-pressed="layer === 'cluster'"
+            @click="layer = 'cluster'"
           >
-            上一页
+            点聚合
           </button>
-          <span
-            >第{{ remoteSearch.page.value }}页 /
-            {{ Math.ceil(searchResult.total / remoteSearch.pageSize) }}页</span
-          >
           <button
-            :disabled="
-              remoteSearch.loading.value ||
-              remoteSearch.page.value * remoteSearch.pageSize >= searchResult.total
+            :class="{ active: layer === 'markers' }"
+            :aria-pressed="layer === 'markers'"
+            :disabled="stationCount > markerLimit"
+            :title="
+              stationCount > markerLimit
+                ? '请先选择区县或缩小当前视野，单独Marker最多显示500条'
+                : '逐点显示当前样本'
             "
-            @click="runSearch(remoteSearch.page.value + 1, true)"
+            @click="layer = 'markers'"
           >
-            下一页
+            Marker
+          </button>
+          <button
+            :class="{ active: layer === 'heatmap' }"
+            :aria-pressed="layer === 'heatmap'"
+            @click="layer = 'heatmap'"
+          >
+            POI样本聚集度
+          </button>
+          <button
+            :class="{ active: layer === 'loca' }"
+            :aria-pressed="layer === 'loca'"
+            :disabled="!mapReady || !locaAvailable"
+            :title="locaAvailable ? '高德LOCA散点图层' : 'LOCA组件暂不可用，仍可使用站点与聚合'"
+            @click="layer = 'loca'"
+          >
+            LOCA散点
           </button>
         </div>
       </div>
-    </div>
+      <details class="cm-scope-switch">
+        <summary>边界与范围</summary>
+        <div class="cm-scope-options">
+          <a-checkbox v-model:checked="cityBoundaryVisible">市州边界</a-checkbox>
+          <a-checkbox v-model:checked="districtVisible">区县边界</a-checkbox>
+          <a-checkbox v-model:checked="viewportOnly" :disabled="!mapReady">仅当前视野</a-checkbox>
+        </div>
+      </details>
+      <div class="cm-search">
+        <span class="cm-search-label">全库站点检索</span>
+        <input
+          aria-label="搜索入库站点"
+          v-model="searchText"
+          type="search"
+          placeholder="输入站点名称、地址或POI ID"
+          @input="searchOpen = true"
+          @focus="searchOpen = true"
+          @keydown.esc="searchOpen = false"
+          @keydown.enter.prevent="
+            searchResult.items[0] && chooseSearchStation(searchResult.items[0])
+          "
+        />
+        <button v-if="searchText" type="button" @click="clearSearch">清除</button>
+
+        <details class="cm-search-scope">
+          <summary aria-label="搜索范围" title="搜索范围">范围</summary>
+          <div class="cm-scope-options">
+            <a-checkbox v-model:checked="searchCurrentScope">仅当前行政区</a-checkbox>
+          </div>
+        </details>
+        <div v-if="searchOpen && searchText.trim()" class="cm-search-results">
+          <p role="status">
+            {{ remoteSearch.loading.value ? '检索中…' : `${searchResult.total} 条匹配` }}
+          </p>
+          <button
+            v-for="station in searchResult.items"
+            :key="station.id"
+            type="button"
+            @click="chooseSearchStation(station)"
+          >
+            <strong>{{ station.name }}</strong
+            ><small>{{ station.address || station.district }}</small>
+          </button>
+          <p v-if="remoteSearch.loading.value" role="status">正在检索入库样本…</p>
+          <p v-else-if="remoteSearch.error.value" role="alert">
+            {{ remoteSearch.error.value }} <button @click="runSearch(1, true)">重试</button>
+          </p>
+          <p v-else-if="!searchResult.total">没有匹配的入库站点，请调整名称或筛选条件。</p>
+          <div v-if="searchResult.total > remoteSearch.pageSize" class="cm-search-pagination">
+            <button
+              :disabled="remoteSearch.loading.value || remoteSearch.page.value === 1"
+              @click="runSearch(remoteSearch.page.value - 1, true)"
+            >
+              上一页
+            </button>
+            <span
+              >第{{ remoteSearch.page.value }}页 /
+              {{ Math.ceil(searchResult.total / remoteSearch.pageSize) }}页</span
+            >
+            <button
+              :disabled="
+                remoteSearch.loading.value ||
+                remoteSearch.page.value * remoteSearch.pageSize >= searchResult.total
+              "
+              @click="runSearch(remoteSearch.page.value + 1, true)"
+            >
+              下一页
+            </button>
+          </div>
+        </div>
+      </div>
+    </Teleport>
     <div class="cm-map-body">
       <div
         ref="canvas"
@@ -911,16 +948,6 @@ defineExpose({
         ><button aria-label="重置市州地图视角" :disabled="!mapReady" @click="reset">
           <AppIcon name="target" :size="17" />
         </button>
-      </div>
-      <div class="cm-layer-note">
-        <template v-if="layer === 'heatmap'"
-          ><span class="cm-heat-key" />低 → 高 · POI样本聚集度</template
-        ><template v-else-if="layer === 'loca'">LOCA 2.0 · POI样本散点</template
-        ><template v-else
-          >点击{{
-            layer === 'cluster' ? '聚合点放大，单点查看来源' : '站点查看来源与采集时间'
-          }}</template
-        ><span v-if="districtCount"> · {{ districtCount }}个区县边界</span>
       </div>
     </div>
     <footer class="cm-footer">
@@ -1307,11 +1334,90 @@ defineExpose({
   font-weight: 650;
   cursor: pointer;
 }
+/* The card owns its material; SDK wrappers remain transparent. */
+.city-map :deep(.amap-info-contentContainer:has(.cm-info-content)),
+.city-map :deep(.amap-info-content:has(.cm-info-content)),
+.city-map :deep(.amap-info-outer:has(.cm-info-content)) {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.city-map :deep(.amap-info:has(.cm-info-content) .amap-info-close) {
+  top: 7px;
+  right: 7px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  color: #436553;
+  font-size: 18px;
+  background: rgba(244, 253, 248, 0.38);
+}
+.city-map :deep(.amap-info:has(.cm-info-content) .amap-info-close:hover) {
+  background: rgba(212, 237, 222, 0.85);
+  color: #155d46;
+}
+.city-map :deep(.amap-info:has(.cm-info-content) .amap-info-sharp) {
+  width: 12px;
+  height: 12px;
+  margin: -7px auto 0;
+  background: rgba(237, 248, 241, 0.8);
+  border: 1px solid rgba(24, 99, 74, 0.6);
+  border-top: 0;
+  border-left: 0;
+  transform: rotate(45deg);
+  box-shadow: none;
+  filter: none;
+}
+/* SDK ::after adds a blurred dark arrow shadow; reset only station InfoWindows. */
+.city-map :deep(.amap-info:has(.cm-info-content) .amap-info-sharp::after) {
+  content: none;
+  filter: none;
+  box-shadow: none;
+}
+
 .city-map :deep(.cm-info-content) {
-  width: 280px;
-  padding: 4px 2px;
+  box-sizing: border-box;
+  width: min(304px, calc(100vw - 64px));
+  padding: 15px;
+  border: 1px solid #18634a;
+  border-radius: 16px;
+  background:
+    linear-gradient(125deg, rgba(255, 255, 255, 0.12), transparent 55%), rgba(237, 248, 241, 0.76);
+  background-clip: padding-box;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 12px 30px rgba(20, 58, 43, 0.14),
+    0 2px 6px rgba(20, 58, 43, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  max-height: min(440px, 65dvh);
+  overflow-y: auto;
+  scrollbar-width: thin;
   color: #2e4839;
   font-family: inherit;
+}
+@media (prefers-reduced-transparency: reduce) {
+  .city-map :deep(.cm-info-content) {
+    background: #f4faf6;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+@supports not (backdrop-filter: blur(1px)) {
+  .city-map :deep(.cm-info-content) {
+    background: rgba(237, 248, 241, 0.96);
+  }
+}
+.city-map :deep(.cm-info-content > strong) {
+  display: block;
+  padding-right: 16px;
+  line-height: 1.5;
+  font-weight: 650;
 }
 .city-map :deep(.cm-info-content strong),
 .city-map :deep(.cm-district-tip strong) {
@@ -1319,7 +1425,7 @@ defineExpose({
   color: #1e604a;
 }
 .city-map :deep(.cm-info-content p) {
-  margin: 5px 0 10px;
+  margin: 5px 0 8px;
   color: #5c7164;
   font-size: 12px;
   line-height: 1.6;
@@ -1331,14 +1437,15 @@ defineExpose({
   margin-bottom: 10px;
 }
 .city-map :deep(.cm-info-tags span) {
-  padding: 3px 8px;
-  border-radius: 4px;
-  background: #edf4ef;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(84, 139, 109, 0.16);
+  background: rgba(216, 239, 225, 0.52);
   color: #3f6251;
   font-size: 12px;
 }
 .city-map :deep(.cm-info-details) {
-  border-top: 1px solid #e3eae1;
+  border-top: 1px solid rgba(75, 119, 94, 0.16);
   padding-top: 9px;
 }
 .city-map :deep(.cm-info-details summary) {
@@ -1359,7 +1466,8 @@ defineExpose({
 }
 .city-map :deep(.cm-info-content .cm-review-hint) {
   padding: 8px;
-  background: #faf4e8;
+  background: rgba(250, 232, 190, 0.48);
+  border-radius: 8px;
   border-left: 2px solid #b99659;
   color: #735b31;
 }
@@ -1377,10 +1485,10 @@ defineExpose({
   margin: 0;
   overflow-wrap: anywhere;
 }
-.city-map :deep(.cm-info-content small) {
+.city-map :deep(.cm-info-content .cm-info-note) {
   display: block;
   margin-top: 8px;
-  border-top: 1px solid #e3eae1;
+  border-top: 1px solid rgba(75, 119, 94, 0.16);
   padding-top: 7px;
   color: #6b7e70;
   font-size: 10px;
