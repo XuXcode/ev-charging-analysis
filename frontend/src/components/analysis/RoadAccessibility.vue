@@ -145,7 +145,7 @@ async function loadGeometry() {
 function select(code) {
   if (cityMapConfig[code]) analysis.$patch({ cityCode: code, districtCode: '' })
   else {
-    const row = data.value?.regions.find((r) => r.adcode === code)
+    const row = data.value?.regions?.find((r) => r.adcode === code)
     if (row) analysis.$patch({ cityCode: row.cityCode, districtCode: row.adcode })
   }
 }
@@ -188,7 +188,7 @@ async function render() {
   const features = geometry.value.features || []
   const mapRows = features.map((feature) => {
     const code = String(feature.properties.adcode)
-    const subset = data.value.regions.filter((r) =>
+    const subset = (data.value?.regions || []).filter((r) =>
       analysis.cityCode ? r.adcode === code : r.cityCode === code,
     )
     const statistics = roadMetrics(subset, props.minutes)

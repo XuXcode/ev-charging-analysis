@@ -326,8 +326,35 @@ def _default_snapshot_id(session):
     )
 
 
+def _latest_per_filter(session):
+    """One snapshot per filter set, newest first, so every selectable layer resolves."""
+    from sqlalchemy import select
+
+    from app.models.analysis import AnalysisSnapshot
+
+    rows = session.execute(
+        select(AnalysisSnapshot.id, AnalysisSnapshot.parameters)
+        .where(AnalysisSnapshot.status == "completed")
+        .order_by(AnalysisSnapshot.computed_at.desc())
+    ).all()
+    seen, picked = set(), []
+    for snapshot_id, parameters in rows:
+        filters = (parameters or {}).get("filters") or {}
+        key = (
+            filters.get("classification"),
+            filters.get("reviewStatus"),
+            filters.get("needsReview"),
+            filters.get("batch"),
+        )
+        if key in seen:
+            continue
+        seen.add(key)
+        picked.append(snapshot_id)
+    return picked
+
+
 def main():
-    """Backfill LISA onto an existing snapshot without recomputing geometry."""
+    """Backfill LISA onto existing snapshots without recomputing geometry."""
     import argparse
     import json
 
@@ -339,6 +366,7 @@ def main():
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--snapshot", help="快照ID；默认当前默认筛选的最新完成快照")
+    parser.add_argument("--all", action="store_true", help="为每个筛选口径的最新完成快照补算")
     parser.add_argument("--force", action="store_true", help="覆盖快照中已有的LISA层")
     parser.add_argument("--dry-run", action="store_true", help="只计算并打印，不写回快照")
     args = parser.parse_args()
@@ -346,6 +374,52 @@ def main():
     engine = create_db_engine(Settings())
     try:
         with create_session_factory(engine)() as session:
+            if args.all:
+                summary = []
+                for snapshot_id in _latest_per_filter(session):
+                    snapshot = session.get(AnalysisSnapshot, snapshot_id)
+                    if snapshot is None or snapshot.status != "completed":
+                        continue
+                    if "lisa" in (snapshot.result.get("layers") or {}) and not args.force:
+                        summary.append({"snapshotId": snapshot_id, "status": "skipped"})
+                        continue
+                    try:
+                        items, metadata = lisa_analysis(snapshot.result["layers"]["grid"])
+                    except ValueError as failure:
+                        # No variance (for example a zero-sample filter): record the
+                        # reason so the API can explain it instead of returning empty.
+                        snapshot.result.setdefault("layers", {})["lisa"] = {
+                            "type": "LISAProperties",
+                            "items": [],
+                        }
+                        snapshot.result.setdefault("metadata", {})["lisa"] = {
+                            "version": LISA_VERSION,
+                            "error": str(failure),
+                        }
+                        flag_modified(snapshot, "result")
+                        session.commit()
+                        summary.append(
+                            {"snapshotId": snapshot_id, "status": "error", "reason": str(failure)}
+                        )
+                        continue
+                    snapshot.result["layers"]["lisa"] = {
+                        "type": "LISAProperties",
+                        "items": items,
+                    }
+                    snapshot.result["metadata"]["lisa"] = metadata
+                    flag_modified(snapshot, "result")
+                    session.commit()
+                    summary.append(
+                        {
+                            "snapshotId": snapshot_id,
+                            "status": "ok",
+                            "stationCount": snapshot.result["metadata"].get("stationCount"),
+                            "moranI": round(metadata["global"]["moranI"], 4),
+                            "fdr": metadata["fdrSignificantCount"],
+                        }
+                    )
+                print(json.dumps(summary, ensure_ascii=False, indent=2))
+                return
             snapshot_id = args.snapshot or _default_snapshot_id(session)
             if not snapshot_id:
                 raise SystemExit("没有已完成的分析快照")

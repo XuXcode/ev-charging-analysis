@@ -921,8 +921,10 @@ footer {
 /* LISA statistics float: frosted glass, same material as the shared map overlays. */
 .lisa-panel {
   position: absolute;
-  top: 96px;
-  right: 18px;
+  /* Start below the HUD breadcrumb/filter strip instead of under it. */
+  top: calc(var(--monitor-top-offset, 96px) + 8px);
+  /* The HUD keeps a 368px right panel; sit inside the map, not under that panel. */
+  right: calc(var(--monitor-right-offset, 36px) + 8px);
   z-index: 3;
   width: 274px;
   max-height: calc(100% - 176px);

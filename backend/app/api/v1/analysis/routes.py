@@ -266,8 +266,10 @@ def layer_geometry(
             )
         )
         if not stored or not stored.get("items"):
+            reason = (statistics or {}).get("error")
             raise HTTPException(
-                404, "该快照尚未计算LISA空间自相关，请先运行离线补算任务；不会在前端估算"
+                404,
+                reason or "该快照尚未计算LISA空间自相关，请先运行离线补算任务；不会在前端估算",
             )
         index = {item["id"]: item for item in stored["items"]}
         merged = []
