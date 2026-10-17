@@ -8,8 +8,8 @@ import * as echarts from 'echarts/core'
 import { bindMapDrag } from '@/utils/map-drag'
 import { cityLabelStyle, cityLabelFormatter } from '@/utils/map-label'
 import { bindProvinceOutline } from '@/utils/map-outline'
-import { mapViewport, observeMapViewport, mapLegend, resizeMapViewport } from '@/utils/map-viewport'
-import { MapChart } from 'echarts/charts'
+import { mapViewport, observeMapViewport, mapLegend } from '@/utils/map-viewport'
+import { LinesChart, MapChart } from 'echarts/charts'
 import { LabelLayout } from 'echarts/features'
 import { TooltipComponent, VisualMapComponent } from 'echarts/components'
 import { CanvasRenderer } from 'echarts/renderers'
@@ -18,7 +18,6 @@ import { useDashboardStore } from '@/stores/dashboard'
 import { getAnalysisLayer } from '@/api/analysis'
 import { regionTooltip, gridTooltip, regionTooltipStyle } from '@/utils/map-tooltip'
 import {
-  hunan,
   labeledHunan,
   cityMapConfig,
   MAP_COLORS,
@@ -32,7 +31,14 @@ import { exportChartPng, exportChartCsv } from '@/utils/export'
 import { snapshotProvenance } from '@/utils/analysis-provenance'
 import { cityAnalysisRoute } from '@/utils/analysis-filters'
 
-echarts.use([LabelLayout, MapChart, TooltipComponent, VisualMapComponent, CanvasRenderer])
+echarts.use([
+  LabelLayout,
+  LinesChart,
+  MapChart,
+  TooltipComponent,
+  VisualMapComponent,
+  CanvasRenderer,
+])
 echarts.registerTheme(themeName, chartTheme)
 const exporting = ref(false),
   exportError = ref('')
@@ -155,7 +161,27 @@ function tooltip(row) {
   })
 }
 
-const boundaryMapName = () => `boundary-${props.parentCode}-${mapName}`
+// Administrative boundaries become polylines on the same geo coordinate system as the
+// grid, so they always pan and zoom together instead of rendering as a second map.
+function boundaryPolylines(geojson) {
+  const lines = []
+  for (const feature of geojson?.features || []) {
+    const geometry = feature.geometry
+    if (!geometry) continue
+    const polygons =
+      geometry.type === 'Polygon'
+        ? [geometry.coordinates]
+        : geometry.type === 'MultiPolygon'
+          ? geometry.coordinates
+          : []
+    for (const polygon of polygons) {
+      for (const ring of polygon) {
+        if (ring?.length > 1) lines.push({ coords: ring })
+      }
+    }
+  }
+  return lines
+}
 
 function render() {
   if (!chart || !mapData.value || !canvas.value?.clientWidth || !canvas.value?.clientHeight) return
@@ -178,7 +204,8 @@ function render() {
     })),
   })
   const isGrid = layer.value === 'grid' || layer.value === 'hotspots'
-  const classified = layer.value === 'regions' || layer.value === 'coverage' || isGrid
+  const isRegion = layer.value === 'regions'
+  const classified = isRegion || layer.value === 'coverage' || isGrid
   // For grid density use a province-wide fixed scale so colors mean the same density
   // regardless of which city or county is selected.
   const scale = isGrid
@@ -189,19 +216,124 @@ function render() {
       )
   const max = Math.max(0.001, ...rows.map((row) => row.value || 0))
   const selectedCode = props.focusCode || analysis.cityCode || dashboard.selectedCityCode
-  const hasBoundaryOverlay = boundaryData.value && layer.value !== 'regions'
-  const boundaryName = boundaryMapName()
-  if (hasBoundaryOverlay) {
-    echarts.registerMap(boundaryName, boundaryData.value)
-  }
+  const hasBoundaryOverlay = boundaryData.value && !isRegion
+  const viewport = mapViewport(canvas.value, { features: rows.map((row) => row.feature) })
   const gridBaseColor = (row) => {
     if (!Number.isFinite(row.value)) return MAP_COLORS.empty
     return isGrid ? scale.color(row.value) : mapPalette[0]
   }
-  const series = [
-    {
-      id: 'analysis-layer',
-      type: 'map',
+  const data = rows.map((row) => {
+    const base = classified ? scale.color(row.value) : gridBaseColor(row)
+    const selected = row.code === selectedCode
+    const color = selected ? MAP_COLORS.selected : base
+    const hover = selected ? color : mapHoverColor(base)
+    return {
+      name: row.code,
+      code: row.code,
+      value: row.value,
+      sampleCount: row.data.count,
+      regionName: cityMapConfig[row.code]?.shortName || row.name,
+      ...(selected ? { itemStyle: { areaColor: color } } : {}),
+      ...(Number.isFinite(row.value) ? {} : { itemStyle: { areaColor: MAP_COLORS.empty } }),
+      label: { show: false },
+      emphasis: { itemStyle: { areaColor: hover }, label: { show: false } },
+    }
+  })
+  const mapSeries = {
+    id: 'analysis-layer',
+    type: 'map',
+    map: mapName,
+    data,
+    itemStyle: {
+      borderColor: isGrid ? '#7ba88f' : '#fff',
+      borderWidth: isGrid ? 0.8 : 1.4,
+      areaColor: isGrid ? MAP_COLORS.empty : '#f0f4ef',
+    },
+    emphasis: {
+      itemStyle: {
+        borderColor: MAP_COLORS.border,
+        borderWidth: isGrid ? 1.2 : 2,
+      },
+    },
+    select: { disabled: true },
+  }
+  if (isRegion) {
+    // Region view keeps the internal geo and its labels.
+    Object.assign(mapSeries, {
+      roam: 'scale',
+      zoomOnMouseWheel: true,
+      moveOnMouseWheel: false,
+      zoom,
+      center,
+      layoutCenter: ['50%', '50%'],
+      layoutSize: '98%',
+      ...viewport,
+      aspectScale: 0.88,
+      label: {
+        show: !props.compact,
+        ...cityLabelStyle,
+        color: '#244b39',
+        formatter: cityLabelFormatter,
+      },
+      labelLayout: { hideOverlap: true },
+    })
+  } else {
+    // Grid/hotspot/coverage views bind to an explicit geo. The series and the
+    // boundary polylines share geoIndex 0, so one roam state moves both layers.
+    mapSeries.geoIndex = 0
+  }
+  const series = [mapSeries]
+  if (hasBoundaryOverlay) {
+    series.push({
+      id: 'boundary-overlay',
+      type: 'lines',
+      coordinateSystem: 'geo',
+      geoIndex: 0,
+      polyline: true,
+      silent: true,
+      data: boundaryPolylines(boundaryData.value),
+      lineStyle: { color: '#23725a', width: 1.8, opacity: 1 },
+      z: 10,
+    })
+  }
+  const option = {
+    animation: false,
+    tooltip: {
+      trigger: 'item',
+      confine: true,
+      ...chartTheme.tooltip,
+      ...regionTooltipStyle,
+      formatter: (p) => tooltip(rows.find((row) => row.code === p.name)),
+    },
+    visualMap: {
+      show: !props.compact,
+      type: classified ? 'piecewise' : 'continuous',
+      ...(classified
+        ? {
+            pieces: scale.pieces,
+            seriesIndex: 0,
+            outOfRange: { color: MAP_COLORS.empty },
+            itemWidth: 18,
+            itemHeight: 14,
+            itemGap: 8,
+          }
+        : {}),
+      ...(isGrid ? {} : { min: 0, max }),
+      orient: 'horizontal',
+      left: 20,
+      bottom: 18,
+      calculable: false,
+      ...mapLegend(canvas.value),
+      text: classified ? undefined : [`${number(max)} ${definition.value?.unit || ''}`, '0'],
+      inRange: {
+        color: layer.value === 'uncovered' ? ['#f5eddc', '#b18b4b'] : mapPalette,
+      },
+      textStyle: { color: '#435e50', fontSize: 12 },
+    },
+    series,
+  }
+  if (!isRegion) {
+    option.geo = {
       map: mapName,
       roam: 'scale',
       zoomOnMouseWheel: true,
@@ -210,117 +342,35 @@ function render() {
       center,
       layoutCenter: ['50%', '50%'],
       layoutSize: '98%',
-      ...mapViewport(canvas.value, { features: rows.map((row) => row.feature) }),
+      ...viewport,
       aspectScale: 0.88,
-      data: rows.map((row) => {
-        const base = classified ? scale.color(row.value) : gridBaseColor(row)
-        const selected = row.code === selectedCode
-        const color = selected ? MAP_COLORS.selected : base
-        const hover = selected ? color : mapHoverColor(base)
-        return {
-          name: row.code,
-          code: row.code,
-          value: row.value,
-          sampleCount: row.data.count,
-          regionName: cityMapConfig[row.code]?.shortName || row.name,
-          ...(selected ? { itemStyle: { areaColor: color } } : {}),
-          label: { show: false },
-          emphasis: { itemStyle: { areaColor: hover }, label: { show: false } },
-        }
-      }),
       itemStyle: {
-        borderColor: isGrid ? '#7ba88f' : '#fff',
-        borderWidth: isGrid ? 0.8 : 1.4,
-        areaColor: isGrid ? MAP_COLORS.empty : '#f0f4ef',
+        areaColor: MAP_COLORS.empty,
+        borderColor: isGrid ? '#7ba88f' : '#dbe5df',
+        borderWidth: isGrid ? 0.8 : 1.2,
       },
+      label: { show: false },
       emphasis: {
-        itemStyle: {
-          borderColor: MAP_COLORS.border,
-          borderWidth: isGrid ? 1.2 : 2,
-        },
+        itemStyle: { borderColor: MAP_COLORS.border, borderWidth: isGrid ? 1.4 : 1.8 },
+        label: { show: false },
       },
       select: { disabled: true },
-    },
-  ]
-  if (hasBoundaryOverlay) {
-    series.push({
-      id: 'boundary-overlay',
-      type: 'map',
-      map: boundaryName,
-      roam: false,
-      zoom,
-      center,
-      layoutCenter: ['50%', '50%'],
-      layoutSize: '98%',
-      aspectScale: 0.88,
-      silent: true,
-      data: [],
-      itemStyle: {
-        areaColor: 'transparent',
-        borderColor: '#23725a',
-        borderWidth: 1.8,
-        shadowColor: 'transparent',
-      },
-      emphasis: { disabled: true },
-      z: 10,
-    })
+    }
   }
-  chart.setOption(
-    {
-      animation: false,
-      tooltip: {
-        trigger: 'item',
-        confine: true,
-        ...chartTheme.tooltip,
-        ...regionTooltipStyle,
-        formatter: (p) => tooltip(rows.find((row) => row.code === p.name)),
-      },
-      visualMap: {
-        show: !props.compact,
-        type: classified ? 'piecewise' : 'continuous',
-        ...(classified
-          ? {
-              pieces: scale.pieces,
-              seriesIndex: 0,
-              outOfRange: { color: MAP_COLORS.empty },
-              itemWidth: 18,
-              itemHeight: 14,
-              itemGap: 8,
-            }
-          : {}),
-        ...(isGrid
-          ? {}
-          : {
-              min: 0,
-              max: Math.max(0.001, ...rows.map((row) => row.value || 0)),
-            }),
-        orient: 'horizontal',
-        left: 20,
-        bottom: 18,
-        calculable: false,
-        ...mapLegend(canvas.value),
-        text: classified ? undefined : [`${number(max)} ${definition.value?.unit || ''}`, '0'],
-        inRange: {
-          color: layer.value === 'uncovered' ? ['#f5eddc', '#b18b4b'] : mapPalette,
-        },
-        textStyle: { color: '#435e50', fontSize: 12 },
-      },
-      series,
-    },
-    true,
-  )
+  chart.setOption(option, true)
   highlight()
 }
 function highlight() {
   if (!chart) return
   chart.dispatchAction({ type: 'downplay' })
   chart.dispatchAction({ type: 'hideTip' })
+  // Grid cells use "x:y" ids; district focus highlighting only applies to region view.
+  if (layer.value !== 'regions') return
   if (props.focusCode) {
     chart.dispatchAction({ type: 'highlight', seriesIndex: 0, name: props.focusCode })
     chart.dispatchAction({ type: 'showTip', seriesIndex: 0, name: props.focusCode })
     return
   }
-  if (layer.value !== 'regions') return
   const code = dashboard.hoveredCityCode || dashboard.selectedCityCode
   if (code) chart.dispatchAction({ type: 'highlight', seriesIndex: 0, name: code })
   if (dashboard.hoveredCityCode && regions.value.some((row) => row.code === code))
@@ -476,9 +526,24 @@ function select(code) {
     emit('city-select', code)
   } else router.push(cityAnalysisRoute(analysis, code))
 }
+function resizeSpatialMap() {
+  if (!chart || chart.isDisposed() || !canvas.value?.clientWidth || !canvas.value?.clientHeight)
+    return
+  chart.resize()
+  const viewport = mapViewport(canvas.value)
+  if (!viewport.layoutSize) return
+  // Update the coordinate system that owns the current view, not a fixed series index.
+  const target = layer.value === 'regions' ? { series: [viewport] } : { geo: [viewport] }
+  chart.setOption({ ...target, visualMap: mapLegend(canvas.value) }, { lazyUpdate: true })
+}
+
 onMounted(() => {
   chart = echarts.init(canvas.value, themeName)
-  removeMapDrag = bindMapDrag(chart, canvas.value)
+  removeMapDrag = bindMapDrag(chart, canvas.value, () =>
+    layer.value === 'regions'
+      ? { componentType: 'series', seriesIndex: 0 }
+      : { componentType: 'geo', geoIndex: 0 },
+  )
   removeOutline = bindProvinceOutline(
     chart,
     () => props.parentCode === '430000' && !props.scopeCode,
@@ -489,18 +554,16 @@ onMounted(() => {
   })
   chart.on('globalout', () => dashboard.hoverCity(''))
   chart.on('georoam', () => {
-    const current = chart.getOption().series?.[0]
+    // Region view roams its internal series geo; grid/coverage views roam geo 0.
+    const option = chart.getOption()
+    const current = layer.value === 'regions' ? option.series?.[0] : option.geo?.[0]
     if (current) {
       zoom = current.zoom
       center = current.center
       rememberCamera()
     }
   })
-  observer = new ResizeObserver(() => {
-    if (canvas.value?.clientWidth && canvas.value?.clientHeight) {
-      resizeMapViewport(chart, canvas.value)
-    }
-  })
+  observer = new ResizeObserver(resizeSpatialMap)
   observer.observe(canvas.value)
   observeMapViewport(observer, canvas.value)
   activeCameraKey = cameraKey()

@@ -1,5 +1,7 @@
 // Map series use roam: 'scale'; only physical mouse dragging dispatches pan actions.
-export function bindMapDrag(chart, element) {
+// `getTarget` keeps the roam target correct when a view switches between an internal
+// map-series geo (regions) and an explicit geo component (grid + boundary overlays).
+export function bindMapDrag(chart, element, getTarget = () => ({ componentType: 'series', seriesIndex: 0 })) {
   let start = null
   let previous = null
   let moved = false
@@ -32,7 +34,7 @@ export function bindMapDrag(chart, element) {
     const dy = current[1] - previous[1]
     previous = current
     chart.getZr().setCursorStyle('grabbing')
-    chart.dispatchAction({ type: 'geoRoam', componentType: 'series', seriesIndex: 0, dx, dy })
+    chart.dispatchAction({ type: 'geoRoam', ...getTarget(), dx, dy })
     event.preventDefault()
   }
   function click(event) {
