@@ -340,13 +340,15 @@ function renderStations() {
       maxZoom: 17,
       renderClusterMarker: ({ marker, count }) => {
         const size = count >= 100 ? 46 : count >= 10 ? 39 : 32
-        marker.setContent(
-          `<span class="cm-cluster" style="width:${size}px;height:${size}px" title="${count}条POI样本 · 点击放大">${count}</span>`,
-        )
+        const clusterContent = (hovered = false) =>
+          `<span class="cm-cluster${hovered ? ' is-hovered' : ''}" style="width:${size}px;height:${size}px" title="${count}条POI样本 · 点击放大">${count}</span>`
+        marker.setContent(clusterContent())
         marker.setOffset(new AMap.Pixel(-size / 2, -size / 2))
         markerStations.delete(marker)
         markerClusterCounts.set(marker, count)
         marker.setTitle(`${count}条POI样本 · 点击放大`)
+        marker.on('mouseover', () => marker.setContent(clusterContent(true)))
+        marker.on('mouseout', () => marker.setContent(clusterContent(false)))
         bindMarkerEvents(marker)
       },
       renderMarker: ({ marker }) => {
@@ -617,7 +619,7 @@ async function initializeMap() {
       mapStyle: 'amap://styles/normal',
       resizeEnable: true,
     })
-    popup = new AMap.InfoWindow({ offset: new AMap.Pixel(0, -14), closeWhenClickMap: true })
+    popup = new AMap.InfoWindow({ offset: new AMap.Pixel(0, -18), closeWhenClickMap: true })
     map.addControl(new AMap.Scale())
     map.on('moveend', onMoveEnd)
     map.on('zoomend', onMoveEnd)
